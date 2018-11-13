@@ -1,0 +1,272 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    margin: 0;
+    padding: 0;
+
+}
+header {
+
+    text-align: center;
+    font-size: 15px;
+}
+body{
+    background: black url("imageFond.png") no-repeat center top;
+    background-size: 100%;
+}
+
+/* logo /nav bar flex */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+/* nav bar flex */ 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* logo */
+h1 {
+    font-size: 45px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* nav bar general */ 
+header{
+    height: 100px;
+    margin-top: 20px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 0 1 40%; 
+}
+header li {
+    width: 150px;
+    line-height: 30px;
+    padding: 20px;
+}
+header a:hover {
+    font-weight: bold;   
+}
+header a:hover span {
+    text-decoration: underline;
+}
+
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+
+/* User scroll bar */
+.dropdown:hover #noHoverUser {
+    display: none;
+}
+.dropdown:hover #hoverUser {
+    display:block;
+    border-radius: 7px;
+    width: 150x;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown:hover #hoverUser p {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: auto;
+}
+.dropdown:hover #hoverUser #borderNone {
+    border: none;
+}
+.boutonmenuprincipal {
+    background: rgba(0, 0, 0, 0) url("User.svg") no-repeat center center;
+    background-size: 30px;
+    padding: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+}
+.dropdown #noHoverUser {
+    display: block;
+}
+.dropdown #hoverUser {
+    display: none;
+}
+
+#salon 
+{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top: 10%
+}
+
+
+.lumprin
+{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+.imglumblanche
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    margin: auto;
+    padding-left:0.1%;
+    padding-right: 65%;
+}
+
+
+.lumchevet
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.imglumbjaune
+{
+    border : 1px solid yellow;
+    padding-left:0.1%;
+    padding-right:10%;
+    background-color: #3C4459;
+    margin: auto;
+}
+
+
+.humidité
+{
+    display:flex;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+.camdesuv
+{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+.imgcadenas
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding: 2%;
+    margin: auto;
+}
+
+.chauff
+{
+    display:flex;
+    flex-direction:row-reverse;
+    text-align: center;
+}
+
+.imgchauffage
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding: 2%;
+    margin: auto;
+}
+
+.plus
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-bottom: 10%;
+    margin: auto;
+    font-size:10em;
+}
+.plus p{
+    margin-left:0%;
+    margin-right:500%;
+    margin-top:-25%;
+    margin-bottom:-50%;
+}
+.ajoutcapteur
+{
+    text-align:center;
+    padding-bottom:26%;
+}
+
+
+section h1 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-bottom:5%;
+    margin-top:5%;
+}
+
+.pourcentage
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-top: 20%;
+    margin: auto;
+    font-size: 5em;
+    text-align:center;
+    padding-left: 10%;
+    padding-right:0%;
+} 
+
+.pourcentage p {
+    margin-left:-10%;
+    margin-right:500%;
+    margin-top:0%;
+    margin-bottom:0%;
+
+}
+
+section a{
+    display:flex;
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    margin-left: 5%;
+}
+
+.humiditégene {
+    margin:auto;
+    padding:auto;
+}
