@@ -1,0 +1,191 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    margin: 0;
+    padding: 0;
+
+}
+header {
+
+    text-align: center;
+    font-size: 15px;
+}
+body{
+    background: black url("imageFond.png") no-repeat center top;
+    background-size: 100%;
+}
+
+/* logo /nav bar flex */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+/* nav bar flex */ 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* logo */
+h1 {
+    font-size: 45px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* nav bar general */ 
+header{
+    height: 100px;
+    margin-top: 20px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 0 1 40%; 
+}
+header li {
+    width: 150px;
+    line-height: 30px;
+    padding: 20px;
+}
+header a:hover {
+    font-weight: bold;   
+}
+header a:hover span {
+    text-decoration: underline;
+}
+
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+
+/* User scroll bar */
+.dropdown:hover #noHoverUser {
+    display: none;
+}
+.dropdown:hover #hoverUser {
+    display:block;
+    border-radius: 7px;
+    width: 150x;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown:hover #hoverUser p {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: auto;
+}
+.dropdown:hover #hoverUser #borderNone {
+    border: none;
+}
+.boutonmenuprincipal {
+    background: rgba(0, 0, 0, 0) url("User.svg") no-repeat center center;
+    background-size: 30px;
+    padding: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+}
+.dropdown #noHoverUser {
+    display: block;
+}
+.dropdown #hoverUser {
+    display: none;
+}
+
+#pieces 
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10%;
+    margin:auto;
+    width: 50%;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+
+.figure {
+    padding:10%;
+    font-size:10em;
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-right:30px;
+    padding-top: em;
+    text-align: center;
+}
+
+.Caractere {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+
+}
+
+
+.button
+{
+    background_color:#3C4459;
+    text-align: center;
+    font-size:
+    
+}
+
+section h2 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-bottom:5%;
+    margin-top:5%;
+}
+
+section a {
+    display:flex;
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    margin-left: 5%;
+}
