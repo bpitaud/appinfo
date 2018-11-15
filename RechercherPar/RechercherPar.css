@@ -25,7 +25,7 @@ input[type=text] {
     border-radius: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.5);
-    background: rgba(0, 0, 0, 0.5) url("../Images/loupe.png") no-repeat 5% center;
+    background: rgba(0, 0, 0, 0.5) url("../Images/loupe.png") no-repeat 2% center;
     background-size: 30px;
     text-align: left;
 }
