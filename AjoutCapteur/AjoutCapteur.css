@@ -67,7 +67,7 @@ header a:hover span {
 .dropdownLang .noHover {
     display: block;
     border-radius: 7px;
-    background: rgba(0, 0, 0, 0.5) url("../page/ArrowDown.svg") no-repeat 70px center;
+    background: rgba(0, 0, 0, 0.5) url("../Images/ArrowDown.svg") no-repeat 70px center;
     background-size: 20px;
     width: 100px;
     margin: auto;
