@@ -13,7 +13,8 @@ header {
     font-size: 15px;
 }
 body{
-    background: black url("../Images/fond.png") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
 }
 
@@ -65,7 +66,7 @@ header a:hover span {
 .dropdownLang .noHover {
     display: block;
     border-radius: 7px;
-    background: rgba(0, 0, 0, 0.5) url("ArrowDown.svg") no-repeat 70px center;
+    background: rgba(0, 0, 0, 0.5) url("../Images/ArrowDown.svg") no-repeat 70px center;
     background-size: 20px;
     width: 100px;
     margin: auto;
@@ -115,7 +116,7 @@ header a:hover span {
     border: none;
 }
 .boutonmenuprincipal {
-    background: rgba(0, 0, 0, 0) url("User.svg") no-repeat center center;
+    background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
     background-size: 30px;
     padding: 20px;
     height: 30px;
@@ -167,10 +168,8 @@ header a:hover span {
 
 .button
 {
-    background_color:#3C4459;
-    text-align: center;
-    font-size:
-    
+    background-color:#3C4459;
+    text-align: center;   
 }
 
 section h2 {
