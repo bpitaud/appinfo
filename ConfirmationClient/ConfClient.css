@@ -171,7 +171,7 @@ footer p
 {
 	display: block;
     border: 2px solid white;
-    background: rgba(0, 0, 0, 0) url("logo_quitter.png") no-repeat 5% center;
+    background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
     background-size: 20px;
     width: 30%;
     margin: 7% 0% 0 100%;
