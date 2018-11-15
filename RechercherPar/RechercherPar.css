@@ -42,7 +42,7 @@ input[type=text] {
     font-size: 15px;
 }
 body{
-    background: black url("imageFond.png") no-repeat center top;
+    background: black url("../Images/fond.png") no-repeat center top;
     background-size: 100%;
 }
 
