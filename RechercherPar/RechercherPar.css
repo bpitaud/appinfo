@@ -2,7 +2,8 @@
 
 h2
 {
-	font-size: 50px;
+    font-size: 50px;
+    margin-top: 5%;
 }
 
 .formulaire{
@@ -12,9 +13,10 @@ h2
 input[type=text] {
 	color : white;
     width:40%;
+    min-width: 300px;
     padding: 10px 20px;
     margin:auto;
-    margin-top: 10px;
+    margin-top: 1.5%;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -23,7 +25,7 @@ input[type=text] {
     border-radius: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.5);
-    background: rgba(0, 0, 0, 0.5) url("Loupe.png") no-repeat 5% center;
+    background: rgba(0, 0, 0, 0.5) url("../Images/loupe.png") no-repeat 2% center;
     background-size: 30px;
     text-align: left;
 }
@@ -42,7 +44,8 @@ input[type=text] {
     font-size: 15px;
 }
 body{
-    background: black url("../Images/fond.png") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
 }
 
