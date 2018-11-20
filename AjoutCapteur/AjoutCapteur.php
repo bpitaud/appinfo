@@ -52,7 +52,7 @@
     	</div>
 		<h1>Ajouter un capteur<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="traitementCapteur.php">
+			<form method="post" action="FormulaireAjoutCapteur.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom du capteur" required/>
       				<input type="text" name="numéro" placeholder="Numéro de série" required />

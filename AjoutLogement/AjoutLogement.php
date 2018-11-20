@@ -52,7 +52,7 @@
     	</div>
 		<h1>Ajouter un logement<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="TraitementPaysLogement.php">
+			<form method="post" action="FormulaireAjoutLogement.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom du logement" required/>
       				<input type="text" name="adresse" placeholder="Adresse du logement" required />

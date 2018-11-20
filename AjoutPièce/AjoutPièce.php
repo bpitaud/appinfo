@@ -52,7 +52,7 @@
     	</div>
 		<h1>Ajouter une pièce<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="TraitementPièce.php">
+			<form method="post" action="FormulaireAjoutPièce.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
        				<input type="text" name="superficie" placeholder="Surface de la pièce" required >
