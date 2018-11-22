@@ -162,17 +162,4 @@ footer p
     width: 28%;
    
 }
-.quitter
-{
-	display: block;
-    border: 2px solid white;
-    background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
-    background-size: 20px;
-    padding-left: 25px;
-    width: 5%;
-    /*margin: 7% 0% 0 100%;
-    padding: 1% 0 1% 0%;*/
-    position: absolute; top: 15%; left: 78%; right: 5%;
-    min-width: 70px;
-    
-}
+

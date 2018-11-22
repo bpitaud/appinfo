@@ -29,7 +29,7 @@
       </ul>
    		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
    			
-      <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
+     
   </div>
 </header>
     
