@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="AjoutPièce.css" />
+    <link rel="stylesheet" href="AjoutPiece.css" />
     <title>Ajout d'une pièce</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -52,10 +52,10 @@
     	</div>
 		<h1>Ajouter une pièce<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="FormulaireAjoutPièce.php">
+			<form method="post" action="../controllers/FormulaireAjoutPiece.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
-       				<input type="text" name="superficie" placeholder="Surface de la pièce" required >
+       				<input type="text" name="name" placeholder="Nom de la pièce" required/>
+       				<input type="text" name="surface" placeholder="Surface de la pièce" required >
        				<input type="submit" value="Suivant">
    				</p>
 			</form>
