@@ -11,40 +11,27 @@
 		
 		<!--HEADER DE WILLIAM-->
 
-		<header>
-        <div class="wrapper">
-            <h1>DOMISEP</h1>
-            <nav>
-                <ul>
-                    <li><a href="../RechercherPar/RechercherPar.php"><span>Home</span></a></li>
-                    <li>
-                        <div class="dropdownLang">
-                            <div class="noHover">
-                                <p>FR</p>
-                            </div>
-                            <div class="hover">
-                                <p>FR</p>
-                                <a href="english.html"> EN </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <div id="noHoverUser">
-                                    <button class="boutonmenuprincipal"><p></p></button>
-                            </div>
-                            <div id="hoverUser">
-                                <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+	<div class="wrapper">
+    <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
+   		<ul>
+   			<li> 					
+          <div class="dropdownLang">
+            <div class="noHover">
+              <p>FR</p>
+            </div>
+            <div class="hover">
+              <p>FR</p>
+              <a href="english.html"> EN </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+   		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
+   			
+      <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
+  </div>
+</header>
     
     
     		<!--CODE DE LA PAGE-->
@@ -73,7 +60,14 @@
 		</div>
 
 			</section>
-    			       
+                
+            
+    <footer>
+    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
+    </footer>
+
+
+
     	</body>
 		
 </html>

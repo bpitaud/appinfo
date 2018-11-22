@@ -13,7 +13,6 @@
 
 <header>
 	<div class="wrapper">
-<<<<<<< HEAD
     <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
    		<ul>
    			<li> 					
@@ -32,31 +31,6 @@
    			
       <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
   </div>
-=======
-
-        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
-          <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
-                    <div class="dropdownLang">
-                        <div class="noHover">
-                            <p>FR</p>
-                        </div>
-                         <div class="hover">
-                            <p>FR</p>
-                            <a href="english.html"> EN </a>
-                         </div>
-                     </div>
-                </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
- 				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
-			</ul>
-        </div>
-    </div>
->>>>>>> 6925b2c15339c36e5951954a108a8c055dec35fd
 </header>
 
     <nav>
@@ -80,7 +54,13 @@
 				</div></a>
 			</div>
 
-			
+
+
+    <footer>
+    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
+	</footer>
+	
+	
 		</body>
 		
 	</html>
