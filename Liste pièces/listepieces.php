@@ -58,10 +58,10 @@
                
                 <div class="block"> 
                     <div class="figure">
-                            <p> <a href ="../AjoutPièce/AjoutPièce.php" > + </a> </p>
+                            <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p>
                             
                             </div>
-                    <div class="Caractere"> Ajouter </div>
+                    <div class="Caractere"> Ajouter </a></div>
                 </div>   
     	</div>	
     </section>
