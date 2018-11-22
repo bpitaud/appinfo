@@ -9,6 +9,29 @@
 
   <body>
 
+<<<<<<< HEAD:ConfirmationClient/ConfClient.html
+    <header>
+      <div class="wrapper">
+        <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
+           <ul>
+             <li> 					
+              <div class="dropdownLang">
+                <div class="noHover">
+                  <p>FR</p>
+                </div>
+                <div class="hover">
+                  <p>FR</p>
+                  <a href="english.html"> EN </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+           <p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
+             
+          <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
+      </div>
+    </header>
+=======
 <header>
 	<div class="wrapper">
 
@@ -35,6 +58,7 @@
         </div>
     </div>
 </header>
+>>>>>>> 6925b2c15339c36e5951954a108a8c055dec35fd:ConfirmationClient/ConfClient.php
 
     			</br>
 				</br>
