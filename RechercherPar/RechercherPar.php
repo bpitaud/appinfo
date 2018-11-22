@@ -16,7 +16,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
+                    <li><a href="../RechercherPar/RechercherPar.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">

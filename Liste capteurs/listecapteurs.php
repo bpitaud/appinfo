@@ -42,7 +42,7 @@
         </div>
     </header>
     <section>
-        <a href ="../Liste pièces/listepieces.html"> < Retour</a> 
+        <a href ="../Liste pièces/listepieces.php"> < Retour</a> 
         <h1> Salon </h1>
     	<div id="salon">
     		
@@ -92,7 +92,7 @@
             <div class="imgajoutcapteur">
                     
                 <div class= "plus"> 
-                <p> <a href = "../AjoutCapteur/AjoutCapteur.html"> + </a> </p> 
+                <p> <a href = "../AjoutCapteur/AjoutCapteur.php"> + </a> </p> 
                 </div>
                    
                 <div class="ajoutcapteur">

@@ -30,7 +30,7 @@
                 </li>
  					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a></li>
+                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
     
     <nav>
-    	<a href="../Menu/Menu.html">Menu</a>/<span id="compte_link">Compte</span>
+    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
     </nav>
     <h2>Compte</h2>
     <section>
@@ -63,7 +63,7 @@
     			<em class="base">ADRESSE PRINCIPALE<br/></em>
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
-    			<button class="bouton" href="../Modifier_les_informations/Modifier_les_informations.html">Modifier les informations</button>
+    			<button class="bouton" href="../Modifier_les_informations/Modifier_les_informations.php">Modifier les informations</button>
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>
     	</div>

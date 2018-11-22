@@ -12,7 +12,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -42,23 +42,23 @@
         </div>
     </header>
     <section>
-         <a href ="../Liste logements/listelogements.html"> < Retour</a> 
+         <a href ="../Liste logements/listelogements.php"> < Retour</a> 
         <h2>Pièce(s) du logement</h2>
     	<div id="pieces">    
                 <div class="block" >
                     <div class="figure">
 
-                        <p> <a href = "listecapteurs.html" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></a></p> 
+                        <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
 
                     </div>
-                    <div class="Caractere"> Salon
+                    <div class="Caractere"> Salon </a>
                         <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="68" height="68"/></p>
                     </div>
                 </div>
                
                 <div class="block"> 
                     <div class="figure">
-                            <p> <a href ="../AjoutPièce/AjoutPièce.html" > + </a> </p>
+                            <p> <a href ="../AjoutPièce/AjoutPièce.php" > + </a> </p>
                             
                             </div>
                     <div class="Caractere"> Ajouter </div>

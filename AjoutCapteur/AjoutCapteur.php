@@ -13,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home.html"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -46,17 +46,17 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste capteurs/listecapteurs.html"> < Retour		
+    		<a href="../Liste capteurs/listecapteurs.php"> < Retour		
     		</a>
     	</p>
     	</div>
 		<h1>Ajouter un capteur<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="FormulaireAjoutCapteur.php">
+			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du capteur" required/>
-      				<input type="text" name="numéro" placeholder="Numéro de série" required />
-       				<select name="Type de capteur" required>
+       				<input type="text" name="name" placeholder="Nom du capteur" required/>
+      				<input type="text" name="number" placeholder="Numéro de série" required />
+       				<select name="type" required>
        					<option value="lumière"> Lumière </option>
 						<option value="caméra de surveillance"> Caméra de surveillance </option>
 						<option value="humidité"> Humidité </option> 
