@@ -30,7 +30,7 @@
           </li>
  					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a></li>
+                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
         </div>
     </div>
@@ -38,14 +38,14 @@
 
     
     <nav>
-    	<a href="../Menu/Menu.html">Menu</a>/<span id="compte_link">Liste des capteurs</span>
+    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Liste des capteurs</span>
     </nav>
 
 
     <section>
       <form method="post" action="TraitementPaysLogement.php">
           <p>
-                <input type="text" value="" name="capt" placeholder="Rechercher un uméro de capteur">
+                <input type="text" value="" name="capt" placeholder="Rechercher un numéro de capteur">
           </p>
       </form>
 

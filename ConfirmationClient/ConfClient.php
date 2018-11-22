@@ -30,7 +30,7 @@
                 </li>
  					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.html"><span>Quitter</span></a></li>
+                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
         </div>
     </div>
@@ -56,7 +56,7 @@
 
     
 		<div class="bouton">
-		<input type=button onclick=window.location.href="../Menu/Menu.html"; value=Valider />
+		<input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
 
 		</div>
 	</div>

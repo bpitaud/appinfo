@@ -32,14 +32,14 @@
                 </li>
  					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.html"><span>Quitter</span></a></li>
+                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
         </div>
     </div>
 </header>
 
     <nav>
-    	<a href="../Menu/Menu.html">Menu</a>/<span id="compte_link">Compte</span>
+    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
     </nav>
     
     
@@ -48,12 +48,12 @@
     
 			<div class="page">
 			
-				<a href = "../Admin_Compte/Compte_Admin.html"><div id="conteneur1">
+				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
 					<div class="element">Compte</div>
 					<img src="../Images/compte.png" alt="Compte" />
 				</div></a>
 			
-				<a href = "../Liste_de_capteurs/Liste_de_capteurs.html"><div id="conteneur2">
+				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
 					<img src="../Images/House.png" alt="House" />
 					<div class="element">Capteurs</div>
 				</div></a>
