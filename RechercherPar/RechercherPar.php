@@ -54,21 +54,23 @@
     			
     		<section>
 		<div class="formulaire">
-			<form method="post" action="TraitementPaysLogement.php">
+			<form method="post" action="../controllers/FormulaireRechercherPar.php">
+                
    				<p>
       					<label for="name">Numéro de téléphone</label>
-      					<input type="text" value="" name="tel">
+      					<input type="text" value="" name="tel" >
       					
       					<label for="message">Adresse email</label>
       					<input type="text" value="" name="mail">
       					
       					<label for="message">Numéro de capteur</label>
       					<input type="text" value="" name="capteur">
+
+                        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
    				</p>
+                
 			</form>
 		</div>
-
-		
 
 			</section>
     			       
