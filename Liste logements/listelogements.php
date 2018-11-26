@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="listelogementcss.css" />
         <title>Domisep - Liste des pièces</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
 
     <body>
@@ -12,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
