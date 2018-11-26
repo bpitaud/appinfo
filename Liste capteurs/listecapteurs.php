@@ -52,7 +52,7 @@
                 <p> <a href = "xxx.html"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> </div>
                 
                 <div class="lumprin"> Lumière <br>principal
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="68" height="68"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
             </div> 
             
                           
@@ -61,7 +61,7 @@
                 <div class="imglumbjaune">
                 <p><a href = "xxx.html"><img src="../Images/iconelumierejaune.png" alt="photo de lumiere"width="128" height="128"/></a></p></div>
                 <div class="lumchevet"> Lampe <br> de chevet
-                <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="68" height="68"/></p></div>
+                <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="52" height="52"/></p></div>
             </div>    
             
             <div class="Humiditégene"> 
@@ -69,7 +69,7 @@
                 <div class="pourcentage" >
                     <p> <a href = "xxx.html"> 70% </a> </p> </div>
                 <div class="humidité" > Humidité
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="68" height="68"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
             </div>
             
             <div class="Caméradesurveillance">
@@ -77,7 +77,7 @@
                 <div class="imgcadenas">
                 <p><a href = "xxx.html"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p></div>
                 <div class="camdesuv"> Caméra de <br> surveillance
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="68" height="68"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
             </div> 
             
             <div class="Chauffage"> 
@@ -85,7 +85,7 @@
                 <div class="imgchauffage">
                 <p><a href = "xxx.html"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
                 <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="68" height="68"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
             </div>    
             
 
