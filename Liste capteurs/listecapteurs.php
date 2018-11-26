@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="codepiececss.css" />
         <title>Domisep - Liste des pièces</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
 
     <body>
@@ -12,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -42,7 +43,7 @@
         </div>
     </header>
     <section>
-        <a href ="../Liste pièces/listepieces.html"> < Retour</a> 
+        <a href ="../Liste pièces/listepieces.php"> < Retour</a> 
         <h1> Salon </h1>
     	<div id="salon">
     		
@@ -92,7 +93,7 @@
             <div class="imgajoutcapteur">
                     
                 <div class= "plus"> 
-                <p> <a href = "../AjoutCapteur/AjoutCapteur.html"> + </a> </p> 
+                <p> <a href = "../AjoutCapteur/AjoutCapteur.php"> + </a> </p> 
                 </div>
                    
                 <div class="ajoutcapteur">

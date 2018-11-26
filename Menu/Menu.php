@@ -13,33 +13,28 @@
 
 <header>
 	<div class="wrapper">
-
-        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
-          <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
-                    <div class="dropdownLang">
-                        <div class="noHover">
-                            <p>FR</p>
-                        </div>
-                         <div class="hover">
-                            <p>FR</p>
-                            <a href="english.html"> EN </a>
-                         </div>
-                     </div>
-                </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
- 				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.html"><span>Quitter</span></a></li>
-			</ul>
-        </div>
-    </div>
+    <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
+   		<ul>
+   			<li> 					
+          <div class="dropdownLang">
+            <div class="noHover">
+              <p>FR</p>
+            </div>
+            <div class="hover">
+              <p>FR</p>
+              <a href="english.html"> EN </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+   		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
+   			
+      <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
+  </div>
 </header>
 
     <nav>
-    	<a href="../Menu/Menu.html">Menu</a>/<span id="compte_link">Compte</span>
+    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
     </nav>
     
     
@@ -48,18 +43,24 @@
     
 			<div class="page">
 			
-				<a href = "../Admin_Compte/Compte_Admin.html"><div id="conteneur1">
+				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
 					<div class="element">Compte</div>
 					<img src="../Images/compte.png" alt="Compte" />
 				</div></a>
 			
-				<a href = "../Liste_de_capteurs/Liste_de_capteurs.html"><div id="conteneur2">
+				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
 					<img src="../Images/House.png" alt="House" />
 					<div class="element">Capteurs</div>
 				</div></a>
 			</div>
 
-			
+
+
+    <footer>
+    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
+	</footer>
+	
+	
 		</body>
 		
 	</html>

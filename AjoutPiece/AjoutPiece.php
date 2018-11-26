@@ -13,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -46,7 +46,7 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste pièces/listepieces.html"> < Retour		
+    		<a href="../Liste pièces/listepieces.php"> < Retour		
     		</a>
     	</p>
     	</div>

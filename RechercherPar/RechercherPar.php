@@ -11,40 +11,27 @@
 		
 		<!--HEADER DE WILLIAM-->
 
-		<header>
-        <div class="wrapper">
-            <h1>DOMISEP</h1>
-            <nav>
-                <ul>
-                    <li><a href="Home"><span>Home</span></a></li>
-                    <li>
-                        <div class="dropdownLang">
-                            <div class="noHover">
-                                <p>FR</p>
-                            </div>
-                            <div class="hover">
-                                <p>FR</p>
-                                <a href="english.html"> EN </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <div id="noHoverUser">
-                                    <button class="boutonmenuprincipal"><p></p></button>
-                            </div>
-                            <div id="hoverUser">
-                                <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+	<div class="wrapper">
+    <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
+   		<ul>
+   			<li> 					
+          <div class="dropdownLang">
+            <div class="noHover">
+              <p>FR</p>
+            </div>
+            <div class="hover">
+              <p>FR</p>
+              <a href="english.html"> EN </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+   		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
+   			
+     
+  </div>
+</header>
     
     
     		<!--CODE DE LA PAGE-->
@@ -54,24 +41,33 @@
     			
     		<section>
 		<div class="formulaire">
-			<form method="post" action="TraitementPaysLogement.php">
+			<form method="post" action="../controllers/FormulaireRechercherPar.php">
+                
    				<p>
       					<label for="name">Numéro de téléphone</label>
-      					<input type="text" value="" name="tel">
+      					<input type="text" value="" name="tel" >
       					
       					<label for="message">Adresse email</label>
       					<input type="text" value="" name="mail">
       					
       					<label for="message">Numéro de capteur</label>
       					<input type="text" value="" name="capteur">
+
+                        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
    				</p>
+                
 			</form>
 		</div>
 
-		
-
 			</section>
-    			       
+                
+            
+    <footer>
+    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
+    </footer>
+
+
+
     	</body>
 		
 </html>
