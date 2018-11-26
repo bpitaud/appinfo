@@ -52,13 +52,10 @@
                         <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
 
                     </div>
-<<<<<<< HEAD
                     <div class="Caractere"> Salon
                         <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="57" height="57"/></p>
-=======
                     <div class="Caractere"> Salon </a>
                         <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="68" height="68"/></p>
->>>>>>> 145f0afb8ef299595bf471a73085e5fbb3fe0cc6
                     </div>
                 </div>
                
