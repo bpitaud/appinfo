@@ -156,14 +156,20 @@ header a:hover span {
     padding-right:30px;
     padding-top: em;
     text-align: center;
+    padding-top:15%;
+    margin-top:35%;
+    padding-bottom:10%;
 }
 
 .Caractere {
     display: flex;
     flex-direction: row-reverse;
     text-align: center;
-
+    margin-top:5%;
+    margin-right:28%;
 }
+
+.caract
 
 
 .button
@@ -187,4 +193,8 @@ section a {
     background-color:rgba(0, 0, 0, 0);
     color:white;
     margin-left: 5%;
+}
+
+.figure + {
+    margin-top:90%;
 }

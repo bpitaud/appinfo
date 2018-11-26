@@ -53,7 +53,7 @@
 
                     </div>
                     <div class="Caractere"> Salon
-                        <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="57" height="57"/></p>
+                        <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
                     </div>
                 </div>
                
