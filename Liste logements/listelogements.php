@@ -48,7 +48,7 @@
                 <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> </div>
                 <div class="maisonprincipal"> Maison <br>principale </a></div>
                 <div class="ajoutlogement">
-                    <p><a href="../AjoutLogement/AjoutLogement.php"> + Ajouter un logement </a></p> </div>
+                    <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
     	</div>	
     </section>
 </body> 
