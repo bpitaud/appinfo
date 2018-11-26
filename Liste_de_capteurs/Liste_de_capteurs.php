@@ -43,7 +43,7 @@
 
 
     <section>
-      <form method="post" action="TraitementPaysLogement.php">
+      <form method="post" action="../controllers/FormulaireListe_De_Capteur.php">
           <p>
                 <input type="text" value="" name="capt" placeholder="Rechercher un numéro de capteur">
           </p>

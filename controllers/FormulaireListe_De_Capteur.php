@@ -1,18 +1,16 @@
 <?php
 
 // define variables and set to empty values
-$telErr = $mailErr = $Err =  "";
-$tel = $mail = $capteur = "";
+$Err =  "";
+$capteur = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   
-  if (empty($_POST["tel"])){
+  if (empty($_POST["capt"])){
     $Err = "Rentrer une recherche";
   } else {
-    $tel = test_input($_POST["tel"]);
-    $mail = test_input($_POST["mail"]);
-    $capteur = test_input($_POST["capteur"]);
+    $capteur = test_input($_POST["capt"]);
   }
     
   
@@ -25,10 +23,6 @@ function test_input($data) {
   return $data;
 }
 
-
-
-echo ($tel);
-echo ($mail);
 echo ($capteur);
 
 
