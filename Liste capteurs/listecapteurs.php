@@ -53,7 +53,7 @@
                 <p> <a href = "xxx.html"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> </div>
                 
                 <div class="lumprin"> Lumière <br>principal
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="50" height="50"/></p></div>
             </div> 
             
                           
@@ -70,7 +70,7 @@
                 <div class="pourcentage" >
                     <p> <a href = "xxx.html"> 70% </a> </p> </div>
                 <div class="humidité" > Humidité
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="50" height="50"/></p></div>
             </div>
             
             <div class="Caméradesurveillance">
@@ -78,7 +78,7 @@
                 <div class="imgcadenas">
                 <p><a href = "xxx.html"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p></div>
                 <div class="camdesuv"> Caméra de <br> surveillance
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="50" height="50"/></p></div>
             </div> 
             
             <div class="Chauffage"> 
@@ -86,7 +86,7 @@
                 <div class="imgchauffage">
                 <p><a href = "xxx.html"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
                 <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="52" height="52"/></p></div>
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="50" height="50"/></p></div>
             </div>    
             
 
