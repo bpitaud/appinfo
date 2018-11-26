@@ -54,8 +54,6 @@
                     </div>
                     <div class="Caractere"> Salon
                         <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="57" height="57"/></p>
-                    <div class="Caractere"> Salon </a>
-                        <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="68" height="68"/></p>
                     </div>
                 </div>
                
