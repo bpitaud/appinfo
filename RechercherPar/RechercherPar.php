@@ -5,11 +5,12 @@
 		<meta charset="utf-8">
 		<link href="RechercherPar.css" rel="stylesheet" media="all" type="text/css">
 		<title>RecherchePar</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 	
 		<body>
 		
-		<!--HEADER DE WILLIAM-->
+		<!--HEADER-->
 
 <header>
 	<div class="wrapper">

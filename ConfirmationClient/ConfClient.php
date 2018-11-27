@@ -9,6 +9,7 @@
 
   <body>
 
+		<!--HEADER-->
 
     <header>
       <div class="wrapper">
@@ -28,14 +29,11 @@
           </ul>
            <p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
              
-          <a class="quitter" href="../RechercherPar/RechercherPar.HTML"><span>Quitter</span></a>
+          <a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a>
       </div>
     </header>
 
-
-    			</br>
-				</br>
-				</br>
+    		<!--CODE DE LA PAGE-->
 
     			<h2>Confirmation Client</h2>
 
