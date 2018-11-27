@@ -42,7 +42,7 @@
     			
     		<section>
 		<div class="formulaire">
-			<form method="post" action="../controllers/FormulaireRechercherPar.php">
+			<form method="post" action="../Menu/Menu.php">
                 
    				<p>
       					<label for="name">Numéro de téléphone</label>
