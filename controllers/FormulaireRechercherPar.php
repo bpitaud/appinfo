@@ -1,13 +1,13 @@
 <?php
 
 // define variables and set to empty values
-$telErr = $mailErr = $Err =  "";
+$Err =  "";
 $tel = $mail = $capteur = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   
-  if (empty($_POST["tel"])){
+  if ((empty($_POST["tel"]))&&(empty($_POST["mail"]))&&(empty($_POST["capteur"]))){
     $Err = "Rentrer une recherche";
   } else {
     $tel = test_input($_POST["tel"]);
