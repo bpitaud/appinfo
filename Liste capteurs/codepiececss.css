@@ -177,6 +177,7 @@ header a:hover span {
     display:flex;
     flex-direction: row-reverse;
     text-align: center;
+    padding-left:75%;
 }
 
 .camdesuv
@@ -205,8 +206,11 @@ header a:hover span {
 {
     border : 1px solid white;
     background-color: #3C4459;
-    padding: 2%;
-    margin: auto;
+    padding-left:1%;
+    padding-right:100%;
+    margin-left:7%;
+    margin-right:90%;
+
 }
 
 .plus
@@ -244,7 +248,7 @@ section h1 {
 {
     border : 1px solid white;
     background-color: #3C4459;
-    padding-top: 20%;
+    padding-top: 15%;
     margin: auto;
     font-size: 5em;
     text-align:center;

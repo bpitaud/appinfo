@@ -1,5 +1,5 @@
 <?php
-// define variables and set to empty values
+// ajouter un logement avec les paramètres
 $nameErr = $addressErr = $zipcodeErr = $surfaceErr = $countryErr = "";
 $name = $address = $zipcode = $surface = $country = "";
 
@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
+    // vérifier si le nom contient que des lettres et des espaces
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed"; 
     }
