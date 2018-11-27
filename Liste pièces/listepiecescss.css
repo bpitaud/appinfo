@@ -144,8 +144,9 @@ header a:hover span {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: auto;
-    padding: auto;
+    margin-top:2%;
+    margin-bottom:100%;
+    padding-top: 2%;
 }
 
 .figure {
@@ -195,6 +196,4 @@ section a {
     margin-left: 5%;
 }
 
-.figure + {
-    margin-top:90%;
-}
+
