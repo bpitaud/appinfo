@@ -99,7 +99,35 @@
                 <div class="ajoutcapteur">
                 Ajouter <br> un capteur 
                 </div>
-            </div>
+            <div class="Chauffage"> 
+
+                <div class="imgchauffage">
+                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
+                <div class="chauff"> Chauffage
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+            </div> 
+            
+            <div class="Chauffage"> 
+
+                <div class="imgchauffage">
+                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
+                <div class="chauff"> Chauffage
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+            </div> 
+
+            <div class="Chauffage"> 
+
+                <div class="imgchauffage">
+                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
+                <div class="chauff"> Chauffage
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+            </div> 
+
+
+            
+
+                
+         
     	</div>	
     </section>
 </body>

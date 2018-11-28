@@ -49,6 +49,7 @@
                 <div class="maisonprincipal"> Maison <br>principale </a></div>
                 <div class="ajoutlogement">
                     <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
-    	</div>	
+        </div>	
+        
     </section>
 </body> 

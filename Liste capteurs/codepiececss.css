@@ -135,7 +135,9 @@ header a:hover span {
     display:flex;
     flex-direction:row;
     justify-content: space-around;
-    margin-top: 10%
+    margin-top: 10%;
+    flex-wrap: wrap-reverse;
+    
 }
 
 
@@ -279,3 +281,4 @@ section a{
 .humidité {
     margin-right : 45%;
 }
+
