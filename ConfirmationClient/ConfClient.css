@@ -5,15 +5,16 @@ h2
 	font-size: 40px;
 	text-align: center;
 	font-weight: bold;
-    padding-top: 20%;
+    padding-top: 7%;
 }
 
-p
+ .espace
 { 
 	font-size: 13px;
-    padding-left: 48%/*140px*/;
-    padding-top: 11px;
+    margin-top: 100%;
     color : rgba(255,255,255,0.9);
+    list-style-type: none;
+    text-decoration: none;
     
 }
 
@@ -21,8 +22,6 @@ input {
 	color : rgba(255,255,255,0.9);
     padding: 6px 25px;
     margin:auto;
-    margin-top: 150px;
-    margin-right: 150px;
     display: flex;
     justify-content: flex-end;
     border: 1px solid rgba(255,255,255,0.6);
@@ -31,33 +30,46 @@ input {
     background-color: rgba(0,0,0,0.5);
     text-align: center;
     font-size: 13px;
+    position: absolute; top: 60%; left: 70%; right: 2%;
 }
 
 #conteneur
 {
     display: flex;
-    padding-top: 20px;
     justify-content: space-between;
-
+    width: 70%;
+    height: 20%;
+    position: absolute; top:50%; left:20%;
+    border: white solid 2px;
 }
+.texte
+{
+    border: white solid 2px;
+    width: 100%;
+}
+
+
+
+
+
+
+
 
 /* HEADER */
 *
 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
 }
 header {
+    text-align: center;
     color:white;
-    font-size: 15px
-    width : 100%;
+    font-size: 15px;
 }
-
-
 
 nav
 {
@@ -65,28 +77,30 @@ nav
 }
 nav+a
 {
-	text-decoration : none;
-	color: rgba(255, 255, 255, 0.8);
+    text-decoration : none;
+    color: rgba(255, 255, 255, 0.8);
 }
 #compte_link
 {
-	text-decoration : underline; 
+    text-decoration : underline; 
 }
 
 body{
+    /*background-color: rgba(0, 0, 0, 0.8);*/
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
-	background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
-    
+    background-position: 10% 0%;
 }
 
 
 .wrapper {
-    display: inline-block;
-    width: 100%;
-
-    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    width: 90%;
 }
 
 
@@ -97,10 +111,11 @@ h1 strong {
     font-weight: bold;
 }
 h1{
-    font-size: 28px;;
+    font-size: 28px;
+    padding-left: 3%;
+    margin-bottom: 10px;
     font-weight: bold;
     border: solid 2 px white;
-    position: absolute; top: 0%; left: 3%; right: 0;
 }
 /* langage scroll bar */
 .dropdownLang .noHover {
@@ -114,11 +129,7 @@ h1{
 
 .dropdownLang
 {
-	position: absolute; top: 5%; left: 50%; right: 0%;
-   
-    width:10%;
-
-    /*margin: 16% 10% 10% 10%;*/
+    margin: 16% 10% 10% 10%;
 }
 .dropdownLang .noHover p {
     text-align: left;
@@ -143,38 +154,36 @@ h1{
     display: none;
 }
 
-
-
-
+.haut_droite
+ {
+    display: flex;
+    width:123%;
+    margin-right: 500%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+}
 .admin
 {
-	width: 21%;
-	color:rgba(255, 255, 255, 0.8);
-    position: absolute; top: 5%; left: 78%; right: 2%%;
-    padding-right: 0%;
+    border: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 100%;
+    color:rgba(255, 255, 255, 0.8);
 }
-
-
 
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 70%; right: 5%;
-    word-wrap: break-word;
-    width: 28%;
-   
+    position: absolute; bottom: 2%; left: 73%; right: 0;
 }
 .quitter
 {
-	display: block;
+    display: block;
     border: 2px solid white;
     background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
     background-size: 20px;
-    padding-left: 25px;
-    width: 5%;
-    /*margin: 7% 0% 0 100%;
-    padding: 1% 0 1% 0%;*/
-    position: absolute; top: 15%; left: 78%; right: 5%;
-    min-width: 70px;
-    
+    width: 30%;
+    margin: 7% 0% 0 100%;
+    padding: 1% 0 1% 0%;
 }

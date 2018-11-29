@@ -53,7 +53,7 @@ h1 strong {
     font-weight: bold;
 }
 h1{
-    font-size: 28px;;
+    font-size: 28px;
     font-weight: bold;
     border: solid 2 px white;
     position: absolute; top: 0%; left: 3%; right: 0;
@@ -128,8 +128,6 @@ footer p
     background-size: 20px;
     padding-left: 25px;
     width: 5%;
-    /*margin: 7% 0% 0 100%;
-    padding: 1% 0 1% 0%;*/
     position: absolute; top: 15%; left: 78%; right: 5%;
     min-width: 70px;
     
