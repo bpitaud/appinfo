@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nameErr = "Only letters and white space allowed"; 
     }
   }
-
   if (empty($_POST["type"])) {
     $typeErr = "type is required";
   } else {

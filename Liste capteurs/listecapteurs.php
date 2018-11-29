@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="codepiececss.css" />
+        <link rel="stylesheet" href="codecapteur.css" />
         <title>Domisep - Liste des pièces</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
@@ -43,91 +43,69 @@
         </div>
     </header>
     <section>
-        <a href ="../Liste pièces/listepieces.php"> < Retour</a> 
+        <a id ="retour" href ="../Liste pièces/listepieces.php"> < Retour</a> 
         <h1> Salon </h1>
-    	<div id="salon">
+    	<div id="capteurs">
     		
-            <div class="lumiereprincipale"> 
+            <div class="block"> 
             
-                <div class="imglumblanche" >
+                <div class="figure" >
                 <p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> </div>
                 
-                <div class="lumprin"> Lumière <br>principal
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+                <div class="caractère"> Lumière <br>principal
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p></div>
             </div> 
             
                           
-            <div class="lampedechevet"> 
+            <div class="block"> 
             
-                <div class="imglumbjaune">
+                <div class="figure">
                 <p><a href = "#"><img src="../Images/iconelumierejaune.png" alt="photo de lumiere"width="128" height="128"/></a></p></div>
-                <div class="lumchevet"> Lampe <br> de chevet
-                <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="45" height="45"/></p></div>
+                <div class="caractère"> Lampe <br> de chevet
+                <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="39" height="39"/></p></div>
             </div>    
             
-            <div class="Humiditégene"> 
+            <div class="block"> 
 
-                <div class="pourcentage" >
-                    <p> <a href = "#"> 70% </a> </p> </div>
-                <div class="humidité" > Humidité
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+                <div class="figure" >
+                    <div class="pourcentage"> <p> <a href = "#"> 70%  </a> </p> </div> 
+                </div>
+                <div class="caractère" > Humidité
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p></div>
             </div>
             
-            <div class="Caméradesurveillance">
+            <div class="block">
 
-                <div class="imgcadenas">
+                <div class="figure">
                 <p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p></div>
-                <div class="camdesuv"> Caméra de <br> surveillance
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
+                <div class="caractère"> Caméra de <br> surveillance
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p></div>
             </div> 
             
-            <div class="Chauffage"> 
+            <div class="block"> 
 
-                <div class="imgchauffage">
-                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
-                <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
-            </div>    
+                <div class="figure">
+                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
+                </div>
+                <div class="caractère"> Chauffage
+                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
+                </div>
+            </div>   
             
-
-            <div class="imgajoutcapteur">
+          
+        
+            <div class="block">
                     
-                <div class= "plus"> 
+                <div class= "figure"> 
+                    <div class="plus">
                 <p> <a href = "../AjoutCapteur/AjoutCapteur.php"> + </a> </p> 
                 </div>
-                   
-                <div class="ajoutcapteur">
-                Ajouter <br> un capteur 
                 </div>
-            <div class="Chauffage"> 
+                   
+                <div class="caractère">
+                Ajouter <br> un capteur </div>
+             </div>
 
-                <div class="imgchauffage">
-                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
-                <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
-            </div> 
-            
-            <div class="Chauffage"> 
-
-                <div class="imgchauffage">
-                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
-                <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
-            </div> 
-
-            <div class="Chauffage"> 
-
-                <div class="imgchauffage">
-                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p></div>
-                <div class="chauff"> Chauffage
-                <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="45" height="45"/></p></div>
-            </div> 
-
-
-            
-
-                
-         
-    	</div>	
-    </section>
+</div>
+</section>
 </body>
