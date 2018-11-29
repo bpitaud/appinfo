@@ -1,3 +1,12 @@
+<?php
+//Dans la page liste piece => récupérer l'IDlogement
+require 'database.php';
+$nomDulogement = salon;
+  $logement = $db -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+  session_start();
+  $_SESSION["logementID"] = $utilisateurID;
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,9 +68,9 @@
                
                 <div class="block"> 
                     <div class="figure">
-                            <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p>
+                            <div class="plus" > <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> </div>
                             
-                            </div>
+                     </div>
                     <div class="Caractere"> Ajouter </a></div>
                 </div>   
     	</div>	

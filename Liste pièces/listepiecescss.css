@@ -102,7 +102,7 @@ header a:hover span {
 .dropdown:hover #hoverUser {
     display:block;
     border-radius: 7px;
-    width: 150x;
+    width: 150px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -138,6 +138,7 @@ header a:hover span {
     margin-top: 10%;
     margin:auto;
     width: 50%;
+    flex-wrap: wrap;
 }
 
 .block {
@@ -155,11 +156,13 @@ header a:hover span {
     border : 1px solid white;
     background-color: #3C4459;
     padding-right:30px;
-    padding-top: em;
     text-align: center;
     padding-top:15%;
     margin-top:35%;
     padding-bottom:10%;
+    width: 130px;
+    height: 130px;
+    overflow:hidden;
 }
 
 .Caractere {
@@ -170,7 +173,7 @@ header a:hover span {
     margin-right:28%;
 }
 
-.caract
+
 
 
 .button
@@ -196,4 +199,9 @@ section a {
     margin-left: 5%;
 }
 
+.figure .plus {
+    text-align: center;
+    padding-bottom: 30%;
+    margin-bottom: 10%;
+}
 

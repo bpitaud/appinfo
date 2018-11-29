@@ -130,109 +130,46 @@ header a:hover span {
     display: none;
 }
 
-#salon 
+#capteurs 
 {
-    display:flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content: left;
     margin-top: 10%;
-    flex-wrap: wrap-reverse;
-    
-}
-
-
-.lumprin
-{
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: center;
-}
-
-.imglumblanche
-{
-    border : 1px solid white;
-    background-color: #3C4459;
-    margin: auto;
-    padding-left:0.1%;
-    padding-right: 65%;
-}
-
-
-.lumchevet
-{
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.imglumbjaune
-{
-    border : 1px solid yellow;
-    padding-left:0.1%;
-    padding-right:10%;
-    background-color: #3C4459;
-    margin: auto;
-}
-
-
-.humidité
-{
+    flex-wrap: wrap;
     display:flex;
-    flex-direction: row-reverse;
-    text-align: center;
-    padding-left:75%;
+    margin-left : 8%;
+    margin-right: 8%;
 }
 
-.camdesuv
-{
+.block {
     display: flex;
-    flex-direction: row-reverse;
+    width: 14.5%;
+    flex-direction: column;
     text-align: center;
+    margin-top:5%;
+    margin-bottom:10%;
+    margin-left:2%;
+    margin-right:2%;
 }
 
-.imgcadenas
-{
-    border : 1px solid white;
-    background-color: #3C4459;
-    padding: 2%;
-    margin: auto;
-}
 
-.chauff
+.caractère
 {
     display:flex;
     flex-direction:row-reverse;
-    text-align: center;
-}
-
-.imgchauffage
-{
-    border : 1px solid white;
-    background-color: #3C4459;
+    text-align: left;
     padding-left:1%;
-    padding-right:100%;
-    margin-left:7%;
-    margin-right:90%;
+    margin-right: 20%;
 
 }
 
-.plus
+.pourcentage
 {
-    border : 1px solid white;
-    background-color: #3C4459;
-    padding-bottom: 10%;
-    margin: auto;
-    font-size:10em;
-}
-.plus p{
-    margin-left:0%;
-    margin-right:500%;
-    margin-top:-25%;
-    margin-bottom:-50%;
-}
-.ajoutcapteur
-{
+    font-size: 63px;
     text-align:center;
-    padding-bottom:26%;
+    margin:auto;
+    padding-top:35%;
+    word-wrap:break-word;
 }
 
 
@@ -246,39 +183,41 @@ section h1 {
     margin-top:5%;
 }
 
-.pourcentage
+.figure
 {
     border : 1px solid white;
     background-color: #3C4459;
-    padding-top: 15%;
-    margin: auto;
+    padding-top: 7%;
+    padding-bottom:7%;
+    padding-right:7%;
+    padding-left:7%;
+    margin-top: 0%;
+    margin-bottom:3%;
     font-size: 5em;
     text-align:center;
-    padding-left: 10%;
-    padding-right:0%;
+    width: 85%;
+    height: 100%;
+    overflow:hidden;
+   
 } 
 
-.pourcentage p {
-    margin-left:-10%;
-    margin-right:500%;
-    margin-top:0%;
-    margin-bottom:0%;
 
-}
 
-section a{
+section #retour{
     display:flex;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     margin-left: 5%;
 }
 
-.humiditégene {
-    margin:auto;
-    padding:auto;
+
+.figure .plus {
+    font-size: 2em;
+    text-align:center;
 }
 
-.humidité {
-    margin-right : 45%;
+.caractère .lampe {
+    color:yellow;
 }
+
 

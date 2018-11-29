@@ -43,16 +43,18 @@
 
     <div id="conteneur">
     	<div class="texte">
-				<em classe="espace">Nom : NOM</br></em>
-				<em classe="espace">Prénom : PRENOM</br></em>
-				<em classe="espace">Numéro de téléphone : +33 0 00 00 00 00</br></em>
-				<em classe="espace">Adresse email : ADRESSE.EMAIL@MAIL.COM </em>
+
+				<em class="espace">Nom : NOM</br></em>
+				<em class="espace">Prénom : PRENOM</br></em>
+				<em class="espace">Numéro de téléphone : +33 0 00 00 00 00</br></em>
+				<em class="espace">Adresse email : ADRESSE.EMAIL@MAIL.COM </em>
           
     		<div class="bouton">
     		<input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
     		</div>
   	   </div>
     </div>
+
 
     <footer>
     	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
