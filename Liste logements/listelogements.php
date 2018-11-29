@@ -1,3 +1,17 @@
+<?php
+// Pour la demo mettre ca dans la page liste des logements 
+  require 'database.php';
+  $utilisateurID = 1;
+  session_start();
+  $_SESSION["utilisateurID"] = $utilisateurID;
+   /*A la page connection (une fois qu'elle sera crée)
+  require 'database.php';
+  $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
+  session_start();
+  $_SESSION["utilisateurID"] = $utilisateurID;
+*/
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,6 +64,7 @@
                 <div class="ajoutlogement">
                     <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
         </div>	
+
         
     </section>
 </body> 

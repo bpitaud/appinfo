@@ -1,5 +1,6 @@
 <?php
 
+
 require("database.php");
 
 // Ajouter un logement 
