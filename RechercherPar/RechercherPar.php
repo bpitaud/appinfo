@@ -42,7 +42,7 @@
     			
     		<section>
 		<div class="formulaire">
-			<form method="post" action="../Menu/Menu.php">
+			<form method="post" action="../ConfirmationClient/ConfClient.php">
                 
    				<p>
       					<label for="name">Numéro de téléphone</label>

@@ -1,29 +1,29 @@
 <?php
 // ajouter un logement avec les paramètres
-$nameErr = $addressErr = $zipcodeErr = $surfaceErr = $countryErr = "";
-$name = $address = $zipcode = $surface = $country = "";
+$nomErr = $adresseErr = $codepostaleErr = $surfaceErr = $paysErr = $utilisateurIDErr = "";
+$nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+  if (empty($_POST["nom"])) {
+    $nomErr = "Name is required";
   } else {
-    $name = test_input($_POST["name"]);
+    $nom = test_input($_POST["nom"]);
     // vérifier si le nom contient que des lettres et des espaces
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+    if (!preg_match("/^[a-zA-Z ]*$/",$nom)) {
+      $nomErr = "Only letters and white space allowed"; 
     }
   }
   
-  if (empty($_POST["address"])) {
-    $addressErr = "Address is required";
+  if (empty($_POST["adresse"])) {
+    $adresseErr = "Address is required";
   } else {
-    $address = test_input($_POST["address"]);
+    $adresse = test_input($_POST["adresse"]);
   }
     
-  if (empty($_POST["zipcode"])) {
-    $zipcodeErr = "Zipcode is required";
+  if (empty($_POST["codepostale"])) {
+    $codepostaleErr = "Zipcode is required";
   } else {
-    $zipcode = test_input($_POST["zipcode"]);
+    $codepostale = test_input($_POST["codepostale"]);
   }
 
   if (empty($_POST["surface"])) {
@@ -32,12 +32,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surfaceErr = test_input($_POST["surface"]);
   }
 
-  if (empty($_POST["country"])) {
-    $countryErr = "Country is required";
+  if (empty($_POST["pays"])) {
+    $paysErr = "Country is required";
   } else {
-    $country = test_input($_POST["country"]);
+    $pays = test_input($_POST["pays"]);
+  }
+
+  if (empty($_SESSION['utilisateurID']) {
+    $utilisateurIDErr = "utilisateur ID is required";
+  } else {
+    $utilisateurID = test_input($_SESSION['utilisateurID']);
   }
 }
+
+if ()
+ajoutLogement($nom, $adresse, $codepostale, $surface, $utilisateurID, $pays);
+
+echo $db -> query('SELECT * FROM logement WHERE nom =$nom') 
+
 
 function test_input($data) {
   $data = trim($data);
@@ -46,10 +58,6 @@ function test_input($data) {
   echo $data;
 }
 
-echo $name;
-echo $address;
-echo $zipcode;
-echo $surface;
-echo $country;
+if (isset($nom)&& isset($adresse) && isset($) && isset($_POST['surface']))
 
 ?>

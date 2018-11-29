@@ -138,6 +138,7 @@ header a:hover span {
     align-items: center;
     margin: auto;
     margin-top: 0%;
+    flex-wrap: wrap;
 
 }
 
