@@ -54,7 +54,7 @@
 		<input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
 
 		</div>
-	</div>
+  </div>
 
     <footer>
     	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
