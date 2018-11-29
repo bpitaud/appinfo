@@ -13,24 +13,29 @@
 
 <header>
   <div class="wrapper">
-    <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
-       <ul>
-         <li> 					
-          <div class="dropdownLang">
-            <div class="noHover">
-              <p>FR</p>
-            </div>
-            <div class="hover">
-              <p>FR</p>
-              <a href="english.html"> EN </a>
-            </div>
-          </div>
-        </li>
+
+        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
+        <div class="haut">    
+      <ul>
+        <div class="haut_droite">
+        <li>
+          
+                    <div class="dropdownLang">
+                        <div class="noHover">
+                            <p>FR</p>
+                        </div>
+                         <div class="hover">
+                            <p>FR</p>
+                            <a href="english.html"> EN </a>
+                        </div>
+                    </div>
+                </li>
+          <li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+        </div>
+                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
       </ul>
-       <p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
-         
-      <a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a>
-  </div>
+        </div>
+    </div>
 </header>
 
     		<!--CODE DE LA PAGE-->
