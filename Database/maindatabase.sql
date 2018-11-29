@@ -23,15 +23,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Action_controleur`
+-- Table structure for table `action_controleur`
 --
 
-CREATE TABLE `Action_controleur` (
-  `ID_action` int(11) NOT NULL,
+CREATE TABLE `action_controleur` (
+  `actionID` int(11) NOT NULL,
   `valeur_min` int(11) DEFAULT NULL,
   `valeur_max` int(11) NOT NULL,
   `valeur` int(11) NOT NULL,
-  `ID_controleur` varchar(15) NOT NULL
+  `controleurID` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -41,11 +41,11 @@ CREATE TABLE `Action_controleur` (
 --
 
 CREATE TABLE `capteur` (
-  `ID_capteur` varchar(15) NOT NULL,
-  `Nom` varchar(20) NOT NULL,
-  `Type` varchar(15) NOT NULL,
-  `Etat` varchar(3) NOT NULL,
-  `ID_pièce` int(11) NOT NULL
+  `capteurID` varchar(15) NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `type` varchar(15) NOT NULL,
+  `etat` varchar(3) NOT NULL,
+  `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -55,39 +55,40 @@ CREATE TABLE `capteur` (
 --
 
 CREATE TABLE `controleur` (
-  `ID_controleur` varchar(15) NOT NULL,
-  `Nom` varchar(20) NOT NULL,
-  `Type` int(15) NOT NULL,
-  `Etat` int(3) NOT NULL,
-  `ID_pièce` int(11) NOT NULL
+  `controleurID` varchar(15) NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `type` int(15) NOT NULL,
+  `etat` int(3) NOT NULL,
+  `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Logement`
+-- Table structure for table `logement`
 --
 
-CREATE TABLE `Logement` (
-  `ID_logement` int(11) NOT NULL,
-  `Nom` varchar(15) NOT NULL,
-  `Adresse` varchar(100) NOT NULL,
+CREATE TABLE `logement` (
+  `logementID` int(11) NOT NULL,
+  `nom` varchar(15) NOT NULL,
+  `adresse` varchar(100) NOT NULL,
   `codepostale` int(11) NOT NULL,
   `surface` int(11) NOT NULL,
-  `ID_utilisateur` int(11) NOT NULL
+  `utilisateurID` int(11) NOT NULL,
+  `pays` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Pièce`
+-- Table structure for table `piece`
 --
 
-CREATE TABLE `Pièce` (
-  `ID_pièce` int(11) NOT NULL,
-  `Nom` varchar(20) NOT NULL,
-  `Superficie` int(11) NOT NULL,
-  `ID_Logement` int(11) NOT NULL
+CREATE TABLE `piece` (
+  `pieceID` int(11) NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `surface` int(11) NOT NULL,
+  `logementID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -97,14 +98,14 @@ CREATE TABLE `Pièce` (
 --
 
 CREATE TABLE `utilisateur` (
-  `ID_utilisateur` int(11) NOT NULL,
-  `Prénom` varchar(20) NOT NULL,
-  `Nom` varchar(25) NOT NULL,
+  `utilisateurID` int(11) NOT NULL,
+  `prenom` varchar(20) NOT NULL,
+  `nom` varchar(25) NOT NULL,
   `adressemail` varchar(255) NOT NULL,
-  `téléphone` varchar(15) NOT NULL,
+  `telephone` varchar(15) NOT NULL,
   `naissance` date NOT NULL,
   `motdepasse` varchar(12) NOT NULL,
-  `Admin` tinyint(1) NOT NULL
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -113,12 +114,12 @@ CREATE TABLE `utilisateur` (
 -- Table structure for table `Valeur_Capteur`
 --
 
-CREATE TABLE `Valeur_Capteur` (
-  `ID_valeur` int(11) NOT NULL,
-  `Time_update` datetime NOT NULL,
-  `Type` varchar(15) NOT NULL,
-  `Valeur` int(11) DEFAULT NULL,
-  `ID_capteur` varchar(15) NOT NULL
+CREATE TABLE `valeur_capteur` (
+  `valeurID` int(11) NOT NULL,
+  `time_update` datetime NOT NULL,
+  `type` varchar(15) NOT NULL,
+  `valeur` int(11) DEFAULT NULL,
+  `capteurID` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -126,46 +127,46 @@ CREATE TABLE `Valeur_Capteur` (
 --
 
 --
--- Indexes for table `Action_controleur`
+-- Indexes for table `action_controleur`
 --
-ALTER TABLE `Action_controleur`
-  ADD PRIMARY KEY (`ID_action`);
+ALTER TABLE `action_controleur`
+  ADD PRIMARY KEY (`actionID`);
 
 --
 -- Indexes for table `capteur`
 --
 ALTER TABLE `capteur`
-  ADD PRIMARY KEY (`ID_capteur`);
+  ADD PRIMARY KEY (`capteurID`);
 
 --
 -- Indexes for table `controleur`
 --
 ALTER TABLE `controleur`
-  ADD PRIMARY KEY (`ID_controleur`);
+  ADD PRIMARY KEY (`controleurID`);
 
 --
--- Indexes for table `Logement`
+-- Indexes for table `logement`
 --
-ALTER TABLE `Logement`
-  ADD PRIMARY KEY (`ID_logement`);
+ALTER TABLE `logement`
+  ADD PRIMARY KEY (`logementID`);
 
 --
--- Indexes for table `Pièce`
+-- Indexes for table `piece`
 --
-ALTER TABLE `Pièce`
-  ADD PRIMARY KEY (`ID_pièce`);
+ALTER TABLE `piece`
+  ADD PRIMARY KEY (`pieceID`);
 
 --
 -- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`ID_utilisateur`);
+  ADD PRIMARY KEY (`utilisateurID`);
 
 --
--- Indexes for table `Valeur_Capteur`
+-- Indexes for table `valeur_capteur`
 --
-ALTER TABLE `Valeur_Capteur`
-  ADD PRIMARY KEY (`ID_valeur`);
+ALTER TABLE `valeur_capteur`
+  ADD PRIMARY KEY (`valeurID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -174,32 +175,32 @@ ALTER TABLE `Valeur_Capteur`
 --
 -- AUTO_INCREMENT for table `Action_controleur`
 --
-ALTER TABLE `Action_controleur`
-  MODIFY `ID_action` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `action_controleur`
+  MODIFY `actionID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Logement`
 --
-ALTER TABLE `Logement`
-  MODIFY `ID_logement` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `logement`
+  MODIFY `logementID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Pièce`
 --
-ALTER TABLE `Pièce`
-  MODIFY `ID_pièce` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `piece`
+  MODIFY `pieceID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `ID_utilisateur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `utilisateurID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Valeur_Capteur`
 --
-ALTER TABLE `Valeur_Capteur`
-  MODIFY `ID_valeur` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `valeur_capteur`
+  MODIFY `valeurID` int(11) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
