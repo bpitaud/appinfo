@@ -138,6 +138,7 @@ header a:hover span {
     margin-top: 10%;
     margin:auto;
     width: 50%;
+    flex-wrap: wrap;
 }
 
 .block {
@@ -198,4 +199,9 @@ section a {
     margin-left: 5%;
 }
 
+.figure .plus {
+    text-align: center;
+    padding-bottom: 30%;
+    margin-bottom: 10%;
+}
 
