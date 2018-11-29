@@ -54,11 +54,11 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutLogement.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom du logement" required/>
-      				<input type="text" name="address" placeholder="Adresse du logement" required />
-       				<input type="text" name="zipcode" placeholder="Code postale" required />
+       				<input type="text" name="nom" placeholder="Nom du logement" required/>
+      				<input type="text" name="adresse" placeholder="Adresse du logement" required />
+       				<input type="text" name="codepostale" placeholder="Code postale" required />
        				<input type="text" name="surface" placeholder="Surface du logement" required>
-       				<select name="country" required>
+       				<select name="pays" required>
        					<option value="france"> France </option>
        					<option value="royaume-uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
