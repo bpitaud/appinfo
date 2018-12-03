@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<link href="Menu.css" rel="stylesheet" media="all" type="text/css">
+		<link href="Menub.css" rel="stylesheet" media="all" type="text/css">
 		<title>Menu</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
@@ -40,7 +40,7 @@
 </header>
 
     <nav>
-    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
+    	<span id="compte_link"><a href="../Menu/Menu.php">Menu</a></span>
     </nav>
     
     
@@ -50,13 +50,14 @@
 			<div class="page">
 			
 				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
-					<div class="element">Compte</div>
-					<img src="../Images/compte.png" alt="Compte" />
+					<div class="element1">Compte</div>
+					<!--<img src="../Images/compte.png" alt="Compte" />-->
 				</div></a>
 			
 				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
-					<img src="../Images/House.png" alt="House" />
-					<div class="element">Capteurs</div>
+
+					<!--<img src="../Images/House.png" alt="House" />-->
+					<div class="element2">Capteurs</div>
 				</div></a>
 			</div>
 

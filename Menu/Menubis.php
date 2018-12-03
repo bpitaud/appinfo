@@ -50,14 +50,13 @@
 			<div class="page">
 			
 				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
-					<div class="element1">Compte</div>
-					<!--<img src="../Images/compte.png" alt="Compte" />-->
+					<div class="element">Compte</div>
+					<img src="../Images/compte.png" alt="Compte" />
 				</div></a>
 			
 				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
-
-					<!--<img src="../Images/House.png" alt="House" />-->
-					<div class="element2">Capteurs</div>
+					<img src="../Images/House.png" alt="House" />
+					<div class="element">Capteurs</div>
 				</div></a>
 			</div>
 

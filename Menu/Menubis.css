@@ -11,24 +11,21 @@ margin-top: 15%;
 
 #conteneur1
 {
-    background: rgba(0, 0, 0, 0) url("../Images/compte.png") no-repeat bottom;
-	background-size: 100%;
-    background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 0.2px solid rgba(255,255,255,0.6);
-    padding-bottom: 4%;
-    width: 250px;
-    height:220px;
-}
+    padding-top: 4%;
+    width: 100%;
+    height : 100%;
 
+}
 
 #conteneur2
 {
-    background: rgba(0, 0, 0, 0) url("../Images/House.png") no-repeat top;
-    background-size: 100%;
+
 	background-color: rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
@@ -36,9 +33,8 @@ margin-top: 15%;
     align-items: center;
     border: 0.2px solid rgba(255,255,255,0.6);
     padding-bottom: 4%;
-    width: 250px;
-    height:220px;
-    
+    width: 100%;
+    height : 100%;
     
 
 }
@@ -56,20 +52,14 @@ margin-top: 15%;
 
 }
 
-.element1
+.element
 {
 	font-size: 50px;
 	font-weight: lighter;
 	color: white;
-    padding-bottom: 65%;
+	
 }
-.element2
-{
-    font-size: 50px;
-    font-weight: lighter;
-    color: white;
-    padding-top: 65%;
-}
+
 
 
 /* HEADER */
