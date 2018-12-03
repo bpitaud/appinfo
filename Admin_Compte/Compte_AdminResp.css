@@ -1,8 +1,8 @@
 *
 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
@@ -21,18 +21,18 @@ nav
 }
 nav+a
 {
-	text-decoration : none;
-	color: rgba(255, 255, 255, 0.8);
+    text-decoration : none;
+    color: rgba(255, 255, 255, 0.8);
 }
 #compte_link
 {
-	text-decoration : underline; 
+    text-decoration : underline; 
 }
 
 body{
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
-	background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
     
 }
@@ -70,7 +70,7 @@ h1{
 
 .dropdownLang
 {
-	position: absolute; top: 5%; left: 50%; right: 0%;
+    position: absolute; top: 5%; left: 50%; right: 0%;
    
     width:10%;
 
@@ -104,8 +104,8 @@ h1{
 
 .admin
 {
-	width: 21%;
-	color:rgba(255, 255, 255, 0.8);
+    width: 21%;
+    color:rgba(255, 255, 255, 0.8);
     position: absolute; top: 5%; left: 78%; right: 2%;
     padding-right: 0%;
 }
@@ -122,13 +122,88 @@ footer p
 }
 .quitter
 {
-	display: block;
+    display: block;
     border: 2px solid white;
     background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
     background-size: 20px;
     padding-left: 25px;
     width: 5%;
-    position: absolute; top: 15%; left: 78%; right: 5%;
+    position: absolute; top: 15%; left: 90%; right: 5%;
     min-width: 70px;
     
+}
+
+
+
+
+
+section
+{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	justify-content: space-around;
+	margin: auto;
+	overflow: auto;
+	font-size: 20px;
+    flex-wrap: wrap;
+}
+.info
+{
+	width: 35%;
+	min-width: 280px;
+	border: 0px white solid;
+	padding: 2px;
+	height: 500px;
+	align-items : stretch;
+	line-height: 100%;
+}
+.base
+{
+	display: flex;
+    box-sizing: border-box;
+	width: 100%;
+	height:100%;
+  	border-bottom: 1px solid white;
+ 	border-top: none;
+  	margin-top: 13%;
+  	font-style: normal;
+  	font-weight: 100; 
+}
+.base2
+{
+	display: flex;
+    box-sizing: border-box;
+	width: 100%;
+	height:100%;
+  	border-bottom: 1px solid white;
+ 	border-top: none;
+  	margin-top: 13%;
+  	margin-bottom: 10%;
+  	font-style: normal;
+  	font-weight: 100; 
+}
+
+
+.bouton {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+padding: 2px 0 3px 0;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
+}
+
+h2
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+     position: absolute; top: 15%;
 }
