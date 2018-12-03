@@ -105,7 +105,7 @@
                 <div class="caractère">
                 Ajouter <br> un capteur </div>
              </div>
-
+          
 </div>
 </section>
 </body>
