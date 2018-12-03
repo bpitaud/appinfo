@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="listepiecescss.css" />
-        <title>Domisep - Liste des pièces</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="connexion.css" />
+    <title>connexion</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <header>
+	<header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
@@ -42,28 +42,19 @@
             </nav>
         </div>
     </header>
-    <section>
-         <a href ="../Liste logements/listelogements.php"> < Retour</a> 
-        <h2>Pièce(s) du logement</h2>
-    	<div id="pieces">    
-                <div class="block" >
-                    <div class="figure">
-
-                        <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
-
-                    </div>
-                    <div class="Caractere"> Salon
-                        <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
-                    </div>
-                </div>
-               
-                <div class="block"> 
-                    <div class="figure">
-                            <div class="plus" > <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> </div>
-                            
-                    </div>
-                    <div class="Caractere"> Ajouter </a></div>
-                </div>   
-    	</div>	
-    </section>
-</body> 
+    <h1> Se connecter </h1>
+    <div class="formulaire">
+    <form method="post" action="../controllers/FormulaireConnexion.php">
+   				<p>
+       				<input type="text" name="adressemail" placeholder="Entrer votre adresse mail" required/>
+      				<input type="text" name="motdepasse" placeholder="Entrer votre mot de passe" required />
+                    <input type="submit" value="Suivant">
+   				</p>
+			</form>
+        </div>
+    <div class="motdepasse"> Mot de passe oublié  
+    </div>
+    <div class="inscription">            
+    <button class="bouton"href="../Inscription.php">Créer un compte</button>
+    </div>
+</body>    
