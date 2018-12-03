@@ -38,17 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pays = test_input($_POST["pays"]);
   }
 
-  if (empty($_SESSION['utilisateurID']) {
+  if (empty($_SESSION["utilisateurID"])) {
     $utilisateurIDErr = "utilisateur ID is required";
   } else {
     $utilisateurID = test_input($_SESSION['utilisateurID']);
   }
 }
 
-if ()
-ajoutLogement($nom, $adresse, $codepostale, $surface, $utilisateurID, $pays);
-
-echo $db -> query('SELECT * FROM logement WHERE nom =$nom') 
+$db = connect();
+echo $db-> query('SELECT * FROM logement WHERE nom =$nom');
 
 
 function test_input($data) {
@@ -57,7 +55,5 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   echo $data;
 }
-
-if (isset($nom)&& isset($adresse) && isset($) && isset($_POST['surface']))
 
 ?>
