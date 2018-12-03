@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+ 				<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
