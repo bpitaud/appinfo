@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-
+$db = connect();
 echo $db -> query('SELECT * FROM logement WHERE nom =$nom');
 
 
