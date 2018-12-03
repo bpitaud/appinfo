@@ -173,7 +173,7 @@ ALTER TABLE `valeur_capteur`
 --
 
 --
--- AUTO_INCREMENT for table `Action_controleur`
+-- AUTO_INCREMENT for table `action_controleur`
 --
 ALTER TABLE `action_controleur`
   MODIFY `actionID` int(11) NOT NULL AUTO_INCREMENT;
@@ -201,6 +201,8 @@ ALTER TABLE `utilisateur`
 --
 ALTER TABLE `valeur_capteur`
   MODIFY `valeurID` int(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `utilisateur` (`utilisateurID`, `prenom`, `nom`, `adressemail`, `telephone`, `naissance`, `motdepasse`, `admin`) VALUES ('1', 'Charlotte', 'Bruzeau', 'Cha@gmail.com', '0631612492', '2018-10-03', 'chacha', '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

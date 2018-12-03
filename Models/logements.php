@@ -1,6 +1,5 @@
 <?php
 
-
 require("database.php");
 session_start();
 
@@ -8,7 +7,8 @@ session_start();
 // Ajouter un logement 
 
 function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
-    $reponse = $db -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
+    $conn = connect();
+    $reponse = $conn -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
     $reponse->execute(array(
         'utilisateurID' => $utilisateurID,
         'nom' => $nom,
@@ -20,4 +20,5 @@ function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, 
     
     echo 'Le logement a bien été ajouté !';
     }
-    ?>  
+
+?>  
