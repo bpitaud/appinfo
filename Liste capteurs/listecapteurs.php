@@ -61,7 +61,7 @@
             
                 <div class="figure">
                 <p><a href = "#"><img src="../Images/iconelumierejaune.png" alt="photo de lumiere"width="128" height="128"/></a></p></div>
-                <div class="caractère"> Lampe <br> de chevet
+                <div class="caractère"> <div class="lampe" > Lampe <br> de chevet </div>
                 <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="39" height="39"/></p></div>
             </div>    
             
@@ -105,7 +105,7 @@
                 <div class="caractère">
                 Ajouter <br> un capteur </div>
              </div>
-
+          
 </div>
 </section>
 </body>
