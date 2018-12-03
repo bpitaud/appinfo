@@ -1,6 +1,6 @@
  <?php
 // Dans la page liste capteur => récupérer l'IDpiece
- $db = 'database.php'
+ $db = 'database.php';
  require $db;
   $piece = $db -> query ('SELECT pieceID FROM piece WHERE nom = $nomDuLogement');
   session_start();
