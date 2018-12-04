@@ -5,7 +5,7 @@ h2
     font-size: 50px;
     margin-top: 10%;
     text-align: center;
-
+    
 }
 
 p
@@ -136,10 +136,13 @@ h1{
     margin: auto;
 }
 .dropdownLang:hover .hover p {
-    border-bottom: 1px solid white;
     width: 80px;
     margin: auto;
 }
+.dropdownLang:hover .hover  #fr{
+    border-bottom: 1px solid white;
+}
+
 .dropdownLang:hover .noHover {
     display: none;
 }

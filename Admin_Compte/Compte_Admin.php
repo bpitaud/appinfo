@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Compte_Admin.css" />
+    <script src="Popupsup.js"></script>
     <title> Compte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
@@ -63,7 +64,7 @@
     			<em class="base">ADRESSE PRINCIPALE<br/></em>
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
-    			<button class="bouton" href="../Modifier_les_informations/Modifier_les_informations.php">Modifier les informations</button>
+    			<button id="bouton" href="../Modifier_les_informations/Modifier_les_informations.php">Modifier les informations</button>
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>
     	</div>
@@ -71,6 +72,22 @@
     <footer>
     	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
     </footer>
+
+
+
+
+<!-- Test Popup-->
+    <div class="fondpop">
+        <div class="pop">
+            <div class="close">+</div>
+            <p>Si vous cliquez sur valider alors le compte de cet utilisateur sera supprimé.</p>
+            
+            <div id="buttonp">
+                <button class="boutonpopA">Annuler</button>
+                <button class="boutonpopV">valider</button>
+            </div>
+        </div>
+    </div>
 
 
   </body>
