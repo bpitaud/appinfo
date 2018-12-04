@@ -64,6 +64,7 @@
     			<em class="base">ADRESSE PRINCIPALE<br/></em>
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
+
     			<button id="bouton" href="../Modifier_les_informations/Modifier_les_informations.php">Modifier les informations</button>
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>

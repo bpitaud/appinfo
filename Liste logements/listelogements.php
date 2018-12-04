@@ -1,6 +1,6 @@
 <?php
 // Pour la demo mettre ca dans la page liste des logements 
-  require("../Models/database.php");
+  require_once("../Models/database.php");
   $utilisateurID = 1;
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID;
