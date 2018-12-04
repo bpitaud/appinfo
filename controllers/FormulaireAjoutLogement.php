@@ -1,4 +1,6 @@
 <?php
+require_once("../Models/database.php");
+require_once("../Models/logements.php");
 // ajouter un logement avec les paramètres
 $nomErr = $adresseErr = $codepostaleErr = $surfaceErr = $paysErr = $utilisateurIDErr = "";
 $nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = "";
@@ -45,15 +47,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-$db = connect();
-echo $db-> query('SELECT * FROM logement WHERE nom =$nom');
+//$db = connect();
+ajoutLogement($nom,$adresse,$codepostale,$surface,$utilisateurID,$pays);
+//$db-> prepare('SELECT * FROM logement WHERE nom = $nom');
 
+//$db = Database::disconnect();
 
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
-  echo $data;
+  return $data;
 }
 
 ?>

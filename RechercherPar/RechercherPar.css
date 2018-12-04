@@ -3,8 +3,9 @@
 h2
 {
     font-size: 50px;
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
+
 }
 
 p
@@ -49,10 +50,12 @@ input[type=text] {
     list-style-type: none;
     text-decoration: none;
 }
+
 header {
     color:white;
     font-size: 15px
     width : 100%;
+
 }
 
 
