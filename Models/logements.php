@@ -1,6 +1,6 @@
 <?php
 
-require("../Models/database.php");
+require_once("../Models/database.php");
 session_start();
 
 // Ajouter un logement 
@@ -17,6 +17,7 @@ function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, 
         'pays' => $pays,
     );*/
     $reponse->execute(array(
+        'logementID' => '1',
         'utilisateurID' => $utilisateurID,
         'nom' => $nom,
         'adresse' => $adresse,
