@@ -84,7 +84,8 @@
     			<button class="bouton" href="../">Annuler</button>
                 <button class="bouton">Valider</button>
             </div>
-    		</p>
+            </p>
+        </form>
     	</div>
     </section>
     <footer>

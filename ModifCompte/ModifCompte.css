@@ -208,6 +208,7 @@ font-size: 19px
     display: flex;
     justify-content: space-between;
     padding-left: 12%;
+    padding-top: 4%;
 }
 
 h2{
