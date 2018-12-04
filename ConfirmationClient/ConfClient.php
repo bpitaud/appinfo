@@ -50,7 +50,7 @@
 				<em class="espace">Adresse email : ADRESSE.EMAIL@MAIL.COM </em>
           
     		<div class="bouton">
-    		<input type=button onclick=window.location.href="../Menu/Menubis.php"; value=Valider />
+        <input type=button onclick=window.location.href="../Menu/Menubis.php"; value=Valider />
     		</div>
   	   </div>
     </div>
