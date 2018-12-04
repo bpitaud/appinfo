@@ -1,8 +1,8 @@
 *
 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
@@ -16,9 +16,9 @@ header {
 
 h2
 {
-	text-align: center;
-	font-size: 30px;
-	font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
 }
 nav
 {
@@ -26,19 +26,19 @@ nav
 }
 nav+a
 {
-	text-decoration : none;
-	color: rgba(255, 255, 255, 0.8);
+    text-decoration : none;
+    color: rgba(255, 255, 255, 0.8);
 }
 #compte_link
 {
-	text-decoration : underline; 
+    text-decoration : underline; 
 }
 
 body{
-	/*background-color: rgba(0, 0, 0, 0.8);*/
+    /*background-color: rgba(0, 0, 0, 0.8);*/
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
-	background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
     background-position: 10% 0%;
 }
@@ -78,7 +78,7 @@ h1{
 
 .dropdownLang
 {
-	margin: 16% 10% 10% 10%;
+    margin: 16% 10% 10% 10%;
 }
 .dropdownLang .noHover p {
     text-align: left;
@@ -114,28 +114,28 @@ h1{
 }
 .admin
 {
-	border: auto;
-	margin-top: 5%;
-	margin-left: 10%;
-	width: 100%;
-	color:rgba(255, 255, 255, 0.8);
+    border: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 100%;
+    color:rgba(255, 255, 255, 0.8);
 }
 
 footer p
 {
-	color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     position: absolute; bottom: 2%; left: 73%; right: 0;
     font-size: 95%;
 }
 .quitter
 {
-	display: block;
+    display: block;
+    position: absolute; top:9.5%; left:90%;
     border: 2px solid white;
     background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
     background-size: 20px;
-    width: 30%;
-    margin: 7% 0% 0 100%;
-    padding: 1% 0 1% 0%;
+    width: 7.7%;
+    padding: 0.3% 0 0.3% 0%;
 }
 
 
@@ -147,48 +147,48 @@ footer p
 
 section
 {
-	display: flex;
-	flex-direction: row;
-	width: 80%;
-	justify-content: space-around;
-	margin: auto;
-	overflow: auto;
-	font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin: auto;
+    overflow: auto;
+    font-size: 20px;
 }
 .info
 {
-	width: 35%;
-	min-width: 280px;
-	border: 0px white solid;
-	padding: 2px;
-	height: 500px;
-	align-items : stretch;
-	line-height: 100%;
+    width: 35%;
+    min-width: 280px;
+    border: 0px white solid;
+    padding: 2px;
+    height: 500px;
+    align-items : stretch;
+    line-height: 100%;
 }
 .base
 {
-	display: flex;
+    display: flex;
     box-sizing: border-box;
-	width: 100%;
-	height:100%;
-  	border-bottom: 1px solid white;
- 	border-top: none;
-  	margin-top: 13%;
-  	font-style: normal;
-  	font-weight: 100; 
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    font-style: normal;
+    font-weight: 100; 
 }
 .base2
 {
-	display: flex;
+    display: flex;
     box-sizing: border-box;
-	width: 100%;
-	height:100%;
-  	border-bottom: 1px solid white;
- 	border-top: none;
-  	margin-top: 13%;
-  	margin-bottom: 10%;
-  	font-style: normal;
-  	font-weight: 100; 
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
 }
 
 
@@ -206,8 +206,91 @@ border-radius: 6px;
 overflow: hidden;
 font-size: 19px
 }
+#bouton {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+padding: 2px 0 3px 0;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
+}
 
 h2{
 
     padding-top: 5%;
+}
+
+
+
+
+/*POPUP*/
+.fondpop{
+    width: 100%;
+    height: 100%;
+    background-color: (0,0,0,0.7);
+    position: absolute;top:0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ 
+}
+.pop{
+    width: 30%;
+    height: 20%;
+    background-color: (255,255,255,1);
+    border-radius: 4px;
+    text-align: center;
+    border: solid white 2px;
+    position: relative;
+}
+.pop p{
+    padding-top: 5%;
+    justify-content: space-around;
+    margin: auto;
+    overflow: auto;
+    font-size: 20px;
+}
+.close{
+    position:absolute;
+    top: 0%;
+    left: 1%;
+    font-size: 25px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.boutonpopA {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:40%;
+height: 20px;
+padding: 2px 0 3px 0;
+margin-bottom: 5%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 10px
+}
+
+.boutonpopV {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:40%;
+height: 20px;
+padding: 2px 0 3px 0;
+margin-bottom: 5%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 10px
 }
