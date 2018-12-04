@@ -17,7 +17,7 @@ function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, 
         'pays' => $pays,
     );*/
     $reponse->execute(array(
-        'logementID' => '1',
+        'logementID' => '',
         'utilisateurID' => $utilisateurID,
         'nom' => $nom,
         'adresse' => $adresse,
