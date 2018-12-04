@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="connexion.css" />
-    <title>connexion</title>
+    <link rel="stylesheet" href="home.css" />
+    <title>Acceuil</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -36,20 +36,11 @@
             </nav>
         </div>
     </header>
-    <h1> Se connecter </h1>
-    <div class="formulaire">
-    <form method="post" action="../controllers/FormulaireConnexion.php">
-   				<p>
-       				<input type="text" name="adressemail" placeholder="Entrer votre adresse mail" required/>
-      				<input type="text" name="motdepasse" placeholder="Entrer votre mot de passe" required />
-                    <input type="submit" value="Suivant">
-   				</p>
-			</form>
-        </div>
-    <div class="motdepasse"> 
-        <a href="envoimail.php"> Mot de passe oublié </a> 
-    </div>
-    <div class="inscription">            
-    <a href="../Inscription/inscription.php"> Créer un Compte </a>
-    </div>
-</body>    
+
+    <body>
+        <h1> Gardez le contrôle <br> de votre logement </h1>
+        <div id="rectangle"></div>
+        <h2> Que faisons-nous ? </h2>
+        <p> blablablabalbalablabalaalablablablaalblablabalbalbalbalbalablablaalbalbalbalb </p>
+    </body>    
+
