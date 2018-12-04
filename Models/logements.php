@@ -1,8 +1,7 @@
 <?php
 
-require("database.php");
+require("../Models/database.php");
 session_start();
-
 
 // Ajouter un logement 
 

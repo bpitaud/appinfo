@@ -1,28 +1,14 @@
-<?php
-// Pour la demo mettre ca dans la page liste des logements 
-  require("../Models/database.php");
-  $utilisateurID = 1;
-  session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID;
-   /*A la page connection (une fois qu'elle sera crée)
-  require 'database.php';
-  $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
-  session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID;
-*/
-?>
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="listelogementcss.css" />
-        <title>Domisep - Liste des pièces</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="connexion.css" />
+    <title>connexion</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <header>
+	<header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
@@ -56,15 +42,19 @@
             </nav>
         </div>
     </header>
-    <section>
-    	<div id="logement">    
-                <div class="imgmaison" >
-                <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> </div>
-                <div class="maisonprincipal"> Maison <br>principale </a></div>
-                <div class="ajoutlogement">
-                    <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
-        </div>	
-
-        
-    </section>
-</body> 
+    <h1> Se connecter </h1>
+    <div class="formulaire">
+    <form method="post" action="../controllers/FormulaireConnexion.php">
+   				<p>
+       				<input type="text" name="adressemail" placeholder="Entrer votre adresse mail" required/>
+      				<input type="text" name="motdepasse" placeholder="Entrer votre mot de passe" required />
+                    <input type="submit" value="Suivant">
+   				</p>
+			</form>
+        </div>
+    <div class="motdepasse"> Mot de passe oublié  
+    </div>
+    <div class="inscription">            
+    <button class="bouton"href="../Inscription.php">Créer un compte</button>
+    </div>
+</body>    

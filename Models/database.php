@@ -12,7 +12,7 @@ function connect (){
         }
     catch(PDOException $e)
         {
-        return echo "Connection failed: " . $e->getMessage(); 
+        echo "Connection failed: " . $e->getMessage();
         }
 }
  ?>
