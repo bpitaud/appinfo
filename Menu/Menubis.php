@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<link href="Menub.css" rel="stylesheet" media="all" type="text/css">
+		<link href="Menubis.css" rel="stylesheet" media="all" type="text/css">
 		<title>Menu</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </li>
- 				<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+ 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
  				</div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
@@ -40,7 +40,7 @@
 </header>
 
     <nav>
-    	<span id="compte_link"><a href="../Menu/Menu.php">Menu</a></span>
+    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
     </nav>
     
     
@@ -50,14 +50,13 @@
 			<div class="page">
 			
 				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
-					<div class="element1">Compte</div>
-					<!--<img src="../Images/compte.png" alt="Compte" />-->
+					<div class="element">Compte</div>
+					<img src="../Images/compte.png" alt="Compte" />
 				</div></a>
 			
 				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
-
-					<!--<img src="../Images/House.png" alt="House" />-->
-					<div class="element2">Capteurs</div>
+					<img src="../Images/House.png" alt="House" />
+					<div class="element">Capteurs</div>
 				</div></a>
 			</div>
 

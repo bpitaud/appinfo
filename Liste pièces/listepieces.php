@@ -70,7 +70,7 @@ $nomDulogement = maison;
                     <div class="figure">
                             <div class="plus" > <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> </div>
                             
-                     </div>
+                    </div>
                     <div class="Caractere"> Ajouter </a></div>
                 </div>   
     	</div>	
