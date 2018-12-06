@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Compte_Admin.css" />
-    <script src="Popupsup.js"></script>
+
+    <!--<script src="Popupsup.js"></script>-->
+
     <title> Compte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
@@ -65,7 +67,7 @@
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<button id="bouton" href="../Modifier_les_informations/Modifier_les_informations.php">Modifier les informations</button>
+    			<a href="../ModifCompte/ModifCompte.php"><button class="bouton">Modifier les informations</button></a>
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>
     	</div>
@@ -77,7 +79,7 @@
 
 
 
-<!-- Test Popup-->
+<!-- Test Popup--
     <div class="fondpop">
         <div class="pop">
             <div class="close">+</div>
@@ -85,7 +87,7 @@
             
             <div id="buttonp">
                 <button class="boutonpopA">Annuler</button>
-                <button class="boutonpopV">valider</button>
+                <button class="boutonpopV" href="../Modifier_les_informations/RechercherPar.php">valider</button>
             </div>
         </div>
     </div>
