@@ -179,7 +179,7 @@ input[type=text] {
 }
 
 select {
-	color : white;
+	color : rgba(255, 255, 255, 0.9);
     width:30%;
     padding: 10px 20px;
     margin-left: auto;
@@ -209,4 +209,9 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: gray;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.9);;
+    opacity: 1; /* Firefox */
 }
