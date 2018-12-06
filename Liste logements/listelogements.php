@@ -5,7 +5,6 @@
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID
   //A la page connection (une fois qu'elle sera crée)//
-  require_once('database.php');
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID;
