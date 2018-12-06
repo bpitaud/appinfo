@@ -28,7 +28,7 @@
           </div>
         </li>
       </ul>
-   		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
+   		
    			
      
   </div>
