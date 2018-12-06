@@ -131,97 +131,7 @@ header a:hover span {
     display: none;
 }
 
-section h1 {
-    display: flex;
-	color: white;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-	margin-top: 20px;
-    font-size: 1.5em;
-    margin-bottom:20px;
-}
-
-section h1 span {
-    opacity: 0;
-}
-
-input[type=text] {
-	color : white;
-    width:30%;
-    padding: 10px 10px;
-    margin:auto;
-    margin-top: 75px;
-    display: flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
-    text-align: left;
-}
-
-select {
-	color : white;
-    width:30%;
-    padding: 20px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    display : flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
-
-}
-
-input[type=submit] {
-    width: 200px;
-    background-color: LightGray;
-    color: black;
-    padding-left: 20%;
-    padding-right:11%;
-    margin-left:34.5%;
-    margin-right:80%;
-    padding-top:7px;
-    padding-bottom:7px;
-    margin-top: 40px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: gray;
-}
-
-input[type=value] {
-    padding-left: 50%;
-    padding-right: 5%;
-}
-
-.motdepasse{
-    font-size: 80%;
-    text-decoration:underline;
-    margin-top:2em;
-}
-
-.inscription{
-    border: solid white;
-    background:rgba(255,255,255,0);
-    margin-top:1.4em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin-left:34.5%;
-    margin-right:34.5%;
-    font-size:100%;
-}
-
-.creationcompteheader {
+.connexionheader {
     border: solid white;
     background:rgba(255,255,255,0);
     margin-top:1.7em;
@@ -235,7 +145,7 @@ input[type=value] {
     margin-right:6em;
 }
 
-.connexionheader {
+.creationcompteheader {
     border:solid grey;
     background:grey;
     color:black;
@@ -248,4 +158,95 @@ input[type=value] {
     font-size:60%;
     width: 180px;
     margin-right:6em;
+}
+
+section
+{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	justify-content: space-around;
+	margin: auto;
+	overflow: auto;
+    font-size: 20px;
+    padding-top: 5%;
+}
+.info
+{
+	width: 35%;
+	min-width: 280px;
+	border: 0px white solid;
+	padding: 2px;
+	height: 500px;
+	align-items : stretch;
+	line-height: 100%;
+}
+input[type=base]
+{
+	width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+::placeholder { 
+    color:white;
+    opacity: 1; 
+}
+
+
+.bouton {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+margin-right: 15%;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
+}
+
+#test {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-top: 4%;
+}
+
+h2{
+
+    padding-top: 5%;
+    font-size: 35px;
+}
+
+select {
+
+
+    width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+
 }
