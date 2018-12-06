@@ -1,11 +1,27 @@
  <?php
 // Dans la page liste capteur => récupérer l'IDpiece
- $db = 'database.php';
+ /*$db = 'database.php';
  require $db;
   $piece = $db -> query ('SELECT pieceID FROM piece WHERE nom = $nomDuLogement');
   session_start();
-  $_SESSION["pieceID"] = $piece;
+  $_SESSION["pieceID"] = $piece; */
 
+  //Dans la page liste piece => récupérer l'IDlogement
+require_once("../Models/database.php");
+//
+//echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+  //echo $logement;
+  /*session_start();
+  function getLogementID($conn) {
+    $nomDulogement = "maison";
+    $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
+    foreach  ($conn->query($sql) as $row) {
+        return $row['logementID'] . "\n";
+  }
+} 
+$_SESSION["logementID"] = getLogementID(connect());
+echo $_SESSION["logementID"];
+*/
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,10 +1,22 @@
 <?php
 //Dans la page liste piece => récupérer l'IDlogement
 require_once("../Models/database.php");
-$nomDulogement = maison;
-  $logement = connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+//
+//echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+  //echo $logement;
   session_start();
-  $_SESSION["logementID"] = $utilisateurID;
+  function getLogementID($conn) {
+    $nomDulogement = "maison";
+    $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
+    foreach  ($conn->query($sql) as $row) {
+        return $row['logementID'] . "\n";
+  }
+} 
+$_SESSION["logementID"] = getLogementID(connect());
+echo $_SESSION["logementID"];
+
+
+
 ?>
 
 <!DOCTYPE html>

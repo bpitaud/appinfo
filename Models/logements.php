@@ -11,6 +11,7 @@ function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, 
     $reponse = connect() -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
     //$array = 
     $reponse->execute(array(
+        'logementID' => '',
         'utilisateurID' => $utilisateurID,
         'nom' => $nom,
         'adresse' => $adresse,
