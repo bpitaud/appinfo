@@ -67,7 +67,7 @@
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<a href="../ModifCompte/ModifCompte.php"><button class="bouton">Modifier les informations</button></a>
+    			<!--<a href="../ModifCompte/ModifCompte.php">--><button class="bouton">Modifier les informations</button><!--</a>-->
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>
     	</div>
