@@ -2,18 +2,15 @@
 require 'database.php';
 session_start();
 
-function ajoutPiece( $nom, $surface, $logementID, $pieceID){
+function ajoutPiece( $nom, $surface, $logementID){
     $con = connect();
-    $reponse = $con -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
+    $reponse = $con -> prepare("INSERT INTO piece(nom, surface, logementID) VALUES (:nom, :surface, :logementID)");
     $reponse->execute(array(
-        'utilisateurID' => $utilisateurID
+        'pieceID' => '',
         'nom' => $nom,
-        'adresse' => $adresse,
-        'codepostale' => $codepostale,
         'surface' => $surface,
-        'pays' => $pays,
         ));
     
-    echo 'Le logement a bien été ajouté !';
+    echo 'La piece a bien été ajouté !';
     }
     ?> 

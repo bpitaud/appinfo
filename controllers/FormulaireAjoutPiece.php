@@ -19,13 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $surfaceErr = test_input($_POST["surface"]);
   }
+  if (empty($_SESSION["logementID"])) {
+    $utilisateurIDErr = "logement ID is required";
+  } else {
+    $logementID = test_input($_SESSION['logementID']);
+  }
 }
+
+//ajoutPiece( $nom, $surface, $logementID);
 
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
-  echo $data;
+  return $data;
 }
 
 echo $name;

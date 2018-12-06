@@ -3,9 +3,8 @@
   require_once("../Models/database.php");
   $utilisateurID = 1;
   session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID;
-   /*A la page connection (une fois qu'elle sera crée)
-  require 'database.php';
+  $_SESSION["utilisateurID"] = $utilisateurID
+  //A la page connection (une fois qu'elle sera crée)//
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID;
