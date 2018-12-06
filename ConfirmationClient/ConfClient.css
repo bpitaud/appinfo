@@ -184,10 +184,10 @@ footer p
 .quitter
 {
     display: block;
+    position: absolute; top:9.5%; left:90%;
     border: 2px solid white;
     background: rgba(0, 0, 0, 0) url("../Images/logo_quitter.png") no-repeat 5% center;
     background-size: 20px;
-    width: 30%;
-    margin: 7% 0% 0 100%;
-    padding: 1% 0 1% 0%;
+    width: 7.7%;
+    padding: 0.3% 0 0.3% 0%;
 }

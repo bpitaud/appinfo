@@ -1,8 +1,8 @@
 <?php
 //Dans la page liste piece => récupérer l'IDlogement
-require 'database.php';
+require_once("../Models/database.php");
 $nomDulogement = maison;
-  $logement = $db -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+  $logement = connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
   session_start();
   $_SESSION["logementID"] = $utilisateurID;
 ?>

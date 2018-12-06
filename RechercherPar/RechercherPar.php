@@ -22,8 +22,8 @@
               <p>FR</p>
             </div>
             <div class="hover">
-              <p>FR</p>
-              <a href="english.html"> EN </a>
+              <p id="fr">FR</p>
+              <p><a href="english.html"> EN </a></p>
             </div>
           </div>
         </li>
