@@ -40,16 +40,13 @@
     <div class="formulaire">
     <form method="post" action="../controllers/FormulaireConnexion.php">
    				<p>
-       				<input type="text" name="adressemail" placeholder="Entrer votre adresse mail" required/>
-      				<input type="text" name="motdepasse" placeholder="Entrer votre mot de passe" required />
-                    <input type="submit" value="Suivant">
+       				<input type="text" name="email" placeholder="Entrer votre adresse mail" required/>
+      				<input type="text" name="mdp" placeholder="Entrer votre mot de passe" required />
+                    <input type="submit" name="connexion" value="Suivant">
    				</p>
 			</form>
         </div>
     <div class="motdepasse"> 
         <a href="envoimail.php"> Mot de passe oublié </a> 
-    </div>
-    <div class="inscription">            
-    <a href="../Inscription/inscription.php"> Créer un Compte </a>
     </div>
 </body>    

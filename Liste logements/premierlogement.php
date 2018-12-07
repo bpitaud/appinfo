@@ -1,21 +1,8 @@
-<?php
-// Pour la demo mettre ca dans la page liste des logements 
-  require_once("../Models/database.php");
-  $utilisateurID = 1;
-  session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID
-  /*//A la page connection (une fois qu'elle sera crée)//
-  $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
-  session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID;
-*/
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="listelogementcss.css" />
+        <link rel="stylesheet" href="premierlogement.css" />
         <title>Domisep - Liste des pièces</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
@@ -26,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li><a href="../Liste logements/premierlogement.php"><span>Home</span></a></li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -57,13 +44,12 @@
     </header>
     <section>
     	<div id="logement">    
-                <div class="imgmaison" >
-                <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> </div>
-                <div class="maisonprincipal"> Maison <br>principale </a></div>
+                <p> <span> Bienvenue sur Domisep ! </span> <br/> Vous pouvez dès à présent créer votre premier logement </p>
                 <div class="ajoutlogement">
-                    <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
+                    <a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a>
+                </div>
         </div>	
 
         
     </section>
-</body> 
+</body>

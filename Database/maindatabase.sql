@@ -99,12 +99,16 @@ CREATE TABLE `piece` (
 
 CREATE TABLE `utilisateur` (
   `utilisateurID` int(11) NOT NULL,
-  `prenom` varchar(20) NOT NULL,
   `nom` varchar(25) NOT NULL,
-  `adressemail` varchar(255) NOT NULL,
-  `telephone` varchar(15) NOT NULL,
+  `prenom` varchar(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `genre` varchar(15) NOT NULL,
   `naissance` date NOT NULL,
-  `motdepasse` varchar(12) NOT NULL,
+  `telephone` varchar(15) NOT NULL,
+  `adresse` varchar(100) NOT NULL,
+  `pays` int(11) NOT NULL,
+  `codepostale` int(11) NOT NULL,
+  `mdp` varchar(12) NOT NULL,
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -202,7 +206,7 @@ ALTER TABLE `utilisateur`
 ALTER TABLE `valeur_capteur`
   MODIFY `valeurID` int(11) NOT NULL AUTO_INCREMENT;
 
-INSERT INTO `utilisateur` (`utilisateurID`, `prenom`, `nom`, `adressemail`, `telephone`, `naissance`, `motdepasse`, `admin`) VALUES ('1', 'Charlotte', 'Bruzeau', 'Cha@gmail.com', '0631612492', '2018-10-03', 'chacha', '0');
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

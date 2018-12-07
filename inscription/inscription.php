@@ -42,31 +42,23 @@
 
     <h2> Créer un compte </h2>
     <section>
-    	<div class="info">
-    		<p>
-            <p>
-       			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
-      			<input type="base" name="number" placeholder="NOM" required />
-                <input type="base" name="name" placeholder="PRENOM" required/>
-                <input type="base" name="motdepasse" placeholder="Entrer votre mot de passe" required />
-                <input type="base" name="motdepasse" placeholder="Confirmer mot de passe" required />
-                <select name="Genre" required>
-       					<option value="genre"> GENRE </option>
-                        <option value="féminin"> Féminin </option>	
-                       <option value="féminin"> Féminin </option>	
-       				</select>
-               
-    			
-    		</p>
     	</div>
     	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+        <form method="post" action="../controllers/FormulaireInscription.php">
    				<p>
-                    <input type="base" name="number" placeholder="JJ/MM/AAAA" required />   
-       				<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
-                      <select name="Pays" required>
-                        <option value="pays"> PAYS </option>	
+      			<input type="text" name="nom" placeholder="NOM" required />
+                <input type="text" name="prenom" placeholder="PRENOM" required/>
+                <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM" required/>
+                <select name="genre" required>
+       					<option value="genre"> GENRE </option>
+                        <option value="feminin"> Féminin </option>	
+                       <option value="masculin"> Masculin </option>	
+       				</select>
+                <input type="text" name="naissance" placeholder="DATE DE NAISSANCE" required />   
+       			<input type="text" name="telephone" placeholder="TELEPHONE" required/>
+      			<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE" required />
+                    <select name="pays" required>
+                        <option value="pays"> PAYS </option>
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
@@ -76,19 +68,17 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-      				<input type="base" name="number" placeholder="75 000" required />
+                <input type="text" name="codepostale" placeholder="CODE POSTAL" required />
+                <input type="password" name="mdp" placeholder="Entrer votre mot de passe" required />
+                <input type="password" name="conf_mdp" placeholder="Confirmer mot de passe" required />
 
             <div id="test">
-    			<button class="bouton" href="../">Annuler</button>
+    			<button class="bouton" href="../inscription/inscription.php">Annuler</button>
                 <button class="bouton">Valider</button>
             </div>
             </p>
         </form>
     	</div>
     </section>
-    <footer>
-    </footer>
-
-
   </body>
 </html>
