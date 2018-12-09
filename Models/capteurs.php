@@ -20,5 +20,8 @@
      echo 'Le capteur a bien été ajouté !';
      }
 
+// récupérer les données d'un capteur 
+// modifier les infos d'un capteur 
+//supprimer un capteur
 ?>
 

@@ -161,6 +161,21 @@ input[type=text] {
     text-align: left;
 }
 
+input[type=password] {
+	color : white;
+    width:30%;
+    padding: 10px 10px;
+    margin:auto;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
 select {
 	color : white;
     width:30%;
@@ -192,6 +207,8 @@ input[type=submit] {
     text-align: center;
     justify-content: center;
 }
+
+
 
 input[type=submit]:hover {
     background-color: gray;

@@ -1,9 +1,16 @@
 <?php
-
-session_start(); 
+ 
+require_once('../Models/user.php');
 
 $emailErr = $mdpErr = "";
 $email = $mdp = "";
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -18,8 +25,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         $mdp = test_input($_POST["mdp"]);
       }
+      if (!$resultat)
+      {
+        echo 'Mauvais identifiant ou mot de passe !';
+        header('Location: ../connexionn/connexion.php');
+      }
+      else
+      {
+        if ($isPasswordCorrect) {
+          session_start();
+          $_SESSION['utilisateurID'] = $resultat['utilisateurID'];
+          $_SESSION['email'] = $email;
+          header('Location: ../Liste logements/premierdomicile.php');
+        }
+        else {
+          echo 'Mauvais identifiant ou mot de passe !';
+          header('Location: ../connexionn/connexion.php');
+        }
+}
+
    
-// Vérifier si le mail et le mot de passe sont valides 
+
 // si oui, récupérer l'utilisateur par le mail 
 //puis récupérer les logements de l'utilisateur, si il n'en a pas dirigé vers la page de première connexion 
 // sinon diriger vers la liste des logements 

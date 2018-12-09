@@ -41,7 +41,7 @@
     <form method="post" action="../controllers/FormulaireConnexion.php">
    				<p>
        				<input type="text" name="email" placeholder="Entrer votre adresse mail" required/>
-      				<input type="text" name="mdp" placeholder="Entrer votre mot de passe" required />
+      				<input type="password" name="mdp" placeholder="Entrer votre mot de passe" required />
                     <input type="submit" name="connexion" value="Suivant">
    				</p>
 			</form>

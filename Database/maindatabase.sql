@@ -106,10 +106,10 @@ CREATE TABLE `utilisateur` (
   `naissance` date NOT NULL,
   `telephone` varchar(15) NOT NULL,
   `adresse` varchar(100) NOT NULL,
-  `pays` int(11) NOT NULL,
+  `pays` varchar(11) NOT NULL,
   `codepostale` int(11) NOT NULL,
   `mdp` varchar(12) NOT NULL,
-  `admin` tinyint(1) NOT NULL
+  `administrateur` tinyint(1) NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

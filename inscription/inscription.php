@@ -54,7 +54,7 @@
                         <option value="feminin"> Féminin </option>	
                        <option value="masculin"> Masculin </option>	
        				</select>
-                <input type="text" name="naissance" placeholder="DATE DE NAISSANCE" required />   
+                <input type="date" name="naissance" placeholder="DATE DE NAISSANCE" required />   
        			<input type="text" name="telephone" placeholder="TELEPHONE" required/>
       			<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE" required />
                     <select name="pays" required>
@@ -73,8 +73,8 @@
                 <input type="password" name="conf_mdp" placeholder="Confirmer mot de passe" required />
 
             <div id="test">
-    			<button class="bouton" href="../inscription/inscription.php">Annuler</button>
-                <button class="bouton">Valider</button>
+    			<button class="bouton" type="reset">Annuler</button>
+                <button class="bouton" type="submit">Valider</button>
             </div>
             </p>
         </form>

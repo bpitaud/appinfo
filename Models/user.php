@@ -2,12 +2,14 @@
 
 require_once("../Models/database.php");
 
-// ajouter un utilisateur à la base de données
+// Hachage du mot de passe
+$mdp_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
-function ajoutUtilisateur($utilisateurID, $nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp){
-    $conn = connect() -> prepare("INSERT INTO `utilisateur` VALUES (:utilisateurID, :nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp)");
+
+// ajouter un utilisateur à la base de données
+function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp_hache){
+    $conn = connect() -> prepare("INSERT INTO utilisateur(nom, prenom, email, genre,naissance,telephone,adresse,pays,codepostale,mdp) VALUES (:nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp)");
     $conn->execute(array(
-        'utilisateurID' => '',
         'nom' => $nom,
         'prenom' => $prenom,
         'email' => $email,
@@ -17,35 +19,40 @@ function ajoutUtilisateur($utilisateurID, $nom, $prenom, $email, $genre, $naissa
         'adresse' => $adresse,
         'pays' => $pays,
         'codepostale' => $codepostale,
-        'mdp' => $mdp,
+        'mdp' => $mdp_hache,
     ));
 
     }
 
 // Connexion d'un utilisateur 
 
-//hacher un mdp dans la base de données (le sécuriser)
-function passwordHash ($mdp){
-    return password_hash($mdp, PASSWORD_DEFAULT);
+// récupérer le user par son email
+function RecupUserByEmail($email){
+    $conn = connect() -> prepare('SELECT utilisateurID , mdp from `utilisateur` WHERE email=:email');
+    $conn-> execute(array('email'=> $email));
+    $resultat = $conn -> fetch();
+    return $resultat;
 }
 
-// vérifier si email et mdp existent dans la base de données
-function UserByEmail($email){
-    $conn = connect() -> prepare('SELECT * from `utilisateur` WHERE email=?');
-    $conn-> execute(array($email));
-    return $conn;
-}
 
-// récupérer le user par son email 
-function VerifIdentifiants ($email , $mdp){
+// Comparaison du pass envoyé via le formulaire avec la base de données
+$isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mdp']);
+
+// vérifier si email et mdp  
+/*function VerifIdentifiants ($email , $mdp){
     $conn = connect() -> prepare('SELECT mdp from `utilisateur` WHERE email=?' );
     $conn  -> execute(array($email));
     if (password_verify($mdp, $hash) == true){
         return true;
     }
-    return false;    
+    return false;*/
+    
+// supprimer un utilisateur 
+// modifier les infos d'un utilisateur 
+// modifier le mot de passe 
+// récupérer les infos d'un utilisateur 
 
-}
+
 ?> 
 
 
