@@ -5,7 +5,7 @@ session_start();
 require_once("../Models/database.php");
 require_once("../Models/user.php");
 
-$nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp_hache = ""; 
+$nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = test_input($_POST["nom"]);
@@ -19,18 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codepostale = test_input($_POST["codepostale"]);
     $mdp= test_input($_POST['mdp']); 
     $confirme_mdp = test_input($_POST['conf_mdp']);
-    if ($mdp == $confirme_mdp) {
-        ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp_hache, false);
-        $to      = $email; // Envoyer un email à l'utilisateur
-        $subject = 'Création de compte Domisep'; // Objet du mail
-        $message = ' Bienvenue sur Domisep! Votre compte a été créé avec succès.'; 
-        $headers = 'From: noreply@domisep.com' . "\r\n"; // Expediteur
-        mail($to, $subject, $message, $headers); // envoi du mail   
+    $email_existe = Verif_email($email);
+    if ($mdp == $confirme_mdp && !$email_existe) {
+        ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
+        send_email($to, $subject, $message, $headers);
         header('Location: ../connexionn/connexion.php');
 
     }
      else {
-        echo "les mots de passe ne correspondent pas";
+        echo "les mots de passe ne correspondent pas ou l'adresse mail existe déjà";
         header('Location: ../inscription/inscription.php');
      }
 

@@ -2,13 +2,11 @@
 
 require_once("../Models/database.php");
 
-// Hachage du mot de passe
-$mdp_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
 
 // ajouter un utilisateur à la base de données
-function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp_hache){
-    $conn = connect() -> prepare("INSERT INTO utilisateur(nom, prenom, email, genre,naissance,telephone,adresse,pays,codepostale,mdp) VALUES (:nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp)");
+function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp){
+    $conn = connect() -> prepare("INSERT INTO utilisateur(nom, prenom, email, genre,naissance,telephone,adresse,pays,codepostale,mdp,administrateur) VALUES (:nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp, false)");
     $conn->execute(array(
         'nom' => $nom,
         'prenom' => $prenom,
@@ -19,33 +17,67 @@ function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone,
         'adresse' => $adresse,
         'pays' => $pays,
         'codepostale' => $codepostale,
-        'mdp' => $mdp_hache,
+        'mdp' => $mdp,
     ));
 
     }
 
-// Connexion d'un utilisateur 
+// hachage du mdp
+function mdp_hache($mdp){
+    return password_hash($mdp, PASSWORD_DEFAULT);
+}
+
+// vérifier si l'email rentré lors de l'inscription existe déjà dans la base de données
+function Verif_email($email){
+    $conn = connect()->prepare('SELECT * FROM utilisateur WHERE email=?');
+    $conn -> execute(array($email));
+    $resultat = $conn->fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) > 0){
+        return true;
+    }
+    return false;
+}
+
+// envoi d'un mail de confirmation de compte
+function send_email($to, $subject, $message, $headers){
+    $to      = $email; // Envoyer un email à l'utilisateur
+    $subject = 'Création de compte Domisep'; // Objet du mail
+    $message = ' Bienvenue sur Domisep! Votre compte a été créé avec succès.'; 
+    $headers = 'From: noreply@domisep.com' . "\r\n"; // Expediteur
+    mail($to, $subject, $message, $headers); // envoi du mail
+}
+
+// cryptage du mdp de passe rentré lors de la connexion
+function Verif_mdp($mdp, $hash){
+    return password_verify($mdp , $hash);
+}
+
+// vérifier si email et mdp rentrés lors de la connexion existent dans la base de données
+function VerifIdentifiants($email, $mdp){
+    $conn = connect() -> prepare('SELECT mdp from `utilisateur` WHERE email=?' );
+    $conn  -> execute(array($email));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) == 0) {
+        return false;
+    }
+    if (Verif_mdp($mdp, $resultat[0][10])== true){
+        return true;
+    }
+    return false; 
+}
 
 // récupérer le user par son email
 function RecupUserByEmail($email){
     $conn = connect() -> prepare('SELECT utilisateurID , mdp from `utilisateur` WHERE email=:email');
-    $conn-> execute(array('email'=> $email));
-    $resultat = $conn -> fetch();
-    return $resultat;
+    $conn-> execute(array($email));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
 }
 
 
-// Comparaison du pass envoyé via le formulaire avec la base de données
-$isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mdp']);
 
-// vérifier si email et mdp  
-/*function VerifIdentifiants ($email , $mdp){
-    $conn = connect() -> prepare('SELECT mdp from `utilisateur` WHERE email=?' );
-    $conn  -> execute(array($email));
-    if (password_verify($mdp, $hash) == true){
-        return true;
-    }
-    return false;*/
+
+
+
     
 // supprimer un utilisateur 
 // modifier les infos d'un utilisateur 

@@ -109,7 +109,7 @@ CREATE TABLE `utilisateur` (
   `pays` varchar(11) NOT NULL,
   `codepostale` int(11) NOT NULL,
   `mdp` varchar(12) NOT NULL,
-  `administrateur` tinyint(1) NULL,
+  `administrateur` tinyint(1) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
