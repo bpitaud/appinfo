@@ -83,7 +83,7 @@ function myFunction() {
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<button class="bouton">Modifier les informations</button>
+    			<button class="bouton" href="../ModifCompte/ModifCompte.php">Modifier les informations</button>
     			<button class="bouton">Réinitialiser le mot de passe</button>
     		</p>
     	</div>
