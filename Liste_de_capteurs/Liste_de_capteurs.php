@@ -8,20 +8,21 @@
 
   //Dans la page liste piece => récupérer l'IDlogement
 require_once("../Models/database.php");
-//
+
 //echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
   //echo $logement;
-  /*session_start();
+  session_start();
   function getLogementID($conn) {
     $nomDulogement = "maison";
     $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
     foreach  ($conn->query($sql) as $row) {
+        echo $row['logementID'] . "\n";
         return $row['logementID'] . "\n";
   }
-} 
+}
 $_SESSION["logementID"] = getLogementID(connect());
 echo $_SESSION["logementID"];
-*/
+
 ?>
 <!DOCTYPE html>
 <html>
