@@ -1,17 +1,14 @@
 <?php
 
 require_once("../Models/database.php");
-session_start();
-
 
 // Ajouter un logement 
 
 function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
     //lancer la requête d'ajout de logement
-    $reponse = connect() -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
+    $reponse = connect() -> prepare("INSERT INTO logement(nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
     // executer la requête
     $reponse->execute(array(
-        'logementID' => '',
         'utilisateurID' => $utilisateurID,
         'nom' => $nom,
         'adresse' => $adresse,
@@ -19,11 +16,16 @@ function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, 
         'surface' => $surface,
         'pays' => $pays,
     ));
-    
-    echo 'Le logement a bien été ajouté !';
     }
 
 // Récupérer les données d'un logement 
+
+function RecupLogements($utilisateurID){
+    $conn = connect() -> prepare('SELECT * FROM logement WHERE utilisateurID =?');
+    $conn -> execute(array($utilisateurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
 // Modifier les données d'un logement 
 // Supprimer un logement
 ?>  

@@ -70,12 +70,12 @@ CREATE TABLE `controleur` (
 
 CREATE TABLE `logement` (
   `logementID` int(11) NOT NULL,
-  `nom` varchar(15) NOT NULL,
+  `nom` varchar(100) NOT NULL,
   `adresse` varchar(100) NOT NULL,
   `codepostale` int(11) NOT NULL,
   `surface` int(11) NOT NULL,
   `utilisateurID` int(11) NOT NULL,
-  `pays` int(11) NOT NULL
+  `pays` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -108,8 +108,8 @@ CREATE TABLE `utilisateur` (
   `adresse` varchar(100) NOT NULL,
   `pays` varchar(11) NOT NULL,
   `codepostale` int(11) NOT NULL,
-  `mdp` varchar(12) NOT NULL,
-  `administrateur` tinyint(1) NULL,
+  `mdp` varchar(200) NOT NULL,
+  `administrateur` tinyint(1) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
