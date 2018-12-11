@@ -1,18 +1,11 @@
 <?php
 require_once("../Models/database.php");
 require_once("../Models/logements.php");
-
+require_once("../controllers/FormulaireConnexion.php");
 session_start();
 
 // ajouter un logement avec les paramètres
 $nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = "";
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   

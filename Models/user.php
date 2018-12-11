@@ -59,7 +59,7 @@ function VerifIdentifiants($email, $mdp){
     if (count($resultat) == 0) {
         return false;
     }
-    if (Verif_mdp($mdp, $resultat[0][0])== true){ // pourquoi le [10] ne fonctionne pas ??? Logs ment
+    if (Verif_mdp($mdp, $resultat[0][0])== true){ 
         return true;
     }
     return false; 
@@ -67,16 +67,18 @@ function VerifIdentifiants($email, $mdp){
 
 // récupérer le user par son email
 function RecupUserByEmail($email){
-    $conn = connect() -> prepare('SELECT utilisateurID , mdp from `utilisateur` WHERE email=?');
+    $conn = connect() -> prepare('SELECT * from `utilisateur` WHERE email=?');
     $conn-> execute(array($email));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
 
+session_start();
+
 // rechercher si un utilisateur a des logements ou non
 function Possede_logements() {
     $logements = RecupLogements($_SESSION['utilisateurID']);
-    if (isset($logements[0][0])){ // pourquoi le [5] ne fonctionne pas ??  Logs ment
+    if (isset($logements[0][5])){
         return true;
     }
     return false;
@@ -90,7 +92,6 @@ function Possede_logements() {
 // supprimer un utilisateur 
 // modifier les infos d'un utilisateur 
 // modifier le mot de passe 
-// récupérer les infos d'un utilisateur 
 
 
 ?> 
