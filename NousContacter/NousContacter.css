@@ -138,3 +138,34 @@ h2 {
 em{
     text-align: center;
 }
+
+
+.page{
+    border: 2px solid white;
+    margin-top: 5%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.page p{
+
+    text-align: center;
+    font-size: 20px;
+}
+
+#coneteneur1{
+    border: 2px solid white;
+    background: url("../Images/iconemaison.png") no-repeat 30% center ;
+}
+
+#coneteneur2{
+    border: 2px solid white;
+    background: url("../Images/iconetel.svg") no-repeat 35% center ;
+}
+
+#coneteneur3{
+    border: 2px solid white;
+    background: url("../Images/iconemail.png") no-repeat 30% center ;
+}
