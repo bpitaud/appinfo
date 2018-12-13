@@ -10,8 +10,7 @@ function ajoutPiece( $nom, $surface, $logementID){
         'nom' => $nom,
         'surface' => $surface,
         'logementID ' => $logementID,
-        ));
-    
+    ));    
     }
 
 // récupérer toutes les pièces 
