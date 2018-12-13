@@ -55,7 +55,7 @@
                 <input type="base" name="name" placeholder="PRENOM" required/>
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
-                        <option value="féminin"> Féminin </option>	
+                        <option value="féminin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
