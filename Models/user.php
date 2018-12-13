@@ -84,13 +84,104 @@ function Possede_logements() {
     return false;
 }
 
+// supprimer un utilisateur (pour la partie admin)
+function SuppUtilisateur($utilisateurID){
+    $conn = connect() -> prepare('DELETE * FROM utilisateur WHERE utilisateurID =?');
+    $conn -> execute(array($utilisateurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
 
-
-
-
-    
-// supprimer un utilisateur 
 // modifier les infos d'un utilisateur 
+function ModifNomUtilisateur($utilisateurID,$nom){
+    $conn = connect() -> prepare('UPDATE utilisateur SET nom=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'nom' => $nom,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifPrenomUtilisateur($utilisateurID,$prenom){
+    $conn = connect() -> prepare('UPDATE utilisateur SET prenom=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'prenom' => $prenom,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifEmailUtilisateur($utilisateurID,$email){
+    $conn = connect() -> prepare('UPDATE utilisateur SET email=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'email' => $email,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifGenreUtilisateur($utilisateurID,$genre){
+    $conn = connect() -> prepare('UPDATE utilisateur SET genre=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'genre' => $genre,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifNaissanceUtilisateur($utilisateurID,$naissance){
+    $conn = connect() -> prepare('UPDATE utilisateur SET naissance=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'naissance' => $naissance,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifTelUtilisateur($utilisateurID,$telephone){
+    $conn = connect() -> prepare('UPDATE utilisateur SET telephone=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'telephone' => $telephone,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifAdresseUtilisateur($utilisateurID,$adresse){
+    $conn = connect() -> prepare('UPDATE utilisateur SET adresse=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'adresse' => $adresse,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifPaysUtilisateur($utilisateurID,$pays){
+    $conn = connect() -> prepare('UPDATE utilisateur SET pays=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'pays' => $pays,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
+    $conn = connect() -> prepare('UPDATE utilisateur SET codepostale=? WHERE utilisateurID =?');
+    $conn -> execute(array(
+            'codepostale' => $codepostale,
+            '$utilisateurID'=> $utilisateurID,    
+        ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
 // modifier le mot de passe 
 
 
