@@ -2,51 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="ModifCompte.css" />
+    <link rel="stylesheet" href="modif.css" />
     <title> ModifCompte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
-  <body>
-
-<header>
-	<div class="wrapper">
-
-        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
-        <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
-                    <div class="dropdownLang">
-                        <div class="noHover">
-                            <p>FR</p>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>DOMISEP</h1>
+            <nav>
+                <ul>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li>
+                        <div class="dropdownLang">
+                            <div class="noHover">
+                                <p>FR</p>
+                            </div>
+                            <div class="hover">
+                                <p>FR</p>
+                                <a href="english.html"> EN </a>
+                            </div>
                         </div>
-                         <div class="hover">
-                            <p>FR</p>
-                            <a href="english.html"> EN </a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <div id="noHoverUser">
+                                    <button class="boutonmenuprincipal"><p></p></button>
+                            </div>
+                            <div id="hoverUser">
+                                <button class="boutonmenuprincipal"><p></p></button>
+                                <a href="MesInfos.html"><p>Mes infos</p></a>
+                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
- 				</div>
-                <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
-			</ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</header>
+    </header>
 
-
-
-
-
-
-    
+  
     <nav>
-    	<a href="../Menu/Menu.php">Menu</a>/<a href="../Admin_Compte/Compte_Admin.php">Compte</a>/<span id="compte_link">Modifier</span>
+    	<a href="../mesinfosuti/mesinfosuti.php">< Retour</a>
     </nav>
-    <h2>Modification des informations du compte</h2>
-    <section>
+    
+    <h2>Modification de mes informations</h2>
+
+<section>
     	<div class="info">
     		<p>
             <p>
@@ -55,7 +59,7 @@
                 <input type="base" name="name" placeholder="PRENOM" required/>
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
-                        <option value="féminin"> Masculin </option>	
+                        <option value="féminin"> Féminin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
@@ -87,11 +91,6 @@
             </p>
         </form>
     	</div>
-    </section>
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
-
-  </body>
+</section>
+</body>
 </html>
