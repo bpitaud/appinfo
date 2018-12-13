@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="mesinfosuti.css" />
+        <link rel="stylesheet" href="MesInfosUser.css" />
         <title>Domisep - Mes informations</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
@@ -81,7 +81,7 @@ function myFunction() {
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<button class="bouton" href="../modifcomteuti/modif.php">Modifier mes informations</button>               
+    			<button class="bouton" type="submit" href="../ModifCompteUser/ModifCompteUser.php">Modifier mes informations</button>               
     			<button onclick="myFunction1()" class="bouton">Réinitialiser mon mot de passe</button>
                     <script>
                     function myFunction1() {

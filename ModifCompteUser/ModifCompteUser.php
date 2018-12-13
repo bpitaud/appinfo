@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="modif.css" />
+    <link rel="stylesheet" href="InfosCompteUser.css" />
     <title> ModifCompte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>

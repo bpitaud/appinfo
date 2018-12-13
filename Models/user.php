@@ -84,13 +84,14 @@ function Possede_logements() {
     return false;
 }
 
-// supprimer un utilisateur (pour la partie admin)
+// supprimer un utilisateur 
 function SuppUtilisateur($utilisateurID){
     $conn = connect() -> prepare('DELETE * FROM utilisateur WHERE utilisateurID =?');
     $conn -> execute(array($utilisateurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
+
 
 // modifier les infos d'un utilisateur 
 function ModifNomUtilisateur($utilisateurID,$nom){
