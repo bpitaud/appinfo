@@ -40,7 +40,7 @@
     <body>
         <h1> Gardez le contrôle <br> de votre logement </h1>
         <div id="rectangle"></div>
-        <h2> Que faisons-nous ? </h2>
-        <p> blablablabalbalablabalaalablablablaalblablabalbalbalbalbalablablaalbalbalbalb </p>
+        <div class="absolute"> 
+        <h2> Que faisons-nous ? </h2> </div>
     </body>    
 
