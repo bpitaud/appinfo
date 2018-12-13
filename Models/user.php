@@ -184,6 +184,25 @@ function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
 }
 // modifier le mot de passe 
 
+function ModifMdp($email, $ancien, $nouveau) {
+    $hache = mdp_hache($nouveau);
+    $conn = connect() ->prepare('SELECT mdp FROM `utilisateur` WHERE email=?');
+    $conn->execute(array($email));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) == 0) {
+        return false;
+    }
+    if(Verif_mdp($ancien, $resultat[0][0]) == false) {
+        return false;
+    }
+    $conn = connect() ->prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
+    $conn -> execute(array(
+        'email' => $email,
+        '$mdp'=> $hache,    
+    ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;    
+}
 
 ?> 
 
