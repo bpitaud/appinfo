@@ -1,8 +1,9 @@
 <?php
  
 require_once('../Models/user.php');
+session_start();
+unset($_SESSION['connected']);
 
-$emailErr = $mdpErr = "";
 $email = $mdp = "";
 
 function test_input($data) {
@@ -14,41 +15,34 @@ function test_input($data) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if (empty($_POST["email"])) {
-        $emailErr = "un email est requis";
+    $email = test_input($_POST["email"]);
+    $mdp= test_input($_POST['mdp']);
+    $IdentifiantsOK = VerifIdentifiants($email,$mdp);
+    if ($IdentifiantsOK){ // email et mdp valides
+      $_SESSION["connected"] = 'true' ;
+      $resultat = RecupUserByEmail($email);
+      $_SESSION['utilisateurID'] = $resultat[0][0]; // création session à partir de l'ID utilisateur // récupérer l'utilisateur par le mail
+      $logements = Possede_logements();// faire une fonction pour checker si l'utilisateur a des logements
+      if ($resultat[0][11]== 1){ // vérifie si c'est un admin 
+        $_SESSION['admin'] = 1;
+        header('Location: ../RechercherPar/RechercherPar.php'); // si admin, diriger vers Rechercher Par
       } else {
-        $email = test_input($_POST["email"]);
-      }
-        
-      if (empty($_POST["mdp"])) {
-        $mdpErr = "un mot de passe est requis";
-      } else {
-        $mdp = test_input($_POST["mdp"]);
-      }
-      if (!$resultat)
-      {
-        echo 'Mauvais identifiant ou mot de passe !';
-        header('Location: ../connexionn/connexion.php');
-      }
-      else
-      {
-        if ($isPasswordCorrect) {
-          session_start();
-          $_SESSION['utilisateurID'] = $resultat['utilisateurID'];
-          $_SESSION['email'] = $email;
-          header('Location: ../Liste logements/premierdomicile.php');
+        $_SESSION['admin'] = 0;
+        if($logements){ // sinon , vérifie si cet utilisateur a des logements 
+        header('Location: ../Liste logements/listelogements.php');
+        } else {
+        header('Location: ../Liste logements/premierlogement.php');
         }
-        else {
-          echo 'Mauvais identifiant ou mot de passe !';
-          header('Location: ../connexionn/connexion.php');
-        }
+      }  
+    }
+    else { // rester sur la page connexion car identifiants non valides
+      $_SESSION["connected"] = 'false';
+      echo ("Email ou mot de passe incorrect(s)");
+      header('Location: ../connexionn/connexion.php');
+
+    }
+       
 }
 
-   
 
-// si oui, récupérer l'utilisateur par le mail 
-//puis récupérer les logements de l'utilisateur, si il n'en a pas dirigé vers la page de première connexion 
-// sinon diriger vers la liste des logements 
-// si mail ou mdp non valide, diriger vers page inscription
-}
 ?>

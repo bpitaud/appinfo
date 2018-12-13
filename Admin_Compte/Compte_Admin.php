@@ -10,17 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
-  <body>
 
 <header>
-	<div class="wrapper">
+    <div class="wrapper">
 
         <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
-        <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
+        <div class="haut">      
+            <ul>
+                <div class="haut_droite">
+                <li>
                     <div class="dropdownLang">
                         <div class="noHover">
                             <p>FR</p>
@@ -31,17 +29,13 @@
                         </div>
                     </div>
                 </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
- 				</div>
+                <li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+                </div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
-			</ul>
+            </ul>
         </div>
     </div>
 </header>
-
-
-
-
 
 
     
@@ -49,6 +43,8 @@
     	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
     </nav>
     <h2>Compte</h2>
+
+
     <section>
     	<div class="info">
     		<p>
@@ -57,7 +53,27 @@
     			<em class="base">PRENOM<br/></em>
     			<em class="base">GENRE<br/></em>
     			<em class="base2">JJ/MM/AAAA<br/></em>
-    			<button class="bouton">Supprimer le compte</button>
+    			<button onclick="myFunction()" class="bouton">Supprimer le compte</button>
+
+
+
+
+
+<script>
+function myFunction() {
+    var txt;
+    var r = confirm("Etes-vous sûr de vouloir supprimer le compte de ce client ?");
+    if (r == true) {
+        href = "../RechercherPar/RechercherPar.php";
+    } else {
+        txt = "none";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
+
     		</p>
     	</div>
     	<div class="info">
@@ -67,30 +83,26 @@
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<button class="bouton">Modifier les informations</button>
-    			<button class="bouton">Réinitialiser le mot de passe</button>
+    			<button class="bouton" href="../ModifCompte/ModifCompte.php">Modifier les informations</button>               
+    			<button onclick="myFunction1()" class="bouton">Réinitialiser le mot de passe</button>
+                    <script>
+                    function myFunction1() {
+                        var txt;
+                        var r = confirm("Etes-vous sûr de vouloir réinitialiser le mot de passe de ce client ?");
+                        if (r == true) {
+                            href = "../RechercherPar/RechercherPar.php";
+                        } else {
+                            txt = "none";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                    </script>
     		</p>
     	</div>
     </section>
     <footer>
     	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
     </footer>
-
-
-
-
-<!-- Test Popup--
-    <div class="fondpop">
-        <div class="pop">
-            <div class="close">+</div>
-            <p>Si vous cliquez sur valider alors le compte de cet utilisateur sera supprimé.</p>
-            
-            <div id="buttonp">
-                <button class="boutonpopA">Annuler</button>
-                <button class="boutonpopV" href="../Modifier_les_informations/RechercherPar.php">valider</button>
-            </div>
-        </div>
-    </div>
 
 
   </body>

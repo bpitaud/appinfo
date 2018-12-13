@@ -43,9 +43,10 @@ CREATE TABLE `action_controleur` (
 CREATE TABLE `capteur` (
   `capteurID` varchar(15) NOT NULL,
   `nom` varchar(20) NOT NULL,
-  `type` varchar(15) NOT NULL,
+  `type` enum('lumiere', 'camera', 'humidité', 'temperature') varchar(15) NOT NULL,
   `etat` varchar(3) NOT NULL,
-  `pieceID` int(11) NOT NULL
+  `pieceID` int(11) NOT NULL,
+  FOREIGN KEY (pieceID) REFERENCES piece(pieceID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -57,9 +58,10 @@ CREATE TABLE `capteur` (
 CREATE TABLE `controleur` (
   `controleurID` varchar(15) NOT NULL,
   `nom` varchar(20) NOT NULL,
-  `type` int(15) NOT NULL,
+  `type` enum('chauffage')int(15) NOT NULL,
   `etat` int(3) NOT NULL,
   `pieceID` int(11) NOT NULL
+  FOREIGN KEY (pieceID) REFERENCES piece(pieceID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -70,12 +72,13 @@ CREATE TABLE `controleur` (
 
 CREATE TABLE `logement` (
   `logementID` int(11) NOT NULL,
-  `nom` varchar(15) NOT NULL,
+  `nom` varchar(100) NOT NULL,
   `adresse` varchar(100) NOT NULL,
   `codepostale` int(11) NOT NULL,
   `surface` int(11) NOT NULL,
   `utilisateurID` int(11) NOT NULL,
-  `pays` int(11) NOT NULL
+  `pays` varchar(11) NOT NULL,
+  FOREIGN KEY (utilisateurID) REFERENCES utilisateur(utilisateurID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -88,7 +91,8 @@ CREATE TABLE `piece` (
   `pieceID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `surface` int(11) NOT NULL,
-  `logementID` int(11) NOT NULL
+  `logementID` int(11) NOT NULL,
+  FOREIGN KEY (logementID) REFERENCES logement(logementID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -108,8 +112,8 @@ CREATE TABLE `utilisateur` (
   `adresse` varchar(100) NOT NULL,
   `pays` varchar(11) NOT NULL,
   `codepostale` int(11) NOT NULL,
-  `mdp` varchar(12) NOT NULL,
-  `administrateur` tinyint(1) NULL,
+  `mdp` varchar(200) NOT NULL,
+  `administrateur` tinyint(1) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -135,18 +139,6 @@ CREATE TABLE `valeur_capteur` (
 --
 ALTER TABLE `action_controleur`
   ADD PRIMARY KEY (`actionID`);
-
---
--- Indexes for table `capteur`
---
-ALTER TABLE `capteur`
-  ADD PRIMARY KEY (`capteurID`);
-
---
--- Indexes for table `controleur`
---
-ALTER TABLE `controleur`
-  ADD PRIMARY KEY (`controleurID`);
 
 --
 -- Indexes for table `logement`

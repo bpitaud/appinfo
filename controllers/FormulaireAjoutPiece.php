@@ -1,32 +1,12 @@
 <?php
-// define variables and set to empty values
-$nameErr =  $surfaceErr = "";
-$name = $surface = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
-    }
-  }
+require_once("../Models/database.php");
+require_once("../Models/pieces.php");
+require_once("../controllers/FormulaireAjoutLogement.php");
+session_start();
 
-  if (empty($_POST["surface"])) {
-    $surface = "Surface is required";
-  } else {
-    $surfaceErr = test_input($_POST["surface"]);
-  }
-  if (empty($_SESSION["logementID"])) {
-    $utilisateurIDErr = "logement ID is required";
-  } else {
-    $logementID = test_input($_SESSION['logementID']);
-  }
-}
-
-//ajoutPiece( $nom, $surface, $logementID);
+// ajouter un logement avec les paramètres
+$nom  = $surface = $logementID = "";
 
 function test_input($data) {
   $data = trim($data);
@@ -35,7 +15,14 @@ function test_input($data) {
   return $data;
 }
 
-echo $name;
-echo $surface;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
+    $nom = test_input($_POST["nom"]);
+    $surface = test_input($_POST["surface"]);
+    $logementID = $_SESSION['logementID'];
+    ajoutLogement($nom,$adresse,$codepostale,$surface,$utilisateurID,$pays);
+    header('Location: ../Liste logements/listelogements.php');
+}
 
 ?>
