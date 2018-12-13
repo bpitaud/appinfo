@@ -47,8 +47,10 @@
     <nav>
     	<a href="../mesinfosuti/mesinfosuti.php">< Retour</a>
     </nav>
-    <h2>Modification des informations du compte</h2>
-    <section>
+    
+    <h2>Modification de mes informations</h2>
+
+<section>
     	<div class="info">
     		<p>
             <p>
@@ -89,9 +91,6 @@
             </p>
         </form>
     	</div>
-    </section>
-    
-
-
+</section>
 </body>
 </html>
