@@ -1,14 +1,14 @@
 <?php
-// Pour la demo mettre ca dans la page liste des logements 
+  // Pour la demo mettre ca dans la page liste des logements 
   require_once("../Models/database.php");
   $utilisateurID = 1;
   session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID
+  $_SESSION["utilisateurID"] = $utilisateurID;
   /*//A la page connection (une fois qu'elle sera crée)//
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID;
-*/
+  */
 ?>
 
 <!DOCTYPE html>
@@ -56,14 +56,33 @@
         </div>
     </header>
     <section>
-    	<div id="logement">    
+        <?php 
+        function getLogement($userID) {
+            $listLogement = array();
+            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$userID.'';
+            foreach  (connect()->query($sql) as $row) {
+                array_push($listLogement, $row['nom']);
+            }
+            //print_r  ($listLogement);
+            return $listLogement;
+        }
+        $list = getLogement($_SESSION["utilisateurID"]);
+        //echo count($list); 
+        for ($i = 0; $i < count($list) ;$i++) {
+            echo
+            ('<div id="logement">    
                 <div class="imgmaison" >
-                <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> </div>
-                <div class="maisonprincipal"> Maison <br>principale </a></div>
-                <div class="ajoutlogement">
-                    <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
-        </div>	
-
-        
+                    <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> 
+                </div>
+                <div class="maisonprincipal"> 
+                    '.$list[$i].' 
+                    <br>principale </a>
+                </div>
+            </div>');
+        }
+        ?>
+        <div class="ajoutlogement">
+            <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
+        </div>
     </section>
 </body> 

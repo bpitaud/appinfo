@@ -27,23 +27,6 @@ echo $_SESSION["logementID"];
 // Fonction qui renvoie un array avec le nom des maison
 // Faire une banque d'image et une fonction qui va chercher une image
 // Faire ensuite une boucle for qui affiche lles logement en fonction de la taille de l'array
-function getLogement($conn) {
-    $listLogement = array();
-    $sql =  'SELECT nom FROM logement WHERE utilisateurID =1';
-    foreach  ($conn->query($sql) as $row) {
-        //echo $row['nom'];
-        array_push($listLogement, $row['nom']);
-
-    }
-    //echo $row
-    print_r  ($listLogement);
-    return $listLogement;
-  }
-  $list = getLogement(connect());
-  echo count($list); 
-  for ($i = 0; $i < count($list) ;$i++) {
-      echo $list[$i];
-  }
 ?>
 
 <!DOCTYPE html>
@@ -90,28 +73,76 @@ function getLogement($conn) {
             </nav>
         </div>
     </header>
+
+
+
     <section>
          <a href ="../Liste logements/listelogements.php"> < Retour</a> 
         <h2>Pièce(s) du logement</h2>
-    	<div id="pieces">    
-                <div class="block" >
-                    <div class="figure">
+    	<div id="pieces">
+            <?php
+                        function getPieceName($logementID) {
+                            $listpiece = array();
+                            $sql =  'SELECT nom FROM piece WHERE logementID ='.$logementID.'';
+                            foreach  (connect()->query($sql) as $row) {
+                                array_push($listpiece, $row['nom']);
+                            }
+                            //print_r  ($listpiece);
+                            return $listpiece;
+                        }
+                        $listName = getPieceName(1);
+                        //print_r ($listName);
+                        
+                        function getPieceID($logementID) {
+                            $listPieceID = array();
+                            $sql =  'SELECT pieceID FROM piece WHERE logementID ='.$logementID.'';
+                            foreach  (connect()->query($sql) as $row) {
+                                array_push($listPieceID, $row['pieceID']);
+                            }
+                            //print_r  ($listPieceID);
+                            return $listPieceID;
+                        }
+                        $listID = getPieceID(1);
+                        //print_r($listID);
+                        for ($i = 0; $i < count($listID) ;$i++) {
+                            echo $listName[$i];
+                            echo'
+                            <div class="block" >
+                                <div class="figure">
+                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                </div>
+                                <div class="Caractere"> 
+                                    '.$listName[$i].'
+                                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
+                                </div>
+                            </div>
+                            ';
+                        }
+            ?>
 
-                        <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
-
-                    </div>
-                    <div class="Caractere"> Salon
-                        <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
-                    </div>
+            <!--
+            <div class="block" >
+                <div class="figure">
+                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
                 </div>
+                <div class="Caractere"> 
+                    Salon
+                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
+                </div>
+            </div>
+            -->
                
-                <div class="block"> 
-                    <div class="figure">
-                            <div class="plus" > <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> </div>
-                            
-                    </div>
-                    <div class="Caractere"> Ajouter </a></div>
-                </div>   
+            <div class="block"> 
+                <div class="figure">
+                    <div class="plus" > 
+                        <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> 
+                    </div>      
+                </div>
+            <div class="Caractere"> 
+                Ajouter </a></div>
+            </div>   
     	</div>	
     </section>
+
+    
 </body> 
