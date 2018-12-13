@@ -7,42 +7,45 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
-  <body>
-
-<header>
-	<div class="wrapper">
-    <h1><strong>DOMISEP</strong> <h1>
-        <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
-                    <div class="dropdownLang">
-                        <div class="noHover">
-                            <p>FR</p>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>DOMISEP</h1>
+            <nav>
+                <ul>
+                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li>
+                        <div class="dropdownLang">
+                            <div class="noHover">
+                                <p>FR</p>
+                            </div>
+                            <div class="hover">
+                                <p>FR</p>
+                                <a href="english.html"> EN </a>
+                            </div>
                         </div>
-                         <div class="hover">
-                            <p>FR</p>
-                            <a href="english.html"> EN </a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <div id="noHoverUser">
+                                    <button class="boutonmenuprincipal"><p></p></button>
+                            </div>
+                            <div id="hoverUser">
+                                <button class="boutonmenuprincipal"><p></p></button>
+                                <a href="MesInfos.html"><p>Mes infos</p></a>
+                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
- 					
- 				</div>
-                
-			</ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</header>
+    </header>
 
-
-
-
-
-
-    
+  
     <nav>
-    	<a href="../Menu/Menu.php">< Retour</a>
+    	<a href="../mesinfosuti/mesinfosuti.php">< Retour</a>
     </nav>
     <h2>Modification des informations du compte</h2>
     <section>
@@ -90,5 +93,5 @@
     
 
 
-  </body>
+</body>
 </html>
