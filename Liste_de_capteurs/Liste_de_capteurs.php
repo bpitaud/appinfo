@@ -18,10 +18,11 @@ require_once("../Models/database.php");
     foreach  ($conn->query($sql) as $row) {
         echo $row['logementID'] . "\n";
         return $row['logementID'] . "\n";
+    }
   }
-}
 $_SESSION["logementID"] = getLogementID(connect());
 echo $_SESSION["logementID"];
+
 
 ?>
 <!DOCTYPE html>

@@ -1,22 +1,49 @@
 <?php
 //Dans la page liste piece => récupérer l'IDlogement
 require_once("../Models/database.php");
-//
+//$nomDulogement = 'maison';
 //echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
   //echo $logement;
-  session_start();
-  function getLogementID($conn) {
-    $nomDulogement = "maison";
-    $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
-    foreach  ($conn->query($sql) as $row) {
+  /*
+function getLogementID($connec,$nomLogement) {
+    $sql =  "SELECT logementID FROM logement WHERE nom ="'.$nomLogement.'"";
+    foreach  ($connec->query($sql) as $row) {
         return $row['logementID'] . "\n";
-  }
+    }
+} 
+session_start();
+$_SESSION["logementID"] = getLogementID(connect(),'maison');
+echo $_SESSION["logementID"]; */
+session_start();
+function getLogementID($conn) {
+  $nomDulogement = "maison";
+  $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
+  foreach  ($conn->query($sql) as $row) {
+      return $row['logementID'] . "\n";
+}
 } 
 $_SESSION["logementID"] = getLogementID(connect());
 echo $_SESSION["logementID"];
+// Fonction qui renvoie un array avec le nom des maison
+// Faire une banque d'image et une fonction qui va chercher une image
+// Faire ensuite une boucle for qui affiche lles logement en fonction de la taille de l'array
+function getLogement($conn) {
+    $listLogement = array();
+    $sql =  'SELECT nom FROM logement WHERE utilisateurID =1';
+    foreach  ($conn->query($sql) as $row) {
+        //echo $row['nom'];
+        array_push($listLogement, $row['nom']);
 
-
-
+    }
+    //echo $row
+    print_r  ($listLogement);
+    return $listLogement;
+  }
+  $list = getLogement(connect());
+  echo count($list); 
+  for ($i = 0; $i < count($list) ;$i++) {
+      echo $list[$i];
+  }
 ?>
 
 <!DOCTYPE html>
