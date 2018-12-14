@@ -45,8 +45,8 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
