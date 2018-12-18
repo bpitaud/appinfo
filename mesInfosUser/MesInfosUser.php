@@ -56,10 +56,11 @@
     			<em class="base">ADRESSE PRINCIPALE<br/></em>
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
-    			<button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
-
-
-
+                <em class="base">+33 6 00 00 00 00<br/></em>
+    			<em class="base">ADRESSE PRINCIPALE<br/></em>
+    			<em class="base">PAYS<br/></em>
+    			<em class="base2">75 000<br/></em>
+                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
 
 
 <script>
@@ -79,30 +80,10 @@ function myFunction() {
 <button class="bouton" href="../reinitialisationmdp/réuni.php">Réinitialiser mon mot de passe</button>
                    
 
+    	
 
-    		</p>
-    	</div>
-    	<div class="info">
-    		<p>
-    			<em class="base">+33 6 00 00 00 00<br/></em>
-    			<em class="base">ADRESSE PRINCIPALE<br/></em>
-    			<em class="base">PAYS<br/></em>
-    			<em class="base2">75 000<br/></em>
-
-    			<button class="bouton" type="submit" href="../ModifCompteUser/ModifCompteUser.php">Modifier mes informations</button>               
-    			<button onclick="myFunction1()" class="bouton">Réinitialiser mon mot de passe</button>
-                    <script>
-                    function myFunction1() {
-                        var txt;
-                        var r = confirm("Etes-vous sûr de vouloir réinitialiser votre mot de passe ?");
-                        if (r == true) {
-                            href = "../RechercherPar/RechercherPar.php";
-                        } else {
-                            txt = "none";
-                        }
-                        document.getElementById("demo").innerHTML = txt;
-                    }
-                    </script>
+    			
+                    
     		</p>
     </div>
     	
