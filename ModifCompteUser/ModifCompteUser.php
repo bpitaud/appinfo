@@ -52,7 +52,7 @@
 
 <section>
     	<div class="info">
-    		<p>
+        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
             <p>
        			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
       			<input type="base" name="number" placeholder="NOM" required />
@@ -63,13 +63,7 @@
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
-    			
-    		</p>
-    	</div>
-    	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
-   				<p>
-       				<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
+    			<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
       				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
                       <select name="Pays" required>
                         <option value="pays"> PAYS </option>	
@@ -83,12 +77,9 @@
        					<option value="japon"> Japon </option>     	
        				</select>
       				<input type="base" name="number" placeholder="75 000" required />
-
-            <div id="test">
-    			<button class="bouton" href="../">Annuler</button>
-                <button class="bouton">Valider</button>
-            </div>
-            </p>
+                    <button class="bouton" href="../">Annuler</button>
+                    <button class="bouton">Valider</button>
+    		</p>
         </form>
     	</div>
 </section>
