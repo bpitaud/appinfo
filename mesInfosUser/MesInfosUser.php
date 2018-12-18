@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="mesinfosuti.css" />
+        <link rel="stylesheet" href="MesInfosUser.css" />
         <title>Domisep - Mes informations</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
@@ -32,8 +32,8 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
@@ -79,6 +79,30 @@ function myFunction() {
 <button class="bouton" href="../reinitialisationmdp/réuni.php">Réinitialiser mon mot de passe</button>
                    
 
+
+    		</p>
+    	</div>
+    	<div class="info">
+    		<p>
+    			<em class="base">+33 6 00 00 00 00<br/></em>
+    			<em class="base">ADRESSE PRINCIPALE<br/></em>
+    			<em class="base">PAYS<br/></em>
+    			<em class="base2">75 000<br/></em>
+
+    			<button class="bouton" type="submit" href="../ModifCompteUser/ModifCompteUser.php">Modifier mes informations</button>               
+    			<button onclick="myFunction1()" class="bouton">Réinitialiser mon mot de passe</button>
+                    <script>
+                    function myFunction1() {
+                        var txt;
+                        var r = confirm("Etes-vous sûr de vouloir réinitialiser votre mot de passe ?");
+                        if (r == true) {
+                            href = "../RechercherPar/RechercherPar.php";
+                        } else {
+                            txt = "none";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                    </script>
     		</p>
     </div>
     	

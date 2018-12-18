@@ -14,7 +14,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li><a href="../Home/home.php"><span>Home</span></a></li>
                     <div class="creationcompteheader">
                             <a href="../Inscription/inscription.php"> Créer un Compte </a>
                             
@@ -42,10 +42,8 @@
 
     <h2> Créer un compte </h2>
     <section>
-    	</div>
     	<div class="info">
         <form method="post" action="../controllers/FormulaireInscription.php">
-   				<p>
       			<input type="text" name="nom" placeholder="NOM" required />
                 <input type="text" name="prenom" placeholder="PRENOM" required/>
                 <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM" required/>
@@ -76,7 +74,6 @@
     			<button class="bouton" type="reset">Annuler</button>
                 <button class="bouton" type="submit">Valider</button>
             </div>
-            </p>
         </form>
     	</div>
     </section>

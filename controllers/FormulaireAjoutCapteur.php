@@ -1,40 +1,27 @@
 <?php
+require_once("../Models/database.php");
+require_once("../Models/capteurs.php");
+
+session_start();
 // define variables and set to empty values
-$nameErr = $numberErr = $typeErr = "" ;
 $name = $number = $type = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
-    }
-  }
-  if (empty($_POST["type"])) {
-    $typeErr = "type is required";
-  } else {
     $type = test_input($_POST["type"]);
-  }
-
-  if (empty($_POST["number"])) {
-    $numberErr = "number is required";
-  } else {
     $number = test_input($_POST["number"]);
-  }
+    $pieceID = $_SESSION['pieceID'];
+    ajoutCapteur($capteurID, $nom, $type, 'ON', $pieceID);
+    $resultat = RecupCapteur($pieceID);
+    $_SESSION['pieceID'] = $resultat[0][0];
+    header('Location: ../Liste capteurs/listecapteurs.php');
 }
 
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
-  echo $data;
+  return $data;
 }
-
-echo $name;
-echo $number;
-echo $type;
 
 ?>

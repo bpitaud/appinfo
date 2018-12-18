@@ -22,6 +22,15 @@ function RecupLogements($utilisateurID){
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
+
+function RecupLogementsbyID($logementID){
+    $conn = connect() -> prepare('SELECT * FROM logement WHERE logementID =?');
+    $conn -> execute(array($logementID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+ 
 // Modifier les données d'un logement 
 function ModifNomLogement($logementID,$nom){
     $conn = connect() -> prepare('UPDATE logement SET nom=? WHERE logementID =?');

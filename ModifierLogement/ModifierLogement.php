@@ -32,8 +32,8 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
@@ -50,9 +50,9 @@
     		</a>
     	</p>
     	</div>
-		<h1>Ajouter un logement<span>.................</span></h1>
+		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="../controllers/FormulaireAjoutLogement.php">
+			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom du logement" required/>
       				<input type="text" name="adresse" placeholder="Adresse du logement" required />
@@ -68,7 +68,11 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-       				<input type="submit" value="Suivant">
+              <div id="bouton">
+                <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
+         				<input type="submit" value="Valider">
+              
+            </div>
    				</p>
 			</form>
 		</div>

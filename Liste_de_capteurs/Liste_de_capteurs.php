@@ -5,24 +5,34 @@
   $piece = $db -> query ('SELECT pieceID FROM piece WHERE nom = $nomDuLogement');
   session_start();
   $_SESSION["pieceID"] = $piece; */
-
   //Dans la page liste piece => récupérer l'IDlogement
-require_once("../Models/database.php");
-
-//echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
-  //echo $logement;
+  require_once("../Models/database.php");
   session_start();
-  function getLogementID($conn) {
-    $nomDulogement = "maison";
-    $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
-    foreach  ($conn->query($sql) as $row) {
+  //echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
+  //echo $logement;
+?>
+
+<?php
+  /*
+  function getLogementID($logement) {
+    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
+    foreach  (connect()->query($sql) as $row) {
         echo $row['logementID'] . "\n";
         return $row['logementID'] . "\n";
     }
-  }
-$_SESSION["logementID"] = getLogementID(connect());
-echo $_SESSION["logementID"];
-
+  } 
+  function getLogementID($logement) {
+    $listLogementID = array();
+    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($listLogement, $row['logementID']);
+    }
+    print_r  ($listLogement);
+    return $listLogementID;
+}
+getLogementID('maison');
+//$_SESSION["logementID"];
+*/
 
 ?>
 <!DOCTYPE html>

@@ -1,14 +1,12 @@
 <?php
-// Pour la demo mettre ca dans la page liste des logements 
+  // Pour la demo mettre ca dans la page liste des logements 
   require_once("../Models/database.php");
-  $utilisateurID = 1;
   session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID
   /*//A la page connection (une fois qu'elle sera crée)//
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
   $_SESSION["utilisateurID"] = $utilisateurID;
-*/
+  */
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +43,8 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
@@ -56,14 +54,17 @@
         </div>
     </header>
     <section>
-    	<div id="logement">    
+        <div id="logement">    
                 <div class="imgmaison" >
-                <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> </div>
-                <div class="maisonprincipal"> Maison <br>principale </a></div>
-                <div class="ajoutlogement">
-                    <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> </div>
-        </div>	
-
-        
+                    <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> 
+                </div>
+                <div class="maisonprincipal"> 
+                    
+                    <br> Maison principale </a>
+                </div>
+            </div>
+        <div class="ajoutlogement">
+            <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
+        </div>
     </section>
 </body> 

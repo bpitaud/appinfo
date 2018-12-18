@@ -9,7 +9,7 @@ function ajoutPiece( $nom, $surface, $logementID){
     $reponse->execute(array(
         'nom' => $nom,
         'surface' => $surface,
-        'logementID ' => $logementID,
+        'logementID' => $logementID,
     ));    
     }
 
