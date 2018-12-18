@@ -78,7 +78,7 @@ CREATE TABLE `logement` (
   `surface` int(11) NOT NULL,
   `utilisateurID` int(11) NOT NULL,
   `pays` varchar(11) NOT NULL,
-  FOREIGN KEY (utilisateurID) REFERENCES utilisateur(utilisateurID)
+  FOREIGN KEY (utilisateurID) REFERENCES utilisateur(utilisateurID) -- Modification --
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

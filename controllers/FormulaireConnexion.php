@@ -2,7 +2,7 @@
  
 require_once('../Models/user.php');
 session_start();
-unset($_SESSION['connected']);
+//unset($_SESSION['connected']);
 
 $email = $mdp = "";
 
