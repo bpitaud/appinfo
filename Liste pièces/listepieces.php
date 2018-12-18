@@ -15,15 +15,15 @@ session_start();
 $_SESSION["logementID"] = getLogementID(connect(),'maison');
 echo $_SESSION["logementID"]; */
 session_start();
-function getLogementID($conn) {
-  $nomDulogement = "maison";
-  $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
-  foreach  ($conn->query($sql) as $row) {
-      return $row['logementID'] . "\n";
-}
-} 
-$_SESSION["logementID"] = getLogementID(connect());
-echo $_SESSION["logementID"];
+// function getLogementID($conn) {
+//   $nomDulogement = "maison";
+//   $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
+//   foreach  ($conn->query($sql) as $row) {
+//       return $row['logementID'] . "\n";
+// }
+// } 
+// $_SESSION["logementID"] = getLogementID(connect());
+// echo $_SESSION["logementID"];
 // Fonction qui renvoie un array avec le nom des maison
 // Faire une banque d'image et une fonction qui va chercher une image
 // Faire ensuite une boucle for qui affiche lles logement en fonction de la taille de l'array
