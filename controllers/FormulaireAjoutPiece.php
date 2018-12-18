@@ -1,28 +1,31 @@
 <?php
 
-require_once("../Models/database.php");
 require_once("../Models/pieces.php");
-require_once("../controllers/FormulaireAjoutLogement.php");
+
 session_start();
 
-// ajouter un logement avec les paramètres
-$nom  = $surface = $logementID = "";
-
 function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 
+// ajouter une pièce 
+$nom = $surface = $logementID = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
+    if (isset($_POST['nom'])){
     $nom = test_input($_POST["nom"]);
+    }
+    if (isset($_POST['surface'])){
     $surface = test_input($_POST["surface"]);
+    }
     $logementID = $_SESSION['logementID'];
-    ajoutLogement($nom,$adresse,$codepostale,$surface,$utilisateurID,$pays);
-    header('Location: ../Liste logements/listelogements.php');
+    ajoutPiece($nom,$surface,$logementID);
+    $resultat = RecupPiece($logementID);
+    $_SESSION['pieceID'] = $resultat[0][0];
+    header('Location: ../Liste pièces/listepieces.php'); 
 }
 
 ?>

@@ -73,11 +73,19 @@ function RecupUserByEmail($email){
     return $resultat;
 }
 
-session_start();
+// récupérer le user par l'utilisateur ID 
+function RecupUserByID($utilisateur){
+    $conn = connect() -> prepare('SELECT * from `utilisateur` WHERE utilisateurID=?');
+    $conn-> execute(array($utilisateurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+
 
 // rechercher si un utilisateur a des logements ou non
-function Possede_logements() {
-    $logements = RecupLogements($_SESSION['utilisateurID']);
+function Possede_logements($utilisateurID) {
+    $logements = RecupLogements($utilisateurID);
     if (isset($logements[0][5])){
         return true;
     }
