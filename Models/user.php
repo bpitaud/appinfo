@@ -73,24 +73,33 @@ function RecupUserByEmail($email){
     return $resultat;
 }
 
-session_start();
+// récupérer le user par l'utilisateur ID 
+function RecupUserByID($utilisateur){
+    $conn = connect() -> prepare('SELECT * from `utilisateur` WHERE utilisateurID=?');
+    $conn-> execute(array($utilisateurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
+
 
 // rechercher si un utilisateur a des logements ou non
-function Possede_logements() {
-    $logements = RecupLogements($_SESSION['utilisateurID']);
+function Possede_logements($utilisateurID) {
+    $logements = RecupLogements($utilisateurID);
     if (isset($logements[0][5])){
         return true;
     }
     return false;
 }
 
-// supprimer un utilisateur (pour la partie admin)
+// supprimer un utilisateur 
 function SuppUtilisateur($utilisateurID){
     $conn = connect() -> prepare('DELETE * FROM utilisateur WHERE utilisateurID =?');
     $conn -> execute(array($utilisateurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
+
 
 // modifier les infos d'un utilisateur 
 function ModifNomUtilisateur($utilisateurID,$nom){
@@ -184,6 +193,25 @@ function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
 }
 // modifier le mot de passe 
 
+function ModifMdp($email, $ancien, $nouveau) {
+    $hache = mdp_hache($nouveau);
+    $conn = connect() ->prepare('SELECT mdp FROM `utilisateur` WHERE email=?');
+    $conn->execute(array($email));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) == 0) {
+        return false;
+    }
+    if(Verif_mdp($ancien, $resultat[0][0]) == false) {
+        return false;
+    }
+    $conn = connect() ->prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
+    $conn -> execute(array(
+        'email' => $email,
+        '$mdp'=> $hache,    
+    ));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;    
+}
 
 ?> 
 

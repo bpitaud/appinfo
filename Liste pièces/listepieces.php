@@ -15,15 +15,15 @@ session_start();
 $_SESSION["logementID"] = getLogementID(connect(),'maison');
 echo $_SESSION["logementID"]; */
 session_start();
-function getLogementID($conn) {
-  $nomDulogement = "maison";
-  $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
-  foreach  ($conn->query($sql) as $row) {
-      return $row['logementID'] . "\n";
-}
-} 
-$_SESSION["logementID"] = getLogementID(connect());
-echo $_SESSION["logementID"];
+// function getLogementID($conn) {
+//   $nomDulogement = "maison";
+//   $sql =  'SELECT logementID FROM logement WHERE nom = "maison"';
+//   foreach  ($conn->query($sql) as $row) {
+//       return $row['logementID'] . "\n";
+// }
+// } 
+// $_SESSION["logementID"] = getLogementID(connect());
+// echo $_SESSION["logementID"];
 // Fonction qui renvoie un array avec le nom des maison
 // Faire une banque d'image et une fonction qui va chercher une image
 // Faire ensuite une boucle for qui affiche lles logement en fonction de la taille de l'array
@@ -63,8 +63,8 @@ echo $_SESSION["logementID"];
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
