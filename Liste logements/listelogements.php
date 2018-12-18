@@ -54,15 +54,74 @@
         </div>
     </header>
     <section>
-        <div id="logement">    
+    <div id="zonelogement"> 
+
+        <div id="logement">  
                 <div class="imgmaison" >
-                    <p><a href="../Liste pièces/listepieces.php"><img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/></p> 
+                    <a href="../Liste pièces/listepieces.php"></a> <!--<img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/>-->
                 </div>
-                <div class="maisonprincipal"> 
-                    
-                    <br> Maison principale </a>
+                <div id="sous">
+                    <div class="reglage">
+                        <a href="../ModifierLogement/ModifierLogement.php"></a>
+                    </div>
+                    <div class="nomlogement"> 
+                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
+                    </div>
                 </div>
-            </div>
+        </div>
+        <div id="logement">  
+                <div class="imgmaison" >
+                    <a href="../Liste pièces/listepieces.php"></a> <!--<img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/>-->
+                </div>
+                <div id="sous">
+                    <div class="reglage">
+                        <a href="../ModifierLogement/ModifierLogement.php"></a>
+                    </div>
+                    <div class="nomlogement"> 
+                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
+                    </div>
+                </div>
+        </div>
+        <div id="logement">  
+                <div class="imgmaison" >
+                    <a href="../Liste pièces/listepieces.php"></a> <!--<img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/>-->
+                </div>
+                <div id="sous">
+                    <div class="reglage">
+                        <a href="../ModifierLogement/ModifierLogement.php"></a>
+                    </div>
+                    <div class="nomlogement"> 
+                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
+                    </div>
+                </div>
+        </div>
+        <div id="logement">  
+                <div class="imgmaison" >
+                    <a href="../Liste pièces/listepieces.php"></a> <!--<img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/>-->
+                </div>
+                <div id="sous">
+                    <div class="reglage">
+                        <a href="../ModifierLogement/ModifierLogement.php"></a>
+                    </div>
+                    <div class="nomlogement"> 
+                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
+                    </div>
+                </div>
+        </div>
+        <div id="logement">  
+                <div class="imgmaison" >
+                    <a href="../Liste pièces/listepieces.php"></a> <!--<img src="../Images/imagemaison.PNG" alt="photo de maisonprincipal" width="300" height="300"/>-->
+                </div>
+                <div id="sous">
+                    <div class="reglage">
+                        <a href="../ModifierLogement/ModifierLogement.php"></a>
+                    </div>
+                    <div class="nomlogement"> 
+                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
+                    </div>
+                </div>
+        </div>
+    </div>
         <div class="ajoutlogement">
             <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
         </div>
