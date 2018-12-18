@@ -85,10 +85,19 @@
             <div class="block"> 
                 
                 <div class="figure">
-                <p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p></div>
+                    
+                <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de cadenas"width="128" height="128"/></a></p></div>
                 <div class="caractère"> Chauffage
                 <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
+                
+                <progress id="avancement" value="50" max="100"></progress>
+                <span id="pourcentage"></span>
+                <input type="button" onclick="modif(-10);" value="-">
+                <input type="button" onclick="modif(10);" value="+">
+                <script type ="text/javascript" src="codecapteur.js"> </script>
+                
+
             </div>   
             
           

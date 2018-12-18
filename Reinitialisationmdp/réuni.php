@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="mesinfosuti.css" />
-        <title>Domisep - Mes informations</title>
+        <link rel="stylesheet" href="réuni.css" />
+        <title>Domisep - Réinitialisation mot de passe</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
 
@@ -42,47 +42,20 @@
             </nav>
         </div>
     </header>
-    
-    <h2> Mes informations </h2>
-<section>
-    <div class="info">
-    		<p>
-    			<em class="base">ADRESS.EMAIL@MAIL.COM <br/></em>
-    			<em class="base">NOM<br/></em>
-    			<em class="base">PRENOM<br/></em>
-    			<em class="base">GENRE<br/></em>
-    			<em class="base2">JJ/MM/AAAA<br/></em>
-                <em class="base">+33 6 00 00 00 00<br/></em>
-    			<em class="base">ADRESSE PRINCIPALE<br/></em>
-    			<em class="base">PAYS<br/></em>
-    			<em class="base2">75 000<br/></em>
-    			<button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
 
-
-
-
-
-<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Etes-vous sûr de vouloir supprimer votre compte ?");
-    if (r == true) {
-        href = "../RechercherPar/RechercherPar.php";
-    } else {
-        txt = "none";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
-<button class="bouton" href="../modifcomteuti/modif.php">Modifier mes informations</button>               
-<button class="bouton" href="../reinitialisationmdp/réuni.php">Réinitialiser mon mot de passe</button>
-                   
-
-    		</p>
+    <h1> Réinitialiser le mot de passe </h1>
+    <div class="formulaire">
+    <form method="post" action="../controllers/FormulaireConnexion.php">
+   				<p>
+       				<input type="password" name="ancienmdp" placeholder="Entrer votre ancier mot de passe" required/>
+      				<input type="password" name="newmdp" placeholder="Entrer votre nouveau mot de passe" required />
+                    <input type="submit" name="connexion" value="Suivant">
+   				</p>
+			</form>
+        </div>
+    <div class="motdepasse"> 
+        <a href="envoimail.php"> Mot de passe oublié </a> 
     </div>
-    	
-    		
-    			
-</section>   
-  
+</body>    
+
+    
