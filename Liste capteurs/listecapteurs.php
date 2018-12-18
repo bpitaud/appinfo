@@ -139,7 +139,12 @@ getLogementID('maison');
                         $html2='<p> <a href = "#"> 20°  </a> </p>';
                         break;
                     case 5://"Chauffage":
-                        $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>';
+                        $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
+                        <progress id="avancement" value="50" max="100"></progress>
+                        <span id="pourcentage"></span>
+                        <input type="button" onclick="modif(-10);" value="-">
+                        <input type="button" onclick="modif(10);" value="+">
+                        <script type ="text/javascript" src="codecapteur.js"> </script>';
                         break;
                 } 
             } // image du type allumé
@@ -158,7 +163,12 @@ getLogementID('maison');
                         $html2='<p> <a href = "#"> 20°  </a> </p>';
                         break;
                     case 5://"Chauffage":
-                        $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>';
+                        $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
+                        <progress id="avancement" value="50" max="100"></progress>
+                        <span id="pourcentage"></span>
+                        <input type="button" onclick="modif(-10);" value="-">
+                        <input type="button" onclick="modif(10);" value="+">
+                        <script type ="text/javascript" src="codecapteur.js"> </script>';
                         break;
                 } 
             }
