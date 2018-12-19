@@ -99,7 +99,7 @@ CREATE TABLE `piece` (
 -- Structure de la table `utilasteur`
 --
 
-CREATE TABLE `utilasteur` (
+CREATE TABLE `utilisateur` (
   `utilisateurID` int(11) NOT NULL,
   `nom` varchar(25) NOT NULL,
   `prenom` varchar(20) NOT NULL,
@@ -170,7 +170,7 @@ ALTER TABLE `piece`
 --
 -- Index pour la table `utilasteur`
 --
-ALTER TABLE `utilasteur`
+ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`utilisateurID`);
 
 --
@@ -217,7 +217,7 @@ ALTER TABLE `piece`
 --
 -- AUTO_INCREMENT pour la table `utilasteur`
 --
-ALTER TABLE `utilasteur`
+ALTER TABLE `utilisateur`
   MODIFY `utilisateurID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -252,7 +252,7 @@ ALTER TABLE `controleur`
 -- Contraintes pour la table `logement`
 --
 ALTER TABLE `logement`
-  ADD CONSTRAINT `logement_ibfk_1` FOREIGN KEY (`utilisateurID`) REFERENCES `utilasteur` (`utilisateurID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `logement_ibfk_1` FOREIGN KEY (`utilisateurID`) REFERENCES `utilisateur` (`utilisateurID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `piece`
