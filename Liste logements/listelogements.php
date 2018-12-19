@@ -2,6 +2,7 @@
   // Pour la demo mettre ca dans la page liste des logements 
   require_once("../Models/database.php");
   session_start();
+  $_SESSION["utilisateurID"] = 1;
   /*//A la page connection (une fois qu'elle sera crée)//
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
@@ -54,22 +55,39 @@
         </div>
     </header>
     <section>
-    <div id="zonelogement"> 
-
-        <div id="logement">  
-               
-
-                    <a class="imagelogement" href="../Liste pièces/listepieces.php">
-                        <div class="imgmaison" href="../Liste pièces/listepieces.php"></div>
-                    </a>
-                <div id="sous">
-                        <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php"><div class="reglage"></div></a>
-                    <div class="nomlogement"> 
-                        <a href="../Liste pièces/listepieces.php"><p>Maison principale</p></a>
-                    </div>
-                </div>
-        </div>        
-    </div>
+    <?php
+    function getLogement($userID) {
+            $listLogement = array();
+            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$userID.'';
+            foreach  (connect()->query($sql) as $row) {
+                array_push($listLogement, $row['nom']);
+            }
+            print_r  ($listLogement);
+            return $listLogement;
+        }
+        $list = getLogement($_SESSION["utilisateurID"]);
+        echo count($list); 
+        for ($i = 0; $i < count($list) ;$i++) {
+            echo(
+                '<div id="zonelogement"> 
+                    <div id="logement">  
+                        <a class="imagelogement" href="../Liste pièces/listepieces.php">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php">
+                            </div>
+                        </a>
+                        <div id="sous">
+                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php">
+                                <div class="reglage">
+                                </div>
+                            </a>
+                            <div class="nomlogement"> 
+                                <a href="../Liste pièces/listepieces.php"><p>'.$list[$i].'</p></a>
+                            </div>
+                        </div>
+                    </div>        
+                </div>');
+            }
+    ?>
         <div class="ajoutlogement">
             <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
         </div>
