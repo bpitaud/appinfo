@@ -43,8 +43,10 @@
         </div>
     </header>
     
+    
+
     <h2> Mes informations </h2>
-<section>
+    <section>
     <div class="info">
     		<p>
     			<em class="base">ADRESS.EMAIL@MAIL.COM <br/></em>
@@ -61,7 +63,7 @@
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
                 <button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
-
+</p>
 
 <script>
 function myFunction() {
@@ -76,13 +78,12 @@ function myFunction() {
 }
 </script>
 
-<div class="button">
-<a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
+<div>
+<a href="../ModifCompteUser/ModifCompteUser.php"> <button  class="bouton"> Modifier mes informations</button></a>               
 </div>   
 
-<div class="button"
-<a href="../reinitialisationmdp/réuni.php"> <input type="button" value ="Réinitialiser mon mot de passe"></a> </div>
-            </p>
+<div><a href="../reinitialisationmdp/réuni.php"> <button class="bouton">Réinitialiser mon mot de passe</button></a> </div>
+            
     </div>
     	
     		
