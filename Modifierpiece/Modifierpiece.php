@@ -50,19 +50,32 @@
     		</a>
     	</p>
     	</div>
-		<h1>Modifier une pièce: NOM DE LA PIÈCE<span>.................</span></h1>
+		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
 		<div class="formulaire">
 			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
       				<input type="text" name="adresse" placeholder="Superficie" required />
               <div id="bouton">
-         
                 <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
-                    <a type="submit" href="../Menu/Menu.php"></a>
-         				<input type="submit" value="Supprimer">
-         			<input type="submit" value="Valider">
+                <input onclick="myFunction()" value="Supprimer" type="submit">
 
+
+                <script>
+                function myFunction() {
+                    var txt;
+                    var r = confirm("Etes-vous sûr de vouloir supprimer cette pièce?");
+                    if (r == true) {
+                        href = "../Liste pièces/listepiece.php";
+                    } else {
+                        txt = "none";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
+                
+                
+                <input type="submit" value="Valider">
               
             </div>
    				</p>
