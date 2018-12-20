@@ -2,7 +2,6 @@
   // Pour la demo mettre ca dans la page liste des logements 
   require_once("../Models/database.php");
   session_start();
-  $_SESSION["utilisateurID"] = 1;
   /*//A la page connection (une fois qu'elle sera crée)//
   $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
   session_start();
@@ -56,17 +55,15 @@
     </header>
     <section>
     <?php
-    function getLogement($userID) {
+    function getLogement($utilisateurID) {
             $listLogement = array();
-            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$userID.'';
+            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$utilisateurID.'';
             foreach  (connect()->query($sql) as $row) {
                 array_push($listLogement, $row['nom']);
             }
-            print_r  ($listLogement);
             return $listLogement;
         }
         $list = getLogement($_SESSION["utilisateurID"]);
-        echo count($list); 
         for ($i = 0; $i < count($list) ;$i++) {
             echo(
                 '<div id="zonelogement"> 

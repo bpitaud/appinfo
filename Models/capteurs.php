@@ -1,16 +1,16 @@
 <?php
  
- require("database.php");
+ require_once("../Models/database.php");
  
  // Ajouter un capteur
- function ajoutCapteur($capteurID, $nom, $type, $etat, $pieceID){
-     $reponse = $conn -> prepare("INSERT INTO capteur VALUES (:capteurID, :nom, :typ, :etat, :pieceID)");
+ function ajoutCapteur( $nom, $capteurID, $type, $pieceID, $etat){
+     $reponse = connect() -> prepare("INSERT INTO capteur(nom, capteurID, typ, pieceID, etat) VALUES (:nom, :capteurID, :typ, :pieceID, :etat)");
      $reponse->execute(array(
-         'capteurID' => $capteurID,
          'nom' => $nom,
+         'capteurID' => $capteurID,
          'typ' => $type,
-         'etat' => $etat,
          'pieceID' => $pieceID,
+         'etat' => $etat,
          ));
      }
 

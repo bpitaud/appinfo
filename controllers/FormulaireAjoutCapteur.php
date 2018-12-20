@@ -4,16 +4,14 @@ require_once("../Models/capteurs.php");
 
 session_start();
 // define variables and set to empty values
-$name = $number = $type = "";
+$name = $capteurID = $type = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = test_input($_POST["name"]);
+    $nom = test_input($_POST["name"]);
     $type = test_input($_POST["type"]);
-    $number = test_input($_POST["number"]);
+    $capteurID = test_input($_POST["number"]);
     $pieceID = $_SESSION['pieceID'];
-    ajoutCapteur($capteurID, $nom, $type, 'ON', $pieceID);
-    $resultat = RecupCapteur($pieceID);
-    $_SESSION['pieceID'] = $resultat[0][0];
+    ajoutCapteur($nom, $capteurID, $type, $pieceID, 'ON');
     header('Location: ../Liste capteurs/listecapteurs.php');
 }
 

@@ -45,8 +45,8 @@ CREATE TABLE `action_controleur` (
 CREATE TABLE `capteur` (
   `capteurID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
-  `type` enum('camera','humidite','temperature','lumiere') NOT NULL,
-  `etat` tinyint(1) NOT NULL,
+  `typ` enum('camera','humidite','temperature','lumiere') NOT NULL,
+  `etat` varchar(3) NOT NULL,
   `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -59,8 +59,8 @@ CREATE TABLE `capteur` (
 CREATE TABLE `controleur` (
   `controleurID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
-  `type` enum('chauffage') NOT NULL,
-  `etat` tinyint(1) NOT NULL,
+  `typ` enum('chauffage') NOT NULL,
+  `etat` varchar(3) NOT NULL,
   `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -189,18 +189,6 @@ ALTER TABLE `valeur_capteur`
 --
 ALTER TABLE `action_controleur`
   MODIFY `actionID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `capteur`
---
-ALTER TABLE `capteur`
-  MODIFY `capteurID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `controleur`
---
-ALTER TABLE `controleur`
-  MODIFY `controleurID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `logement`
