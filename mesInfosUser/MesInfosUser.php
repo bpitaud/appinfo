@@ -78,12 +78,14 @@ function myFunction() {
 }
 </script>
 
+
 <div>
 <a href="../ModifCompteUser/ModifCompteUser.php"> <button  class="bouton"> Modifier mes informations</button></a>               
 </div>   
 
 <div><a href="../reinitialisationmdp/réuni.php"> <button class="bouton">Réinitialiser mon mot de passe</button></a> </div>
             
+
     </div>
     	
     		

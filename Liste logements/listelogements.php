@@ -1,12 +1,7 @@
 <?php
-  // Pour la demo mettre ca dans la page liste des logements 
   require_once("../Models/database.php");
   session_start();
-  /*//A la page connection (une fois qu'elle sera crée)//
-  $utilisateurID = $db -> query ('SELECT utilisateurID FROM utilisateur WHERE adressemail = $CequiAEteRentreeDansLeFormulaire AND motdepasse = $MotDePasseEcritDansFormulaire');
-  session_start();
-  $_SESSION["utilisateurID"] = $utilisateurID;
-  */
+ 
 ?>
 
 <!DOCTYPE html>

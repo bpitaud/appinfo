@@ -123,20 +123,21 @@ getLogementID('maison');
             $html1 = '<div class="block"> 
             <div class="figure" >';
             if (getCapteurEtat($listID[$i])==0) { // Image du type éteint
+                echo getCapteurType($listID[$i]);
                 switch (getCapteurType($listID[$i])){
-                    case 1://"Lumière":
+                    case "lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
-                    case 2://"Camèra de surveillance":
+                    case "caméra de surveillance":
                         $html2='<p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                         break;
-                    case 3://"Humidité":
+                    case "humidité":
                         $html2='<p> <a href = "#"> 70%  </a> </p>';
                         break;
-                    case 4://"Température":
+                    case "température":
                         $html2='<p> <a href = "#"> 20°  </a> </p>';
                         break;
-                    case 5://"Chauffage":
+                    case "chauffage":
                         $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
                         <progress id="avancement" value="50" max="100"></progress>
                         <span id="pourcentage"></span>
@@ -144,23 +145,24 @@ getLogementID('maison');
                         <input type="button" onclick="modif(10);" value="+">
                         <script type ="text/javascript" src="codecapteur.js"> </script>';
                         break;
+                    
                 } 
             } // image du type allumé
             else {
                 switch (getCapteurType($listID[$i])){
-                    case 1://"Lumière":
+                    case "lumière":
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
-                    case 2://"Camèra de surveillance":
+                    case "caméra de surveillance":
                         $html2='<p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                         break;
-                    case 3://"Humidité":
+                    case "humidité":
                         $html2='<p> <a href = "#"> 70%  </a> </p>';
                         break;
-                    case 4://"Température":
+                    case "température":
                         $html2='<p> <a href = "#"> 20°  </a> </p>';
                         break;
-                    case 5://"Chauffage":
+                    case "chauffage":
                         $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
                         <progress id="avancement" value="50" max="100"></progress>
                         <span id="pourcentage"></span>
@@ -168,7 +170,10 @@ getLogementID('maison');
                         <input type="button" onclick="modif(10);" value="+">
                         <script type ="text/javascript" src="codecapteur.js"> </script>';
                         break;
+                    default :
+                        break;
                 } 
+                
             }
             $html3 = '</div>
             <div class="caractère"> 

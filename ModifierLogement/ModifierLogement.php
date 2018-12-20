@@ -70,7 +70,24 @@
        				</select>
               <div id="bouton">
                 <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
-         				<input type="submit" value="Valider">
+                <input onclick="myFunction()" value="Supprimer" type="submit">
+
+
+                <script>
+                function myFunction() {
+                    var txt;
+                    var r = confirm("Etes-vous sûr de vouloir supprimer votre compte ?");
+                    if (r == true) {
+                        href = "../RechercherPar/RechercherPar.php";
+                    } else {
+                        txt = "none";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
+                
+                
+                <input type="submit" value="Valider">
               
             </div>
    				</p>

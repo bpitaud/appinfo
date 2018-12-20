@@ -109,7 +109,7 @@ session_start();
                             echo'
                             <div class="block" >
                                 <div class="figure">
-                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                    <p> <a href = "../Modifierpiece/Modifierpiece.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
                                 </div>
                                 <div class="Caractere"> 
                                     '.$listName[$i].'
@@ -123,7 +123,7 @@ session_start();
             <!--
             <div class="block" >
                 <div class="figure">
-                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                    <p> <a href = "../Modifierpiece/Modifierpiece.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
                 </div>
                 <div class="Caractere"> 
                     Salon
