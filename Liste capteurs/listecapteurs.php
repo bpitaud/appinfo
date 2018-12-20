@@ -125,8 +125,9 @@ getLogementID('maison');
             $html1 = '<div class="block"> 
             <div class="figure" >';
             if (getCapteurEtat($listID[$i])==0) { // Image du type éteint
+                echo getCapteurType($listID[$i]);
                 switch (getCapteurType($listID[$i])){
-                    case 1://"Lumière":
+                    case "Lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
                     case 2://"Camèra de surveillance":
@@ -146,6 +147,7 @@ getLogementID('maison');
                         <input type="button" onclick="modif(10);" value="+">
                         <script type ="text/javascript" src="codecapteur.js"> </script>';
                         break;
+                    
                 } 
             } // image du type allumé
             else {
