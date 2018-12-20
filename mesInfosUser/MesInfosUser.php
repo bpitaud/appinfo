@@ -82,13 +82,6 @@ function myFunction() {
 <a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
 </div>   
 
-<<<<<<< HEAD
-
-=======
-<div class="button2">
-<a href="../reinitialisationmdp/réuni.php"> <input type="button" value ="Réinitialiser mon mot de passe"></a> </div>
-    </div>
->>>>>>> d19c6c2eed9df05192484609e071e3b5dd8c5584
     	
     		
     			
