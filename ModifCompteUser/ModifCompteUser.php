@@ -54,17 +54,17 @@
     	<div class="info">
         <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
             <p>
-       			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
-      			<input type="base" name="number" placeholder="NOM" required />
-                <input type="base" name="name" placeholder="PRENOM" required/>
+       			<input type="email" name="name" placeholder="ADRESS.EMAIL@MAIL.COM"/>
+      			<input type="text" name="number" placeholder="NOM"  />
+                <input type="text" name="name" placeholder="PRENOM" />
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
                         <option value="féminin"> Féminin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
-    			<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
+                <input type="date" name="number" placeholder="JJ/MM/AAAA" />
+    			<input type="text" name="name" placeholder="+33 6 00 00 00 00" required/>
+      				<input type="text" name="number" placeholder="ADRESSE PRINCIPALE" required />
                       <select name="Pays" required>
                         <option value="pays"> PAYS </option>	
        					<option value="france"> France </option>
@@ -76,7 +76,8 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-      				<input type="base" name="number" placeholder="75 000" required />
+                      <input type="text" name="number" placeholder="75 000" required />
+                      <input type="password" name
                     <button class="bouton" href="../">Annuler</button>
                     <button class="bouton">Valider</button>
     		</p>
