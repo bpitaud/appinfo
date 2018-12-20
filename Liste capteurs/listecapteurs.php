@@ -122,9 +122,9 @@ getLogementID('maison');
         for ($i = 0; $i < count($listID) ;$i++) {
             $html1 = '<div class="block"> 
             <div class="figure" >';
-            if (getCapteurEtat($listID[$i])==0) { // Image du type éteint
+            if (getCapteurEtat($listID[$i])==0 ) { // Image du type éteint
                 echo getCapteurType($listID[$i]);
-                switch (getCapteurType($listID[$i])){
+                switch (getCapteurType($listID[$i]) OR getControlleurType($listID[$i])){
                     case "lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
@@ -173,7 +173,7 @@ getLogementID('maison');
                     default :
                         break;
                 } 
-                
+
             }
             $html3 = '</div>
             <div class="caractère"> 
