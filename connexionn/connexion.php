@@ -49,4 +49,9 @@
     <div class="motdepasse"> 
         <a href="envoimail.php"> Mot de passe oublié </a> 
     </div>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>    

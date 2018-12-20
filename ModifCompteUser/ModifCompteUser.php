@@ -89,5 +89,10 @@
         </form>
     	</div>
 </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>
 </html>

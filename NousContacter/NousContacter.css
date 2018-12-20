@@ -169,3 +169,9 @@ em{
     border: 2px solid white;
     background: url("../Images/iconemail.png") no-repeat 30% center ;
 }
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+}
