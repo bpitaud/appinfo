@@ -16,7 +16,7 @@ function test_input($data) {
 $nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
+
     $nom = test_input($_POST["nom"]);
     $adresse = test_input($_POST["adresse"]);
     $codepostale = test_input($_POST["codepostale"]);
