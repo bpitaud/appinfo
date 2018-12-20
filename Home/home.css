@@ -162,7 +162,7 @@ header a:hover span {
     
 }
 
-#rectangle {
+.rectangle {
     margin-top:50em;
     margin-left:-20%;
     margin-right:20%;
@@ -170,20 +170,23 @@ header a:hover span {
     height:2000px;
     background:black;
     transform:rotate(6deg)
+    
 }
 
 
 #triangle {
-    width: 0;
+    width: 60;
     height: 0;
-    margin-top:45.6em;
-    border-top: 100px solid transparent;
-    border-bottom: 100% solid transparent;
-    border-left: 1520px solid black;
-    transform:rotate(0deg)
+    border-top: 200px solid transparent;
+    border-bottom: 780px solid transparent;
+    border-left: 1580px solid black;
+    margin-top:10%;
+    background-position: none;
 }
 
-.absolute {
-    position: absolute;
-    
+.h2 {
+    position:absolute;
+    margin-top:40%;
+    margin-bottom: 10%;
+    padding-top:40%;
 }
