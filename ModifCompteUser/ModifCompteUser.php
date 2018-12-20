@@ -57,18 +57,18 @@
         <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
        			
-      			<input type="text" name="number" placeholder="NOM"  />
-                <input type="text" name="name" placeholder="PRENOM" />
-                <input type="email" name="name" placeholder="ADRESS.EMAIL@MAIL.COM"/>
-                <select name="Genre" required>
+      			<input type="text" name="nom" placeholder="NOM"  />
+                <input type="text" name="prenom" placeholder="PRENOM" />
+                <input type="email" name="email" placeholder="ADRESS.EMAIL@MAIL.COM"/>
+                <select name="genre" required>
        					<option value="genre"> GENRE </option>
                         <option value="masculin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="date" name="number" placeholder="JJ/MM/AAAA" />
-    			<input type="text" name="name" placeholder="+33 6 00 00 00 00" />
-      				<input type="text" name="number" placeholder="ADRESSE PRINCIPALE"  />
-                      <select name="Pays">
+                <input type="date" name="naissance" placeholder="JJ/MM/AAAA" />
+    			<input type="text" name="telephone" placeholder="+33 6 00 00 00 00" />
+      				<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE"  />
+                      <select name="pays">
                         <option value="pays"> PAYS </option>	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
@@ -79,7 +79,7 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-                      <input type="text" name="number" placeholder="75 000" />
+                      <input type="text" name="codepostale" placeholder="75 000" />
                       <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
                       <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
                       <button class="bouton">Valider</button>
