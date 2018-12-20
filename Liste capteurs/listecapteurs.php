@@ -1,8 +1,6 @@
 <?php
 require_once("../Models/database.php");
-$pieceID = 1;
 session_start();
-$_SESSION["pieceID"] = $pieceID;
 /*
 function getLogementID($logement) {
     $listLogementID = array();

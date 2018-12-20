@@ -102,7 +102,7 @@ session_start();
                             //print_r  ($listPieceID);
                             return $listPieceID;
                         }
-                        $listID = getPieceID(1);
+                        $listID = getPieceID($_SESSION["logementID"]);
                         //print_r($listID);
                         for ($i = 0; $i < count($listID) ;$i++) {
                             echo $listName[$i];
