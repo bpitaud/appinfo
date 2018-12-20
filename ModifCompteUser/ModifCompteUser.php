@@ -79,7 +79,7 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-                      <input type="text" name="number" placeholder="75 000" required />
+                      <input type="text" name="number" placeholder="75 000" />
                       <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
                       <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
                       <button class="bouton">Valider</button>
