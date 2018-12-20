@@ -52,20 +52,21 @@
 
 <section>
     	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+        <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
-       			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
-      			<input type="base" name="number" placeholder="NOM" required />
-                <input type="base" name="name" placeholder="PRENOM" required/>
+       			
+      			<input type="text" name="number" placeholder="NOM"  />
+                <input type="text" name="name" placeholder="PRENOM" />
+                <input type="email" name="name" placeholder="ADRESS.EMAIL@MAIL.COM"/>
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
                         <option value="féminin"> Féminin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
-    			<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
-                      <select name="Pays" required>
+                <input type="date" name="number" placeholder="JJ/MM/AAAA" />
+    			<input type="text" name="name" placeholder="+33 6 00 00 00 00" />
+      				<input type="text" name="number" placeholder="ADRESSE PRINCIPALE"  />
+                      <select name="Pays">
                         <option value="pays"> PAYS </option>	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
@@ -76,9 +77,12 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-      				<input type="base" name="number" placeholder="75 000" required />
-                    <button class="bouton" href="../">Annuler</button>
-                    <button class="bouton">Valider</button>
+                      <input type="text" name="number" placeholder="75 000" required />
+                      <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
+                      <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
+                      <button class="bouton">Valider</button>
+                      <button class="bouton" href="../">Annuler</button>
+                    
     		</p>
         </form>
     	</div>
