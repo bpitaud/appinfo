@@ -57,10 +57,10 @@
        				<input type="text" name="name" placeholder="Nom du capteur" required/>
       				<input type="text" name="number" placeholder="Numéro de série" required />
        				<select name="type" required>
-       					<option value="lumière"> Lumière </option>
-						<option value="caméra de surveillance"> Caméra de surveillance </option>
-						<option value="humidité"> Humidité </option> 
-						<option value="température"> Température </option>
+       					<option value="lumiere"> Lumière </option>
+						<option value="camera"> Caméra de surveillance </option>
+						<option value="humidite"> Humidité </option> 
+						<option value="temperature"> Température </option>
 						<option value="chauffage"> Chauffage </option>
 						      	
        				</select>

@@ -2,7 +2,7 @@
 function connect (){
 $servername = "localhost";
 $user = "root";
-$password = "root";
+$password = "";
     try {
         $conn = new PDO("mysql:host=$servername;dbname=domisep",$user,$password);
         // set the PDO error mode to exception

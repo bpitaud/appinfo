@@ -46,7 +46,7 @@ CREATE TABLE `capteur` (
   `capteurID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `typ` enum('camera','humidite','temperature','lumiere') NOT NULL,
-  `etat` varchar(3) NOT NULL,
+  `etat` tinyint(1) NOT NULL,
   `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,7 +60,7 @@ CREATE TABLE `controleur` (
   `controleurID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `typ` enum('chauffage') NOT NULL,
-  `etat` varchar(3) NOT NULL,
+  `etat` tinyint(1) NOT NULL,
   `pieceID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
