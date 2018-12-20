@@ -60,4 +60,9 @@
 
 
     </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body> 

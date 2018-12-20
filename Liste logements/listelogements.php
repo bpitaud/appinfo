@@ -84,4 +84,9 @@
             <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
         </div>
     </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+
 </body> 

@@ -3,8 +3,6 @@ require_once("../Models/database.php");
 require_once("../Models/capteurs.php");
 
 session_start();
-// define variables and set to empty values
-
 
 $capteurs = array("lumiere", "camera", "humidite", "temperature");
 $controleurs = array("chauffage");
@@ -15,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = test_input($_POST["name"]);
     $type = test_input($_POST["type"]);
     if (in_array($type, $capteurs)){
-      switch (type){
+      switch ($type){
         case "lumiere":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
@@ -46,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     } else {
       switch ($type){
-        case "camera":
+        case "chauffage":
         $controleurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutControleur($nom, $controleurID, $type, $pieceID, 1);

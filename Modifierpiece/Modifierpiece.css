@@ -10,7 +10,7 @@
 
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.gif") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
 }
@@ -137,38 +137,42 @@ section h1 {
     justify-content: center;
     align-items: center;
     align-content: center;
-	margin-top: 20px;
-    font-size: 1.5em;
-    margin-bottom:20px;
+	margin-top: 5%;
+	font-size: 1.5em;
 }
 
 section h1 span {
     opacity: 0;
 }
 
-input[type=text] {
-	color : white;
-    width:30%;
-    padding: 10px 10px;
-    margin:auto;
-    margin-top: 75px;
+.retour{
     display: flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
     background-color: rgba(0,0,0,0);
-    text-align: left;
+    color: white;
+    margin-left: 5%;
+   
 }
 
-input[type=password] {
-	color : white;
-    width:30%;
-    padding: 10px 10px;
-    margin:auto;
-    margin-top: 75px;
+section a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.formulaire{
+    
+    width: 30%;
+    justify-content: center;
     display: flex;
     flex-direction: column;
+    margin:auto
+}
+
+input[type=text] {
+	color : white;
+    width:100%;
+    padding: 10px 20px;
+    margin:auto;
+    margin-top: 25px;
+    
     border:none;
     border-bottom: 1px solid white;
     box-sizing: border-box;
@@ -177,9 +181,9 @@ input[type=password] {
 }
 
 select {
-	color : white;
-    width:30%;
-    padding: 20px 20px;
+	color : rgba(255, 255, 255, 0.9);
+    width:100%;
+    padding: 10px 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -188,81 +192,88 @@ select {
     border:none;
     border-bottom: 1px solid white;
     box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0.6);
 
 }
 
+#bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+}
+
+
+
 input[type=submit] {
-    width: 200px;
+    
+    width: 30%;
     background-color: LightGray;
     color: black;
-    padding-left: 15%;
-    padding-right:15%;
-    padding-top:7px;
-    padding-bottom:7px;
+    padding: 5px 5px;
+    margin-left: 20%;
+    margin-right: auto;
     margin-top: 40px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-align: center;
-    justify-content: center;
 }
 
+a[type=submit] {
+    
+    width: 30%;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 5px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
+input[type=test] {
+    
+    width: 30%;
+    background-color: LightGray;
+    color: black;
+    padding: 5px 5px;
+    margin-left: 20%;
+    margin-right: auto;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a[type=test] {
+    
+    width: 30%;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 5px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 input[type=submit]:hover {
     background-color: gray;
 }
 
-input[type=value] {
-    padding-left: 50%;
-    padding-right: 5%;
+::placeholder { 
+    color: rgba(255, 255, 255, 0.9);;
+    opacity: 1; 
 }
 
-.motdepasse{
-    font-size: 80%;
-    text-decoration:underline;
-    margin-top:2em;
-}
-
-.inscription{
-    border: solid white;
-    background:rgba(255,255,255,0);
-    margin-top:1.4em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin-left:34.5%;
-    margin-right:34.5%;
-    font-size:100%;
-}
-
-.creationcompteheader {
-    border: solid white;
-    background:rgba(255,255,255,0);
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:4px;
-    padding-bottom:1%;
-    margin-bottom:80em;
-    font-size:60%;
-    width: 180px;
-    margin-right:6em;
-}
-
-.connexionheader {
-    border:solid grey;
-    background:grey;
-    color:black;
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:4px;
-    padding-bottom:1%;
-    margin-bottom:80em;
-    font-size:60%;
-    width: 180px;
-    margin-right:6em;
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
 }

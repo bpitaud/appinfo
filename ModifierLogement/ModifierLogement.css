@@ -203,6 +203,8 @@ select {
     width:100%;
 }
 
+
+
 input[type=submit] {
     
     width: 30%;
@@ -241,4 +243,8 @@ input[type=submit]:hover {
     opacity: 1; /* Firefox */
 }
 
-.option 
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+}

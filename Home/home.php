@@ -40,7 +40,11 @@
     <body>
         <h1> Gardez le contrôle <br> de votre logement </h1>
         <div id="triangle"></div>
-        <div class="absolute"> 
         <h2> Que faisons-nous ? </h2> </div>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
     </body>    
 

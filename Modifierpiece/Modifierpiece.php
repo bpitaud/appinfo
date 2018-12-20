@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="AjoutCapteur.css" />
-    <title>Ajout d'un Capteur</title>
+    <link rel="stylesheet" href="Modifierpiece.css" />
+    <title>Ajout d'un Logement</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -46,25 +46,38 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste capteurs/listecapteurs.php"> < Retour		
+    		<a href="../Liste logements/listelogements.php">  < Retour	
     		</a>
     	</p>
     	</div>
-		<h1>Ajouter un capteur<span>.................</span></h1>
+		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom du capteur" required/>
-      				<input type="text" name="number" placeholder="Numéro de série" required />
-       				<select name="type" required>
-       					<option value="lumiere"> Lumière </option>
-						<option value="camera"> Caméra de surveillance </option>
-						<option value="humidite"> Humidité </option> 
-						<option value="temperature"> Température </option>
-						<option value="chauffage"> Chauffage </option>
-						      	
-       				</select>
-       				<input type="submit" value="Suivant">
+       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
+      				<input type="text" name="adresse" placeholder="Superficie" required />
+              <div id="bouton">
+                <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
+                <input onclick="myFunction()" value="Supprimer" type="submit">
+
+
+                <script>
+                function myFunction() {
+                    var txt;
+                    var r = confirm("Etes-vous sûr de vouloir supprimer cette pièce?");
+                    if (r == true) {
+                        href = "../Liste pièces/listepiece.php";
+                    } else {
+                        txt = "none";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
+                
+                
+                <input type="submit" value="Valider">
+              
+            </div>
    				</p>
 			</form>
 		</div>
@@ -75,3 +88,5 @@
     </footer>
     
 </body>
+
+
