@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="ModifierLogement.css" />
+    <link rel="stylesheet" href="Modifierpiece.css" />
     <title>Ajout d'un Logement</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -54,20 +54,8 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du logement" required/>
-      				<input type="text" name="adresse" placeholder="Adresse du logement" required />
-       				<input type="text" name="codepostale" placeholder="Code postale" required />
-       				<input type="text" name="surface" placeholder="Surface du logement" required>
-       				<select name="pays" required>
-       					<option value="france"> France </option>
-       					<option value="royaume-uni"> Royaume-Uni </option>
-       					<option value="espagne"> Espagne </option>
-       					<option value="italie"> Italie </option>
-       					<option value="etats-unis"> Etats-Unis </option>
-       					<option value="canada"> Canada </option>
-       					<option value="chine"> Chine </option>
-       					<option value="japon"> Japon </option>     	
-       				</select>
+       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
+      				<input type="text" name="adresse" placeholder="Superficie" required />
               <div id="bouton">
                 <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
                 <input onclick="myFunction()" value="Supprimer" type="submit">
@@ -76,9 +64,9 @@
                 <script>
                 function myFunction() {
                     var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer votre compte ?");
+                    var r = confirm("Etes-vous sûr de vouloir supprimer cette pièce?");
                     if (r == true) {
-                        href = "../RechercherPar/RechercherPar.php";
+                        href = "../Liste pièces/listepiece.php";
                     } else {
                         txt = "none";
                     }

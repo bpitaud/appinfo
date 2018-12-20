@@ -76,11 +76,11 @@ function myFunction() {
 }
 </script>
 
-<div class="button">
+<div class="button1">
 <a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
 </div>   
 
-<div class="button"
+<div class="button2"
 <a href="../reinitialisationmdp/réuni.php"> <input type="button" value ="Réinitialiser mon mot de passe"></a> </div>
             </p>
     </div>
