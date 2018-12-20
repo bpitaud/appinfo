@@ -68,14 +68,14 @@ function SuppCapteur($capteurID){
 }
 
 // ajouter un controleur 
-function ajoutControleur($controleurID, $nom, $type, $etat, $pieceID){
-    $reponse = $conn -> prepare("INSERT INTO controleur VALUES (:controleurID, :nom, :typ, :etat, :pieceID)");
+function ajoutControleur( $nom, $controleurID, $type, $pieceID, $etat){
+    $reponse = connect() -> prepare("INSERT INTO controleur(nom, controleurID, typ, pieceID, etat) VALUES (:nom, :controleurID, :typ, :pieceID, :etat)");
     $reponse->execute(array(
-        'controleurID' => $controleurID,
         'nom' => $nom,
+        'controleurID' => $controleurID,
         'typ' => $type,
-        'etat' => $etat,
         'pieceID' => $pieceID,
+        'etat' => $etat,
         ));
     }
 
