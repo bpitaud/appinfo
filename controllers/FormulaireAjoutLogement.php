@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultat = RecupLogements($utilisateurID);
     $_SESSION['logementID'] = $resultat[0][0]; 
     header('Location: ../Liste logements/listelogements.php'); 
+    
 }
 
 ?>
