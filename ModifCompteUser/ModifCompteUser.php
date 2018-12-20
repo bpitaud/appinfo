@@ -52,20 +52,21 @@
 
 <section>
     	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+        <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
-       			<input type="email" name="name" placeholder="ADRESS.EMAIL@MAIL.COM"/>
+       			
       			<input type="text" name="number" placeholder="NOM"  />
                 <input type="text" name="name" placeholder="PRENOM" />
+                <input type="email" name="name" placeholder="ADRESS.EMAIL@MAIL.COM"/>
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
                         <option value="féminin"> Féminin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="date" name="number" placeholder="JJ/MM/AAAA" />
-    			<input type="text" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="text" name="number" placeholder="ADRESSE PRINCIPALE" required />
-                      <select name="Pays" required>
+    			<input type="text" name="name" placeholder="+33 6 00 00 00 00" />
+      				<input type="text" name="number" placeholder="ADRESSE PRINCIPALE"  />
+                      <select name="Pays">
                         <option value="pays"> PAYS </option>	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
@@ -77,9 +78,11 @@
        					<option value="japon"> Japon </option>     	
        				</select>
                       <input type="text" name="number" placeholder="75 000" required />
-                      <input type="password" name
-                    <button class="bouton" href="../">Annuler</button>
-                    <button class="bouton">Valider</button>
+                      <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
+                      <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
+                      <button class="bouton">Valider</button>
+                      <button class="bouton" href="../">Annuler</button>
+                    
     		</p>
         </form>
     	</div>
