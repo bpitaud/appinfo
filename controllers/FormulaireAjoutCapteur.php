@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type = test_input($_POST["type"]);
     $capteurID = test_input($_POST["number"]);
     $pieceID = $_SESSION['pieceID'];
-    ajoutCapteur($nom, $capteurID, $type, $pieceID, '1');
+    ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
     header('Location: ../Liste capteurs/listecapteurs.php');
 }
 

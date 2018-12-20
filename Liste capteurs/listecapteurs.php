@@ -128,16 +128,16 @@ getLogementID('maison');
                     case "Lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
-                    case 2://"Camèra de surveillance":
+                    case "Camèra de surveillance":
                         $html2='<p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                         break;
-                    case 3://"Humidité":
+                    case "Humidité":
                         $html2='<p> <a href = "#"> 70%  </a> </p>';
                         break;
-                    case 4://"Température":
+                    case "Température":
                         $html2='<p> <a href = "#"> 20°  </a> </p>';
                         break;
-                    case 5://"Chauffage":
+                    case "Chauffage":
                         $html2='<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
                         <progress id="avancement" value="50" max="100"></progress>
                         <span id="pourcentage"></span>
