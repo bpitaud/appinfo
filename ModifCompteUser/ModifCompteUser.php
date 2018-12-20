@@ -8,7 +8,7 @@
   </head>
 
 <body>
-    <header>
+<header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
@@ -44,13 +44,15 @@
     </header>
 
   
-    <nav>
-    	<a href="../mesinfosuti/mesinfosuti.php">< Retour</a>
-    </nav>
-    
-    <h2>Modification de mes informations</h2>
+  <div id="retour">
+    <a href="../mesInfosUser/MesInfosUser.php">< Retour</a>
+</div>
+
+  <h2>Modification de mes informations</h2>
 
 <section>
+
+
     	<div class="info">
         <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
             <p>
@@ -59,7 +61,7 @@
                 <input type="base" name="name" placeholder="PRENOM" required/>
                 <select name="Genre" required>
        					<option value="genre"> GENRE </option>
-                        <option value="féminin"> Féminin </option>	
+                        <option value="masculin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
