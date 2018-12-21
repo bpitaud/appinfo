@@ -59,7 +59,7 @@
        			
       			<input type="text" name="nom" placeholder="NOM"  />
                 <input type="text" name="prenom" placeholder="PRENOM" />
-                <input type="email" name="email" placeholder="ADRESS.EMAIL@MAIL.COM"/>
+                <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM"/>
                 <select name="genre" required>
        					<option value="genre"> GENRE </option>
                         <option value="masculin"> Masculin </option>	
@@ -82,7 +82,7 @@
                       <input type="text" name="codepostale" placeholder="75 000" />
                       <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
                       <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
-                      <button class="bouton">Valider</button>
+                      <button class="bouton" type="submit">Valider</button>
                       <button class="bouton" href="../">Annuler</button>
                     
     		</p>

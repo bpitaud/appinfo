@@ -92,7 +92,7 @@ function Possede_logements($utilisateurID) {
 
 // supprimer un utilisateur 
 function SuppUtilisateur($utilisateurID){
-    $conn = connect() -> prepare('DELETE * FROM utilisateur WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('DELETE * FROM `utilisateur` WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array($utilisateurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
@@ -101,7 +101,7 @@ function SuppUtilisateur($utilisateurID){
 
 // modifier les infos d'un utilisateur 
 function ModifNomUtilisateur($utilisateurID,$nom){
-    $conn = connect() -> prepare('UPDATE utilisateur SET nom=:nom WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET nom=:nom WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'nom' => $nom,
             'utilisateurID'=> $utilisateurID,    
@@ -109,7 +109,7 @@ function ModifNomUtilisateur($utilisateurID,$nom){
 }
 
 function ModifPrenomUtilisateur($utilisateurID,$prenom){
-    $conn = connect() -> prepare('UPDATE utilisateur SET prenom=:prenom WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET prenom=:prenom WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'prenom' => $prenom,
             'utilisateurID'=> $utilisateurID,    
@@ -117,7 +117,7 @@ function ModifPrenomUtilisateur($utilisateurID,$prenom){
     }
 
 function ModifEmailUtilisateur($utilisateurID,$email){
-    $conn = connect() -> prepare('UPDATE utilisateur SET email=:email WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET email=:email WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'email' => $email,
             'utilisateurID'=> $utilisateurID,    
@@ -125,7 +125,7 @@ function ModifEmailUtilisateur($utilisateurID,$email){
 }
 
 function ModifGenreUtilisateur($utilisateurID,$genre){
-    $conn = connect() -> prepare('UPDATE utilisateur SET genre=:genre WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET genre=:genre WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'genre' => $genre,
             'utilisateurID'=> $utilisateurID,    
@@ -133,7 +133,7 @@ function ModifGenreUtilisateur($utilisateurID,$genre){
 }
 
 function ModifNaissanceUtilisateur($utilisateurID,$naissance){
-    $conn = connect() -> prepare('UPDATE utilisateur SET naissance=:naissance WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET naissance=:naissance WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'naissance' => $naissance,
             'utilisateurID'=> $utilisateurID,    
@@ -141,15 +141,16 @@ function ModifNaissanceUtilisateur($utilisateurID,$naissance){
 }
 
 function ModifTelUtilisateur($utilisateurID,$telephone){
-    $conn = connect() -> prepare('UPDATE utilisateur SET telephone=:telephone WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET telephone=:telephone WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'telephone' => $telephone,
             'utilisateurID'=> $utilisateurID,    
         ));
+        
 }
 
 function ModifAdresseUtilisateur($utilisateurID,$adresse){
-    $conn = connect() -> prepare('UPDATE utilisateur SET adresse=:adresse WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET adresse=:adresse WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'adresse' => $adresse,
             'utilisateurID'=> $utilisateurID,    
@@ -158,7 +159,7 @@ function ModifAdresseUtilisateur($utilisateurID,$adresse){
 }
 
 function ModifPaysUtilisateur($utilisateurID,$pays){
-    $conn = connect() -> prepare('UPDATE utilisateur SET pays=:pays WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET pays=:pays WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'pays' => $pays,
             'utilisateurID'=> $utilisateurID,    
@@ -166,11 +167,12 @@ function ModifPaysUtilisateur($utilisateurID,$pays){
 }
 
 function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
-    $conn = connect() -> prepare('UPDATE utilisateur SET codepostale=:codepostale WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('UPDATE `utilisateur` SET codepostale=:codepostale WHERE utilisateurID =:utilisateurID');
     $conn -> execute(array(
             'codepostale' => $codepostale,
             'utilisateurID'=> $utilisateurID,    
         ));
+        
 }
 // modifier le mot de passe 
 
@@ -191,6 +193,16 @@ function ModifMdp($email, $ancien, $nouveau) {
         'mdp'=> $hache,    
     ));
     return true;    
+}
+
+function changeMdp($email, $nouveau) {
+    $conn = connect() -> prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
+    $hache = mdp_hache($nouveau);
+    $conn-> execute(array(
+        'email' => $email,
+        'mdp' => $hache,
+    ));    
+    
 }
 
 ?> 
