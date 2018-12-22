@@ -30,6 +30,16 @@ function RecupLogementsbyID($logementID){
     return $resultat;
 }
 
+// récupérer un logement pour l'afficher dans liste logement
+function getLogement($utilisateurID) {
+    $listLogement = array();
+    $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$utilisateurID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($listLogement, $row['nom']);
+    }
+    return $listLogement;
+}
+
  
 // Modifier les données d'un logement 
 function ModifNomLogement($logementID,$nom){

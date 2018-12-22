@@ -1,6 +1,6 @@
 <?php 
 require 'database.php';
-session_start();
+
 
 // ajouter une pièce 
 function ajoutPiece( $nom, $surface, $logementID){
@@ -35,6 +35,16 @@ function RecupPiecebyID($pieceID){
     $conn -> execute(array($pieceID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
+}
+
+// récupérer un logement pour l'afficher dans liste logement
+function getPiece($logementID) {
+    $listPiece = array();
+    $sql =  'SELECT nom FROM piece WHERE logementID ='.$logementID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($listPiece, $row['nom']);
+    }
+    return $listPiece;
 }
 
 // modifier le nom d'une pièce 

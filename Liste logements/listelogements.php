@@ -1,7 +1,5 @@
 <?php
-
   session_start();
- 
 ?>
 
 <!DOCTYPE html>
@@ -50,15 +48,8 @@
     </header>
     <section>
     <?php
-    function getLogement($utilisateurID) {
-            $listLogement = array();
-            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$utilisateurID.'';
-            foreach  (connect()->query($sql) as $row) {
-                array_push($listLogement, $row['nom']);
-            }
-            return $listLogement;
-        }
-        $list = getLogement($_SESSION["utilisateurID"]);
+    require_once('../controllers/FormulaireAjoutLogement.php');
+        $list = getLogementController($_SESSION["utilisateurID"]);
         for ($i = 0; $i < count($list) ;$i++) {
             echo(
                 '<div id="zonelogement"> 
@@ -69,8 +60,6 @@
                         </a>
                         <div id="sous">
                             <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php">
-                                <div class="reglage">
-                                </div>
                             </a>
                             <div class="nomlogement"> 
                                 <a href="../Liste pièces/listepieces.php"><p>'.$list[$i].'</p></a>

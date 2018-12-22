@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 ?>
 
@@ -55,32 +54,36 @@ session_start();
         <h2>Pièce(s) du logement</h2>
     	<div id="pieces">
             <?php
-                        
-                        function getPiece($logementID) {
-                            $listPiece = array();
-                            $sql =  'SELECT nom FROM piece WHERE logementID ='.$logementID.'';
-                            foreach  (connect()->query($sql) as $row) {
-                                array_push($listPiece, $row['nom']);
-                            }
-                            return $listPiece;
-                        }
-                        $list = getPiece($_SESSION["logementID"]);
+            require_once('../controllers/FormulaireAjoutPiece.php');
+                        $list = getPieceController($_SESSION["logementID"]);
                         for ($i = 0; $i < count($list) ;$i++) {
-                            echo('
+                            echo'
                             <div class="block" >
                                 <div class="figure">
                                     <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
                                 </div>
                                 <div class="Caractere"> 
                                     '.$list[$i].'
-                                    <p><a href="../ModifierLogement/ModifierLogement.php">  	
-                                    <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
+                                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
                                 </div>
+                                
                             </div>
-                            ');
+                            ';
                         }
             ?>
-           
+
+            <!--
+            <div class="block" >
+                <div class="figure">
+                    <p> <a href = "../Modifierpiece/Modifierpiece.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                </div>
+                <div class="Caractere"> 
+                    Salon
+                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
+                </div>
+            </div>
+            -->
+               
             <div class="block"> 
                 <div class="figure">
                     <div class="plus" > 
