@@ -50,14 +50,14 @@
     		</a>
     	</p>
     	</div>
-		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
+		<h1>Modifier une pièce: NOM DE LA PIECE<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
+			<form method="post" action="../controllers/ModifPieces.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
-      				<input type="text" name="adresse" placeholder="Superficie" required />
+       				<input type="text" name="nom" placeholder="Nom de la pièce" />
+      				<input type="text" name="surface" placeholder="Superficie" />
               <div id="bouton">
-                <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
+                <a type="submit" href="../Liste pièces/listepieces.php">Annuler</a>
                 <input onclick="myFunction()" value="Supprimer" type="submit">
 
 

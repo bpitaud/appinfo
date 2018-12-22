@@ -28,4 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: ../Liste pièces/listepieces.php'); 
 }
 
+function getPieceController($logementID){
+    return getPiece($logementID);
+}
 ?>

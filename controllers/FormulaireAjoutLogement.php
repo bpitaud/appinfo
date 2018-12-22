@@ -30,4 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 }
 
+function getLogementController($utilisateurID){
+    return getLogement($utilisateurID);
+}
+
 ?>

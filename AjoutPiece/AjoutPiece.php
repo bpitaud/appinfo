@@ -54,7 +54,7 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutPiece.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom de la pièce" required/>
+       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
        				<input type="text" name="surface" placeholder="Surface de la pièce" required >
        				<input type="submit" value="Suivant">
    				</p>

@@ -105,11 +105,11 @@ CREATE TABLE `utilisateur` (
   `prenom` varchar(20) NOT NULL,
   `email` varchar(250) NOT NULL,
   `genre` varchar(15) NOT NULL,
-  `naissance` date NOT NULL,
+  `naissance` date NULL,
   `telephone` varchar(15) NOT NULL,
   `adresse` varchar(100) NOT NULL,
   `pays` varchar(11) NOT NULL,
-  `codepostale` int(11) NOT NULL,
+  `codepostale` int(11) NULL,
   `mdp` varchar(200) NOT NULL,
   `administrateur` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
