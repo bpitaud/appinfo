@@ -1,5 +1,5 @@
 <?php
-  require_once("../Models/database.php");
+
   session_start();
  
 ?>
@@ -64,7 +64,7 @@
                 '<div id="zonelogement"> 
                     <div id="logement">  
                         <a class="imagelogement" href="../Liste pièces/listepieces.php">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php"> 
                             </div>
                         </a>
                         <div id="sous">

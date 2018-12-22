@@ -1,19 +1,7 @@
 <?php
-require_once("../Models/database.php");
 session_start();
-/*
-function getLogementID($logement) {
-    $listLogementID = array();
-    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listLogement, $row['logementID']);
-    }
-    print_r  ($listLogement);
-    return $listLogementID;
-}
-getLogementID('maison'); 
-*/
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>

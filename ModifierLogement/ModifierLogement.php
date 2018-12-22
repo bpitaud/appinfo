@@ -52,13 +52,13 @@
     	</div>
 		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="../controllers/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.php">
+			<form method="post" action="../controllers/ModifLogements.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du logement" required/>
-      				<input type="text" name="adresse" placeholder="Adresse du logement" required />
-       				<input type="text" name="codepostale" placeholder="Code postale" required />
-       				<input type="text" name="surface" placeholder="Surface du logement" required>
-       				<select name="pays" required>
+       				<input type="text" name="nom" placeholder="Nom du logement" />
+      				<input type="text" name="adresse" placeholder="Adresse du logement" />
+       				<input type="text" name="codepostale" placeholder="Code postale" />
+       				<input type="text" name="surface" placeholder="Surface du logement" >
+       				<select name="pays" >
        					<option value="france"> France </option>
        					<option value="royaume-uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>

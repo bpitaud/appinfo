@@ -195,15 +195,6 @@ function ModifMdp($email, $ancien, $nouveau) {
     return true;    
 }
 
-function changeMdp($email, $nouveau) {
-    $conn = connect() -> prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
-    $hache = mdp_hache($nouveau);
-    $conn-> execute(array(
-        'email' => $email,
-        'mdp' => $hache,
-    ));    
-    
-}
 
 ?> 
 
