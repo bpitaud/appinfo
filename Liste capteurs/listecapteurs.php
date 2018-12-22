@@ -124,7 +124,7 @@ getLogementID('maison');
             <div class="figure" >';
             if (getCapteurEtat($listID[$i])==0 ) { // Image du type éteint
                 echo getCapteurType($listID[$i]);
-                switch (getCapteurType($listID[$i]) OR getControlleurType($listID[$i])){
+                switch (getCapteurType($listID[$i])){ //OR getControlleurType($listID[$i])
                     case "lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
