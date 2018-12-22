@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -64,25 +61,13 @@ session_start();
                                 </div>
                                 <div class="Caractere"> 
                                     '.$list[$i].'
-                                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
+                                <p><a href = "../Modifierpiece/Modifierpiece.php"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
                                 </div>
                                 
                             </div>
                             ';
                         }
             ?>
-
-            <!--
-            <div class="block" >
-                <div class="figure">
-                    <p> <a href = "../Modifierpiece/Modifierpiece.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
-                </div>
-                <div class="Caractere"> 
-                    Salon
-                    <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></p>
-                </div>
-            </div>
-            -->
                
             <div class="block"> 
                 <div class="figure">

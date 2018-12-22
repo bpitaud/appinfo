@@ -1,6 +1,3 @@
-<?php
-  session_start();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -60,6 +57,8 @@
                         </a>
                         <div id="sous">
                             <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php">
+                                <div class="reglage">
+                                </div>
                             </a>
                             <div class="nomlogement"> 
                                 <a href="../Liste pièces/listepieces.php"><p>'.$list[$i].'</p></a>
