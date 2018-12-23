@@ -62,6 +62,7 @@
 						<option value="humidite"> Humidité </option> 
 						<option value="temperature"> Température </option>
 						<option value="chauffage"> Chauffage </option>
+                        
 						      	
        				</select>
        				<input type="submit" value="Suivant">

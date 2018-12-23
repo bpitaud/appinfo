@@ -1,7 +1,6 @@
 <?php
 require_once("../Models/database.php");
 require_once("../Models/capteurs.php");
-
 session_start();
 
 $capteurs = array("lumiere", "camera", "humidite", "temperature");
