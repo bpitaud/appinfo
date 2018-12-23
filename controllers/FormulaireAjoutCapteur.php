@@ -7,10 +7,10 @@ session_start();
 $capteurs = array("lumiere", "camera", "humidite", "temperature");
 $controleurs = array("chauffage");
 
-$name = $capteurID = $type = "";
+$nom = $capteurID = $controleurID = $type = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = test_input($_POST["name"]);
+    $nom = test_input($_POST["nom"]);
     $type = test_input($_POST["type"]);
     if (in_array($type, $capteurs)){
       switch ($type){

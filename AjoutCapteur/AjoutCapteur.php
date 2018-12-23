@@ -54,7 +54,7 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom du capteur" required/>
+       				<input type="text" name="nom" placeholder="Nom du capteur" required/>
       				<input type="text" name="number" placeholder="Numéro de série" required />
        				<select name="type" required>
        					<option value="lumiere"> Lumière </option>

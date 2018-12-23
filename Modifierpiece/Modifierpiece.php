@@ -46,7 +46,7 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste logements/listelogements.php">  < Retour	
+    		<a href="../Liste pièces/listepieces.php">  < Retour	
     		</a>
     	</p>
     	</div>

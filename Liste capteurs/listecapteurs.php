@@ -52,9 +52,9 @@ require_once('../Models/database.php');
         <a id ="retour" href ="../Liste pièces/listepieces.php"> < Retour</a> 
         <h1> Salon </h1>
     	<div id="capteurs">
-        <?php
         
-        function getCapteurName($pieceID) {
+        <?php
+        /*function getCapteurName($pieceID) {
             $listCapteur = array();
             $sql =  'SELECT nom FROM controleur WHERE pieceID ='.$pieceID.'';
             foreach  (connect()->query($sql) as $row) {
@@ -174,14 +174,11 @@ require_once('../Models/database.php');
         }
         
         // Faire java script pour le onclic les images et le nom du capteur passe en jaune et modifie dans la base de donnée l'état à 1
-        ?>
+        */?>
 
 
 
-
-
-
-        <!--
+        
             <div class="block"> 
                 <div class="figure" >
                     <p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> 
@@ -235,11 +232,9 @@ require_once('../Models/database.php');
                     Chauffage
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
-            </div>   -->
+            </div>   
 
 
-
-            <!-- PLUS -->
             <div class="block">       
                 <div class= "figure"> 
                     <div class="plus">
@@ -258,3 +253,4 @@ require_once('../Models/database.php');
     </footer>
     
 </body>
+</html>

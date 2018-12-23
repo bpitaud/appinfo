@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = test_input($_POST["nom"]);
     }
     
-    $capteurID = $_SESSION['capteurID'];
-    $capteur = RecupCapteurbyID($capteurID);
+    $controleurID = $_SESSION['controleurID'];
+    $capteur = RecupControleurbyID($controleurID);
     $modif = false;
 
     if (isset($nom)&& trim($nom)!=""){
-        $change = ModifNomCapteur($capteurID,$nom);
+        $change = ModifNomControleur($controleurID,$nom);
         if (!($change == 1)) {
           $modif = true;
         }
@@ -37,4 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
- 
