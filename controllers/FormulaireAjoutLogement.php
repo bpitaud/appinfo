@@ -11,8 +11,6 @@ function test_input($data) {
     return $data;
   }
 
-
-// ajouter un logement avec les paramètres
 $nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,15 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surface = test_input($_POST["surface"]);
     $pays = test_input($_POST["pays"]);
     $utilisateurID = $_SESSION['utilisateurID'];
-    ajoutLogement($nom,$adresse,$codepostale,$surface,$utilisateurID,$pays);
+    ajoutLogement($nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
     $resultat = RecupLogements($utilisateurID);
-    $_SESSION['logementID'] = $resultat[0][0]; 
+    $_SESSION['logementID'] = $resultat[0][0];
+    var_dump($resultat[0][0]);
     header('Location: ../Liste logements/listelogements.php'); 
-    
+      
 }
 
 function getLogementController($utilisateurID){
-    return getLogement($utilisateurID);
+  return getLogement($utilisateurID);
 }
 
 ?>

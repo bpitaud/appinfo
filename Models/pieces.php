@@ -1,5 +1,5 @@
 <?php 
-require 'database.php';
+require_once("../Models/database.php");
 
 
 // ajouter une pièce 
