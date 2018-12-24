@@ -1,4 +1,10 @@
+<?php
 
+if (isset($_GET['piece'])) {
+	$_SESSION['pieceID'] = $_GET['piece'];
+} 
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,9 +57,24 @@
         <h2>Pièce(s) du logement</h2>
     	<div id="pieces">
             <?php
-            require_once('../controllers/FormulaireAjoutPiece.php');
-                        $list = getPieceController($_SESSION["logementID"]);
-                        for ($i = 0; $i < count($list) ;$i++) {
+            require('../controllers/FormulaireAjoutPiece.php');
+                        $piece = RecupPieceController($_SESSION["logementID"]);
+                        foreach ($piece as $piece){
+                            echo ('
+                            <div class="block" >
+                                <div class="figure">
+                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                </div>
+                                <div class="Caractere"> 
+                                    '.$piece[1].'
+                                <p><a href = "../Modifierpiece/Modifierpiece.php"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
+                                </div>
+                                
+                            </div>
+                            ');
+                        }
+                        
+                        /*for ($i = 0; $i < count($list) ;$i++) {
                             echo'
                             <div class="block" >
                                 <div class="figure">
@@ -66,7 +87,7 @@
                                 
                             </div>
                             ';
-                        }
+                        }*/
             ?>
                
             <div class="block"> 

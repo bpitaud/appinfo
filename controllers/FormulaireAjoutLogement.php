@@ -1,5 +1,4 @@
 <?php
-require_once("../Models/database.php");
 require_once("../Models/logements.php");
 
 session_start();
@@ -11,7 +10,6 @@ function test_input($data) {
     return $data;
   }
 
-$nom = $adresse = $codepostale = $surface = $pays = $utilisateurID = $logementID = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -23,14 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $utilisateurID = $_SESSION['utilisateurID'];
     $logementID = uniqid();
     ajoutLogement($logementID,$nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
-    $resultat = RecupLogementsbyID($logementID);
-    $_SESSION['logementID'] = $resultat[0][0];
     header('Location: ../Liste logements/listelogements.php?user='.$utilisateurID);  
     }     
 
 
-function getLogementController($utilisateurID){
-  return getLogement($utilisateurID);
+function RecupLogementController($utilisateurID){
+  return RecupLogements($utilisateurID);
 }
 
 ?>

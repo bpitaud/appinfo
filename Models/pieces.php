@@ -38,16 +38,6 @@ function RecupPiecebyID($pieceID){
     return $resultat;
 }
 
-// récupérer un logement pour l'afficher dans liste logement
-function getPiece($logementID) {
-    $listPiece = array();
-    $sql = 'SELECT nom FROM piece WHERE logementID =?';
-    foreach  (connect()-> prepare($sql) as $row) {
-        array_push($listPiece, $row['nom']);
-    }
-    return $listPiece;
-}
-
 // modifier le nom d'une pièce 
 function ModifNomPiece($pieceID,$nom){
     $conn = connect() -> prepare('UPDATE piece SET nom=:nom WHERE pieceID =:pieceID');
