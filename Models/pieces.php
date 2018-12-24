@@ -41,8 +41,8 @@ function RecupPiecebyID($pieceID){
 // récupérer un logement pour l'afficher dans liste logement
 function getPiece($logementID) {
     $listPiece = array();
-    $sql = 'SELECT nom FROM piece WHERE logementID =:logementID';
-    foreach  (connect()-> query($sql) as $row) {
+    $sql = 'SELECT nom FROM piece WHERE logementID =?';
+    foreach  (connect()-> prepare($sql) as $row) {
         array_push($listPiece, $row['nom']);
     }
     return $listPiece;

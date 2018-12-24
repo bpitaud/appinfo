@@ -41,12 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['codepostale'])){
     $codepostale = test_input($_POST["codepostale"]);
     }
-    /*if (isset($_POST['ancien_mdp'])){
+    if (isset($_POST['ancien_mdp'])){
     $ancien= test_input($_POST['ancien_mdp']);
     }
     if (isset($_POST['nouveau_mdp'])){
     $nouveau = test_input($_POST['nouveau_mdp']);
-    }*/
+    }
 
     $utilisateurID = $_SESSION['utilisateurID'];
     $utilisateur = RecupUserByID($utilisateurID);
@@ -116,12 +116,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
       }
     
-    /*if (isset($ancien) && isset($nouveau) != ""){
+    if (isset($ancien) && isset($nouveau) && trim($ancien) && trim($nouveau) != ""){
         $modif = ModifMdp($utilisateur[0][3], $ancien, $nouveau);
         if (!($change == 1)){
             $modif = true;
         }
-    }*/
+    }
 
   if ($modif == true) {
     header("Location: ../mesInfosUser/MesInfosUser.php?modif=true");
