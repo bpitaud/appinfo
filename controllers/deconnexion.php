@@ -7,6 +7,6 @@ session_unset ();
 // On détruit notre session
 session_destroy ();
 
-// On redirige le visiteur vers la page d'accueil
+// On redirige l'utilisateur vers la page d'accueil
 header ('location: ../Home/home.php');
 ?> 
