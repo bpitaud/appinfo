@@ -3,9 +3,10 @@
 require_once("../Models/database.php");
 
 // Ajouter un logement 
-function ajoutLogement($nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
-    $reponse = connect() -> prepare("INSERT INTO logement(nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
+function ajoutLogement($logementID, $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
+    $reponse = connect() -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
     $reponse->execute(array(
+        'logementID' => $logementID,
         'nom' => $nom,
         'adresse' => $adresse,
         'codepostale' => $codepostale,

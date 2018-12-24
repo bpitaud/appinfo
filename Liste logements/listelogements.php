@@ -35,7 +35,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -52,7 +52,7 @@
                 '<div id="zonelogement"> 
                     <div id="logement">  
                         <a class="imagelogement" href="../Liste pièces/listepieces.php">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php"> 
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php?"> 
                             </div>
                         </a>
                         <div id="sous">

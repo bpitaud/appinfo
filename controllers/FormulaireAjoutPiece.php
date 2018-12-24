@@ -1,5 +1,5 @@
 <?php
-
+require_once("../Models/database.php");
 require_once("../Models/pieces.php");
 
 session_start();
@@ -12,7 +12,7 @@ function test_input($data) {
   }
 
 // ajouter une pièce 
-$nom = $surface = $logementID = "";
+$nom = $surface = $logementID = $pieceID ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
@@ -22,10 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surface = test_input($_POST["surface"]);
     }
     $logementID = $_SESSION['logementID'];
-    ajoutPiece($nom,$surface,$logementID);
-    $resultat = RecupPiece($logementID);
+    $pieceID = uniqid();
+    ajoutPiece($pieceID, $nom,$surface,$logementID);
+    $resultat = RecupPiecebyID($pieceID);
     $_SESSION['pieceID'] = $resultat[0][0];
-    header('Location: ../Liste pièces/listepieces.php'); 
+    header('Location: ../Liste pièces/listepieces.php?log='.$_SESSION['logementID']); 
 }
 
 function getPieceController($logementID){

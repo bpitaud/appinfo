@@ -18,28 +18,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "camera":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "humidite":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "temperature":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
       }
     } else {
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $controleurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutControleur($nom, $controleurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
       }
     }
