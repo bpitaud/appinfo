@@ -7,7 +7,7 @@ section
 	width: 80%;
 	justify-content: space-around;
 	margin: auto;
-	overflow: auto;
+	overflow: visible;
     font-size: 20px;
     padding-top: 5%;
  
@@ -168,6 +168,7 @@ body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 /* logo /nav bar flex */
@@ -285,5 +286,6 @@ header a:hover span {
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
+    margin: 29% 2% 0 0;
+    /*position: absolute; top: 98%; left: 73%; right: 0;*/
 }
