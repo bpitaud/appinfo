@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="réuni.css" />
-        <title>Domisep - Réinitialisation mot de passe</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="mdp_oublie.css" />
+    <title>Mot de passe oublié</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <header>
+	<header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
@@ -32,9 +32,9 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="MesInfos.html"><p>Mes infos</p></a>
-                                <a href="NousContacter.html"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -43,19 +43,26 @@
         </div>
     </header>
 
-    <h1> Réinitialiser le mot de passe </h1>
-    <div class="formulaire">
-    <form method="post" action="../controllers/FormulaireConnexion.php">
+    <section>
+    	<div class="retour">
+    		<p>
+    		<a href="../Liste capteurs/listecapteurs.php"> < Retour		
+    		</a>
+    	</p>
+    	</div>
+		<h1>Mot de passe oublié<span>.................</span></h1>
+		<div class="formulaire">
+			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
    				<p>
-       				<input type="password" name="ancienmdp" placeholder="Entrer votre ancier mot de passe" required/>
-      				<input type="password" name="newmdp" placeholder="Entrer votre nouveau mot de passe" required />
-                    <input type="submit" name="connexion" value="Suivant">
+       				<input type="email" name="email" placeholder="Veuillez rentrer votre adresse mail" required/>
+       				<input type="submit" value="Suivant">
    				</p>
 			</form>
-        </div>
-    <div class="motdepasse"> 
-        <a href="envoimail.php"> Mot de passe oublié </a> 
-    </div>
-</body>    
-
+		</div>
+    </section>
     
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
+</body>

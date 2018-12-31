@@ -3,14 +3,15 @@
 require_once("../Models/database.php");
 
 // Ajouter un logement 
-function ajoutLogement( $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
-    $reponse = connect() -> prepare("INSERT INTO logement(nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
+function ajoutLogement($logementID, $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){
+    $reponse = connect() -> prepare("INSERT INTO logement(logementID, nom, adresse, codepostale, surface, utilisateurID, pays) VALUES (:logementID, :nom, :adresse, :codepostale, :surface, :utilisateurID, :pays)");
     $reponse->execute(array(
-        'utilisateurID' => $utilisateurID,
+        'logementID' => $logementID,
         'nom' => $nom,
         'adresse' => $adresse,
         'codepostale' => $codepostale,
         'surface' => $surface,
+        'utilisateurID' => $utilisateurID,
         'pays' => $pays,
     ));
     }
@@ -30,61 +31,50 @@ function RecupLogementsbyID($logementID){
     return $resultat;
 }
 
- 
 // Modifier les données d'un logement 
 function ModifNomLogement($logementID,$nom){
-    $conn = connect() -> prepare('UPDATE logement SET nom=? WHERE logementID =?');
+    $conn = connect() -> prepare('UPDATE logement SET nom=:nom WHERE logementID =:logementID');
     $conn -> execute(array(
             'nom' => $nom,
-            '$logementID'=> $logementID,    
+            'logementID'=> $logementID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 function ModifAdresseLogement($logementID,$adresse){
-    $conn = connect() -> prepare('UPDATE logement SET adresse=? WHERE logementID =?');
+    $conn = connect() -> prepare('UPDATE logement SET adresse=:adresse WHERE logementID =:logementID');
     $conn -> execute(array(
             'adresse' => $adresse,
-            '$logementID'=> $logementID,    
+            'logementID'=> $logementID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 function ModifZipcodeLogement($logementID,$codepostale){
-    $conn = connect() -> prepare('UPDATE logement SET codepostale=? WHERE logementID =?');
+    $conn = connect() -> prepare('UPDATE logement SET codepostale=:codepostale WHERE logementID =:logementID');
     $conn -> execute(array(
             'codepostale' => $codepostale,
-            '$logementID'=> $logementID,    
+            'logementID'=> $logementID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 function ModifSurfaceLogement($logementID,$surface){
-    $conn = connect() -> prepare('UPDATE logement SET surface=? WHERE logementID =?');
+    $conn = connect() -> prepare('UPDATE logement SET surface=:surface WHERE logementID =:logementID');
     $conn -> execute(array(
             'surface' => $surface,
-            '$logementID'=> $logementID,    
+            'logementID'=> $logementID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 function ModifPaysLogement($logementID,$pays){
-    $conn = connect() -> prepare('UPDATE logement SET pays=? WHERE logementID =?');
+    $conn = connect() -> prepare('UPDATE logement SET pays=:pays WHERE logementID =:logementID');
     $conn -> execute(array(
             'pays' => $pays,
-            '$logementID'=> $logementID,    
+            'logementID'=> $logementID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 // Supprimer un logement
 function SuppLogement($logementID){
-    $conn = connect() -> prepare('DELETE * FROM logement WHERE logementID =?');
+    $conn = connect() -> prepare('DELETE * FROM logement WHERE logementID =:logementID');
     $conn -> execute(array($logementID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;

@@ -1,8 +1,3 @@
-<?php
-  require_once("../Models/database.php");
-  session_start();
- 
-?>
 
 <!DOCTYPE html>
 <html>
@@ -40,7 +35,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -50,21 +45,14 @@
     </header>
     <section>
     <?php
-    function getLogement($utilisateurID) {
-            $listLogement = array();
-            $sql =  'SELECT nom FROM logement WHERE utilisateurID ='.$utilisateurID.'';
-            foreach  (connect()->query($sql) as $row) {
-                array_push($listLogement, $row['nom']);
-            }
-            return $listLogement;
-        }
-        $list = getLogement($_SESSION["utilisateurID"]);
-        for ($i = 0; $i < count($list) ;$i++) {
+    require_once('../controllers/FormulaireAjoutLogement.php');
+        $logement = RecupLogementController($_SESSION["utilisateurID"]);
+        foreach ($logement as $logement){
             echo(
                 '<div id="zonelogement"> 
                     <div id="logement">  
-                        <a class="imagelogement" href="../Liste pièces/listepieces.php">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php">
+                        <a class="imagelogement" href="../Liste pièces/listepieces.php?log='.$_SESSION["logementID"].'">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php?log='.$_SESSION["logementID"].'"> 
                             </div>
                         </a>
                         <div id="sous">
@@ -73,15 +61,20 @@
                                 </div>
                             </a>
                             <div class="nomlogement"> 
-                                <a href="../Liste pièces/listepieces.php"><p>'.$list[$i].'</p></a>
+                                <a href="../Liste pièces/listepieces.php"><p>'.$logement[1].'</p></a>
                             </div>
                         </div>
                     </div>        
-                </div>');
-            }
+                </div>'); 
+        }
     ?>
         <div class="ajoutlogement">
             <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
         </div>
     </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+
 </body> 

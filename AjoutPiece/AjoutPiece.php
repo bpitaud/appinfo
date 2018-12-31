@@ -34,7 +34,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -54,11 +54,16 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutPiece.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom de la pièce" required/>
+       				<input type="text" name="nom" placeholder="Nom de la pièce" required/>
        				<input type="text" name="surface" placeholder="Surface de la pièce" required >
        				<input type="submit" value="Suivant">
    				</p>
 			</form>
 		</div>
-	</section>
+    </section>
+    
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>

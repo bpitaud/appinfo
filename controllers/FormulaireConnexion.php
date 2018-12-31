@@ -32,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         $_SESSION['admin'] = 0;
         if($logements){ // sinon , vérifie si cet utilisateur a des logements 
-        header('Location: ../Liste logements/listelogements.php');
+        header('Location: ../Liste logements/listelogements.php?user='.$_SESSION['utilisateurID']);
         } else {
-        header('Location: ../Liste logements/premierlogement.php');
+        header('Location: ../Liste logements/premierlogement.php?user='.$_SESSION['utilisateurID']);
         }
       }
     }

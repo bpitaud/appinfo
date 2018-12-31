@@ -1,19 +1,8 @@
 <?php
-require_once("../Models/database.php");
 session_start();
-/*
-function getLogementID($logement) {
-    $listLogementID = array();
-    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listLogement, $row['logementID']);
-    }
-    print_r  ($listLogement);
-    return $listLogementID;
-}
-getLogementID('maison'); 
-*/
+require_once('../Models/database.php');
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,7 +39,7 @@ getLogementID('maison');
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -63,9 +52,9 @@ getLogementID('maison');
         <a id ="retour" href ="../Liste pièces/listepieces.php"> < Retour</a> 
         <h1> Salon </h1>
     	<div id="capteurs">
-        <?php
         
-        function getCapteurName($pieceID) {
+        <?php
+        /*function getCapteurName($pieceID) {
             $listCapteur = array();
             $sql =  'SELECT nom FROM controleur WHERE pieceID ='.$pieceID.'';
             foreach  (connect()->query($sql) as $row) {
@@ -122,9 +111,9 @@ getLogementID('maison');
         for ($i = 0; $i < count($listID) ;$i++) {
             $html1 = '<div class="block"> 
             <div class="figure" >';
-            if (getCapteurEtat($listID[$i])==0) { // Image du type éteint
+            if (getCapteurEtat($listID[$i])==0 ) { // Image du type éteint
                 echo getCapteurType($listID[$i]);
-                switch (getCapteurType($listID[$i])){
+                switch (getCapteurType($listID[$i])){ //OR getControlleurType($listID[$i])
                     case "lumière": //1:
                         $html2='<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                         break;
@@ -173,7 +162,7 @@ getLogementID('maison');
                     default :
                         break;
                 } 
-                
+
             }
             $html3 = '</div>
             <div class="caractère"> 
@@ -185,14 +174,11 @@ getLogementID('maison');
         }
         
         // Faire java script pour le onclic les images et le nom du capteur passe en jaune et modifie dans la base de donnée l'état à 1
-        ?>
+        */?>
 
 
 
-
-
-
-        <!--
+        
             <div class="block"> 
                 <div class="figure" >
                     <p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> 
@@ -246,11 +232,9 @@ getLogementID('maison');
                     Chauffage
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
-            </div>   -->
+            </div>   
 
 
-
-            <!-- PLUS -->
             <div class="block">       
                 <div class= "figure"> 
                     <div class="plus">
@@ -263,4 +247,10 @@ getLogementID('maison');
             </div>
         </div>
 </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>
+</html>

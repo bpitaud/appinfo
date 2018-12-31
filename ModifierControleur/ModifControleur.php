@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="AjoutLogement.css" />
+    <link rel="stylesheet" href="ModifControleur.css" />
     <title>Ajout d'un Logement</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -46,29 +46,39 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste logements/listelogements.php">  < Retour	
+    		<a href="../Liste capteurs/listecapteurs.php">  < Retour	
     		</a>
     	</p>
     	</div>
-		<h1>Ajouter un logement<span>.................</span></h1>
+		<h1>Modifier un capteur: NOM DU CAPTEUR<span>.................</span></h1>
 		<div class="formulaire">
-			<form method="post" action="../controllers/FormulaireAjoutLogement.php">
+			<form method="post" action="../controllers/ModifControleurs.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du logement" required/>
-      				<input type="text" name="adresse" placeholder="Adresse du logement" required />
-       				<input type="text" name="codepostale" placeholder="Code postale" required />
-       				<input type="text" name="surface" placeholder="Surface du logement" required>
-       				<select name="pays" required>
-       					<option value="france"> France </option>
-       					<option value="royaume-uni"> Royaume-Uni </option>
-       					<option value="espagne"> Espagne </option>
-       					<option value="italie"> Italie </option>
-       					<option value="etats-unis"> Etats-Unis </option>
-       					<option value="canada"> Canada </option>
-       					<option value="chine"> Chine </option>
-       					<option value="japon"> Japon </option>     	
+       				<input type="text" name="nom" placeholder="Nom du capteur" />
+						      	
        				</select>
-       				<input type="submit" value="Suivant">
+              <div id="bouton">
+                <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
+                <input onclick="myFunction()" value="Supprimer" type="submit">
+
+
+                <script>
+                function myFunction() {
+                    var txt;
+                    var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur?");
+                    if (r == true) {
+                        href = "../Liste capteurs/listecapteurs.php";
+                    } else {
+                        txt = "none";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+                </script>
+                
+                
+                <input type="submit" value="Valider">
+              
+            </div>
    				</p>
 			</form>
 		</div>
@@ -79,5 +89,3 @@
     </footer>
     
 </body>
-
-

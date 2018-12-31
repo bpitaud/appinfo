@@ -47,6 +47,11 @@
 			</form>
         </div>
     <div class="motdepasse"> 
-        <a href="envoimail.php"> Mot de passe oublié </a> 
+        <a href="../mdp_oublie/mdp_oublie.php"> Mot de passe oublié </a> 
     </div>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>    

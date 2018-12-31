@@ -8,7 +8,7 @@
   </head>
 
 <body>
-    <header>
+<header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
@@ -44,28 +44,31 @@
     </header>
 
   
-    <nav>
-    	<a href="../mesinfosuti/mesinfosuti.php">< Retour</a>
-    </nav>
-    
-    <h2>Modification de mes informations</h2>
+  <div id="retour">
+    <a href="../mesInfosUser/MesInfosUser.php">< Retour</a>
+</div>
+
+  <h2>Modification de mes informations</h2>
 
 <section>
+
+
     	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+        <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
-       			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
-      			<input type="base" name="number" placeholder="NOM" required />
-                <input type="base" name="name" placeholder="PRENOM" required/>
-                <select name="Genre" required>
+       			
+      			<input type="text" name="nom" placeholder="NOM"  />
+                <input type="text" name="prenom" placeholder="PRENOM" />
+                <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM"/>
+                <select name="genre" required>
        					<option value="genre"> GENRE </option>
-                        <option value="féminin"> Féminin </option>	
+                        <option value="masculin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
-    			<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
-                      <select name="Pays" required>
+                <input type="date" name="naissance" placeholder="JJ/MM/AAAA" />
+    			<input type="text" name="telephone" placeholder="+33 6 00 00 00 00" />
+      				<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE"  />
+                      <select name="pays">
                         <option value="pays"> PAYS </option>	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
@@ -76,12 +79,20 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-      				<input type="base" name="number" placeholder="75 000" required />
-                    <button class="bouton" href="../">Annuler</button>
-                    <button class="bouton">Valider</button>
+                      <input type="text" name="codepostale" placeholder="75 000" />
+                      <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
+                      <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
+                      <button class="bouton" type="submit">Valider</button>
+                      <button class="bouton" href="../">Annuler</button>
+                    
     		</p>
         </form>
     	</div>
 </section>
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
 </body>
 </html>

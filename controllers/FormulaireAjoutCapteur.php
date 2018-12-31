@@ -3,54 +3,52 @@ require_once("../Models/database.php");
 require_once("../Models/capteurs.php");
 
 session_start();
-// define variables and set to empty values
-
 
 $capteurs = array("lumiere", "camera", "humidite", "temperature");
 $controleurs = array("chauffage");
 
-$name = $capteurID = $type = "";
+$nom = $capteurID = $controleurID = $type = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = test_input($_POST["name"]);
+    $nom = test_input($_POST["nom"]);
     $type = test_input($_POST["type"]);
     if (in_array($type, $capteurs)){
-      switch (type){
+      switch ($type){
         case "lumiere":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "camera":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "humidite":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
 
         case "temperature":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
       }
     } else {
       switch ($type){
-        case "camera":
+        case "chauffage":
         $controleurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['pieceID'];
         ajoutControleur($nom, $controleurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php');
+        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['pieceID']);
         break;
       }
     }

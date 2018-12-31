@@ -30,6 +30,15 @@ function RecupCapteur($pieceID){
     return $resultat;
 }
 
+// récupérer un capteur par son ID
+
+function RecupCapteurbyID($capteurID){
+    $conn = connect() -> prepare('SELECT * FROM capteur WHERE capteurID =?');
+    $conn -> execute(array($capteurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
 // récupérer l'état d'un capteur 
 function RecupEtatCapteur($capteurID, $etat){
     $conn = connect() -> prepare('SELECT etat FROM capteur WHERE capteurID =?');
@@ -40,42 +49,39 @@ function RecupEtatCapteur($capteurID, $etat){
 
 // modifier l'état d'un capteur 
 function ModifEtatCapteur($capteurID, $etat){
-    $conn = connect() -> prepare('UPDATE capteur SET etat=? WHERE capteurID =?');
+    $conn = connect() -> prepare('UPDATE capteur SET etat=:etat WHERE capteurID =:capteurID');
     $conn -> execute(array(
             'etat' => $etat,
-            '$capteurID'=> $capteurID,    
+            'capteurID'=> $capteurID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+
 }
 // modifier le nom d'un capteur 
 function ModifNomCapteur($capteurID,$nom){
-    $conn = connect() -> prepare('UPDATE capteur SET nom=? WHERE capteurID =?');
+    $conn = connect() -> prepare('UPDATE capteur SET nom=:nom WHERE capteurID =:capteurID');
     $conn -> execute(array(
             'nom' => $nom,
-            '$capteurID'=> $capteurID,    
+            'capteurID'=> $capteurID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 //supprimer un capteur
 function SuppCapteur($capteurID){
-    $conn = connect() -> prepare('DELETE * FROM capteur WHERE capteurID =?');
+    $conn = connect() -> prepare('DELETE * FROM capteur WHERE capteurID =:capteurID');
     $conn -> execute(array($capteurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
 
 // ajouter un controleur 
-function ajoutControleur($controleurID, $nom, $type, $etat, $pieceID){
-    $reponse = $conn -> prepare("INSERT INTO controleur VALUES (:controleurID, :nom, :typ, :etat, :pieceID)");
+function ajoutControleur( $nom, $controleurID, $type, $pieceID, $etat){
+    $reponse = connect() -> prepare("INSERT INTO controleur(nom, controleurID, typ, pieceID, etat) VALUES (:nom, :controleurID, :typ, :pieceID, :etat)");
     $reponse->execute(array(
-        'controleurID' => $controleurID,
         'nom' => $nom,
+        'controleurID' => $controleurID,
         'typ' => $type,
-        'etat' => $etat,
         'pieceID' => $pieceID,
+        'etat' => $etat,
         ));
     }
 
@@ -95,6 +101,15 @@ function RecupControleur($pieceID){
     return $resultat;
 }
 
+// récupérer un controleur par son ID 
+
+function RecupControleurbyID($controleurID){
+    $conn = connect() -> prepare('SELECT * FROM controleur WHERE controleurID =?');
+    $conn -> execute(array($controleurID));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
 // récupérer l'état d'un controleur
 function RecupEtatControleur($controleurID, $etat){
     $conn = connect() -> prepare('SELECT etat FROM controleur WHERE controleurID =?');
@@ -105,28 +120,24 @@ function RecupEtatControleur($controleurID, $etat){
 
 // modifier l'état d'un controleur 
 function ModifEtatControleur($controleurID, $etat){
-    $conn = connect() -> prepare('UPDATE controleur SET etat=? WHERE controleurID =?');
+    $conn = connect() -> prepare('UPDATE controleur SET etat=:etat WHERE controleurID =:controleurID');
     $conn -> execute(array(
             'etat' => $etat,
-            '$controleurID'=> $controleurID,    
+            'controleurID'=> $controleurID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 // modifier le nom d'un controleur
 function ModifNomControleur($controleurID,$nom){
-    $conn = connect() -> prepare('UPDATE controleur SET nom=? WHERE controleurID =?');
+    $conn = connect() -> prepare('UPDATE controleur SET nom=:nom WHERE controleurID =:controleurID');
     $conn -> execute(array(
             'nom' => $nom,
-            '$controleurID'=> $controleurID,    
+            'controleurID'=> $controleurID,    
         ));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
 }
 
 //supprimer un controleur
 function SuppControleur($controleurID){
-    $conn = connect() -> prepare('DELETE * FROM controleur WHERE controleurID =?');
+    $conn = connect() -> prepare('DELETE * FROM controleur WHERE controleurID =:controleurID');
     $conn -> execute(array($controleurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;

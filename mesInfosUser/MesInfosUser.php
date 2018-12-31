@@ -34,7 +34,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -79,16 +79,25 @@ function myFunction() {
 </script>
 
 
-<div>
-<a href="../ModifCompteUser/ModifCompteUser.php"> <button  class="bouton"> Modifier mes informations</button></a>               
+
+
+
+
+
+
+<div class="button1">
+<a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
 </div>   
 
-<div><a href="../reinitialisationmdp/réuni.php"> <button class="bouton">Réinitialiser mon mot de passe</button></a> </div>
-            
 
-    </div>
     	
     		
     			
-</section>   
-  
+</section>  
+
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+    
+</body>
+</html>
