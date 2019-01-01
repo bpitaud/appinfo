@@ -138,7 +138,7 @@ select {
     border:none;
     border-bottom: 1px solid white;
     box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0.6);
     text-align: left;
 
 }
@@ -163,6 +163,7 @@ header {
 
     text-align: center;
     font-size: 15px;
+    
 }
 body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
