@@ -41,7 +41,9 @@
 
 
     <h2> Créer un compte </h2>
+
     <section>
+      
     	<div class="info">
         <form method="post" action="../controllers/FormulaireInscription.php">
       			<input type="text" name="nom" placeholder="NOM" required />
