@@ -48,9 +48,15 @@ require_once('../Models/database.php');
         </div>
     </header>
 
-    <section>
-        <a id ="retour" href ="../Liste pièces/listepieces.php"> < Retour</a> 
-        <h1> Salon </h1>
+    
+    <div id="retour">
+    <a href="../mesInfosUser/MesInfosUser.php">< Retour</a>
+    </div>
+
+    <h2> Salon </h2>
+
+<section>
+
     	<div id="capteurs">
         
         <?php
@@ -242,7 +248,7 @@ require_once('../Models/database.php');
                     </div>
                 </div>
                 <div class="caractère">
-                    Ajouter <br> un capteur 
+                    Ajouter <br/> un capteur 
                 </div>
             </div>
         </div>

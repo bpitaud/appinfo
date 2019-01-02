@@ -57,7 +57,7 @@
         <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
        			
-      			<input type="text" name="nom" placeholder="NOM"  />
+      			    <input type="text" name="nom" placeholder="NOM"  />
                 <input type="text" name="prenom" placeholder="PRENOM" />
                 <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM"/>
                 <select name="genre" required>

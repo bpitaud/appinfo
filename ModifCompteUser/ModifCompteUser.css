@@ -13,7 +13,6 @@ body{
     background-color: black;
     background-size: 100%;
     background-attachment: fixed;
-   /* overflow: hidden;*/
 }
 
 /* logo /nav bar flex */
@@ -161,13 +160,13 @@ section
     overflow: auto;
     font-size: 20px;
 }
+
 .info
 {
 	width: 35%;
 	min-width: 280px;
 	border: 0px white solid;
 	padding: 2px;
-    
 	align-items: stretch;
 	line-height: 100%;
 }
