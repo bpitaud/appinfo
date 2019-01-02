@@ -150,8 +150,8 @@ section
     margin-top: 1%;
     flex-wrap: wrap;
     display:flex;
-    
-}
+    padding-bottom: 55%;
+    }
 
 .block {
     display: flex;
