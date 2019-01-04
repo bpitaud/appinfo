@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,8 +51,16 @@
     		</a>
     	</p>
     	</div>
-		<h1>Modifier une pièce: NOM DE LA PIECE<span>.................</span></h1>
-		<div class="formulaire">
+        <?php
+        require ('../controllers/ModifPieces.php');
+
+        $pieceID = $_SESSION['pieceID'];
+        $piece = RecupPieceModif($pieceID);
+            foreach ($piece as $piece){
+                echo"
+        <h1>Modifier un logement: ".$pieced[1]."<span>.................</span></h1>";
+    }
+        ?>		<div class="formulaire">
 			<form method="post" action="../controllers/ModifPieces.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom de la pièce" />

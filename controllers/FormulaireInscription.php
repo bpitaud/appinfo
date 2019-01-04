@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_existe = Verif_email($email);
     if ($mdp == $confirme_mdp && !$email_existe) {
         ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
-        send_email($to, $subject, $message, $headers);
+        //send_email($to, $subject, $message, $headers);
         header('Location: ../connexionn/connexion.php');
 
     }

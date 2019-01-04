@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $logementID = $_SESSION['logementID'];
     $pieceID = uniqid();
     ajoutPiece($pieceID, $nom,$surface,$logementID);
-    header('Location: ../Liste pièces/listepieces.php?log='.$_SESSION['logementID']); 
+    header('Location: ../Liste pièces/listepieces.php?log='.$_SESSION['logementID']);
 }
 
 function RecupPieceController($logementID){

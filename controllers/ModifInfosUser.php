@@ -10,6 +10,10 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+function RecupInfoUser($utilisateurID){
+  return RecupUserByID($utilisateurID);
+
+}
 
 $nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = "";
 

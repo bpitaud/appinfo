@@ -1,10 +1,12 @@
 <?php
+session_start();
 
-if (isset($_GET['piece'])) {
-	$_SESSION['pieceID'] = $_GET['piece'];
-} 
+if (isset($_GET['selected']) && $_GET['selected'] != '') {
+    $_SESSION['selected_logement'] = $_GET['selected'];
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -53,12 +55,12 @@ if (isset($_GET['piece'])) {
 
 
     <section>
-         <a href ="../Liste logements/listelogements.php"> < Retour</a> 
+        <?php echo "<a href='../Liste logements/listelogements.php?user=".$_SESSION["utilisateurID"]."'> < Retour </a>";?> 
         <h2>Pièce(s) du logement</h2>
     	<div id="pieces">
             <?php
-            require('../controllers/FormulaireAjoutPiece.php');
-                        $piece = RecupPieceController($_SESSION["logementID"]);
+            require_once ('../controllers/FormulaireAjoutPiece.php');
+                        $piece = RecupPieceController($_SESSION["selected_logement"]);
                         foreach ($piece as $piece){
                             echo ('
                             <div class="block" >
@@ -89,17 +91,17 @@ if (isset($_GET['piece'])) {
                             ';
                         }*/
             ?>
-               
-            <div class="block"> 
-                <div class="figure">
-                    <div class="plus" > 
-                        <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> 
+            <?php
+            echo "
+            <div class='block'> 
+                <div class='figure'>
+                    <div class='plus' >   
+                    <a href='../AjoutPiece/AjoutPiece.php?selected=".$_SESSION["selected_logement"]."'> <input type='button' value='+'></a>               
                     </div>      
                 </div>
-            <div class="Caractere"> 
-                Ajouter </a></div>
-            </div>   
-    	</div>	
+             
+            </div>";
+        ?>
     </section>
 
     <footer>

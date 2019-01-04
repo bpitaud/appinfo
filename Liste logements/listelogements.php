@@ -51,12 +51,12 @@
             echo(
                 '<div id="zonelogement"> 
                     <div id="logement">  
-                        <a class="imagelogement" href="../Liste pièces/listepieces.php?log='.$_SESSION["logementID"].'">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php?log='.$_SESSION["logementID"].'"> 
+                        <a class="imagelogement" href="../Liste pièces/listepieces.php?selected='.$logement[0].'">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php?selected='.$logement[0].'"> 
                             </div>
                         </a>
                         <div id="sous">
-                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php">
+                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php?selected='.$logement[0].'">
                                 <div class="reglage">
                                 </div>
                             </a>

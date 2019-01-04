@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -48,22 +49,26 @@
     <h2> Mes informations </h2>
     <section>
     <div class="info">
+        <?php
+        require_once ('../controllers/ModifInfosUser.php');
+        $utilisateurID = $_SESSION['utilisateurID'];
+        $utilisateur = RecupInfoUser($utilisateurID);
+        foreach ($utilisateur as $utilisateur) {
+        echo'
     		<p>
-    			<em class="base">ADRESS.EMAIL@MAIL.COM <br/></em>
-    			<em class="base">NOM<br/></em>
-    			<em class="base">PRENOM<br/></em>
-    			<em class="base">GENRE<br/></em>
-    			<em class="base2">JJ/MM/AAAA<br/></em>
-                <em class="base">+33 6 00 00 00 00<br/></em>
-    			<em class="base">ADRESSE PRINCIPALE<br/></em>
-    			<em class="base">PAYS<br/></em>
-    			<em class="base2">75 000<br/></em>
-                <em class="base">+33 6 00 00 00 00<br/></em>
-    			<em class="base">ADRESSE PRINCIPALE<br/></em>
-    			<em class="base">PAYS<br/></em>
-    			<em class="base2">75 000<br/></em>
-                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
-</p>
+    			<em class="email">'.$utilisateur[3].'<br/></em>
+    			<em class="text">'.$utilisateur[1].'<br/></em>
+    			<em class="text">'.$utilisateur[2].'<br/></em>
+    			<em class="text">'.$utilisateur[4].'<br/></em>
+    			<em class="date">'.$utilisateur[5].'<br/></em>
+                <em class="text">'.$utilisateur[6].'<br/></em>
+    			<em class="text">'.$utilisateur[7].'<br/></em>
+    			<em class="text">'.$utilisateur[8].'<br/></em>
+    			<em class="number">'.$utilisateur[9].'<br/></em>
+                
+                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button> 
+</p>';}
+?>
 
 <script>
 function myFunction() {

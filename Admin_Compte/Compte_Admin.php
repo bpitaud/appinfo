@@ -83,14 +83,14 @@ function myFunction() {
     			<em class="base">PAYS<br/></em>
     			<em class="base2">75 000<br/></em>
 
-    			<button class="bouton" href="../ModifCompte/ModifCompte.php">Modifier les informations</button>               
+    			<a href="../ModifCompteAdmin/ModifCompte.php"> <input type="button" value="Modifier mes informations"></a>               
     			<button onclick="myFunction1()" class="bouton">Réinitialiser le mot de passe</button>
                     <script>
                     function myFunction1() {
                         var txt;
                         var r = confirm("Etes-vous sûr de vouloir réinitialiser le mot de passe de ce client ?");
                         if (r == true) {
-                            href = "../RechercherPar/RechercherPar.php";
+                            <a href = "../RechercherPar/RechercherPar.php"></a>;
                         } else {
                             txt = "none";
                         }

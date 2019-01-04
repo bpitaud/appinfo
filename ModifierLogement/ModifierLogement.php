@@ -1,3 +1,7 @@
+<?php 
+// session_start();
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,12 +49,20 @@
 
     <section>
     	<div class="retour">
-    		<p>
-    		<a href="../Liste logements/listelogements.php">  < Retour	
-    		</a>
+    		<p>   
+            <?php 
+                    require ('../controllers/ModifLogements.php');
+                    echo "<a href='../Liste logements/listelogements.php?user=".$_SESSION["utilisateurID"]."'> < Retour </a>";?>    
     	</p>
-    	</div>
-		<h1>Modifier un logement: NOM DU LOGEMENT<span>.................</span></h1>
+        </div>
+        <?php
+        $logementID = $_SESSION['logementID'];
+        $logement = RecupLogement($logementID);
+            foreach ($logement as $logement){
+                echo"
+        <h1>Modifier un logement: ".$logement[1]."<span>.................</span></h1>";
+    }
+        ?>
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifLogements.php">
    				<p>

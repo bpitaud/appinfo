@@ -10,6 +10,11 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+function RecupPieceModif($pieceID){
+  return RecupPiecebyID($pieceID);
+
+}
+
 
 $nom = $surface = "" ;
 

@@ -10,7 +10,7 @@
 
 	<header>
         <div class="wrapper">
-            <h1>DOMISEP</h1>
+            <h1>DOMISEP</h1> 
             <nav>
                 <ul>
                     <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
