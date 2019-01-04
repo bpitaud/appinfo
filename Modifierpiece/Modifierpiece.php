@@ -58,7 +58,7 @@
         $piece = RecupPieceModif($pieceID);
             foreach ($piece as $piece){
                 echo"
-        <h1>Modifier un logement: ".$pieced[1]."<span>.................</span></h1>";
+        <h1>Modifier un logement: ".$piece[1]."<span>.................</span></h1>";
     }
         ?>		<div class="formulaire">
 			<form method="post" action="../controllers/ModifPieces.php">
