@@ -2,6 +2,93 @@
  
  require_once("../Models/database.php");
  
+ function getControleurName($pieceID) {
+    $listCapteur = array();
+    $sql =  'SELECT nom FROM controleur WHERE pieceID ='.$pieceID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($listCapteur, $row['nom']);
+    }
+    //print_r  ($listLogement);
+    return $listCapteur;
+  }
+  function getCapteurName($pieceID) {
+    $listCapteur = array();
+    $sql2 =  'SELECT nom FROM capteur WHERE pieceID ='.$pieceID.'';
+    foreach  (connect()->query($sql2) as $row) {
+      array_push($listCapteur, $row['nom']);
+    }
+    //print_r  ($listLogement);
+    return $listCapteur;
+  }
+  // Type de capteur dans la base de donnée en int => menu déroulant pour savoir le type => numéro selon l'option choisi 
+  
+  function getControleurID($pieceID) {
+    $listCapteur = array();
+    $sql =  'SELECT controleurID FROM controleur WHERE pieceID ='.$pieceID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($listCapteur, $row['controleurID']);
+    }
+    //print_r  ($listLogement);
+    return $listCapteur;
+  }
+  //$listID = getCapteurID($_SESSION["pieceID"]);
+  //print_r ($listID);
+  
+  function getCapteurID($pieceID) {
+    $listCapteur = array();
+    $sql2 =  'SELECT capteurID FROM capteur WHERE pieceID ='.$pieceID.'';
+    foreach  (connect()->query($sql2) as $row) {
+      array_push($listCapteur, $row['capteurID']);
+    }
+    //print_r  ($listLogement);
+    return $listCapteur;
+  }
+  
+  function getControleurType($capteurID) {
+    $capteurType = array();
+    $sql =  'SELECT `typ` FROM controleur WHERE controleurID ='.$capteurID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($capteurType, $row['typ']);
+    }
+    return $capteurType[0];
+  }
+  
+  function getCapteurType($capteurID) {
+    $capteurType = array();
+    $sql =  'SELECT `typ` FROM capteur WHERE capteurID ='.$capteurID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($capteurType, $row['typ']);
+    }
+    return $capteurType[0];
+  }
+  
+  function getCapteurEtat ($capteurID) {
+    $capteurEtat = array();
+    $sql =  'SELECT etat FROM capteur WHERE capteurID ='.$capteurID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($capteurEtat, $row['etat']);
+    }
+    return $capteurEtat[0];
+  }
+  
+  function getControleurEtat ($capteurID) {
+    $capteurEtat = array();
+    $sql =  'SELECT etat FROM controleur WHERE controleurID ='.$capteurID.'';
+    foreach  (connect()->query($sql) as $row) {
+        array_push($capteurEtat, $row['etat']);
+    }
+    return $capteurEtat[0];
+  }
+
+
+
+
+
+
+
+  
+
+
  // Ajouter un capteur
  function ajoutCapteur( $nom, $capteurID, $type, $pieceID, $etat){
      $reponse = connect() -> prepare("INSERT INTO capteur(nom, capteurID, typ, pieceID, etat) VALUES (:nom, :capteurID, :typ, :pieceID, :etat)");

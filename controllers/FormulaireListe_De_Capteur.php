@@ -1,5 +1,4 @@
 <?php
-
 // define variables and set to empty values
 $Err =  "";
 $capteur = "";
@@ -22,8 +21,6 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-
-echo ($capteur);
 
 
 
