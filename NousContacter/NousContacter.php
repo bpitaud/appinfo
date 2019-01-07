@@ -34,7 +34,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="MesInfos.html"><p>Mes infos</p></a>
                                 <a href="NousContacter.html"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>

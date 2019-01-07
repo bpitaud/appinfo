@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_GET['selected']) && $_GET['selected'] != '') {
+    $_SESSION['selected_logement'] = $_GET['selected'];
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -35,7 +43,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -47,13 +55,28 @@
 
 
     <section>
-         <a href ="../Liste logements/listelogements.php"> < Retour</a> 
+        <?php echo "<a href='../Liste logements/listelogements.php?user=".$_SESSION["utilisateurID"]."'> < Retour </a>";?> 
         <h2>Pièce(s) du logement</h2>
     	<div id="pieces">
             <?php
-            require_once('../controllers/FormulaireAjoutPiece.php');
-                        $list = getPieceController($_SESSION["logementID"]);
-                        for ($i = 0; $i < count($list) ;$i++) {
+            require_once ('../controllers/FormulaireAjoutPiece.php');
+                        $piece = RecupPieceController($_SESSION["selected_logement"]);
+                        foreach ($piece as $piece){
+                            echo ('
+                            <div class="block" >
+                                <div class="figure">
+                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                </div>
+                                <div class="Caractere"> 
+                                    '.$piece[1].'
+                                <p><a href = "../Modifierpiece/Modifierpiece.php"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
+                                </div>
+                                
+                            </div>
+                            ');
+                        }
+                        
+                        /*for ($i = 0; $i < count($list) ;$i++) {
                             echo'
                             <div class="block" >
                                 <div class="figure">
@@ -66,19 +89,19 @@
                                 
                             </div>
                             ';
-                        }
+                        }*/
             ?>
-               
-            <div class="block"> 
-                <div class="figure">
-                    <div class="plus" > 
-                        <p> <a href ="../AjoutPiece/AjoutPiece.php" > +</p> 
+            <?php
+            echo "
+            <div class='block'> 
+                <div class='figure'>
+                    <div class='plus' >   
+                    <a href='../AjoutPiece/AjoutPiece.php?selected=".$_SESSION["selected_logement"]."'> <input type='button' value='+'></a>               
                     </div>      
                 </div>
-            <div class="Caractere"> 
-                Ajouter </a></div>
-            </div>   
-    	</div>	
+             
+            </div>";
+        ?>
     </section>
 
     <footer>

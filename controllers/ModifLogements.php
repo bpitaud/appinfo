@@ -10,6 +10,10 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+function RecupLogement($logementID){
+  return RecupLogementsbyID($logementID);
+
+}
 
 $nom = $adresse = $codepostale = $surface = $pays = "" ;
 

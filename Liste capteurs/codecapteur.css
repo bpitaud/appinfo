@@ -130,20 +130,32 @@ header a:hover span {
     display: none;
 }
 
+section
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+    margin: auto;
+    overflow: auto;
+    font-size: 20px;
+}
+
 #capteurs 
 {
+    width: 80%;
     flex-direction:row;
     justify-content: left;
-    margin-top: 10%;
+    margin-top: 1%;
     flex-wrap: wrap;
     display:flex;
-    margin-left : 8%;
-    margin-right: 8%;
-}
+    padding-bottom: 55%;
+    }
 
 .block {
     display: flex;
-    width: 14.5%;
+    width: 15%;
     flex-direction: column;
     text-align: center;
     margin-top:5%;
@@ -157,7 +169,7 @@ header a:hover span {
 {
     display:flex;
     flex-direction:row-reverse;
-    text-align: left;
+    text-align: center;
     padding-left:1%;
     margin-right: 20%;
 
@@ -168,20 +180,25 @@ header a:hover span {
     font-size: 63px;
     text-align:center;
     margin:auto;
-    padding-top:35%;
+    padding-top:25%;
     word-wrap:break-word;
 }
 
 
-section h1 {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    margin-bottom:5%;
-    margin-top:5%;
+h2{
+
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 40px;
 }
+
+#retour{
+
+    margin-left: 5%;
+    position: fixed;
+}
+
 
 .figure
 {
@@ -212,7 +229,7 @@ section #retour{
 
 
 .figure .plus {
-    font-size: 2em;
+    font-size: 1.4em;
     text-align:center;
 }
 

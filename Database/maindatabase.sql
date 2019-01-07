@@ -2,14 +2,12 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  mer. 19 déc. 2018 à 15:38
--- Version du serveur :  10.1.36-MariaDB
--- Version de PHP :  7.2.11
+-- Host: localhost:8889
+-- Generation Time: Dec 24, 2018 at 10:23 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `domisep`
+-- Database: `domisep`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `action_controleur`
+-- Table structure for table `action_controleur`
 --
 
 CREATE TABLE `action_controleur` (
@@ -39,21 +37,21 @@ CREATE TABLE `action_controleur` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `capteur`
+-- Table structure for table `capteur`
 --
 
 CREATE TABLE `capteur` (
-  `capteurID` int(11) NOT NULL,
   `nom` varchar(20) NOT NULL,
-  `typ` enum('camera','humidite','temperature','lumiere') NOT NULL,
-  `etat` tinyint(1) NOT NULL,
-  `pieceID` int(11) NOT NULL
+  `capteurID` int(11) NOT NULL,
+  `typ` enum('lumiere','camera','humidite','temperature') NOT NULL,
+  `pieceID` varchar(200) NOT NULL,
+  `etat` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `controleur`
+-- Table structure for table `controleur`
 --
 
 CREATE TABLE `controleur` (
@@ -61,17 +59,17 @@ CREATE TABLE `controleur` (
   `nom` varchar(20) NOT NULL,
   `typ` enum('chauffage') NOT NULL,
   `etat` tinyint(1) NOT NULL,
-  `pieceID` int(11) NOT NULL
+  `pieceID` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `logement`
+-- Table structure for table `logement`
 --
 
 CREATE TABLE `logement` (
-  `logementID` int(11) NOT NULL,
+  `logementID` varchar(200) NOT NULL,
   `nom` varchar(100) NOT NULL,
   `adresse` varchar(100) NOT NULL,
   `codepostale` int(11) NOT NULL,
@@ -80,23 +78,30 @@ CREATE TABLE `logement` (
   `pays` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `logement`
+--
+
+INSERT INTO `logement` (`logementID`, `nom`, `adresse`, `codepostale`, `surface`, `utilisateurID`, `pays`) VALUES
+('5c20a7f2826e6', 'Meribel', '206 Avenue paul doumer', 35782, 140, 2, 'france');
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `piece`
+-- Table structure for table `piece`
 --
 
 CREATE TABLE `piece` (
-  `pieceID` int(11) NOT NULL,
+  `pieceID` varchar(200) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `surface` int(11) NOT NULL,
-  `logementID` int(11) NOT NULL
+  `logementID` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilasteur`
+-- Table structure for table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -105,19 +110,27 @@ CREATE TABLE `utilisateur` (
   `prenom` varchar(20) NOT NULL,
   `email` varchar(250) NOT NULL,
   `genre` varchar(15) NOT NULL,
-  `naissance` date NULL,
+  `naissance` date DEFAULT NULL,
   `telephone` varchar(15) NOT NULL,
   `adresse` varchar(100) NOT NULL,
   `pays` varchar(11) NOT NULL,
-  `codepostale` int(11) NULL,
+  `codepostale` int(11) DEFAULT NULL,
   `mdp` varchar(200) NOT NULL,
   `administrateur` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`utilisateurID`, `nom`, `prenom`, `email`, `genre`, `naissance`, `telephone`, `adresse`, `pays`, `codepostale`, `mdp`, `administrateur`) VALUES
+(2, 'Bruzeau', 'Emma', 'charlotte.bruzeau@yahoo.fr', 'genre', '1998-06-24', '0663792527', 'zerze', 'pays', 35782, '$2y$10$RVJ.gILbU2f8FKOaDppauOvOUgWaNfO748MfhXNXevWRyMljU7WX6', 0),
+(3, 'Bruzeau', 'Charlotte', 'charlotte.bruzeau@gmail.com', 'feminin', '1998-09-14', '0663792528', '206 Avenue paul doumer', 'royaume-Uni', 35782, '$2y$10$V3Ladt0018QShypANEgx7upg6o2iqoSqygzY1oRrY04zn2XZQ076C', 0);
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `valeur_capteur`
+-- Table structure for table `valeur_capteur`
 --
 
 CREATE TABLE `valeur_capteur` (
@@ -129,131 +142,118 @@ CREATE TABLE `valeur_capteur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `action_controleur`
+-- Indexes for table `action_controleur`
 --
 ALTER TABLE `action_controleur`
   ADD PRIMARY KEY (`actionID`),
   ADD KEY `controleurID` (`controleurID`);
 
 --
--- Index pour la table `capteur`
+-- Indexes for table `capteur`
 --
 ALTER TABLE `capteur`
   ADD PRIMARY KEY (`capteurID`),
   ADD KEY `pieceID` (`pieceID`);
 
 --
--- Index pour la table `controleur`
+-- Indexes for table `controleur`
 --
 ALTER TABLE `controleur`
   ADD PRIMARY KEY (`controleurID`),
   ADD KEY `pieceID` (`pieceID`);
 
 --
--- Index pour la table `logement`
+-- Indexes for table `logement`
 --
 ALTER TABLE `logement`
   ADD PRIMARY KEY (`logementID`),
   ADD KEY `utilisateurID` (`utilisateurID`);
 
 --
--- Index pour la table `piece`
+-- Indexes for table `piece`
 --
 ALTER TABLE `piece`
   ADD PRIMARY KEY (`pieceID`),
   ADD KEY `logementID` (`logementID`);
 
 --
--- Index pour la table `utilasteur`
+-- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`utilisateurID`);
 
 --
--- Index pour la table `valeur_capteur`
+-- Indexes for table `valeur_capteur`
 --
 ALTER TABLE `valeur_capteur`
   ADD PRIMARY KEY (`valeurID`),
   ADD KEY `capteurID` (`capteurID`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `action_controleur`
+-- AUTO_INCREMENT for table `action_controleur`
 --
 ALTER TABLE `action_controleur`
   MODIFY `actionID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `logement`
---
-ALTER TABLE `logement`
-  MODIFY `logementID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `piece`
---
-ALTER TABLE `piece`
-  MODIFY `pieceID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `utilasteur`
+-- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `utilisateurID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `utilisateurID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `valeur_capteur`
+-- AUTO_INCREMENT for table `valeur_capteur`
 --
 ALTER TABLE `valeur_capteur`
   MODIFY `valeurID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `action_controleur`
+-- Constraints for table `action_controleur`
 --
 ALTER TABLE `action_controleur`
   ADD CONSTRAINT `action_controleur_ibfk_1` FOREIGN KEY (`controleurID`) REFERENCES `controleur` (`controleurID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `capteur`
+-- Constraints for table `capteur`
 --
 ALTER TABLE `capteur`
   ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`pieceID`) REFERENCES `piece` (`pieceID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `controleur`
+-- Constraints for table `controleur`
 --
 ALTER TABLE `controleur`
   ADD CONSTRAINT `controleur_ibfk_1` FOREIGN KEY (`pieceID`) REFERENCES `piece` (`pieceID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `logement`
+-- Constraints for table `logement`
 --
 ALTER TABLE `logement`
   ADD CONSTRAINT `logement_ibfk_1` FOREIGN KEY (`utilisateurID`) REFERENCES `utilisateur` (`utilisateurID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `piece`
+-- Constraints for table `piece`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`logementID`) REFERENCES `logement` (`logementID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `valeur_capteur`
+-- Constraints for table `valeur_capteur`
 --
 ALTER TABLE `valeur_capteur`
-  ADD CONSTRAINT `valeur_capteur_ibfk_1` FOREIGN KEY (`capteurID`) REFERENCES `capteur` (`capteurID`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
+  ADD CONSTRAINT `valeur_capteur_ibfk_1` FOREIGN KEY (`capteurID`) REFERENCES `capteur` (`capteurID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

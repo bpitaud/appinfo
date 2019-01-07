@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +35,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -46,12 +47,20 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste logements/listelogements.php">  < Retour	
+    		<a href="../Liste pièces/listepieces.php">  < Retour	
     		</a>
     	</p>
     	</div>
-		<h1>Modifier une pièce: NOM DE LA PIECE<span>.................</span></h1>
-		<div class="formulaire">
+        <?php
+        require ('../controllers/ModifPieces.php');
+
+        $pieceID = $_SESSION['pieceID'];
+        $piece = RecupPieceModif($pieceID);
+            foreach ($piece as $piece){
+                echo"
+        <h1>Modifier un logement: ".$piece[1]."<span>.................</span></h1>";
+    }
+        ?>		<div class="formulaire">
 			<form method="post" action="../controllers/ModifPieces.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom de la pièce" />

@@ -39,7 +39,7 @@ require_once('../Models/database.php');
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -48,13 +48,19 @@ require_once('../Models/database.php');
         </div>
     </header>
 
-    <section>
-        <a id ="retour" href ="../Liste pièces/listepieces.php"> < Retour</a> 
-        <h1> Salon </h1>
+    
+    <div id="retour">
+    <a href="../mesInfosUser/MesInfosUser.php">< Retour</a>
+    </div>
+
+    <h2> Salon </h2>
+
+<section>
+
     	<div id="capteurs">
-        <?php
         
-        function getCapteurName($pieceID) {
+        <?php
+        /*function getCapteurName($pieceID) {
             $listCapteur = array();
             $sql =  'SELECT nom FROM controleur WHERE pieceID ='.$pieceID.'';
             foreach  (connect()->query($sql) as $row) {
@@ -174,14 +180,11 @@ require_once('../Models/database.php');
         }
         
         // Faire java script pour le onclic les images et le nom du capteur passe en jaune et modifie dans la base de donnée l'état à 1
-        ?>
+        */?>
 
 
 
-
-
-
-        <!--
+        
             <div class="block"> 
                 <div class="figure" >
                     <p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> 
@@ -235,11 +238,9 @@ require_once('../Models/database.php');
                     Chauffage
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
-            </div>   -->
+            </div>   
 
 
-
-            <!-- PLUS -->
             <div class="block">       
                 <div class= "figure"> 
                     <div class="plus">
@@ -247,7 +248,7 @@ require_once('../Models/database.php');
                     </div>
                 </div>
                 <div class="caractère">
-                    Ajouter <br> un capteur 
+                    Ajouter <br/> un capteur 
                 </div>
             </div>
         </div>
@@ -258,3 +259,4 @@ require_once('../Models/database.php');
     </footer>
     
 </body>
+</html>

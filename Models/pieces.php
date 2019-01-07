@@ -1,12 +1,13 @@
 <?php 
-require 'database.php';
+require_once("../Models/database.php");
 
 
 // ajouter une pièce 
-function ajoutPiece( $nom, $surface, $logementID){
+function ajoutPiece($pieceID, $nom, $surface, $logementID){
     $con = connect();
-    $reponse = $con -> prepare("INSERT INTO piece(nom, surface, logementID) VALUES (:nom, :surface, :logementID)");
+    $reponse = $con -> prepare("INSERT INTO piece(pieceID, nom, surface, logementID) VALUES (:pieceID, :nom, :surface, :logementID)");
     $reponse->execute(array(
+        'pieceID' => $pieceID,
         'nom' => $nom,
         'surface' => $surface,
         'logementID' => $logementID,
@@ -37,16 +38,6 @@ function RecupPiecebyID($pieceID){
     return $resultat;
 }
 
-// récupérer un logement pour l'afficher dans liste logement
-function getPiece($logementID) {
-    $listPiece = array();
-    $sql =  'SELECT nom FROM piece WHERE logementID ='.$logementID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listPiece, $row['nom']);
-    }
-    return $listPiece;
-}
-
 // modifier le nom d'une pièce 
 function ModifNomPiece($pieceID,$nom){
     $conn = connect() -> prepare('UPDATE piece SET nom=:nom WHERE pieceID =:pieceID');
@@ -73,4 +64,4 @@ function suppPiece($pieceID){
     return $resultat;
 
 }
-    ?> 
+?> 

@@ -35,7 +35,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -46,27 +46,27 @@
     <section>
     <?php
     require_once('../controllers/FormulaireAjoutLogement.php');
-        $list = getLogementController($_SESSION["utilisateurID"]);
-        for ($i = 0; $i < count($list) ;$i++) {
+        $logement = RecupLogementController($_SESSION["utilisateurID"]);
+        foreach ($logement as $logement){
             echo(
                 '<div id="zonelogement"> 
                     <div id="logement">  
-                        <a class="imagelogement" href="../Liste pièces/listepieces.php">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php"> 
+                        <a class="imagelogement" href="../Liste pièces/listepieces.php?selected='.$logement[0].'">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php?selected='.$logement[0].'"> 
                             </div>
                         </a>
                         <div id="sous">
-                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php">
+                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php?selected='.$logement[0].'">
                                 <div class="reglage">
                                 </div>
                             </a>
                             <div class="nomlogement"> 
-                                <a href="../Liste pièces/listepieces.php"><p>'.$list[$i].'</p></a>
+                                <a href="../Liste pièces/listepieces.php"><p>'.$logement[1].'</p></a>
                             </div>
                         </div>
                     </div>        
-                </div>');
-            }
+                </div>'); 
+        }
     ?>
         <div class="ajoutlogement">
             <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 

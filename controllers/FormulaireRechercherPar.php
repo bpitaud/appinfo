@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ((empty($_POST["tel"]))&&(empty($_POST["mail"]))&&(empty($_POST["capteur"]))){
     $Err = "Rentrer une recherche";
   } else {
-    $tel = test_input($_POST["tel"]);
-    $mail = test_input($_POST["mail"]);
-    $capteur = test_input($_POST["capteur"]);
+    $telephone = test_input($_POST["telephone"]);
+    $email = test_input($_POST["email"]);
+    $capteurID = test_input($_POST["capteurID"]);
   }
     
   

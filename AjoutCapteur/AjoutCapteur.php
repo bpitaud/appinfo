@@ -34,7 +34,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -54,7 +54,7 @@
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
    				<p>
-       				<input type="text" name="name" placeholder="Nom du capteur" required/>
+       				<input type="text" name="nom" placeholder="Nom du capteur" required/>
       				<input type="text" name="number" placeholder="Numéro de série" required />
        				<select name="type" required>
        					<option value="lumiere"> Lumière </option>

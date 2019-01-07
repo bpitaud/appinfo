@@ -16,6 +16,8 @@ body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
+    background-attachment: fixed;
+
 }
 
 /* logo /nav bar flex */
@@ -130,16 +132,6 @@ header a:hover span {
     display: none;
 }
 
-section h2 {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    margin-bottom:5%;
-    margin-top:5%;
-}
-
 .info
 {
     width: 35%;
@@ -149,6 +141,8 @@ section h2 {
     height: 500px;
     align-items : stretch;
     line-height: 100%;
+    overflow: visible;
+
 }
 section
 {
@@ -157,10 +151,9 @@ section
     width: 80%;
     justify-content: space-around;
     margin: auto;
-    overflow: auto;
     font-size: 20px;
 }
-.base
+.text
 {
     display: flex;
     box-sizing: border-box;
@@ -172,7 +165,35 @@ section
     font-style: normal;
     font-weight: 100; 
 }
-.base2
+.number
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.email 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.date 
 {
     display: flex;
     box-sizing: border-box;
@@ -202,17 +223,15 @@ overflow: hidden;
 font-size: 19px
 }
 
-h2{
-
-    padding-top: 5%;
-}
 
 h2
 {
     text-align: center;
     font-size: 30px;
     font-weight: normal;
+    padding-top: 3%;
 }
+
 
 input {
 
@@ -233,6 +252,8 @@ font-size: 19px
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
+    margin: 42% 0% 0 0;
+/*    position: absolute; top: 98%; left: 73%; right: 0;*/
 }
     
+

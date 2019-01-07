@@ -43,10 +43,10 @@
         </div>
     </header>
 
-  
+
   <div id="retour">
     <a href="../mesInfosUser/MesInfosUser.php">< Retour</a>
-</div>
+  </div>
 
   <h2>Modification de mes informations</h2>
 
@@ -57,7 +57,7 @@
         <form method="post" action="../controllers/ModifInfosUser.php">
             <p>
        			
-      			<input type="text" name="nom" placeholder="NOM"  />
+      			    <input type="text" name="nom" placeholder="NOM"  />
                 <input type="text" name="prenom" placeholder="PRENOM" />
                 <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM"/>
                 <select name="genre" required>
@@ -82,9 +82,10 @@
                       <input type="text" name="codepostale" placeholder="75 000" />
                       <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
                       <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
+                      <div id="test">
                       <button class="bouton" type="submit">Valider</button>
                       <button class="bouton" href="../">Annuler</button>
-                    
+                    </div>
     		</p>
         </form>
     	</div>
@@ -93,6 +94,6 @@
     <footer>
     	<p> WEBAC © Tous droits réservés </p>
     </footer>
-    
+
 </body>
 </html>

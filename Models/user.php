@@ -178,7 +178,7 @@ function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
 
 function ModifMdp($email, $ancien, $nouveau) {
     $hache = mdp_hache($nouveau);
-    $conn = connect() ->prepare('SELECT mdp FROM `utilisateur` WHERE email=:email');
+    $conn = connect() ->prepare('SELECT mdp FROM `utilisateur` WHERE email=?');
     $conn->execute(array($email));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     if (count($resultat) == 0) {
