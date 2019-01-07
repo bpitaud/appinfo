@@ -1,22 +1,31 @@
 <?php
 
-// define variables and set to empty values
-$Err =  "";
-$tel = $mail = $capteur = "";
+require_once("../Models/user.php");
+
+function RecupUserTel($telephone) {
+  return RecupUserByTel($telephone);
+}
+
+function RecupUserEmail($email) {
+  return RecupUserByEmail($email);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
- 
-  
-  if ((empty($_POST["tel"]))&&(empty($_POST["mail"]))&&(empty($_POST["capteur"]))){
-    $Err = "Rentrer une recherche";
-  } else {
-    $telephone = test_input($_POST["telephone"]);
-    $email = test_input($_POST["email"]);
-    $capteurID = test_input($_POST["capteurID"]);
+
+  $telephone = test_input($_POST["telephone"]);
+  $email = test_input($_POST["email"]);
+
+  if (isset($telephone)&& trim($telephone)!=""){
+    $recherche = RecupUserByTel($telephone);
   }
-    
-  
-}
+
+  if (isset($email)&& trim($email)!=""){
+    $recherche = RecupUserByEmail($email);
+  }
+
+  RecupUserTel($logementID,$nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
+  header('Location: ../Liste logements/listelogements.php?user='.$utilisateurID);  
+  }     
 
 function test_input($data) {
   $data = trim($data);
@@ -24,13 +33,5 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-
-
-
-echo ($tel);
-echo ($mail);
-echo ($capteur);
-
-
 
 ?>

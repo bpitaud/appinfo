@@ -54,7 +54,7 @@
       					<label for="message">Numéro de capteur</label>
       					<input type="text" value="" name="capteur">
 
-                        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
+								<input type="submit" value="Valider">
    				</p>
                 
 			</form>
