@@ -42,17 +42,17 @@
     			
     		<section>
 		<div class="formulaire">
-			<form method="post" action="../ConfirmationClient/ConfClient.php">
+			<form method="post" action="../controllers/FormulaireRechercherPar.php">
                 
    				<p>
       					<label for="name">Numéro de téléphone</label>
-      					<input type="text" value="" name="tel" >
+      					<input type="text" value="" name="telephone" >
       					
       					<label for="message">Adresse email</label>
-      					<input type="text" value="" name="mail">
+      					<input type="text" value="" name="email">
       					
-      					<label for="message">Numéro de capteur</label>
-      					<input type="text" value="" name="capteur">
+      					<!--<label for="message">Numéro de capteur</label>
+      					<input type="text" value="" name="capteur"> -->
 
 								<input type="submit" value="Valider">
    				</p>

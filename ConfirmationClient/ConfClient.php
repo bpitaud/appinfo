@@ -43,11 +43,18 @@
 
     <div id="conteneur">
     	<div class="texte">
+      <?php
+      require_once('../controllers/FormulaireRechercherPar.php');
+      $utilisateurID = 2;
+			$utilisateur = RecupUserID($utilisateurID);
+			echo'
 
-				<em class="espace">Nom : NOM</br></em>
-				<em class="espace">Prénom : PRENOM</br></em>
-				<em class="espace">Numéro de téléphone : +33 0 00 00 00 00</br></em>
-				<em class="espace">Adresse email : ADRESSE.EMAIL@MAIL.COM </em>
+				<em class="espace">Nom :'.$utilisateur[1].'</br></em>
+				<em class="espace">Prénom : '.$utilisateur[2].'</br></em>
+				<em class="espace">Numéro de téléphone : '.$utilisateur[6].' </br></em>
+        <em class="espace">Adresse email : '.$utilisateur[3].' </em> ';
+      
+        ?>
           
     		<div class="bouton">
         <input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
