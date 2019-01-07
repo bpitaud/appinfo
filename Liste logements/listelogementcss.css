@@ -149,7 +149,7 @@ header a:hover span {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 10% auto auto auto;
+    margin: 10% auto 1% auto;
     width: 300px;
     height:350px;
 }
@@ -219,7 +219,8 @@ header a:hover span {
     color: black;
     padding-left:2.5%;
     padding-right:2.5%;
-    margin: 5% auto;
+    margin: auto;
+    margin-bottom: 5%;
     width: 300px;
     text-align: center;
 
