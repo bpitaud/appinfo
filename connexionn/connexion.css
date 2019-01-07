@@ -193,11 +193,9 @@ select {
 }
 
 input[type=submit] {
-    width: 200px;
+    width: 10%;
     background-color: LightGray;
     color: black;
-    padding-left: 15%;
-    padding-right:15%;
     padding-top:7px;
     padding-bottom:7px;
     margin-top: 40px;

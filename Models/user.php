@@ -81,6 +81,14 @@ function RecupUserByID($utilisateurID){
     return $resultat;
 }
 
+// récupérer le user par son téléphone
+function RecupUserByTel($telephone){
+    $conn = connect() -> prepare('SELECT * from `utilisateur` WHERE telephone=?');
+    $conn-> execute(array($telephone));
+    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return $resultat;
+}
+
 // rechercher si un utilisateur a des logements ou non
 function Possede_logements($utilisateurID) {
     $logements = RecupLogements($utilisateurID);
