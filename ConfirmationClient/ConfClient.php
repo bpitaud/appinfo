@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,14 +54,14 @@
     	<div class="texte">
       <?php
       require_once('../controllers/FormulaireRechercherPar.php');
-      $utilisateurID = 2;
+      $utilisateurID = $_SESSION['selected_user'];
 			$utilisateur = RecupUserID($utilisateurID);
 			echo'
 
-				<em class="espace">Nom :'.$utilisateur[1].'</br></em>
-				<em class="espace">Prénom : '.$utilisateur[2].'</br></em>
-				<em class="espace">Numéro de téléphone : '.$utilisateur[6].' </br></em>
-        <em class="espace">Adresse email : '.$utilisateur[3].' </em> ';
+				<em class="espace">Nom : '.$utilisateur[0][1].'</br></em>
+				<em class="espace">Prénom : '.$utilisateur[0][2].'</br></em>
+				<em class="espace">Numéro de téléphone : '.$utilisateur[0][6].' </br></em>
+        <em class="espace">Adresse email : '.$utilisateur[0][3].' </em> ';
       
         ?>
           
