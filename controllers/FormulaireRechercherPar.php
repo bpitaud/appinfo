@@ -2,14 +2,6 @@
 
 require_once("../Models/user.php");
 
-function RecupUserTel($telephone) {
-  return RecupUserByTel($telephone);
-}
-
-function RecupUserEmail($email) {
-  return RecupUserByEmail($email);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $telephone = test_input($_POST["telephone"]);
@@ -21,11 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (isset($email)&& trim($email)!=""){
     $recherche = RecupUserByEmail($email);
+    if (!($recherche == 1)) {
+      $recup = true;
+    }
   }
 
-  RecupUserTel($logementID,$nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
-  header('Location: ../Liste logements/listelogements.php?user='.$utilisateurID);  
-  }     
+  if ($recup == true) {
+    header("Location: ../Liste logements/listelogements.php?modif=true");
+  } else {
+    header("Location: ../Liste logements/listelogements.php?modif=false");
+  }  
+    
 
 function test_input($data) {
   $data = trim($data);
