@@ -2,33 +2,24 @@
 
 session_start();
 
-require_once("..APP2/Models/database.php");
-require_once("..APP2/Models/user.php");
+require_once("..APP2_WilliamCarro/Models/database.php");
+require_once("..APP2_WilliamCarro/Models/users.php");
 
-$nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
+$login = $passeword = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = test_input($_POST["nom"]);
-    $prenom = test_input($_POST["prenom"]);
-    $email = test_input($_POST["email"]);
-    $genre = test_input($_POST["genre"]);
-    $naissance = test_input($_POST["naissance"]);
-    $telephone = test_input($_POST["telephone"]);
-    $adresse = test_input($_POST["adresse"]);
-    $pays = test_input($_POST["pays"]);
-    $codepostale = test_input($_POST["codepostale"]);
-    $mdp= test_input($_POST['mdp']); 
-    $confirme_mdp = test_input($_POST['conf_mdp']);
-    $email_existe = Verif_email($email);
-    if ($mdp == $confirme_mdp && !$email_existe) {
-        ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
+    $login = test_input($_POST["login"]);
+    $passeword = test_input($_POST["passeword"]);
+    $confirmPasseword = test_input($_POST["conf_mdp"]);
+    $loginExist = logingExisting($login);
+    if ($passeword == $confirmPasseword && !$loginExist && strlen($login)>=10) {
+        addUsers($login, mdp_hache($passeword));   
         //send_email($to, $subject, $message, $headers);
-        header('Location: ../connexionn/connexion.php');
-
+        header('Location: ..APP2_WilliamCarro/Views/Connexion/connexion.php');
     }
      else {
         echo "les mots de passe ne correspondent pas ou l'adresse mail existe déjà";
-        header('Location: ../inscription/inscription.php');
+        header('Location: ..APP2_WilliamCarro/Views/NewAccount/createAnAccount.php');
      }
 
 }
