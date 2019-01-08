@@ -14,13 +14,13 @@ function addUsers($login, $passeword){
     }
 
 // hachage du mdp
-function mdp_hache($mdp){
+function Passewordhache($mdp){
     return password_hash($mdp, PASSWORD_DEFAULT);
 }
 // passeword hash ??
 
 // cryptage du mdp de passe rentré lors de la connexion
-function Verif_mdp($mdp, $hash){
+function PassewordVerify($mdp, $hash){
     return password_verify($mdp , $hash);
 }
 //password_verify ????

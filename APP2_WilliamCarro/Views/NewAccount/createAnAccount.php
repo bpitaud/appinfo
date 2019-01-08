@@ -14,10 +14,10 @@
 <section>
   
     <div class="info">
-    <form method="post" action="../controllers/FormulaireInscription.php">
-              <input type="text" name="Login" placeholder="" required />
-            <input type="text" name="Passeword" placeholder="" required/>
-            <input type="email" name="Repeat passeword" placeholder="" required/>
+    <form method="post" action="..APP2_WilliamCarro/Controllers/newAccountForm.php">
+            <p> Login: </p><input type="text" name="Login" placeholder="" required />
+            <p> Passeword: </p><input type="text" name="Passeword" placeholder="" required/>
+            <p> Repeat passeword: </p><input type="email" name="Repeat_passeword" placeholder="" required/>
 
         <div id="test">
             <!--<button class="bouton" type="reset">Annuler</button>-->
