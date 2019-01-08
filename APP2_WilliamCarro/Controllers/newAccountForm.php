@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once("../Models/database.php");
-require_once("../Models/user.php");
+require_once("..APP2/Models/database.php");
+require_once("..APP2/Models/user.php");
 
 $nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
 
