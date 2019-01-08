@@ -163,6 +163,7 @@ header a:hover span {
     width: 130px;
     height: 130px;
     overflow:hidden;
+
 }
 
 .Caractere {
@@ -179,7 +180,8 @@ header a:hover span {
 .button
 {
     background-color:#3C4459;
-    text-align: center;   
+    text-align: center; 
+    margin-top:20em;  
 }
 
 section h2 {
@@ -201,8 +203,10 @@ section a {
 
 .figure .plus {
     text-align: center;
-    padding-bottom: 30%;
+    padding-bottom: 40%;
     margin-bottom: 40%;
+    justify-content: center;
+    width:150px;
 }
 
 footer p

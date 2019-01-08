@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +34,7 @@
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
+                                <a href="Accueil.html"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
@@ -44,31 +43,25 @@
         </div>
     </header>
     
-    
-
     <h2> Mes informations </h2>
-    <section>
+<section>
     <div class="info">
-        <?php
-        require_once ('../controllers/ModifInfosUser.php');
-        $utilisateurID = $_SESSION['utilisateurID'];
-        $utilisateur = RecupInfoUser($utilisateurID);
-        foreach ($utilisateur as $utilisateur) {
-        echo'
     		<p>
-    			<em class="email">'.$utilisateur[3].'<br/></em>
-    			<em class="text">'.$utilisateur[1].'<br/></em>
-    			<em class="text">'.$utilisateur[2].'<br/></em>
-    			<em class="text">'.$utilisateur[4].'<br/></em>
-    			<em class="date">'.$utilisateur[5].'<br/></em>
-                <em class="text">'.$utilisateur[6].'<br/></em>
-    			<em class="text">'.$utilisateur[7].'<br/></em>
-    			<em class="text">'.$utilisateur[8].'<br/></em>
-    			<em class="number">'.$utilisateur[9].'<br/></em>
-                
-                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button> 
-</p>';}
-?>
+    			<em class="base">ADRESS.EMAIL@MAIL.COM <br/></em>
+    			<em class="base">NOM<br/></em>
+    			<em class="base">PRENOM<br/></em>
+    			<em class="base">GENRE<br/></em>
+    			<em class="base2">JJ/MM/AAAA<br/></em>
+                <em class="base">+33 6 00 00 00 00<br/></em>
+    			<em class="base">ADRESSE PRINCIPALE<br/></em>
+    			<em class="base">PAYS<br/></em>
+    			<em class="base2">75 000<br/></em>
+                <em class="base">+33 6 00 00 00 00<br/></em>
+    			<em class="base">ADRESSE PRINCIPALE<br/></em>
+    			<em class="base">PAYS<br/></em>
+    			<em class="base2">75 000<br/></em>
+                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button>
+
 
 <script>
 function myFunction() {
@@ -85,24 +78,15 @@ function myFunction() {
 
 
 
-
-
-
-
-
 <div class="button1">
 <a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
 </div>   
 
-
+<div class="button2">
+<a href="../reinitialisationmdp/réuni.php"> <input type="button" value ="Réinitialiser mon mot de passe"></a> </div>
+    </div>
     	
     		
     			
-</section>  
-
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
-    
-</body>
-</html>
+</section>   
+  
