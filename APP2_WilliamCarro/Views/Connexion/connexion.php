@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="inscription.css" />
+    <link rel="stylesheet" href="connexion.css" />
     <title> Inscription </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
     <div class="info">
     <form method="post" action="..APP2_WilliamCarro/Controllers/newAccountForm.php">
             <p> Login: </p><input type="text" name="Login" placeholder="" required />
-            <p> Passeword: </p><input type="text" name="Passeword" placeholder="" required/>
+            <p> Passeword: </p><input type="password" name="Passeword" placeholder="" required/>
         <div id="test">
             <input type="submit" name="connexion" value="Suivant">
         </div>

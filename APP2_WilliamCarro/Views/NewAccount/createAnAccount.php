@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="inscription.css" />
+    <link rel="stylesheet" href="createAnAccount.css" />
     <title> Inscription </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -12,19 +12,15 @@
 <h2> Fill the form to create a new account. </h2>
 
 <section>
-  
-    <div class="info">
-    <form method="post" action="..APP2_WilliamCarro/Controllers/newAccountForm.php">
-            <p> Login: </p><input type="text" name="Login" placeholder="" required />
-            <p> Passeword: </p><input type="text" name="Passeword" placeholder="" required/>
-            <p> Repeat passeword: </p><input type="email" name="Repeat_passeword" placeholder="" required/>
-
-        <div id="test">
+    <form method="post" action="..APP2_WilliamCarro/Controllers/newAccountForm.php">  
+            <p> Login: <input type="text" name="Login" placeholder="" required /> </p>
+            <div id ="row">
+                <p> Passeword: <input type="password" name="Passeword" placeholder="" required/> </p>
+                <p> Repeat passeword: <input type="password" name="Repeat_passeword" placeholder="" required/> </p>
+            <div>
             <!--<button class="bouton" type="reset">Annuler</button>-->
-            <button class="bouton" type="submit">Valider</button>
-        </div>
+            <button class="bouton" type="submit">Submit</button>
     </form>
-    </div>
 </section>
 </body>
 </html>
