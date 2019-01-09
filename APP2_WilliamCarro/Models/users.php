@@ -4,10 +4,10 @@ require_once("..Models/database.php");
 
 // ajouter un utilisateur à la base de données
 function addUsers($login, $passeword){
-    $conn = connect() -> prepare("INSERT INTO utilisateur(logins, passeword) VALUES (:logins, :passeword)");
+    $conn = connect() -> prepare("INSERT INTO utilisateur(`login`, `password`) VALUES (:`login`, :`password`)");
     $conn->execute(array(
-        'logins' => $login,
-        'passeword' => $passeword,
+        'login' => $login,
+        'password' => $passeword,
     ));
 
     }

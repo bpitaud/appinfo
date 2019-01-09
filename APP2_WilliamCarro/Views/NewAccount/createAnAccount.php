@@ -16,9 +16,8 @@
             <p> Login: <input type="text" name="Login" placeholder="" required /> </p>
             <div id ="row">
                 <p> Passeword: <input type="password" name="Passeword" placeholder="" required/> </p>
-                <p> Repeat passeword: <input type="password" name="Repeat_passeword" placeholder="" required/> </p>
+                <p> Repeat password: <input type="password" name="Repeat_passeword" placeholder="" required/> </p>
             <div>
-            <!--<button class="bouton" type="reset">Annuler</button>-->
             <button class="bouton" type="submit">Submit</button>
     </form>
 </section>

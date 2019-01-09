@@ -5,15 +5,15 @@ session_start();
 require_once("..Models/database.php");
 require_once("..Models/users.php");
 
-$login = $passeword = ""; 
+$login = $password = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = test_input($_POST["Login"]);
-    $passeword = test_input($_POST["Passeword"]);
+    $password = test_input($_POST["Passeword"]);
     $confirmPasseword = test_input($_POST["Repeat_passeword"]);
     $loginExist = logingExisting($login);
-    if ($passeword == $confirmPasseword && !$loginExist && strlen($login)>=10) {
-        addUsers($login, Passewordhache($passeword));   
+    if ($password == $confirmPasseword && !$loginExist && strlen($login)>=10) {
+        addUsers($login, Passewordhache($password));   
         header('Location: ..Views/Connexion/connexion.php');
     }
      else {
