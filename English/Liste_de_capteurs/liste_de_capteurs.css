@@ -29,7 +29,7 @@ nav+a
 
 body{
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") fixed no-repeat center top;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
 	background-color: black;
     background-size: 100%;
     background-position: 10% 0%;

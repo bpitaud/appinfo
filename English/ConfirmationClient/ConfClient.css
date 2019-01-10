@@ -1,8 +1,69 @@
+/* Code de la page */
+
+h2
+{
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+    padding-top: 7%;
+}
+
+ .espace
+{ 
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+    color : rgba(255,255,255,0.9);
+    
+}
+
+
+input {
+	color : rgba(255,255,255,0.9);
+    padding: 7px 35px;
+    margin-top: 8%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 18px;
+    position: absolute; top: 60%; left: 70%; right: 2%;
+}
+
+#conteneur
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 30%;
+    position: absolute; top:50%; left:15%;
+
+}
+.texte
+{
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+/* HEADER */
 *
 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
@@ -19,24 +80,24 @@ nav
 }
 nav+a
 {
-	text-decoration : none;
-	color: rgba(255, 255, 255, 0.8);
+    text-decoration : none;
+    color: rgba(255, 255, 255, 0.8);
 }
 #compte_link
 {
-	text-decoration : underline; 
+    text-decoration : underline; 
 }
 
 body{
+    /*background-color: rgba(0, 0, 0, 0.8);*/
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") fixed no-repeat center top;
-	background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
+    background-color: black;
     background-size: 100%;
     background-position: 10% 0%;
 }
 
-header
-/* logo /nav bar flex */
+
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -71,7 +132,7 @@ h1{
 
 .dropdownLang
 {
-	margin: 16% 10% 10% 10%;
+    margin: 16% 10% 10% 10%;
 }
 .dropdownLang .noHover p {
     text-align: left;
@@ -107,17 +168,18 @@ h1{
 }
 .admin
 {
-	border: auto;
-	margin-top: 5%;
-	margin-left: 10%;
-	width: 100%;
-	color:rgba(255, 255, 255, 0.8);
+    border: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 100%;
+    color:rgba(255, 255, 255, 0.8);
 }
 
 footer p
 {
-	color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     position: absolute; bottom: 2%; left: 73%; right: 0;
+    font-size: 95%;
 }
 .quitter
 {
@@ -129,73 +191,3 @@ footer p
     width: 7.7%;
     padding: 0.3% 0 0.3% 0%;
 }
-
-
-#deco_supp
-{
-    width:30%;
-    display: inline-block;
-
-    justify-content: space-between;
-    position: absolute; bottom:35%; right:10%;
-}
-
-.bouton {
-background-color: rgba(255,255,255,0.8);
-color: black;
-border: none;
-cursor: pointer;
-padding:center;
-width:40%;
-height: 30px;
-padding: 2px 0 3px 0;
-margin: 0% 2% 10% 2%;
-border-radius: 6px; 
-overflow: hidden;
-font-size: 19px
-}
-
-
-
-input[type=text] {
-    color : white;
-    width:28%;
-    padding: 5px 0px;
-    margin:auto;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 55px;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 20px;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.5);
-    background: rgba(0, 0, 0, 0.5) url("../Images/loupe.png") no-repeat 2% center;
-    background-size: 30px;
-    text-align: left;
-    font-size: 20px;
-    position: absolute; top:35%; right: 36%;
-}
-
-
-table {
- border-collapse:collapse;
- background-color: rgba(152, 152, 152, 0.8);
- width:80%;
- position: absolute; top:60%; right: 10%;
- }
-th, td {
- border:0px solid black;
- padding: 0.5% 0% 0.5% 0%;
- width:20%;
- }
-td {
- text-align:center;
- }
-caption {
- font-size: 45px;
- font-weight: normal;
- text-align: left;
- padding-bottom: 2%;
- }

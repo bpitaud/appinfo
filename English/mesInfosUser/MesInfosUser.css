@@ -1,8 +1,8 @@
 * {
-    text-decoration: none;
     list-style-type: none;
+    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color:white;
     margin: 0;
     padding: 0;
 
@@ -13,9 +13,11 @@ header {
     font-size: 15px;
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
+    background-attachment: fixed;
+
 }
 
 /* logo /nav bar flex */
@@ -102,7 +104,7 @@ header a:hover span {
 .dropdown:hover #hoverUser {
     display:block;
     border-radius: 7px;
-    width: 150x;
+    width: 150px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -130,122 +132,128 @@ header a:hover span {
     display: none;
 }
 
-
-#zonelogement
+.info
 {
-    
-    margin: auto;
-    width: 100%;
-    height: 430px;
-    overflow: auto;
-}
+    width: 35%;
+    min-width: 280px;
+    border: 0px white solid;
+    padding: 2px;
+    height: 500px;
+    align-items : stretch;
+    line-height: 100%;
+    overflow: visible;
 
-#zone
+}
+section
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 80%;
     justify-content: space-around;
-    overflow: hidden;
     margin: auto;
-    width: 75%;
+    font-size: 20px;
 }
-
-
-#logement
+.text
 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2% auto 1% auto;
-    width: 300px;
-    height:350px;
-}
-
-
-.imagelogement {
-     width: 100%;
-    height: 75%;
-}
-
-.imgmaison
-{
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    background:rgba(0, 0, 0, 0) url("../Images/imagemaison.PNG") no-repeat top;
-    background-size: 100%;
-}
-
-#sous{
-    display: flex;
-    width: 100%;
-    height: 20%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: bottom;
-    font-size: 50px;
-    font-weight: lighter;
-    color: white;
-}
-
-.logoreglage{
-    width: 20%;
-    height: 100%;
-}
-
-.reglage
-{
-    background:rgba(0, 0, 0, 0) url("../Images/Capteur/off/iconereglageblanc.png") no-repeat center;
-    background-size: 100%;
+    box-sizing: border-box;
     width: 100%;
     height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    font-style: normal;
+    font-weight: 100; 
 }
-
-.nomlogement
+.number
 {
-
-    text-align: center;
+    display: flex;
+    box-sizing: border-box;
     width: 100%;
-    max-width: 240px;
-    font-size:30px;
-    margin: 0 auto;
-    align-items: bottom;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: break-word;
-    padding:0;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.email 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.date 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
 }
 
 
-.ajoutlogement
-{
-    border-radius:5px;
-    font-size: 1.3em;
-    background-color :grey;
-    padding-top:0.2%;
-    padding-bottom :0.2%;
-    color: black;
-    padding-left:2.5%;
-    padding-right:2.5%;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 2%; 
-    width: 300px;
-    text-align: center;
+.bouton {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+padding: 2px 0 3px 0;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
+}
 
+
+h2
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 3%;
+}
+
+
+input {
+
+    background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+padding: 2px 0 3px 0;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
 }
 
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
+    margin: 42% 0% 0 0;
+/*    position: absolute; top: 98%; left: 73%; right: 0;*/
 }
+    
 
-h2{
-    margin: 0% auto 1% auto;
-    font-size: 25px;
-    text-align: center;
-
-}

@@ -1,19 +1,16 @@
 * {
-    text-decoration: none;
-    list-style-type: none;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
-
-}
-header {
-
-    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    color:white;
     font-size: 15px;
+
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
 }
@@ -23,8 +20,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;   
+    flex-wrap: nowrap;   
 }
+
+
 
 /* nav bar flex */ 
 ul {
@@ -44,6 +43,7 @@ h1 {
 header{
     height: 100px;
     margin-top: 20px;
+    margin-right: 0;
 }
 header nav {
     display: flex;
@@ -55,6 +55,7 @@ header li {
     line-height: 30px;
     padding: 20px;
 }
+
 header a:hover {
     font-weight: bold;   
 }
@@ -130,122 +131,93 @@ header a:hover span {
     display: none;
 }
 
-
-#zonelogement
-{
-    
-    margin: auto;
-    width: 100%;
-    height: 430px;
-    overflow: auto;
-}
-
-#zone
-{
+section h1 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
-    margin: auto;
-    width: 75%;
+	color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+	margin-top: 5%;
+	font-size: 1.5em;
 }
 
+section h1 span {
+    opacity: 0;
+}
 
-#logement
-{
+.retour{
+    display: flex;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    margin-left: 5%;
+   
+}
+
+section a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+section img {
+    width: 1%;
+    padding: 0;
+}
+
+input[type=email] {
+	color : white;
+    width:30%;
+    padding: 10px 20px;
+    margin:auto;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2% auto 1% auto;
-    width: 300px;
-    height:350px;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
 }
 
+select {
+	color : rgba(255, 255, 255, 0.9);
+    width:30%;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display : flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
 
-.imagelogement {
-     width: 100%;
-    height: 75%;
 }
 
-.imgmaison
-{
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    background:rgba(0, 0, 0, 0) url("../Images/imagemaison.PNG") no-repeat top;
-    background-size: 100%;
-}
-
-#sous{
-    display: flex;
-    width: 100%;
-    height: 20%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: bottom;
-    font-size: 50px;
-    font-weight: lighter;
-    color: white;
-}
-
-.logoreglage{
-    width: 20%;
-    height: 100%;
-}
-
-.reglage
-{
-    background:rgba(0, 0, 0, 0) url("../Images/Capteur/off/iconereglageblanc.png") no-repeat center;
-    background-size: 100%;
-    width: 100%;
-    height:100%;
-}
-
-.nomlogement
-{
-
-    text-align: center;
-    width: 100%;
-    max-width: 240px;
-    font-size:30px;
-    margin: 0 auto;
-    align-items: bottom;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: break-word;
-    padding:0;
-}
-
-
-.ajoutlogement
-{
-    border-radius:5px;
-    font-size: 1.3em;
-    background-color :grey;
-    padding-top:0.2%;
-    padding-bottom :0.2%;
+input[type=submit] {
+    width: 200px;
+    background-color: LightGray;
     color: black;
-    padding-left:2.5%;
-    padding-right:2.5%;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 2%; 
-    width: 300px;
-    text-align: center;
+    padding: 5px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.9);;
+    opacity: 1; /* Firefox */
 }
 
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
     position: absolute; bottom: 2%; left: 73%; right: 0;
-}
-
-h2{
-    margin: 0% auto 1% auto;
-    font-size: 25px;
-    text-align: center;
-
 }

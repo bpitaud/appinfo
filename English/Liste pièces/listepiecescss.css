@@ -1,8 +1,8 @@
 * {
-    text-decoration: none;
     list-style-type: none;
+    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color:white;
     margin: 0;
     padding: 0;
 
@@ -13,7 +13,7 @@ header {
     font-size: 15px;
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
     background-color: black;
     background-size: 100%;
 }
@@ -102,7 +102,7 @@ header a:hover span {
 .dropdown:hover #hoverUser {
     display:block;
     border-radius: 7px;
-    width: 150x;
+    width: 150px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -130,111 +130,83 @@ header a:hover span {
     display: none;
 }
 
-
-#zonelogement
+#pieces 
 {
-    
-    margin: auto;
-    width: 100%;
-    height: 430px;
-    overflow: auto;
-}
-
-#zone
-{
-    display: flex;
+    display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    overflow: hidden;
-    margin: auto;
-    width: 75%;
+    margin-top: 10%;
+    margin:auto;
+    width: 50%;
+    flex-wrap: wrap;
 }
 
-
-#logement
-{
+.block {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2% auto 1% auto;
-    width: 300px;
-    height:350px;
+    text-align: center;
+    margin-top:-5%;
+    margin-bottom:5%;
+    padding-top: 2%;
 }
 
+.figure {
+    padding:5%;
+    font-size:10em;
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-right:30px;
+    text-align: center;
+    padding-top:15%;
+    margin-top:35%;
+    padding-bottom:10%;
+    width: 130px;
+    height: 130px;
+    overflow:hidden;
 
-.imagelogement {
-     width: 100%;
-    height: 75%;
 }
 
-.imgmaison
-{
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    background:rgba(0, 0, 0, 0) url("../Images/imagemaison.PNG") no-repeat top;
-    background-size: 100%;
-}
-
-#sous{
+.Caractere {
     display: flex;
-    width: 100%;
-    height: 20%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: bottom;
-    font-size: 50px;
-    font-weight: lighter;
-    color: white;
-}
-
-.logoreglage{
-    width: 20%;
-    height: 100%;
-}
-
-.reglage
-{
-    background:rgba(0, 0, 0, 0) url("../Images/Capteur/off/iconereglageblanc.png") no-repeat center;
-    background-size: 100%;
-    width: 100%;
-    height:100%;
-}
-
-.nomlogement
-{
-
+    flex-direction: row-reverse;
     text-align: center;
-    width: 100%;
-    max-width: 240px;
-    font-size:30px;
-    margin: 0 auto;
-    align-items: bottom;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: break-word;
-    padding:0;
+    margin-top:5%;
+    margin-right:28%;
 }
 
 
-.ajoutlogement
-{
-    border-radius:5px;
-    font-size: 1.3em;
-    background-color :grey;
-    padding-top:0.2%;
-    padding-bottom :0.2%;
-    color: black;
-    padding-left:2.5%;
-    padding-right:2.5%;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 2%; 
-    width: 300px;
-    text-align: center;
 
+
+.button
+{
+    background-color:#3C4459;
+    text-align: center; 
+    margin-top:20em;  
+}
+
+section h2 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-bottom:5%;
+    margin-top:5%;
+}
+
+section a {
+    display:flex;
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    margin-left: 5%;
+}
+
+.figure .plus {
+    text-align: center;
+    padding-bottom: 40%;
+    margin-bottom: 40%;
+    justify-content: center;
+    width:150px;
 }
 
 footer p
@@ -243,9 +215,3 @@ footer p
     position: absolute; bottom: 2%; left: 73%; right: 0;
 }
 
-h2{
-    margin: 0% auto 1% auto;
-    font-size: 25px;
-    text-align: center;
-
-}

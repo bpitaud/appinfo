@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="listelogementcss.css" />
+        <link rel="stylesheet" href="NousContacter.css" />
         <title>Domisep - Liste des pièces</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
@@ -33,8 +32,8 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
-                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
+                                <a href="MesInfos.html"><p>Mes infos</p></a>
+                                <a href="NousContacter.html"><p>Contacter</p></a>
                                 <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
@@ -43,43 +42,27 @@
             </nav>
         </div>
     </header>
-
-    <h2>Liste logements</h2>
     <section>
-        <div id="zonelogement"> 
-            <div id="zone">
-    <?php
-    require_once('../controllers/FormulaireAjoutLogement.php');
-        $logement = RecupLogementController($_SESSION["utilisateurID"]);
-        foreach ($logement as $logement){
-            echo(
-                '
-                    <div id="logement">  
-                        <a class="imagelogement" href="../Liste pièces/listepieces.php?selected='.$logement[0].'">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php?selected='.$logement[0].'"> 
-                            </div>
-                        </a>
-                        <div id="sous">
-                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php?selected='.$logement[0].'">
-                                <div class="reglage">
-                                </div>
-                            </a>
-                            <div class="nomlogement"> 
-                                <a href="../Liste pièces/listepieces.php"><p>'.$logement[1].'</p></a>
-                            </div>
-                        </div>        
-                </div>'); 
-        }
-    ?>
-</div>
-</div>
-        <div class="ajoutlogement">
-            <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
+        <h2>Nous contacter</h2>
+        <div class="page">
+		<div id="coneteneur1">
+        <p>35 rue Notre-Dame des champs,</br> Paris, 75006,France</p>
         </div>
+        <div id="coneteneur2">
+        <p>+33 (0) 1 55 09 24 92</p>
+        </div>
+        <div id="coneteneur3">
+        <p>contact@domisep.fr</p>
+        </div>
+
+
+        </div>   
+
+
     </section>
 
     <footer>
     	<p> WEBAC © Tous droits réservés </p>
     </footer>
-
+    
 </body> 
