@@ -1,0 +1,252 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    margin: 0;
+    padding: 0;
+
+}
+header {
+
+    text-align: center;
+    font-size: 15px;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background-color: black;
+    background-size: 100%;
+}
+
+/* logo /nav bar flex */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+/* nav bar flex */ 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* logo */
+h1 {
+    font-size: 45px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* nav bar general */ 
+header{
+    height: 100px;
+    margin-top: 20px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 0 1 40%; 
+}
+header li {
+    width: 150px;
+    line-height: 30px;
+    padding: 20px;
+}
+header a:hover {
+    font-weight: bold;   
+}
+header a:hover span {
+    text-decoration: underline;
+}
+
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("../Images/ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+
+/* User scroll bar */
+.dropdown:hover #noHoverUser {
+    display: none;
+}
+.dropdown:hover #hoverUser {
+    display:block;
+    border-radius: 7px;
+    width: 150x;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown:hover #hoverUser p {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: auto;
+}
+.dropdown:hover #hoverUser #borderNone {
+    border: none;
+}
+.boutonmenuprincipal {
+    background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
+    background-size: 30px;
+    padding: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+}
+.dropdown #noHoverUser {
+    display: block;
+}
+.dropdown #hoverUser {
+    display: none;
+}
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+    margin: auto;
+    overflow: auto;
+    font-size: 20px;
+}
+
+#capteurs 
+{
+    width: 80%;
+    flex-direction:row;
+    justify-content: left;
+    margin-top: 1%;
+    flex-wrap: wrap;
+    display:flex;
+    padding-bottom: 55%;
+    }
+
+.block {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    text-align: center;
+    margin-top:5%;
+    margin-bottom:10%;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+
+.caractère
+{
+    display:flex;
+    flex-direction:row-reverse;
+    text-align: center;
+    padding-left:1%;
+    margin-right: 20%;
+
+}
+
+.pourcentage
+{
+    font-size: 63px;
+    text-align:center;
+    margin:auto;
+    padding-top:25%;
+    word-wrap:break-word;
+}
+
+
+h2{
+
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 40px;
+}
+
+#retour{
+
+    margin-left: 5%;
+    position: fixed;
+}
+
+
+.figure
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-top: 7%;
+    padding-bottom:7%;
+    padding-right:7%;
+    padding-left:7%;
+    margin-top: 0%;
+    margin-bottom:3%;
+    font-size: 5em;
+    text-align:center;
+    width: 85%;
+    height: 100%;
+    overflow:hidden;
+   
+} 
+
+
+
+section #retour{
+    display:flex;
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    margin-left: 5%;
+}
+
+
+.figure .plus {
+    font-size: 1.4em;
+    text-align:center;
+}
+
+.caractère .lampe {
+    color:#efe601;
+}
+
+progress { 
+    display: inline-block; height: 1em; width: 10em; vertical-align: -0.2em; background-color: gray; -webkit-block-flow: tb !important; 
+}
+
+button {
+    display:flex;
+}
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+}
