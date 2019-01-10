@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="AjoutLogement.css" />
-    <title>Ajout d'un Logement</title>
+    <title>Add housing</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -17,11 +17,11 @@
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
-                                <p>FR</p>
+                                <p>EN</p>
                             </div>
                             <div class="hover">
-                                <p>FR</p>
-                                <a href="english.html"> EN </a>
+                                <p>EN</p>
+                                <a href="../AjoutLogement/ENAjoutLogement.php"> FR </a>
                             </div>
                         </div>
                     </li>
@@ -32,9 +32,9 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
-                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
+                                <a href="../mesInfosUser/MesInfosUser.php"><p>My infos</p></a>
+                                <a href="../NousContacter/NousContacter.php"><p>Contact</p></a>
+                                <a href="../controllers/deconnexion.php"><p id="borderNone">Log out</p></a>
                             </div>
                         </div>
                     </li>
@@ -46,11 +46,11 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste logements/listelogements.php">  < Retour	
+    		<a href="../Liste logements/ENlistelogements.php">  < Back	
     		</a>
     	</p>
     	</div>
-		<h1>Ajouter un logement<span>.................</span></h1>
+		<h1>Add housing<span>.................</span></h1>
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutLogement.php">
    				<p>

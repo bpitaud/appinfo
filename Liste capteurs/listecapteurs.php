@@ -55,7 +55,7 @@
 
     <h2> Salon </h2>
 
-    <section>
+    <article>
     	<div id="capteurs">
         <?php
         /*
@@ -71,106 +71,123 @@
         $listControleurName = getControleurName('1');
         $listCapteurID = getCapteurID('1');
         $listControleurID = getControleurID('1');
-        $html1 = '<div class="block"> 
-        <div class="figure" >';
-        $html2 = "";
-        $html3 = "";
-        $html4 = "";
+        $html = "";
+        $idBlock = 0;
+        echo $idBlock;
         if (empty($listCapteurID) != 1){ // Si la liste capteurID est vide cela ne sert à rien d'executer ce code
             for ($i = 0; $i < count($listCapteurID) ;$i++) {
                 $type = getCapteurType($listCapteurID[$i]);
                 $etat = getCapteurEtat($listCapteurID[$i]);
                 if (getCapteurEtat($listCapteurID[$i])==0 ) { // Image du type éteint
+                    $onOff = 'off';
+                    $idBlock++;
+                    echo $idBlock;
+                    $html .= '
+                    <section class="block" id = "'.$idBlock.'" onClick="reply_click(this.idBlock)"> 
+                    <div class = "blanc">
+                    <div class="figure" >';
                     //echo getCapteurType($listCapteurID[$i]);
                     switch (getCapteurType($listCapteurID[$i])){ //OR getControlleurType($listID[$i])
                         case "lumière": //1:
-                            $html2.= '<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
+                            $html .= '<p> <a href = "#"> <img src="../Images/capteur/off/iconeLumiere.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                             break;
                         case "caméra de surveillance":
-                            $html2 .= '<p><a href = "#"><img src="../Images/iconecamera.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
+                            $html .= '<p><a href = "#"><img src="../Images/capteur/off/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                             break;
                         case "humidité":
-                            $html2 .= '<p> <a href = "#"> 70%  </a> </p>';
+                            $html .= '<p> <a href = "#"> 70%  </a> </p>';
                             break;
                         case "température":
-                            $html2 .= '<p> <a href = "#"> 20°  </a> </p>';
-                            break;
-                        
-                    } 
+                            $html .= '<p> <a href = "#"> 20°  </a> </p>';
+                            break; 
+                    }
                 } // image du type allumé
                 else {
+                    $onOff = 'on';
+                    $idBlock++;
+                    echo $idBlock;
+                    $html .= '
+                    <section class="block" id = "'.$idBlock.'"  onClick="reply_click(this.idBlock)"> 
+                    <div class = "jaune">
+                    <div class="figure" >';
                     switch (getCapteurType($listCapteurID[$i])){
                         case "lumière":
-                            $html2 .= '<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
+                            $html .= '<p> <a href = "#"> <img src="../Images/capteur/on/iconeLumiere.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                             break;
                         case "caméra de surveillance":
-                            $html2 .= '<p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
+                            $html .= '<p><a href = "#"><img src="../Images/capteur/on/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                             break;
                         case "humidité":
-                            $html2 .= '<p> <a href = "#"> 70%  </a> </p>';
+                            $html .= '<p> <a href = "#"> 70%  </a> </p>';
                             break;
                         case "température":
-                            $html2 .='<p> <a href = "#"> 20°  </a> </p>';
-                            break;
-                        default :
+                            $html .='<p> <a href = "#"> 20°  </a> </p>';
                             break;
                     }
                 }
-                $html2 .= 
-        '</div>
-        <div class="caractère"> 
-            '.$listCapteurName[$i].'
-            <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
+                $html .= 
+        '   </div>
+            <div class="caractère"> 
+                '.$listCapteurName[$i].'
+                <p><img src="../Images/capteur/'.$onOff.'/iconeReglage.png" alt="logo réglage" width="39" height="39"/></p>
+            </div>
         </div>
-        </div> '; 
+        </section> '; 
             }
         }
+        //Controller 
         if (empty($listControleurID) != 1){ // Si la liste controleurID est vide cela ne sert à rien d'executer ce code
-            for ($i = 0; $i < count($listControleurID) ;$i++) {
+            for ($i = 0; $i < count($listControleurID) ;$i++) { //off
                 $etat = getControleurEtat($listControleurID[$i]);
                 $type = getControleurType($listControleurID[$i]);
                 if (getControleurEtat($listControleurID[$i])==0 ) { // Image du type éteint
+                    $onOff = 'off';
+                    $idBlock++;
+                    echo $idBlock;
+                    $html .= '
+                    <section class="block" id = "'.$idBlock.'"  onClick="reply_click(this.idBlock)"> 
+                    <div class = "blanc">
+                    <div class="figure" >';
                     //echo getControleurType($listControleurID[$i]);
                     switch (getControleurType($listControleurID[$i])){ //OR getControlleurType($listID[$i])
                         case "chauffage":
-                            $html3 .= '<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
-                            <progress id="avancement" value="50" max="100"></progress>
-                            <span id="pourcentage"></span>
-                            <input type="button" onclick="modif(-10);" value="-">
-                            <input type="button" onclick="modif(10);" value="+">
-                            <script type ="text/javascript" src="codecapteur.js"> </script>';
-                            break;
-                        default :
+                            $html .= '<p><a href = "#"><img src="../Images/capteur/off/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>';
                             break;
                     }
-                } else {
+                } else { //on
+                    $onOff = 'on';
+                    $idBlock++;
+                    echo $idBlock;
+                    $html .= '
+                    <div class="block"id = "'.$idBlock.'"  onClick="reply_click(this.idBlock)"> 
+                    <div class = "jaune">
+                    <div class="figure" >';
                     switch (getControleurType($listControleurID[$i])){
                         case "chauffage":
-                        $html3 .= '<p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
-                        <progress id="avancement" value="50" max="100"></progress>
-                        <span id="pourcentage"></span>
-                        <input type="button" onclick="modif(-10);" value="-">
-                        <input type="button" onclick="modif(10);" value="+">
-                        <script type ="text/javascript" src="codecapteur.js"> </script>';
-                        break;
-                    default :
+                        $html .= '<p><a href = "#"><img src="../Images/capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>';
                         break;
                     }
                 }
-                $html3 .= 
-        '</div>
-        <div class="caractère"> 
-            '.$listControleurName[$i].'
-            <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
+                $html .= 
+        '       <progress id="avancement" value="50" max="100"></progress>
+                <span id="pourcentage"></span>
+                <input type="button" onclick="modif(-10);" value="-">
+                <input type="button" onclick="modif(10);" value="+">
+                <script type ="text/javascript" src="codecapteur.js"> </script>
+            </div>
+            <div class="caractère"> 
+                '.$listControleurName[$i].'
+                <p><img src="../Images/capteur/'.$onOff.'/iconeReglage.png" alt="logo réglage" width="39" height="39"/></p>
+            </div>
         </div>
-        </div> ';
+        </section> ';
             }
         }
-        echo $html1.$html2.$html3;
-        
+        echo $html;
+        // Prend 
+
         // Faire java script pour le onclic les images et le nom du capteur passe en jaune et modifie dans la base de donnée l'état à 1
         ?>
-
 
 
         <!--
@@ -246,7 +263,29 @@
                 </div>
             </div>
         </div>
-</section>
+        <script type="text/javascript">
+        //document.getElementByTagName("section").addEventListener("click", getIdBlock);
+        /*function reply_click(clicked_idBlock){
+            alert(clicked_idBlock);
+        }*/
+
+        
+            var sections = document.getElementsByTagName("section");
+            var sectionsCount = sections.length;
+            for (var i = 0; i <= sectionsCount; i += 1) {
+                sections[i].onclick = function(e) {
+                 alert(this.id);
+                };
+            }
+        
+
+        </script>
+    <?php
+        //require_once('../controllers/ModifControleurs.php');
+        //require_once('../controllers/ModifCapteurs.php');
+        //ModifEtatCapteur($capteurID, $etat);
+    ?>
+</article>
 
     <footer>
     	<p> WEBAC © Tous droits réservés </p>
