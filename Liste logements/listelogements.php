@@ -43,13 +43,17 @@
             </nav>
         </div>
     </header>
+
+    <h2>Liste logements</h2>
     <section>
+        <div id="zonelogement"> 
+            <div id="zone">
     <?php
     require_once('../controllers/FormulaireAjoutLogement.php');
         $logement = RecupLogementController($_SESSION["utilisateurID"]);
         foreach ($logement as $logement){
             echo(
-                '<div id="zonelogement"> 
+                '
                     <div id="logement">  
                         <a class="imagelogement" href="../Liste pièces/listepieces.php?selected='.$logement[0].'">
                             <div class="imgmaison" href="../Liste pièces/listepieces.php?selected='.$logement[0].'"> 
@@ -63,14 +67,15 @@
                             <div class="nomlogement"> 
                                 <a href="../Liste pièces/listepieces.php"><p>'.$logement[1].'</p></a>
                             </div>
-                        </div>
-                    </div>        
+                        </div>        
                 </div>'); 
         }
     ?>
-        <div class="ajoutlogement">
-            <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
-        </div>
+</div>
+</div>
+        <a href="../AjoutLogement/AjoutLogement.php"> <div class="ajoutlogement">
+             <p>+  Ajouter un logement</p>  
+        </div></a>
     </section>
 
     <footer>

@@ -15,7 +15,7 @@ $nom = $type = "" ;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
-    $nom = test_input($_POST["nom"]);
+      $nom = test_input($_POST["nom"]);
     }
     
     $capteurID = $_SESSION['capteurID'];

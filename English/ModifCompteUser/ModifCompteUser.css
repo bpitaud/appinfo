@@ -1,0 +1,293 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background-color: black;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+/* logo /nav bar flex */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+/* nav bar flex */ 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* logo */
+h1 {
+    font-size: 45px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* nav bar general */ 
+header{
+    text-align: center;
+    font-size: 15px;
+    height: 100px;
+    padding-top: 20px;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fondHead.png") no-repeat top;
+    background-color: black;
+    background-size: 100%;
+    position: fixed;
+    width: 100%;*/
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 0 1 40%; 
+}
+header li {
+    width: 150px;
+    line-height: 30px;
+    padding: 20px;
+}
+header a:hover {
+    font-weight: bold;   
+}
+header a:hover span {
+    text-decoration: underline;
+}
+
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("../Images/ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+
+/* User scroll bar */
+.dropdown:hover #noHoverUser {
+    display: none;
+}
+.dropdown:hover #hoverUser {
+    display:block;
+    border-radius: 7px;
+    width: 150px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown:hover #hoverUser p {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: auto;
+}
+.dropdown:hover #hoverUser #borderNone {
+    border: none;
+}
+.boutonmenuprincipal {
+    background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
+    background-size: 30px;
+    padding: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+}
+.dropdown #noHoverUser {
+    display: block;
+}
+.dropdown #hoverUser {
+    display: none;
+}
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+    /*position: fixed;*/
+}
+
+
+
+#retour{
+
+    margin-left: 5%;
+    position: fixed;
+}
+
+section
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+    height: 400px;
+	justify-content: space-around;
+	margin: auto;
+    overflow: auto;
+    font-size: 20px;
+}
+
+.info
+{
+	width: 35%;
+	min-width: 280px;
+	border: 0px white solid;
+	padding: 2px;
+	align-items: stretch;
+	line-height: 100%;
+}
+
+
+input[type=text]
+{
+	width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+input[type=password]
+{
+	width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+input[type=email]
+{
+	width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+input[type=date]
+{
+	width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+::placeholder { 
+    color:white;
+    opacity: 1; 
+}
+
+
+.bouton {
+background-color: rgba(255,255,255,0.8);
+color: black;
+border: none;
+cursor: pointer;
+padding:center;
+width:100%;
+height: 30px;
+margin-right: 15%;
+margin-bottom: 10%;
+border-radius: 6px; 
+overflow: hidden;
+font-size: 19px
+}
+
+#test {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-top: 4%;
+}
+
+h2{
+
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+	height:100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);
+    text-align: left;
+}
+
