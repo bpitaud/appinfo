@@ -73,9 +73,9 @@
     ?>
 </div>
 </div>
-        <div class="ajoutlogement">
-            <p><a href="../AjoutLogement/AjoutLogement.php"> +  Ajouter un logement </a></p> 
-        </div>
+        <a href="../AjoutLogement/AjoutLogement.php"> <div class="ajoutlogement">
+             <p>+  Ajouter un logement</p>  
+        </div></a>
     </section>
 
     <footer>
