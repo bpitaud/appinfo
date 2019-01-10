@@ -54,7 +54,7 @@
                         <option value="feminin"> Féminin </option>	
                        <option value="masculin"> Masculin </option>	
        				</select>
-                <input type="date" name="naissance" placeholder="DATE DE NAISSANCE" required />   
+                <input type="text" name="naissance" placeholder="DATE DE NAISSANCE" required />   
        			<input type="text" name="telephone" placeholder="TELEPHONE" required/>
       			<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE" required />
                     <select name="pays" required>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,8 +37,13 @@
                             <a href="english.html"> EN </a>
                         </div>
                     </div>
-                </li>
-                <li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+                    <?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
                 </div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
             </ul>
@@ -38,28 +52,61 @@
 </header>
 
 
-    
+    <?php
+    echo '
     <nav>
-    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Compte</span>
-    </nav>
+    	<a href="../Menu/Menu.php?user='.$_SESSION['selected_user'].'">Menu</a>/<span id="compte_link">Compte</span>
+    </nav>';
+    ?>
     <h2>Compte</h2>
+
+    <?php
+                $modif = $_GET['modif'];
+                if (isset($modif)) {
+                    if ($modif == "true") {
+                        echo "<p style='color:white;'>Vos informations ont été modifié.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Vos informations n'ont pas été modifié.</p>";
+                    }
+                }
+                ?>
+
 
 
     <section>
     	<div class="info">
+        <?php
+        require_once ('../controllers/FormulaireRechercherPar.php');
+        $utilisateurID = $_SESSION['selected_user'];
+        $utilisateur = RecupUserID($utilisateurID);
+        echo'
     		<p>
-    			<em class="base">ADRESS.EMAIL@MAIL.COM <br/></em>
-    			<em class="base">NOM<br/></em>
-    			<em class="base">PRENOM<br/></em>
-    			<em class="base">GENRE<br/></em>
-    			<em class="base2">JJ/MM/AAAA<br/></em>
+    			<em class="email">'.$utilisateur[0][3].' <br/></em>
+    			<em class="text">'.$utilisateur[0][1].'<br/></em>
+    			<em class="text">'.$utilisateur[0][2].'<br/></em>
+    			<em class="text">'.$utilisateur[0][4].'<br/></em>
+    			<em class="date">'.$utilisateur[0][5].'<br/></em>
     			<button onclick="myFunction()" class="bouton">Supprimer le compte</button>
+            </p>
+    	</div>
+    	<div class="info">
+        
+    		<p>
+    			<em class="text">'.$utilisateur[0][6].'<br/></em>
+    			<em class="text">'.$utilisateur[0][7].'<br/></em>
+    			<em class="text">'.$utilisateur[0][8].'<br/></em>
+    			<em class="text">'.$utilisateur[0][9].'<br/></em>
 
-
-
-
-
-<script>
+                <a href="../ModifCompteAdmin/ModifCompte.php?user='.$_SESSION['selected_user'].'"> <input class="bouton" type="button" value="Modifier mes informations"></a>
+                <a href="../NouveauMdpAdmin/NouveauMdpAdmin.php?user='.$_SESSION['selected_user'].'"> <input class="bouton" type="button" value="Réinitialisation de mot de passe"></a>               
+    			
+    		</p>
+        </div>';
+        ?>
+    </section>
+    
+  </body>
+  <script>
 function myFunction() {
     var txt;
     var r = confirm("Etes-vous sûr de vouloir supprimer le compte de ce client ?");
@@ -71,39 +118,4 @@ function myFunction() {
     document.getElementById("demo").innerHTML = txt;
 }
 </script>
-
-
-
-    		</p>
-    	</div>
-    	<div class="info">
-    		<p>
-    			<em class="base">+33 6 00 00 00 00<br/></em>
-    			<em class="base">ADRESSE PRINCIPALE<br/></em>
-    			<em class="base">PAYS<br/></em>
-    			<em class="base2">75 000<br/></em>
-
-    			<a href="../ModifCompteAdmin/ModifCompte.php"> <input type="button" value="Modifier mes informations"></a>               
-    			<button onclick="myFunction1()" class="bouton">Réinitialiser le mot de passe</button>
-                    <script>
-                    function myFunction1() {
-                        var txt;
-                        var r = confirm("Etes-vous sûr de vouloir réinitialiser le mot de passe de ce client ?");
-                        if (r == true) {
-                            <a href = "../RechercherPar/RechercherPar.php"></a>;
-                        } else {
-                            txt = "none";
-                        }
-                        document.getElementById("demo").innerHTML = txt;
-                    }
-                    </script>
-    		</p>
-    	</div>
-    </section>
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
-
-  </body>
 </html>
