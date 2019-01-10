@@ -76,7 +76,6 @@
         $html2 = "";
         $html3 = "";
         $html4 = "";
-        //test 
         if (empty($listCapteurID) != 1){ // Si la liste capteurID est vide cela ne sert à rien d'executer ce code
             for ($i = 0; $i < count($listCapteurID) ;$i++) {
                 $type = getCapteurType($listCapteurID[$i]);
@@ -88,7 +87,7 @@
                             $html2.= '<p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p>';
                             break;
                         case "caméra de surveillance":
-                            $html2 .= '<p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
+                            $html2 .= '<p><a href = "#"><img src="../Images/iconecamera.png" alt="photo de cadenas"width="128" height="128"/></a></p>';
                             break;
                         case "humidité":
                             $html2 .= '<p> <a href = "#"> 70%  </a> </p>';
@@ -175,6 +174,7 @@
 
 
         <!--
+            <!- lumiere ->
             <div class="block"> 
                 <div class="figure" >
                     <p> <a href = "#"> <img src="../Images/iconelumiereblanche.png" alt="photo de lumiere eteinte" width="128" height="128"/></a> </p> 
@@ -183,7 +183,9 @@
                     Lumière<br>principal
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
-            </div>           
+            </div>  
+
+            <!- Lampe ->
             <div class="block"> 
                 <div class="figure">
                     <p><a href = "#"><img src="../Images/iconelumierejaune.png" alt="photo de lumiere"width="128" height="128"/></a></p>
@@ -194,7 +196,9 @@
                     </div>
                     <p><img src="../Images/iconereglagejaune.png" alt="logo réglage allumé" width="39" height="39"/></p>
                 </div>
-            </div>    
+            </div>  
+
+            <!- Humidite ->
             <div class="block"> 
                 <div class="figure" >
                     <div class="pourcentage"> 
@@ -206,6 +210,8 @@
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
             </div>
+
+            <!- camera ->
             <div class="block">
                 <div class="figure">
                     <p><a href = "#"><img src="../Images/iconecadenas.png" alt="photo de cadenas"width="128" height="128"/></a></p>
@@ -215,6 +221,8 @@
                     <p><img src="../Images/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></p>
                 </div>
             </div> 
+
+            <!- chauffage ->
             <div class="block"> 
                 <div class="figure">
                     <p><a href = "#"><img src="../Images/iconechauffage.png" alt="photo de chauffage"width="128" height="128"/></a></p>
@@ -226,6 +234,7 @@
             </div>   
             -->
 
+            <!-- + -->
             <div class="block">       
                 <div class= "figure"> 
                     <div class="plus">

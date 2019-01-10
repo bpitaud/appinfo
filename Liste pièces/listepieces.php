@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-/*if (isset($_GET['selected']) && $_GET['selected'] != '') {
+if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $_SESSION['selected_logement'] = $_GET['selected'];
-}*/
+}
 
 ?>
 
