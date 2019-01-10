@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,11 +52,18 @@
 
     <div id="conteneur">
     	<div class="texte">
+      <?php
+      require_once('../controllers/FormulaireRechercherPar.php');
+      $utilisateurID = $_SESSION['selected_user'];
+			$utilisateur = RecupUserID($utilisateurID);
+			echo'
 
-				<em class="espace">Nom : NOM</br></em>
-				<em class="espace">Prénom : PRENOM</br></em>
-				<em class="espace">Numéro de téléphone : +33 0 00 00 00 00</br></em>
-				<em class="espace">Adresse email : ADRESSE.EMAIL@MAIL.COM </em>
+				<em class="espace">Nom : '.$utilisateur[0][1].'</br></em>
+				<em class="espace">Prénom : '.$utilisateur[0][2].'</br></em>
+				<em class="espace">Numéro de téléphone : '.$utilisateur[0][6].' </br></em>
+        <em class="espace">Adresse email : '.$utilisateur[0][3].' </em> ';
+      
+        ?>
           
     		<div class="bouton">
         <input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
