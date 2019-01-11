@@ -229,5 +229,6 @@ function SuppControleur($controleurID){
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
 }
+
 ?>
 
