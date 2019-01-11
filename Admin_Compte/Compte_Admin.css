@@ -139,9 +139,6 @@ h2
     font-weight: normal;
 }
 
-
-
-
 section
 {
     display: flex;
@@ -162,7 +159,7 @@ section
     align-items : stretch;
     line-height: 100%;
 }
-.base
+.email
 {
     display: flex;
     box-sizing: border-box;
@@ -174,7 +171,21 @@ section
     font-style: normal;
     font-weight: 100; 
 }
-.base2
+.text
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.date
 {
     display: flex;
     box-sizing: border-box;

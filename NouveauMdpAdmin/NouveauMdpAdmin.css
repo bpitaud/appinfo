@@ -138,39 +138,20 @@ footer p
     padding: 1% 0 1% 0%;
 }
 
+section h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 10%;
 
-
-section
-{
-	display: flex;
-	flex-direction: row;
-	width: 80%;
-	justify-content: space-around;
-	margin: auto;
-	overflow: auto;
-    font-size: 20px;
-    padding-top: 5%;
-}
-.info
-{
-	width: 35%;
-	min-width: 280px;
-	border: 0px white solid;
-	padding: 2px;
-	height: 400px;
-	align-items : stretch;
-	line-height: 100%;
-    
 }
 
-input[type=text]
-{
-	width: 100%;
-	height:10040;
+input[type=password] {
+	color : white;
+    width:30%;
     padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-size: 20px;
+    margin:auto;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     border:none;
@@ -178,105 +159,52 @@ input[type=text]
     box-sizing: border-box;
     background-color: rgba(0,0,0,0);
     text-align: left;
-}
-
-input[type=email]
-{
-	width: 100%;
-	height:10040;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
-    text-align: left;
-}
-
-input[type=date]
-{
-	width: 100%;
-	height:10040;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
-    text-align: left;
-}
-
-::placeholder { 
-    color:white;
-    opacity: 1; 
-}
-
-#test a {
-    background-color: rgba(255,255,255,0.8);
-    color: black;
-    border: none;
-    cursor: pointer;
-    padding:center;
-    width:100%;
-    height: 30px;
-    margin-right: 15%;
-    margin-bottom: 10%;
-    border-radius: 6px; 
-    overflow: hidden;
-    font-size: 19px;  
-    justify-content: center;
-}
-
-.bouton {
-background-color: rgba(255,255,255,0.8);
-color: black;
-border: none;
-cursor: pointer;
-padding:center;
-width:100%;
-height: 30px;
-margin-right: 15%;
-margin-bottom: 10%;
-border-radius: 6px; 
-overflow: hidden;
-font-size: 19px;
-}
-
-#test {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 12%;
-    padding-top: 4%;
-}
-
-h2{
-
-    padding-top: 5%;
 }
 
 select {
-
-
-    width: 100%;
-	height:100%;
+	color : rgba(255, 255, 255, 0.9);
+    width:30%;
     padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-size: 20px;
-    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display : flex;
     flex-direction: column;
     border:none;
     border-bottom: 1px solid white;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.6);
-    text-align: left;
 
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: LightGray;
+    color: black;
+    padding: 5px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.9);;
+    opacity: 1; /* Firefox */
+}
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
 }
