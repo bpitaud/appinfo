@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -30,8 +39,13 @@
                             <a href="english.html"> EN </a>
                         </div>
                     </div>
-                </li>
- 				<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+					<?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
  				</div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
@@ -39,34 +53,25 @@
     </div>
 </header>
 
-    <nav>
-    	<span id="compte_link"><a href="../Menu/Menu.php">Menu</a></span>
-    </nav>
-    
     
     		<!--CODE DE LA PAGE-->
-
-    
+			<?php
+			$utilisateurID = $_SESSION['selected_user'];
+			echo'
 			<div class="page">
 			
-				<a href = "../Admin_Compte/Compte_Admin.php"><div id="conteneur1">
+				<a href = "../Admin_Compte/Compte_Admin.php?user='.$_SESSION["selected_user"].'"><div id="conteneur1">
 					<div class="element1">Compte</div>
 					<!--<img src="../Images/compte.png" alt="Compte" />-->
 				</div></a>
 			
-				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php"><div id="conteneur2">
+				<a href = "../Liste_de_capteurs/Liste_de_capteurs.php?user='.$_SESSION["selected_user"].'"><div id="conteneur2">
 
 					<!--<img src="../Images/House.png" alt="House" />-->
 					<div class="element2">Capteurs</div>
 				</div></a>
-			</div>
-
-
-
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-	</footer>
-	
+			</div>';
+			?>
 	
 		</body>
 		

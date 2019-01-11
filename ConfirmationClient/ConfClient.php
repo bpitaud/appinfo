@@ -38,7 +38,13 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
               </div>
           </div>
           </li>
-          <li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+          <?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
         </div>
           <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
       </ul>
@@ -61,21 +67,17 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
 				<em class="espace">Nom : '.$utilisateur[0][1].'</br></em>
 				<em class="espace">Prénom : '.$utilisateur[0][2].'</br></em>
 				<em class="espace">Numéro de téléphone : '.$utilisateur[0][6].' </br></em>
-        <em class="espace">Adresse email : '.$utilisateur[0][3].' </em> ';
+        <em class="espace">Adresse email : '.$utilisateur[0][3].' </em>
       
-        ?>
-          
+    
+        
+      
     		<div class="bouton">
-        <input type=button onclick=window.location.href="../Menu/Menu.php"; value=Valider />
-    		</div>
+        <a href="../Menu/Menu.php?user='.$_SESSION['selected_user'].'"> <input type="button" value="Valider"></a>
+        </div>';
+        ?>
   	   </div>
     </div>
-
-
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
 
   </body>
 </html>

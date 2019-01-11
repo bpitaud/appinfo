@@ -62,13 +62,6 @@
 
 			</section>
                 
-            
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
-
-
     	</body>
 		
 </html>

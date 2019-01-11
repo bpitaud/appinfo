@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="ModifCompteUser.css" />
-    <title> ModifCompte </title>
+    <title> Modification de Compte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 

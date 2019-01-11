@@ -1,9 +1,18 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="ModifCompte.css" />
-    <title> ModifCompte </title>
+    <title> Modification de Compte </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
@@ -27,8 +36,13 @@
                             <a href="english.html"> EN </a>
                         </div>
                     </div>
-                </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+                    <?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
  				</div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
@@ -41,34 +55,43 @@
 
 
 
-    
+    <?php
+    echo'
     <nav>
-    	<a href="../Menu/Menu.php">Menu</a>/<a href="../Admin_Compte/Compte_Admin.php">Compte</a>/<span id="compte_link">Modifier</span>
-    </nav>
+    	<a href="../Menu/Menu.php?user='.$_SESSION['selected_user'].'">Menu</a>/<a href="../Admin_Compte/Compte_Admin.php?user='.$_SESSION['selected_user'].'">Compte</a>/<span id="compte_link">Modifier</span>
+    </nav>';
+    ?>
     <h2>Modification des informations du compte</h2>
     <section>
     	<div class="info">
-    		<p>
+        <form method="post" action="../controllers/ModifInfosAdmin.php">
+            <?php
+            $utilisateurID = $_SESSION['selected_user'];
+            $utilisateur = RecupUserID($utilisateurID);
+            echo'
             <p>
-       			<input type="base" name="name" placeholder="ADRESS.EMAIL@MAIL.COM" required/>
-      			<input type="base" name="number" placeholder="NOM" required />
-                <input type="base" name="name" placeholder="PRENOM" required/>
-                <select name="Genre" required>
-       					<option value="genre"> GENRE </option>
+       			<input type="email" name="email" placeholder="'.$utilisateur[0][3].'"/>
+      			<input type="text" name="nom" placeholder="'.$utilisateur[0][1].'" />
+                <input type="text" name="prenom" placeholder="'.$utilisateur[0][2].'" />
+                <select name="'.$utilisateur[0][4].'">
                         <option value="féminin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="base" name="number" placeholder="JJ/MM/AAAA" required />
-    			
-    		</p>
+                <input type="text" name="naissance" placeholder="'.$utilisateur[0][5].'" />
+            </p>';
+            ?>
+        </form>
     	</div>
     	<div class="info">
-        <form method="post" action="../controllers/FormulaireAjoutCapteur.php">
+        <form method="post" action="../controllers/ModifInfosAdmin.php">
+        <?php
+        $utilisateurID = $_SESSION['selected_user'];
+        $utilisateur = RecupUserID($utilisateurID);
+        echo '
    				<p>
-       				<input type="base" name="name" placeholder="+33 6 00 00 00 00" required/>
-      				<input type="base" name="number" placeholder="ADRESSE PRINCIPALE" required />
-                      <select name="Pays" required>
-                        <option value="pays"> PAYS </option>	
+       				<input type="text" name="telephone" placeholder="'.$utilisateur[0][6].'" />
+      				<input type="text" name="adresse" placeholder="'.$utilisateur[0][7].'" />
+                      <select name="'.$utilisateur[0][8].'" >	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
@@ -78,20 +101,18 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-      				<input type="base" name="number" placeholder="75 000" required />
+                      <input type="text" name="codepostale" placeholder="'.$utilisateur[0][9].'" />
+                      
 
             <div id="test">
-    			<button class="bouton" href="../">Annuler</button>
-                <button class="bouton">Valider</button>
+    			<button class="bouton" href="../Admin_Compte/Compte_Admin.php?user='.$_SESSION['selected_user'].'">Annuler</button>
+                <button class="bouton" type="submit">Valider</button>
             </div>
-            </p>
+            </p>';
+
+        ?>
         </form>
     	</div>
     </section>
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
-
   </body>
 </html>
