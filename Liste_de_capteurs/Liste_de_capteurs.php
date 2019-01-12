@@ -1,46 +1,13 @@
  <?php
-// Dans la page liste capteur => récupérer l'IDpiece
- /*$db = 'database.php';
- require $db;
-  $piece = $db -> query ('SELECT pieceID FROM piece WHERE nom = $nomDuLogement');
   session_start();
-  $_SESSION["pieceID"] = $piece; */
-  //Dans la page liste piece => récupérer l'IDlogement
-  require_once("../Models/database.php");
-  session_start();
-  //echo connect() -> query ('SELECT logementID FROM logement WHERE nom = $nomDulogement');
-  //echo $logement;
-?>
+ ?>
 
-<?php
-  /*
-  function getLogementID($logement) {
-    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
-    foreach  (connect()->query($sql) as $row) {
-        echo $row['logementID'] . "\n";
-        return $row['logementID'] . "\n";
-    }
-  } 
-  function getLogementID($logement) {
-    $listLogementID = array();
-    $sql =  'SELECT logementID FROM logement WHERE nom ='.$logement.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listLogement, $row['logementID']);
-    }
-    print_r  ($listLogement);
-    return $listLogementID;
-}
-getLogementID('maison');
-//$_SESSION["logementID"];
-*/
-
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="liste_de_capteurs.css" />
-    <title> Compte </title>
+    <title> Recherche d'un capteur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 
@@ -64,8 +31,13 @@ getLogementID('maison');
                 <a href="english.html"> EN </a>
             </div>
             </div>
-          </li>
- 					<li><p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p></li>
+            <?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
  				</div>
                 <li><a class="quitter" href="../RechercherPar/RechercherPar.php"><span>Quitter</span></a></li>
 			</ul>
@@ -74,58 +46,81 @@ getLogementID('maison');
 </header>
 
     
+<?php
+    echo '
     <nav>
-    	<a href="../Menu/Menu.php">Menu</a>/<span id="compte_link">Liste des capteurs</span>
-    </nav>
+    	<a href="../Menu/Menu.php?user='.$_SESSION['selected_user'].'">Menu</a>/<span id="compte_link">Recherche de capteur</span>
+    </nav>';
+    ?>
 
 
     <section>
-      <form method="post" action="../controllers/FormulaireListe_De_Capteur.php">
+
+      <form method="post" action="../controllers/RechercheCapteur.php">
+      <?php
+		try {
+			$error = $_GET['recup'];
+			if (isset($error) && $error == "error") {
+				echo "<p style='color:red'>Le capteur n'existe pas. </p>";
+			}
+		} catch (Exception $e) {}
+	?>
           <p>
-                <input type="text" value="" name="capt" placeholder="Rechercher un numéro de capteur">
+                <input type="text" name="capteurID" placeholder="numéro de capteur">
           </p>
       </form>
 
         <p id="deco_supp" >
           <button class="bouton">Supprimer</button>
-          <button class="bouton">Déconnecter</button>
+          <button class="bouton">Changer l'état</button>
         </p>
       </div>
      
 
 
 <table summary="ligne 1 : Propriété capteurs, ligne 2 : Info capteur">
+
  <caption>Capteur</caption>
   <tr>
-    <th>Numéro des capteur</th>
+    <th>Numéro des capteurs</th>
     <th>Type</th>
-    <th>Maison</th>
+    <th>Logement</th>
     <th>Pièce</th>
     <th>Etat</th>
   </tr>
-  <tr>
-      <td>LU120578</td>
-      <td>Lumière</td>
-      <td>Home</td>
-      <td>Cuisine</td>
-      <td>Connecté</td>
+  <?php
+  require_once('../controllers/RechercheCapteur.php');
+  $capteur = JoinCapteurModel($_GET['capteur'], $utilisateurID);
+  if (!$capteur) {
+    $capteur = JoinControleurModel($_GET['capteur'], $utilisateurID);
+  }
+  if ($capteur) {
+    ?>
+    <tr>
+      <td><?php echo $capteur['capteurID']?></td>
+      <td><?php echo $capteur['capteurTyp']?></td>
+      <td><?php echo $capteur['logementNom']?></td>
+      <td><?php echo $capteur['pieceNom']?></td>
+      <td><?php echo $capteur['etat']?></td>
    </tr>
+
+   <?php
+    
+  } else {
+    
+		try {
+			$error = $_GET['recherche'];
+			if (isset($error) && $error == "error") {
+				echo "<p style='color:red'>Ce capteur n'existe pas</p>";
+			}
+		} catch (Exception $e) {}
+	
+  }
+  ?>
+  
 </table>
 
 
-
     </section>
-    
-
-
-    <footer>
-    	<p > Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
-
-
-  </body>
-  
-
-  
-  
+  </body> 
 </html>

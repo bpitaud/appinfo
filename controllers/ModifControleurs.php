@@ -17,8 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
     $nom = test_input($_POST["nom"]);
     }
+    if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
+      $_SESSION['selected_controleur'] = $_GET['controleur'];
+      }
     
-    $controleurID = $_SESSION['controleurID'];
+    $controleurID = $_SESSION['selected_controleur'];
     $capteur = RecupControleurbyID($controleurID);
     $modif = false;
 

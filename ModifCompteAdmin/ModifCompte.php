@@ -66,8 +66,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     	<div class="info">
         <form method="post" action="../controllers/ModifInfosAdmin.php">
             <?php
-            $utilisateurID = $_SESSION['selected_user'];
-            $utilisateur = RecupUserID($utilisateurID);
             echo'
             <p>
        			<input type="email" name="email" placeholder="'.$utilisateur[0][3].'"/>
@@ -78,18 +76,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
                        <option value="féminin"> Féminin </option>	
        				</select>
                 <input type="text" name="naissance" placeholder="'.$utilisateur[0][5].'" />
-            </p>';
-            ?>
-        </form>
-    	</div>
-    	<div class="info">
-        <form method="post" action="../controllers/ModifInfosAdmin.php">
-        <?php
-        $utilisateurID = $_SESSION['selected_user'];
-        $utilisateur = RecupUserID($utilisateurID);
-        echo '
-   				<p>
-       				<input type="text" name="telephone" placeholder="'.$utilisateur[0][6].'" />
+                <input type="text" name="telephone" placeholder="'.$utilisateur[0][6].'" />
       				<input type="text" name="adresse" placeholder="'.$utilisateur[0][7].'" />
                       <select name="'.$utilisateur[0][8].'" >	
        					<option value="france"> France </option>
@@ -108,11 +95,12 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     			<button class="bouton" href="../Admin_Compte/Compte_Admin.php?user='.$_SESSION['selected_user'].'">Annuler</button>
                 <button class="bouton" type="submit">Valider</button>
             </div>
-            </p>';
-
-        ?>
+            </p>
+            ';
+            ?>
         </form>
     	</div>
+    
     </section>
   </body>
 </html>

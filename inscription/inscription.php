@@ -46,6 +46,14 @@
       
     	<div class="info">
         <form method="post" action="../controllers/FormulaireInscription.php">
+        <?php
+		try {
+			$error = $_GET['inscription'];
+			if (isset($error) && $error == "error") {
+				echo "<p style='color:red'>L'email existe déjà ou les mots de passe ne sont pas identiques. </p>";
+			}
+		} catch (Exception $e) {}
+	?>
       			<input type="text" name="nom" placeholder="NOM" required />
                 <input type="text" name="prenom" placeholder="PRENOM" required/>
                 <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM" required/>

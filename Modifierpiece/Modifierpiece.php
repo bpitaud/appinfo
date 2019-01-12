@@ -1,10 +1,17 @@
+<?php 
+session_start();
+
+if (isset($_GET['piece']) && $_GET['piece'] != '') {
+    $_SESSION['selected_piece'] = $_GET['piece'];
+} 
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Modifierpiece.css" />
-    <title>Ajout d'un Logement</title>
+    <title>Modification d'une pièce</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +21,9 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                <li>
+                     <a href="../Liste logements/listelogements.php"><span>Home</span></a>
+                    </li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -47,26 +56,35 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste pièces/listepieces.php">  < Retour	
-    		</a>
+            <?php 
+            require ('../controllers/ModifPieces.php');
+            $pieceID = $_SESSION['selected_piece'];
+            $piece = RecupPieceModif($pieceID);
+            echo '
+    		<a href="../Liste pièces/listepieces.php?log='.$piece[0][3].'">  < Retour	
+            </a>';
+            ?>
     	</p>
     	</div>
         <?php
-        require ('../controllers/ModifPieces.php');
-
-        $pieceID = $_SESSION['pieceID'];
-        $piece = RecupPieceModif($pieceID);
             foreach ($piece as $piece){
                 echo"
-        <h1>Modifier un logement: ".$piece[1]."<span>.................</span></h1>";
+        <h1>Modifier une pièce: ".$piece[1]."<span>.................</span></h1>";
     }
         ?>		<div class="formulaire">
-			<form method="post" action="../controllers/ModifPieces.php">
+            <form method="post" action="../controllers/ModifPieces.php">
+            
    				<p>
-       				<input type="text" name="nom" placeholder="Nom de la pièce" />
-      				<input type="text" name="surface" placeholder="Superficie" />
+                    <?php
+                    echo'
+       				<input type="text" name="nom" placeholder="'.$piece[1].'" />
+                      <input type="text" name="surface" placeholder="'.$piece[2].'" />';
+                    ?>
               <div id="bouton">
-                <a type="submit" href="../Liste pièces/listepieces.php">Annuler</a>
+                <?php
+                echo '
+                <a type="submit" href="../Liste pièces/listepieces.php?log='.$piece[3].'">Annuler</a>';
+                ?>
                 <input onclick="myFunction()" value="Supprimer" type="submit">
 
 

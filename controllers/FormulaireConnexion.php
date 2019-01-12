@@ -32,15 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         $_SESSION['admin'] = 0;
         if($logements){ // sinon , vérifie si cet utilisateur a des logements 
-        header('Location: ../Liste logements/listelogements.php?user='.$_SESSION['utilisateurID']);
+        header('Location: ../Liste logements/listelogements.php');
         } else {
-        header('Location: ../Liste logements/premierlogement.php?user='.$_SESSION['utilisateurID']);
+        header('Location: ../Liste logements/premierlogement.php');
         }
       }
     }
     else { // rester sur la page connexion car identifiants non valides
-      echo ("Email ou mot de passe incorrect(s)");
-      header('Location: ../connexionn/connexion.php');
+      header('Location: ../connexionn/connexion.php?connexion=error');
 
     }
        

@@ -1,8 +1,10 @@
 <?php
 
 require_once("../Models/user.php");
+require_once("../Models/capteurs.php");
 
-function test_input($data) {
+
+function test($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
@@ -16,12 +18,17 @@ function RecupUserID($utilisateurID){
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (isset($_POST['telephone'])){
-  $telephone = test_input($_POST["telephone"]);
+  $telephone = test($_POST["telephone"]);
   }
   if (isset($_POST['email'])){
-  $email = test_input($_POST["email"]);
+  $email = test($_POST["email"]);
   }
+  if (isset($_POST['capteurID'])){
+    $capteurID = test($_POST["capteurID"]);
+    }
+
   $recup =false;
+  
 
   if (isset($telephone)&& trim($telephone)!=""){
     $recherche = RecupUserByTel($telephone);
@@ -37,14 +44,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
+  if (isset($capteurID)&& trim($capteurID)!=""){
+    $recherche = getUserByCapteurID($capteurID);
+    if ($recherche) {
+      $recup = true;
+    }
+  }
+
+  if (isset($capteurID)&& trim($capteurID)!="" && $recup === false){
+    $recherche = getUserByControleurID($capteurID);
+    if ($recherche) {
+      $recup = true;
+    }
+  }
+
   if ($recup == true) {
     header("Location: ../ConfirmationClient/ConfClient.php?user=".$recherche[0][0]);
   } else {
     header("Location: ../RechercherPar/RechercherPar.php?recherche=error");
   }  
-    
-
-
 }
 
 ?>

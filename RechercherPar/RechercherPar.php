@@ -33,26 +33,32 @@
      
   </div>
 </header>
-    
-    
-    		<!--CODE DE LA PAGE-->
-    		
 
     			<h2>Rechercher par :</h2>
     			
     		<section>
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireRechercherPar.php">
+			
+			<?php
+		try {
+			$error = $_GET['recherche'];
+			if (isset($error) && $error == "error") {
+				echo "<p style='color:red'>Utilisateur introuvable</p>";
+			}
+		} catch (Exception $e) {}
+	?>
                 
    				<p>
       					<label for="name">Numéro de téléphone</label>
-      					<input type="text" value="" name="telephone" >
+      					<input type="text" name="telephone" >
       					
       					<label for="message">Adresse email</label>
-      					<input type="text" value="" name="email">
-      					
-      					<!--<label for="message">Numéro de capteur</label>
-      					<input type="text" value="" name="capteur"> -->
+								<input type="text" name="email">
+								
+								<label for="numero">Numéro de capteur</label>
+								<input type="text" name="capteurID">
+								
 
 								<input type="submit" value="Valider">
    				</p>

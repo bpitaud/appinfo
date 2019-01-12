@@ -1,13 +1,17 @@
 <?php 
-// session_start();
-?> 
+session_start();
+
+if (isset($_GET['selected']) && $_GET['selected'] != '') {
+    $_SESSION['selected_logement'] = $_GET['selected'];
+}
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="ModifierLogement.css" />
-    <title>Ajout d'un Logement</title>
+    <title>Modification d'un Logement</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +21,9 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li>
+                        <a href="../Liste logements/listelogements.php"><span>Home</span></a>
+                    </li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -36,7 +42,10 @@
                             </div>
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                <?php
+                                echo '
+                                <a href="../mesInfosUser/MesInfosUser.php?user='.$logement[0][5].'"><p>Mes infos</p></a>';
+                                ?>
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
@@ -50,27 +59,26 @@
     <section>
     	<div class="retour">
     		<p>   
-            <?php 
-                    require ('../controllers/ModifLogements.php');
-                    echo "<a href='../Liste logements/listelogements.php?user=".$_SESSION["utilisateurID"]."'> < Retour </a>";?>    
+           <a href='../Liste logements/listelogements.php'> < Retour </a>    
     	</p>
         </div>
         <?php
-        $logementID = $_SESSION['logementID'];
+        require ('../controllers/ModifLogements.php');
+        $logementID = $_SESSION['selected_logement'];
         $logement = RecupLogement($logementID);
-            foreach ($logement as $logement){
                 echo"
-        <h1>Modifier un logement: ".$logement[1]."<span>.................</span></h1>";
-    }
+        <h1>Modifier un logement: ".$logement[0][1]."<span>.................</span></h1>";
         ?>
 		<div class="formulaire">
-			<form method="post" action="../controllers/ModifLogements.php">
+            <form method="post" action="../controllers/ModifLogements.php">
+            <?php
+            echo'
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du logement" />
-      				<input type="text" name="adresse" placeholder="Adresse du logement" />
-       				<input type="text" name="codepostale" placeholder="Code postale" />
-       				<input type="text" name="surface" placeholder="Surface du logement" >
-       				<select name="pays" >
+       				<input type="text" name="nom" placeholder="'.$logement[0][1].'" />
+      				<input type="text" name="adresse" placeholder="'.$logement[0][2].'" />
+       				<input type="text" name="codepostale" placeholder="'.$logement[0][3].'" />
+       				<input type="text" name="surface" placeholder="'.$logement[0][4].'" >
+       				<select name="'.$logement[0][6].'" >
        					<option value="france"> France </option>
        					<option value="royaume-uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
@@ -79,16 +87,19 @@
        					<option value="canada"> Canada </option>
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
-       				</select>
+                       </select>';
+                ?>
+            
               <div id="bouton">
                 <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
+                
                 <input onclick="myFunction()" value="Supprimer" type="submit">
 
 
                 <script>
                 function myFunction() {
                     var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer votre compte ?");
+                    var r = confirm("Etes-vous sûr de vouloir supprimer ce logement?");
                     if (r == true) {
                         href = "../RechercherPar/RechercherPar.php";
                     } else {
@@ -97,8 +108,7 @@
                     document.getElementById("demo").innerHTML = txt;
                 }
                 </script>
-                
-                
+ 
                 <input type="submit" value="Valider">
               
             </div>
@@ -112,5 +122,5 @@
     </footer>
     
 </body>
-
+</html>
 

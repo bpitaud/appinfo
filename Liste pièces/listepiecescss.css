@@ -149,15 +149,22 @@ header a:hover span {
     margin-bottom:5%;
     padding-top: 2%;
 }
+.block1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top:-5%;
+    margin-bottom:5%;
+    padding-top: 2%;
+}
 
 .figure {
     padding:5%;
     font-size:10em;
     border : 1px solid white;
     background-color: #3C4459;
-    padding-right:30px;
+    padding-right:20px;
     text-align: center;
-    padding-top:15%;
     margin-top:35%;
     padding-bottom:10%;
     width: 130px;
@@ -165,6 +172,20 @@ header a:hover span {
     overflow:hidden;
 
 }
+.figure1
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-top: 7%;
+    padding-left:7%;
+    margin-top: 0%;
+    font-size: 5em;
+    text-align:center;
+    width: 85%;
+    height: 100%;
+    overflow:hidden;
+   
+} 
 
 .Caractere {
     display: flex;
@@ -181,6 +202,8 @@ header a:hover span {
 {
     background-color:#3C4459;
     text-align: center; 
+    align-content: center;
+    justify-content: center;
     margin-top:20em;  
 }
 
@@ -202,11 +225,9 @@ section a {
 }
 
 .figure .plus {
-    text-align: center;
-    padding-bottom: 40%;
-    margin-bottom: 40%;
-    justify-content: center;
-    width:150px;
+    font-size: 1.4em;
+    text-align:center;
+    margin-top: -50%;
 }
 
 footer p

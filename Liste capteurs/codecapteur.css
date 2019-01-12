@@ -165,6 +165,7 @@ section
 }
 
 
+
 .caractère
 {
     display:flex;
@@ -231,6 +232,14 @@ section #retour{
 .figure .plus {
     font-size: 1.4em;
     text-align:center;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
 }
 
 .caractère .lampe {

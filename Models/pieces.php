@@ -32,7 +32,7 @@ function RecupPiece($logementID){
 
 // récupérer une pièce par son ID 
 function RecupPiecebyID($pieceID){
-    $conn = connect() -> prepare('SELECT * FROM piece WHERE logementID =?');
+    $conn = connect() -> prepare('SELECT * FROM piece WHERE pieceID=?');
     $conn -> execute(array($pieceID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;

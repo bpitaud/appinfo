@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +21,9 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li>
+                    <a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    </li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -46,8 +56,9 @@
     <section>
     	<div class="retour">
     		<p>
+            
     		<a href="../Liste logements/listelogements.php">  < Retour	
-    		</a>
+            </a>
     	</p>
     	</div>
 		<h1>Ajouter un logement<span>.................</span></h1>

@@ -2,93 +2,7 @@
  
  require_once("../Models/database.php");
  
- function getControleurName($pieceID) {
-    $listCapteur = array();
-    $sql =  'SELECT nom FROM controleur WHERE pieceID ='.$pieceID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listCapteur, $row['nom']);
-    }
-    //print_r  ($listLogement);
-    return $listCapteur;
-  }
-  function getCapteurName($pieceID) {
-    $listCapteur = array();
-    $sql2 =  'SELECT nom FROM capteur WHERE pieceID ='.$pieceID.'';
-    foreach  (connect()->query($sql2) as $row) {
-      array_push($listCapteur, $row['nom']);
-    }
-    //print_r  ($listLogement);
-    return $listCapteur;
-  }
-  // Type de capteur dans la base de donnée en int => menu déroulant pour savoir le type => numéro selon l'option choisi 
-  
-  function getControleurID($pieceID) {
-    $listCapteur = array();
-    $sql =  'SELECT controleurID FROM controleur WHERE pieceID ='.$pieceID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($listCapteur, $row['controleurID']);
-    }
-    //print_r  ($listLogement);
-    return $listCapteur;
-  }
-  //$listID = getCapteurID($_SESSION["pieceID"]);
-  //print_r ($listID);
-  
-  function getCapteurID($pieceID) {
-    $listCapteur = array();
-    $sql2 =  'SELECT capteurID FROM capteur WHERE pieceID ='.$pieceID.'';
-    foreach  (connect()->query($sql2) as $row) {
-      array_push($listCapteur, $row['capteurID']);
-    }
-    //print_r  ($listLogement);
-    return $listCapteur;
-  }
-  
-  function getControleurType($capteurID) {
-    $capteurType = array();
-    $sql =  'SELECT `typ` FROM controleur WHERE controleurID ='.$capteurID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($capteurType, $row['typ']);
-    }
-    return $capteurType[0];
-  }
-  
-  function getCapteurType($capteurID) {
-    $capteurType = array();
-    $sql =  'SELECT `typ` FROM capteur WHERE capteurID ='.$capteurID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($capteurType, $row['typ']);
-    }
-    return $capteurType[0];
-  }
-  
-  function getCapteurEtat ($capteurID) {
-    $capteurEtat = array();
-    $sql =  'SELECT etat FROM capteur WHERE capteurID ='.$capteurID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($capteurEtat, $row['etat']);
-    }
-    return $capteurEtat[0];
-  }
-  
-  function getControleurEtat ($capteurID) {
-    $capteurEtat = array();
-    $sql =  'SELECT etat FROM controleur WHERE controleurID ='.$capteurID.'';
-    foreach  (connect()->query($sql) as $row) {
-        array_push($capteurEtat, $row['etat']);
-    }
-    return $capteurEtat[0];
-  }
-
-
-
-
-
-
-
-  
-
-
+ 
  // Ajouter un capteur
  function ajoutCapteur( $nom, $capteurID, $type, $pieceID, $etat){
      $reponse = connect() -> prepare("INSERT INTO capteur(nom, capteurID, typ, pieceID, etat) VALUES (:nom, :capteurID, :typ, :pieceID, :etat)");
@@ -160,6 +74,50 @@ function SuppCapteur($capteurID){
     return $resultat;
 }
 
+// join les tables capteur, pièce, logement, utilisateur 
+function joinCapteur($capteurID, $utilisateurID){
+    $req = connect() -> prepare('SELECT
+    capteur.capteurID as capteurID,
+    capteur.typ as capteurTyp,
+    capteur.etat,
+    piece.nom as pieceNom,
+    logement.nom as logementNom
+    FROM
+        capteur
+    INNER JOIN piece ON capteur.pieceID = piece.pieceID
+    INNER JOIN logement ON logement.logementID = piece.logementID
+    WHERE capteurID = :capteurID AND logement.utilisateurID = :utilisateurID');
+
+    $req->execute(array(
+        'capteurID' => $capteurID,
+        'utilisateurID' => $utilisateurID
+    ));
+
+    return $req->fetch(PDO::FETCH_ASSOC);
+}
+
+// get user by capteur ID
+function getUserByCapteurID($capteurID) {
+    $req = connect() -> prepare('SELECT
+        utilisateur.utilisateurID as utilisateurID,
+        utilisateur.nom as userNom,
+        utilisateur.prenom as userPrenom,
+        utilisateur.telephone as userTel, 
+        utilisateur.email as userEmail
+    FROM
+        capteur
+    INNER JOIN piece ON capteur.pieceID = piece.pieceID
+    INNER JOIN logement ON logement.logementID = piece.logementID
+    INNER JOIN utilisateur ON utilisateur.utilisateurID = logement.utilisateurID
+    WHERE capteur.capteurID = :capteurID');
+
+    $req->execute(array(
+        'capteurID' => $capteurID,
+    ));
+
+    return $req->fetchAll(PDO::FETCH_NUM);
+}
+
 // ajouter un controleur 
 function ajoutControleur( $nom, $controleurID, $type, $pieceID, $etat){
     $reponse = connect() -> prepare("INSERT INTO controleur(nom, controleurID, typ, pieceID, etat) VALUES (:nom, :controleurID, :typ, :pieceID, :etat)");
@@ -228,6 +186,50 @@ function SuppControleur($controleurID){
     $conn -> execute(array($controleurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;
+}
+
+// join les tables controleur, pièce, logement, utilisateur 
+function joinControleur($controleurID, $utilisateurID){
+    $req = connect() -> prepare('SELECT
+    controleur.controleurID as capteurID,
+    controleur.typ as capteurTyp,
+    controleur.etat,
+    piece.nom as pieceNom,
+    logement.nom as logementNom
+    FROM
+        controleur
+    INNER JOIN piece ON controleur.pieceID = piece.pieceID
+    INNER JOIN logement ON logement.logementID = piece.logementID
+    WHERE controleurID = :controleurID AND logement.utilisateurID = :utilisateurID');
+
+    $req->execute(array(
+        'controleurID' => $controleurID,
+        'utilisateurID' => $utilisateurID
+    ));
+
+    return $req->fetch(PDO::FETCH_ASSOC);
+}
+
+// get user by controleur ID
+function getUserByControleurID($controleurID) {
+    $req = connect() -> prepare('SELECT
+        utilisateur.utilisateurID as utilisateurID,
+        utilisateur.nom as userNom,
+        utilisateur.prenom as userPrenom,
+        utilisateur.telephone as userTel, 
+        utilisateur.email as userEmail
+    FROM
+        controleur
+    INNER JOIN piece ON controleur.pieceID = piece.pieceID
+    INNER JOIN logement ON logement.logementID = piece.logementID
+    INNER JOIN utilisateur ON utilisateur.utilisateurID = logement.utilisateurID
+    WHERE controleur.controleurID = :controleurID');
+
+    $req->execute(array(
+        'controleurID' => $controleurID,
+    ));
+
+    return $req->fetchAll(PDO::FETCH_NUM);
 }
 ?>
 

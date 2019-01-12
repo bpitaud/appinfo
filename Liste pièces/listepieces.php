@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-if (isset($_GET['selected']) && $_GET['selected'] != '') {
-    $_SESSION['selected_logement'] = $_GET['selected'];
+if (isset($_GET['log']) && $_GET['log'] != '') {
+    $_SESSION['selected_logement'] = $_GET['log'];
 }
+
 
 ?>
 
@@ -55,8 +56,19 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
 
 
     <section>
-        <?php echo "<a href='../Liste logements/listelogements.php?user=".$_SESSION["utilisateurID"]."'> < Retour </a>";?> 
+
+        <a href='../Liste logements/listelogements.php'> < Retour </a> 
         <h2>Pièce(s) du logement</h2>
+        <?php
+                $modif = $_GET['modif'];
+                if (isset($modif)) {
+                    if ($modif == "true") {
+                        echo "<p style='color:white;'>Votre pièce a bien été modifié.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre pièce n'a pas été modifié.</p>";
+                    }
+                }
+                ?>
     	<div id="pieces">
             <?php
             require_once ('../controllers/FormulaireAjoutPiece.php');
@@ -65,43 +77,31 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
                             echo ('
                             <div class="block" >
                                 <div class="figure">
-                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                    <p> <a href = "../Liste capteurs/listecapteurs.php?piece='.$piece[0].'" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
                                 </div>
                                 <div class="Caractere"> 
                                     '.$piece[1].'
-                                <p><a href = "../Modifierpiece/Modifierpiece.php"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
+                                <p><a href = "../Modifierpiece/Modifierpiece.php?piece='.$piece[0].'"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
                                 </div>
                                 
                             </div>
                             ');
                         }
-                        
-                        /*for ($i = 0; $i < count($list) ;$i++) {
-                            echo'
-                            <div class="block" >
-                                <div class="figure">
-                                    <p> <a href = "../Liste capteurs/listecapteurs.php" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
-                                </div>
-                                <div class="Caractere"> 
-                                    '.$list[$i].'
-                                <p><a href = "../Modifierpiece/Modifierpiece.php"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
-                                </div>
-                                
-                            </div>
-                            ';
-                        }*/
-            ?>
-            <?php
-            echo "
-            <div class='block'> 
-                <div class='figure'>
-                    <div class='plus' >   
-                    <a href='../AjoutPiece/AjoutPiece.php?selected=".$_SESSION["selected_logement"]."'> <input type='button' value='+'></a>               
-                    </div>      
+              ?>          
+            <div class="block1">       
+                <div class= "figure"> 
+                    <div class="plus">
+                        <?php
+                        echo'
+                        <a href = "../AjoutPiece/AjoutPiece.php?piece='.$_SESSION['selected_piece'].'"> + </a> '; 
+                        ?>
+                    </div>
                 </div>
-             
-            </div>";
-        ?>
+                <div class="caractère">
+                    Ajouter <br/> une pièce  
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>

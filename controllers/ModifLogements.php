@@ -34,7 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $naissance = test_input($_POST["pays"]);
     }
 
-    $logementID = $_SESSION['logementID'];
+    if (isset($_GET['log']) && $_GET['log'] != '') {
+    $_SESSION['selected_logement'] = $_GET['log'];
+    }
+
+
+    $logementID = $_SESSION['selected_logement'];
     $logement = RecupLogementsbyID($logementID);
     $modif = false;
 

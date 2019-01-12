@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +18,10 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li>
+                    
+                    <a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -34,11 +41,13 @@
                             <div id="hoverUser">
                                 <button class="boutonmenuprincipal"><p></p></button>
                                 <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
+                                
                                 <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
                                 <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
+                    
                 </ul>
             </nav>
         </div>
@@ -46,6 +55,18 @@
 
     <h2>Liste logements</h2>
     <section>
+
+    <?php
+                $modif = $_GET['modif'];
+                if (isset($modif)) {
+                    if ($modif == "true") {
+                        echo "<p style='color:white;'>Votre logement a bien été modifié.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre logement n'a pas été modifié.</p>";
+                    }
+                }
+                ?>
+                
         <div id="zonelogement"> 
             <div id="zone">
     <?php
@@ -55,12 +76,12 @@
             echo(
                 '
                     <div id="logement">  
-                        <a class="imagelogement" href="../Liste pièces/listepieces.php?selected='.$logement[0].'">
-                            <div class="imgmaison" href="../Liste pièces/listepieces.php?selected='.$logement[0].'"> 
+                        <a class="imagelogement" href="../Liste pièces/listepieces.php?log='.$logement[0].'">
+                            <div class="imgmaison" href="../Liste pièces/listepieces.php?log='.$logement[0].'"> 
                             </div>
                         </a>
                         <div id="sous">
-                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php?selected='.$logement[0].'">
+                            <a class="logoreglage" href="../ModifierLogement/ModifierLogement.php?log='.$logement[0].'">
                                 <div class="reglage">
                                 </div>
                             </a>
@@ -74,6 +95,7 @@
 </div>
 </div>
         <a href="../AjoutLogement/AjoutLogement.php"> <div class="ajoutlogement">
+
              <p>+  Ajouter un logement</p>  
         </div></a>
     </section>

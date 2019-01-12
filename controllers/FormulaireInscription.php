@@ -27,8 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
      else {
-        echo "les mots de passe ne correspondent pas ou l'adresse mail existe déjà";
-        header('Location: ../inscription/inscription.php');
+        header('Location: ../inscription/inscription.php?inscription=error');
      }
 
 }

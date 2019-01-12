@@ -39,6 +39,14 @@
     <h1> Se connecter </h1>
     <div class="formulaire">
     <form method="post" action="../controllers/FormulaireConnexion.php">
+    <?php
+		try {
+			$error = $_GET['connexion'];
+			if (isset($error) && $error == "error") {
+				echo "<p style='color:red'>Email ou mot de passe incorrect.</p>";
+			}
+		} catch (Exception $e) {}
+	?>
    				<p>
        				<input type="text" name="email" placeholder="Entrer votre adresse mail" required/>
       				<input type="password" name="mdp" placeholder="Entrer votre mot de passe" required />
