@@ -130,7 +130,14 @@ header a:hover span {
     display: none;
 }
 
-section
+
+
+
+
+
+
+
+article
 {
     display: flex;
     flex-direction: row;
@@ -169,11 +176,20 @@ section
 .caractère
 {
     display:flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
     text-align: center;
     padding-left:1%;
     margin-right: 20%;
 
+}
+.caractere h4 {
+    padding-left: 10%;
+    margin-top: 5%;
+    font-size: 30px;
+
+}
+#caracterePlus h4{
+    text-align: center;
 }
 
 .pourcentage
@@ -201,23 +217,6 @@ h2{
 }
 
 
-.figure
-{
-    border : 1px solid white;
-    background-color: #3C4459;
-    padding-top: 7%;
-    padding-bottom:7%;
-    padding-right:7%;
-    padding-left:7%;
-    margin-top: 0%;
-    margin-bottom:3%;
-    font-size: 5em;
-    text-align:center;
-    width: 85%;
-    height: 100%;
-    overflow:hidden;
-   
-} 
 
 
 
@@ -229,7 +228,7 @@ section #retour{
 }
 
 
-.figure .plus {
+.figure  {
     font-size: 1.4em;
     text-align:center;
 }
@@ -254,16 +253,30 @@ button {
     display:flex;
 }
 
+
+
+
+.figure
+{
+    border : 1px solid white;
+    background-color: #3C4459;
+    padding-top: 7%;
+    padding-bottom:7%;
+    padding-right:7%;
+    padding-left:7%;
+    margin-top: 0%;
+    margin-bottom:3%;
+    font-size: 5em;
+    text-align:center;
+    width: 85%;
+    height: 100%;
+    overflow:hidden;
+   
+} 
+
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
     position: absolute; bottom: 2%; left: 73%; right: 0;
 }
 
-.blanc {
-    color: white;
-}
-
-.jaune {
-    color: #FFDA44;
-}

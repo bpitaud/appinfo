@@ -148,11 +148,115 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                         ?>
                     </div>
                 </div>
-                <div class="caractère">
-                    Ajouter <br/> un capteur 
+                <div class="caractere" id = "caracterePlus">
+                    <h4> Ajouter <br/> un capteur </h4> 
                 </div>
-            </div>
-        </div>
+            </section>
+        <script>
+            let reglageON = new Image(); 
+            let reglageON.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\on\iconeReglage.png";
+
+            let reglageOFF = new Image(); 
+            let reglageOFF.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\off\iconeReglage.png";
+
+            let lumiereON = new Image(); 
+            let lumiereON.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\on\iconeLumiere.png";
+
+            let lumiereOFF = new Image(); 
+            let lumiereOFF.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\off\iconeLumiere.png";
+
+            let cameraON = new Image(); 
+            let cameraON.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\on\iconeCamera.png";
+
+            let cameraOFF = new Image(); 
+            let cameraOFF.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\off\iconeCamera.png";
+
+            let chauffageON = new Image(); 
+            let chauffageON.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\on\iconeChauffage.png";
+
+            let chauffageOFF = new Image(); 
+            let chauffageOFF.src = "C:\xampp\htdocs\xampp\appinfo\Images\capteur\off\iconeChauffage.png";
+
+            //fonction modifie les images du capteur/controleur et de réglage en jaune 
+            function modifyImg (idBlock) {
+                alert (cameraON);
+                let x = element.getElementsByTagId("reglage"+idBlock+"");
+                let v = x.getAttribute("src");
+                if(v == reglageON) {
+                    v = reglageOFF;
+                }else if(v == reglageOFF) {
+                    v = reglageON;
+                }
+                x.setAttribute("src", v);
+
+                let z = element.getElementsByTagId("img"+idBlock+"");
+                let v1 = z.getAttribute("src");
+                if(v1 == cameraON) {
+                    v1 = cameraOFF;
+                }else if(v1 == cameraOFF) {
+                    v1 = cameraON;
+                }
+                else if(v1 == lumiereON) {
+                    v1 = lumiereOFF;
+                }else if(v1 == lumiereOFF) {
+                    v1 = lumiereON;
+                }
+                else if(v1 == chauffageON) {
+                    v1 = chauffageOFF;
+                }else if(v1 == chauffageOFF) {
+                    v1 = chauffageON;
+                }
+                z.setAttribute("src", v1);
+            }
+
+            //Fonction modifie avec ajax (permet de ne pas recharger la page) la bordure en jaune + le texte + appel la fonction modifImage
+            function modifyHTML(id,etat,type,idBlock) {
+            alert("Hey");
+            alert(id.", ".etat.", ".type.", ".idBlock);
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert(this.responseText);
+
+                    modifyImg (idBlock);
+                    if (etat == 0) {
+                        document.getElementById("figure"+idBlock+"").style.border = "1px solid white";;
+                        document.getElementById("caractere"+idBlock+"").style.color = "white";
+                    } else {
+                        document.getElementById("figure"+idBlock+"").style.border = "1px solid #FFDA44";
+                        document.getElementById("caractere"+idBlock+"").style.color = "#FFDA44";
+                    }
+                }
+            };
+            let arr = [type, id, etat];
+            alert( arr[0].", ".arr[1]", ".arr[2]);
+            xmlhttp.open("GET",".php?q="+arr,true);
+            xmlhttp.send();
+        }
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
         <script type="text/javascript">
         document.getElementByTagName("section").addEventListener("click", getIdBlock);
         function reply_click(clicked_idBlock){
@@ -164,11 +268,38 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
             var sectionsCount = sections.length;
             for (var i = 0; i <= sectionsCount; i += 1) {
                 sections[i].onclick = function(e) {
-                 alert(this.id);
+                //alert(this.id);
+                let str = this.id;
+                let res = str.split(" ");
+                modifyHTML(res[0],res[1],res[2]); //res[0] => id / res[1] => etat / res[2] => type
+                //function qui prend en argument l'id, qui modifi le block html et envoie une requette ajax pour modifier la base de donnée 
                 };
             }
-        
-
+            function modifyHTML (id,etat,type) {
+                if (etat == 0) {
+                    let onOff = "off";
+                    let liste = document.getElementByTagClass("class");
+                    for (let i = 0; i<document.getElementByClass("class").length;i++){
+                        liste[i].style.border = "1px solid white";
+                        liste[i].style.color = "white"; 
+                    }
+                } else {
+                    let onOff = "on";
+                    let liste = document.getElementByTagClass("class");
+                    for (let i = 0; i<document.getElementByClass("class").length;i++){
+                        liste[i].style.border = "border : 1px solid #FFDA44";
+                        liste[i].style.color = "#FFDA44"; 
+                    }
+                }
+                //modify texte grace à son ID
+                document.getElementByTagName("strong").innerHTML = onOff; //modifi tout les paths des images de on à off (ce qui permait de passer d'une image blanche à jaune)
+                /*
+                //Récupére texte grace à son ID
+                let elt = document.getElementById('mon-texte');
+                let monTexte = elt.innerText || elt.textContent;    
+                */
+            }
+            // fonction php => ModifEtatControleur($controleurID, $etat); => recupérer du html et envoyer à phph via ajax => controller ou capteur / ID / Etat
         </script>
     
 </article>
