@@ -90,9 +90,9 @@
   </tr>
   <?php
   require_once('../controllers/RechercheCapteur.php');
-  $capteur = JoinCapteurModel($_GET['capteur'], $utilisateurID);
+  $capteur = JoinCapteurModel($_GET['capteur'], $_GET['user']);
   if (!$capteur) {
-    $capteur = JoinControleurModel($_GET['capteur'], $utilisateurID);
+    $capteur = JoinControleurModel($_GET['capteur'], $_GET['user']);
   }
   if ($capteur) {
     ?>
@@ -105,13 +105,13 @@
    </tr>
 
    <?php
-    
+  
   } else {
     
 		try {
 			$error = $_GET['recherche'];
 			if (isset($error) && $error == "error") {
-				echo "<p style='color:red'>Ce capteur n'existe pas</p>";
+				echo "<p style='color:red'>Ce capteur n'existe pas.</p>";
 			}
 		} catch (Exception $e) {}
 	

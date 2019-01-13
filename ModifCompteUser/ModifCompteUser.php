@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?> 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -55,21 +60,23 @@
 
     	<div class="info">
         <form method="post" action="../controllers/ModifInfosUser.php">
-            <p>
-       			
-      			    <input type="text" name="nom" placeholder="NOM"  />
-                <input type="text" name="prenom" placeholder="PRENOM" />
-                <input type="email" name="email" placeholder="ADRESSE.EMAIL@MAIL.COM"/>
-                <select name="genre" required>
-       					<option value="genre"> GENRE </option>
+        <?php
+        require('../controllers/ModifInfosUser.php');
+        $utilisateurID = $_SESSION['utilisateurID'];
+        $utilisateur = RecupInfoUser($utilisateurID);
+        echo '
+            <p>	
+      			<input type="text" name="nom" placeholder="'.$utilisateur[0][1].'"  />
+                <input type="text" name="prenom" placeholder="'.$utilisateur[0][2].'" />
+                <input type="email" name="email" placeholder="'.$utilisateur[0][3].'"/>
+                <select name="'.$utilisateur[0][4].'" >
                         <option value="masculin"> Masculin </option>	
                        <option value="féminin"> Féminin </option>	
        				</select>
-                <input type="date" name="naissance" placeholder="JJ/MM/AAAA" />
-    			<input type="text" name="telephone" placeholder="+33 6 00 00 00 00" />
-      				<input type="text" name="adresse" placeholder="ADRESSE PRINCIPALE"  />
-                      <select name="pays">
-                        <option value="pays"> PAYS </option>	
+                <input type="text" name="naissance" placeholder="'.$utilisateur[0][5].'" />
+    			<input type="text" name="telephone" placeholder="'.$utilisateur[0][6].'" />
+      				<input type="text" name="adresse" placeholder="'.$utilisateur[0][7].'"  />
+                      <select name="'.$utilisateur[0][8].'">	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
@@ -79,14 +86,15 @@
        					<option value="chine"> Chine </option>
        					<option value="japon"> Japon </option>     	
        				</select>
-                      <input type="text" name="codepostale" placeholder="75 000" />
-                      <input type="password" name="ancien_mdp" placeholder="ANCIEN MOT DE PASSE"/>
-                      <input type="password" name="nouveau_mdp" placeholder="NOUVEAU MOT DE PASSE"/>
+                      <input type="text" name="codepostale" placeholder="'.$utilisateur[0][9].'" />
+                      <input type="password" name="ancien_mdp" placeholder="Ancien mot de passe"/>
+                      <input type="password" name="nouveau_mdp" placeholder="Nouveau mot de passe"/>
                       <div id="test">
                       <button class="bouton" type="submit">Valider</button>
                       <button class="bouton" href="../">Annuler</button>
                     </div>
-    		</p>
+            </p>';
+            ?>
         </form>
     	</div>
 </section>

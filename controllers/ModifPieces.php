@@ -4,12 +4,12 @@ session_start();
 
 require_once('../Models/pieces.php');
 
-// function test_input($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-// }
+function input_test($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 function RecupPieceModif($pieceID){
   return RecupPiecebyID($pieceID);
 
@@ -19,10 +19,10 @@ $nom = $surface = "" ;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
-    $nom = test_input($_POST["nom"]);
+    $nom = input_test($_POST["nom"]);
     }
     if (isset($_POST['surface'])){
-    $genre = test_input($_POST["surface"]);
+    $genre = input_test($_POST["surface"]);
     }
     if (isset($_GET['piece']) && $_GET['piece'] != '') {
       $_SESSION['selected_piece'] = $_GET['piece'];

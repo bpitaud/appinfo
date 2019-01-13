@@ -111,9 +111,9 @@ function myFunction() {
     var txt;
     var r = confirm("Etes-vous sûr de vouloir supprimer le compte de ce client ?");
     if (r == true) {
-        href = "../RechercherPar/RechercherPar.php";
+        href = "../controllers/SuppCompteAdmin.php";
     } else {
-        txt = "none";
+        href = "../Admin_Compte/Compte_Admin.php";
     }
     document.getElementById("demo").innerHTML = txt;
 }

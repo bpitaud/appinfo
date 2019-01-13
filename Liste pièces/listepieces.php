@@ -81,7 +81,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                                 </div>
                                 <div class="Caractere"> 
                                     '.$piece[1].'
-                                <p><a href = "../Modifierpiece/Modifierpiece.php?piece='.$piece[0].'"> <img src="../Images/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
+                                <p><a href = "../Modifierpiece/Modifierpiece.php?piece='.$piece[0].'"> <img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" widt="46" height="46"/></a></p>
                                 </div>
                                 
                             </div>
