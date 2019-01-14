@@ -5,7 +5,6 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
     $_SESSION['selected_logement'] = $_GET['log'];
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +56,8 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
 
     <section>
 
-        <a href='../Liste logements/listelogements.php'> < Retour </a> 
-        <h2>Pièce(s) du logement</h2>
+        <div class = 'retour' ><a href='../Liste logements/listelogements.php'> < Retour </a> </div>
+        
         <?php
                 $modif = $_GET['modif'];
                 if (isset($modif)) {
@@ -68,11 +67,20 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                         echo "<p style='color:red;'>Votre pièce n'a pas été modifié.</p>";
                     }
                 }
+                require_once ('../Models/logements.php');
+
+                $logement = $_SESSION['selected_logement'];
+                $log = RecupLogementsbyID($logement);
+                echo'
+                <h2>Pièce(s) du logement '.$log[0][1].'</h2>';
                 ?>
     	<div id="pieces">
             <?php
             require_once ('../controllers/FormulaireAjoutPiece.php');
                         $piece = RecupPieceController($_SESSION["selected_logement"]);
+                        if (count($piece) == 0) {
+                            echo "<li> Vous n'avez pas encore de pièce pour ce logement.</li>";
+                        } else {
                         foreach ($piece as $piece){
                             echo ('
                             <div class="block" >
@@ -87,21 +95,21 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                             </div>
                             ');
                         }
+                    }
               ?>          
-            <div class="block1">       
-                <div class= "figure"> 
-                    <div class="plus">
-                        <?php
-                        echo'
-                        <a href = "../AjoutPiece/AjoutPiece.php?piece='.$_SESSION['selected_piece'].'"> + </a> '; 
-                        ?>
-                    </div>
-                </div>
-                <div class="caractère">
-                    Ajouter <br/> une pièce  
-                </div>
-            </div>
+            
+
+            
         </div>
+
+            <?php
+            echo'
+            </div>
+            <a href="../AjoutPiece/AjoutPiece.php?log='.$_SESSION['selected_logement'].'"> <div class="ajoutpiece">
+             <p>+  Ajouter une pièce</p>  
+        </div></a>';
+        ?>
+
     </section>
 
     <footer>

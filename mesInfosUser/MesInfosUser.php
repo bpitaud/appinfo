@@ -59,6 +59,18 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     
 
     <h2> Mes informations </h2>
+
+    <?php
+                $modif = $_GET['modif'];
+                if (isset($modif)) {
+                    if ($modif == "true") {
+                        echo "<p style='color:white;'>Vos informations ont été modifié.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Vos informations n'ont pas été modifié.</p>";
+                    }
+                }
+                ?>
+
     <section>
     <div class="info">
         <?php

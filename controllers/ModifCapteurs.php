@@ -10,7 +10,9 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
+function RecupCapteurID($capteurID){
+  return RecupCapteurbyID($capteurID);
+}
 $nom = $type = "" ;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     
     $capteurID = $_SESSION['selected_capteur'];
-    $capteur = RecupCapteurbyID($capteurID);
     $modif = false;
 
     if (isset($nom)&& trim($nom)!=""){

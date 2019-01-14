@@ -40,6 +40,8 @@ function RecupCapteurbyID($capteurID){
     return $resultat;
 }
 
+// récuperer le nom d'un capteur par son 
+
 // récupérer l'état d'un capteur 
 function RecupEtatCapteur($capteurID, $etat){
     $conn = connect() -> prepare('SELECT etat FROM capteur WHERE capteurID =?');

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['piece']) && $_GET['piece'] != '') {
+    $_SESSION['selected_piece'] = $_GET['piece'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +55,11 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste capteurs/listecapteurs.php"> < Retour		
-    		</a>
+            <?php
+            echo'
+    		<a href="../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece'].'"> < Retour		
+            </a>';
+            ?>
     	</p>
     	</div>
 		<h1>Ajouter un capteur<span>.................</span></h1>

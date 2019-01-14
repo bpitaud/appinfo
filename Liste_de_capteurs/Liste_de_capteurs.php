@@ -57,14 +57,13 @@
     <section>
 
       <form method="post" action="../controllers/RechercheCapteur.php">
+
       <?php
-		try {
 			$error = $_GET['recup'];
 			if (isset($error) && $error == "error") {
 				echo "<p style='color:red'>Le capteur n'existe pas. </p>";
-			}
-		} catch (Exception $e) {}
-	?>
+			}	
+	    ?>
           <p>
                 <input type="text" name="capteurID" placeholder="numéro de capteur">
           </p>

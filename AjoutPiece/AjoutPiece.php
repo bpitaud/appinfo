@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['log']) && $_GET['log'] != '') {
+    $_SESSION['selected_logement'] = $_GET['log'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +55,11 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste pièces/listepieces.php"> < Retour		
-    		</a>
+            <?php
+            echo'
+    		<a href="../Liste pièces/listepieces.php?log='.$_SESSION['selected_logement'].'"> < Retour		
+            </a>';
+            ?>
     	</p>
     	</div>
 		<h1>Ajouter une pièce<span>.................</span></h1>

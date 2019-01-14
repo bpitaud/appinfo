@@ -13,16 +13,19 @@ function test_input($data) {
 
 $nom = "" ;
 
+function RecupControleurID($controleurID){
+  return RecupControleurbyID($controleurID);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
     $nom = test_input($_POST["nom"]);
     }
-    if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
-      $_SESSION['selected_controleur'] = $_GET['controleur'];
+    if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
+      $_SESSION['selected_capteur'] = $_GET['capteur'];
       }
     
-    $controleurID = $_SESSION['selected_controleur'];
-    $capteur = RecupControleurbyID($controleurID);
+    $controleurID = $_SESSION['selected_capteur'];
     $modif = false;
 
     if (isset($nom)&& trim($nom)!=""){

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
+    $_SESSION['selected_capteur'] = $_GET['capteur'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +59,12 @@
     		</a>
     	</p>
     	</div>
-		<h1>Modifier un capteur: NOM DU CAPTEUR<span>.................</span></h1>
+		<?php 
+        require ('../controllers/ModifControleurs.php');
+        $controleur = RecupControleurID($_SESSION['selected_capteur']);
+        echo' 
+        <h1>Modifier un capteur: '.$controleur[0][1].' <span>.................</span></h1>';   
+        ?>
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifControleurs.php">
    				<p>

@@ -15,5 +15,6 @@ else{
 }
 
 ModifEtatCapteur($id,$etat);
+ModifEtatControleur($id,$etat);
 
 ?>

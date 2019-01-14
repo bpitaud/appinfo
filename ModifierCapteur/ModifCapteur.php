@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
+    $_SESSION['selected_capteur'] = $_GET['capteur'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,22 +55,23 @@
     <section>
     	<div class="retour">
     		<p>
-    		<a href="../Liste capteurs/listecapteurs.php">  < Retour	
-    		</a>
+            <?php
+            echo'
+    		<a href="../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece'].'">  < Retour	
+            </a>';
+            ?>
     	</p>
-    	</div>
-		<h1>Modifier un capteur: NOM DU CAPTEUR<span>.................</span></h1>
+        </div>
+        <?php 
+        require ('../controllers/ModifCapteurs.php');
+        $capteur = RecupCapteurID($_SESSION['selected_capteur']);
+        echo' 
+        <h1>Modifier un capteur: '.$capteur[0][0].' <span>.................</span></h1>';   
+        ?>
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifCapteurs.php">
    				<p>
        				<input type="text" name="nom" placeholder="Nom du capteur" />
-                       <select name="type">
-       					<option value="lumiere"> Lumière </option>
-						<option value="camera"> Caméra de surveillance </option>
-						<option value="humidite"> Humidité </option> 
-						<option value="temperature"> Température </option>
-						      	
-       				</select>
               <div id="bouton">
                 <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
                 <input onclick="myFunction()" value="Supprimer" type="submit">
