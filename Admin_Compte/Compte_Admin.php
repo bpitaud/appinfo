@@ -111,7 +111,7 @@ function myFunction() {
     var txt;
     var r = confirm("Etes-vous sûr de vouloir supprimer le compte de ce client ?");
     if (r == true) {
-        href = "../controllers/SuppCompteAdmin.php";
+        href = "../controllers/ModifInfosAdmin.php";
     } else {
         href = "../Admin_Compte/Compte_Admin.php";
     }
