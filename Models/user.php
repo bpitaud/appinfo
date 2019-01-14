@@ -37,16 +37,7 @@ function Verif_email($email){
     return false;
 }
 
-// envoi d'un mail de confirmation de compte
-function send_email($to, $subject, $message, $headers){
-    $to      = $email; // Envoyer un email à l'utilisateur
-    $subject = 'Création de compte Domisep'; // Objet du mail
-    $message = ' Bienvenue sur Domisep! Votre compte a été créé avec succès.'; 
-    $headers = 'From: noreply@domisep.com' . "\r\n"; // Expediteur
-    mail($to, $subject, $message, $headers); // envoi du mail
-}
-
-// cryptage du mdp de passe rentré lors de la connexion
+// cryptage du mdp de passe rentré lors de la connexion et on vérifie que c'est le bon
 function Verif_mdp($mdp, $hash){
     return password_verify($mdp , $hash);
 }
@@ -182,7 +173,7 @@ function ModifZipcodeUtilisateur($utilisateurID,$codepostale){
         ));
         
 }
-// modifier le mot de passe 
+// modifier le mot de passe si on entre l'ancien et le nouveau mot de passe 
 
 function ModifMdp($email, $ancien, $nouveau) {
     $hache = mdp_hache($nouveau);
@@ -195,6 +186,18 @@ function ModifMdp($email, $ancien, $nouveau) {
     if(Verif_mdp($ancien, $resultat[0][0]) == false) {
         return false;
     }
+    $conn = connect() ->prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
+    $conn -> execute(array(
+        'email' => $email,
+        'mdp'=> $hache,    
+    ));
+    return true;    
+}
+
+// Modification du mdp en cas d'oubli du mot de passe 
+
+function ModifMdpOubli($email, $nouveau) {
+    $hache = mdp_hache($nouveau);
     $conn = connect() ->prepare('UPDATE`utilisateur` SET  mdp=:mdp WHERE email=:email');
     $conn -> execute(array(
         'email' => $email,
