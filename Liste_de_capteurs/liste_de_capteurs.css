@@ -154,8 +154,26 @@ border-radius: 6px;
 overflow: hidden;
 font-size: 19px
 }
-
-
+.bouton a{
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:center;
+    width:40%;
+    height: 30px;
+    padding: 2px 0 3px 0;
+    margin: 0% 2% 10% 2%;
+    border-radius: 6px; 
+    overflow: hidden;
+    font-size: 19px
+    }
+    .show{
+        display: block;
+    }
+    
+    .hide{
+        display: none;
+    }
 
 input[type=text] {
     color : white;

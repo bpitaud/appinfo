@@ -61,7 +61,7 @@
       <?php
 			$error = $_GET['recup'];
 			if (isset($error) && $error == "error") {
-				echo "<p style='color:red'>Le capteur n'existe pas. </p>";
+        echo "<p style='color:red'>Le capteur n'existe pas. </p>";
 			}	
 	    ?>
           <p>
@@ -70,12 +70,24 @@
       </form>
 
         <p id="deco_supp" >
-          <button class="bouton">Supprimer</button>
-          <button class="bouton">Changer l'état</button>
+        <button onclick="myFunction()" class="bouton">Supprimer </button>
+        <button class="bouton"><a href="../controllers/ChangementEtat.php"> Changer l'état</a></button>
+      
         </p>
       </div>
      
-
+      <script>
+function myFunction() {
+    var txt;
+    var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur ?");
+    if (r == true) {
+        document.location.href = "../controllers/suppCapteur.php";
+    } else {
+        href = "../Liste_de_capteurs/Liste_de_capteurs.php";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
 
 <table summary="ligne 1 : Propriété capteurs, ligne 2 : Info capteur">
 
@@ -95,13 +107,24 @@
   }
   if ($capteur) {
     ?>
-    <tr>
+   <tr>
       <td><?php echo $capteur['capteurID']?></td>
       <td><?php echo $capteur['capteurTyp']?></td>
       <td><?php echo $capteur['logementNom']?></td>
       <td><?php echo $capteur['pieceNom']?></td>
-      <td><?php echo $capteur['etat']?></td>
-   </tr>
+      <?php
+      $etat=$capteur['etat'];
+      if ($etat == '1'){
+        echo'
+      <td class="component-on figure show"> ON </td>';
+      } 
+      else {
+        echo'
+        <tdclass="component-off figure hide"> OFF </td>';
+      }
+      ?>
+
+   </tr> 
 
    <?php
   
