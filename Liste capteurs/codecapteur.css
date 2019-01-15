@@ -157,7 +157,7 @@ section
 
 .block {
     display: flex;
-    width: 15%;
+    width: 20%;
     flex-direction: column;
     text-align: center;
     margin-top:2%;

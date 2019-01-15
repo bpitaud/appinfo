@@ -166,7 +166,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                                     <p style=" color:white">  22°C  </a> 
                                     </p>
                                 </div> 
-                                <br/> OFF 
+                                <br/><br/> OFF 
                             </div>
                             <div class="caractère" > 
                             <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
