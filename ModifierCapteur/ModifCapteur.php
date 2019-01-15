@@ -82,9 +82,9 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
                     var txt;
                     var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur?");
                     if (r == true) {
-                        href = "../Liste capteurs/listecapteurs.php";
+                        //href = "../Liste capteurs/listecapteurs.php";
                     } else {
-                        txt = "none";
+                        //txt = "none";
                     }
                     document.getElementById("demo").innerHTML = txt;
                 }

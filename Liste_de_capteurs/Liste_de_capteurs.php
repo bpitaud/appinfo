@@ -1,5 +1,9 @@
  <?php
   session_start();
+
+  if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
+    $_SESSION['selected_capteur'] = $_GET['capteur'];
+}
  ?>
 
 <!DOCTYPE html>
@@ -70,7 +74,8 @@
       </form>
 
         <p id="deco_supp" >
-        <button onclick="myFunction()" class="bouton">Supprimer </button>
+        <form method="GET" action="../controllers/SuppCapteurAdmin.php" onsubmit="myFunction()">
+        <input class="bouton" type="submit" value="Supprimer"> </form>
         <button class="bouton"><a href="../controllers/ChangementEtat.php"> Changer l'état</a></button>
       
         </p>
@@ -81,9 +86,9 @@ function myFunction() {
     var txt;
     var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur ?");
     if (r == true) {
-        document.location.href = "../controllers/suppCapteur.php";
+        //document.location.href = "../controllers/SuppCapteur.php";
     } else {
-        href = "../Liste_de_capteurs/Liste_de_capteurs.php";
+        //href = "../Liste_de_capteurs/Liste_de_capteurs.php";
     }
     document.getElementById("demo").innerHTML = txt;
 }
@@ -103,7 +108,7 @@ function myFunction() {
   require_once('../controllers/RechercheCapteur.php');
   $capteur = JoinCapteurModel($_GET['capteur'], $_GET['user']);
   if (!$capteur) {
-    $capteur = JoinControleurModel($_GET['capteur'], $_GET['user']);
+  $capteur = JoinControleurModel($_GET['capteur'], $_GET['user']);
   }
   if ($capteur) {
     ?>
