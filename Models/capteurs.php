@@ -70,7 +70,7 @@ function ModifNomCapteur($capteurID,$nom){
 
 //supprimer un capteur
 function SuppCapteur($capteurID){
-    $conn = connect() -> prepare('DELETE * FROM capteur WHERE capteurID =:capteurID');
+    $conn = connect() -> prepare('DELETE FROM `capteur` WHERE capteurID =?');
     $conn -> execute(array($capteurID));
     $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return $resultat;

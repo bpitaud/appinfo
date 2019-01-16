@@ -66,41 +66,38 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
         require ('../controllers/ModifCapteurs.php');
         $capteur = RecupCapteurID($_SESSION['selected_capteur']);
         echo' 
-        <h1>Modifier un capteur: '.$capteur[0][0].' <span>.................</span></h1>';   
+        <h1>Modification du capteur : '.$capteur[0][0].' <span>.................</span></h1>';   
         ?>
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifCapteurs.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du capteur" />
-              <div id="bouton">
-                <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
-                <input onclick="myFunction()" value="Supprimer" type="submit">
-
-
-                <script>
-                function myFunction() {
-                    var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur?");
-                    if (r == true) {
-                        //href = "../Liste capteurs/listecapteurs.php";
-                    } else {
-                        //txt = "none";
-                    }
-                    document.getElementById("demo").innerHTML = txt;
-                }
-                </script>
+       				<input type="text" name="nom" placeholder="Nom du capteur" /> </p>
+                <div id="bouton">
+                    <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
+                    <input type="submit" value="Valider">
+                </div>
+            </form>
                 
+                <div id="bouton">
+                    <form action="../controllers/SuppCapteur.php?capteur=<?php echo $_SESSION['selected_capteur'] ?>" 
+                    method="get" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer ce capteur?')">
+                        <input  value="Supprimer" type="submit">
+                    </form>   
+                </div>        
                 
-                <input type="submit" value="Valider">
               
-            </div>
-   				</p>
-			</form>
+            
+			
 		</div>
     </section>
     
     <footer>
-    	<p> WEBAC © Tous droits réservés </p>
+    	<p> WEBAC © Tous droits réservés </p>
     </footer>
     
 </body>
+
+
+  <!-- <input type='hidden' value=<?php  $capteur[0][1]  ?> name='capteur' id='capteur'/>  -->
+                        <!-- <?php var_dump($capteur[0][1]); ?> -->

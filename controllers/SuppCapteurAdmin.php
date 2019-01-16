@@ -19,7 +19,7 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
   $_SESSION['selected_capteur'] = $_GET['capteur'];
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $capteur = test_input($_SESSION['selected_capteur']);
     $controleur = test_input($_SESSION['selected_capteur']);

@@ -1,9 +1,5 @@
- <?php
+<?php
   session_start();
-
-  if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
-    $_SESSION['selected_capteur'] = $_GET['capteur'];
-}
  ?>
 
 <!DOCTYPE html>
@@ -13,6 +9,9 @@
     <link rel="stylesheet" href="liste_de_capteurs.css" />
     <title> Recherche d'un capteur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ListeCapteurAdmin.js"></script>
+
   </head>
 
   <body>
@@ -74,9 +73,11 @@
       </form>
 
         <p id="deco_supp" >
-        <form method="GET" action="../controllers/SuppCapteurAdmin.php" onsubmit="myFunction()">
-        <input class="bouton" type="submit" value="Supprimer"> </form>
-        <button class="bouton"><a href="../controllers/ChangementEtat.php"> Changer l'état</a></button>
+        <button onclick="myFunction()" class="bouton">Supprimer </button>
+        <!-- <button class="bouton"><a href="../controllers/ChangementEtatAdmin.php"> Changer l'état</a></button> -->
+        
+        
+        
       
         </p>
       </div>
@@ -86,9 +87,9 @@ function myFunction() {
     var txt;
     var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur ?");
     if (r == true) {
-        //document.location.href = "../controllers/SuppCapteur.php";
+        document.location.href = "../controllers/SuppCapteur.php?capteur=" ;
     } else {
-        //href = "../Liste_de_capteurs/Liste_de_capteurs.php";
+        href = "../Liste_de_capteurs/Liste_de_capteurs.php";
     }
     document.getElementById("demo").innerHTML = txt;
 }
@@ -108,27 +109,27 @@ function myFunction() {
   require_once('../controllers/RechercheCapteur.php');
   $capteur = JoinCapteurModel($_GET['capteur'], $_GET['user']);
   if (!$capteur) {
-  $capteur = JoinControleurModel($_GET['capteur'], $_GET['user']);
+    $capteur = JoinControleurModel($_GET['capteur'], $_GET['user']);
   }
   if ($capteur) {
     ?>
-   <tr>
+   <tr class='tableau'>
       <td><?php echo $capteur['capteurID']?></td>
       <td><?php echo $capteur['capteurTyp']?></td>
       <td><?php echo $capteur['logementNom']?></td>
       <td><?php echo $capteur['pieceNom']?></td>
+     
       <?php
       $etat=$capteur['etat'];
       if ($etat == '1'){
         echo'
-      <td class="component-on figure show"> ON </td>';
-      } 
+          <td>ON</td>';
+      }
       else {
-        echo'
-        <tdclass="component-off figure hide"> OFF </td>';
+        echo' 
+          <td>OFF</td>';
       }
       ?>
-
    </tr> 
 
    <?php
@@ -144,6 +145,15 @@ function myFunction() {
 	
   }
   ?>
+
+<?php
+      echo"
+      <form method='post' action='../controllers/ChangementEtatAdmin.php'>
+        <input type='hidden' value=".$capteur['capteurID']." name='capteur' id='capteur'/>
+        <input type='hidden' value='changer_etat' name='changement' id='changement'/>
+        <button  class='bouton' type='submit'>changer etat</button>
+        </form>"
+        ?>
   
 </table>
 
@@ -151,3 +161,26 @@ function myFunction() {
     </section>
   </body> 
 </html>
+
+
+
+<!-- <p id="deco_supp" >
+        <form method="POST" action="../controllers/SuppCapteurAdmin.php" onsubmit="myFunction()">
+        <input class="bouton" type="submit" value="Supprimer"> </form>
+        <button class="bouton"><a href="../controllers/ChangementEtat.php"> Changer l'état</a></button>
+      
+        </p>
+      </div>
+     
+      <script>
+function myFunction() {
+    var txt;
+    var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur ?");
+    if (r == true) {
+        //document.location.href = "../controllers/SuppCapteur.php";
+    } else {
+        //href = "../Liste_de_capteurs/Liste_de_capteurs.php";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script> -->

@@ -42,7 +42,7 @@ CREATE TABLE `action_controleur` (
 
 CREATE TABLE `capteur` (
   `nom` varchar(20) NOT NULL,
-  `capteurID` int(11) NOT NULL,
+  `capteurID` varchar(200) NOT NULL,
   `typ` enum('lumiere','camera','humidite','temperature') NOT NULL,
   `pieceID` varchar(200) NOT NULL,
   `etat` tinyint(1) NOT NULL
@@ -55,7 +55,7 @@ CREATE TABLE `capteur` (
 --
 
 CREATE TABLE `controleur` (
-  `controleurID` int(11) NOT NULL,
+  `controleurID` varchar(200) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `typ` enum('chauffage') NOT NULL,
   `etat` tinyint(1) NOT NULL,
