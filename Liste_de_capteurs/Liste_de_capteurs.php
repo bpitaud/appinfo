@@ -95,7 +95,7 @@ function myFunction() {
 
  <caption>Capteur</caption>
   <tr>
-    <th>Numéro des capteurs</th>
+    <th>Numéro du capteur</th>
     <th>Type</th>
     <th>Logement</th>
     <th>Pièce</th>
