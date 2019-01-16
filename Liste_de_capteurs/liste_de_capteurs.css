@@ -135,9 +135,16 @@ footer p
 {
     width:30%;
     display: inline-block;
-
     justify-content: space-between;
     position: absolute; bottom:35%; right:10%;
+}
+
+#change_etat
+{
+    width:30%;
+    display: inline-block;
+    justify-content: space-between;
+    position: absolute; bottom:35%; right:-5%;
 }
 
 .bouton {

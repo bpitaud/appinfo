@@ -74,11 +74,7 @@
 
         <p id="deco_supp" >
         <button onclick="myFunction()" class="bouton">Supprimer </button>
-        <!-- <button class="bouton"><a href="../controllers/ChangementEtatAdmin.php"> Changer l'état</a></button> -->
-        
-        
-        
-      
+        <!-- <button class="bouton"><a href="../controllers/ChangementEtatAdmin.php"> Changer l'état</a></button> -->   
         </p>
       </div>
      
@@ -145,7 +141,7 @@ function myFunction() {
 	
   }
   ?>
-
+<p id="change_etat" >
 <?php
       echo"
       <form method='post' action='../controllers/ChangementEtatAdmin.php'>
@@ -154,6 +150,9 @@ function myFunction() {
         <button  class='bouton' type='submit'>changer etat</button>
         </form>"
         ?>
+</p>
+        
+
   
 </table>
 
