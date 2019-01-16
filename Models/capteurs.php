@@ -182,12 +182,13 @@ function ModifNomControleur($controleurID,$nom){
         ));
 }
 
+
 //supprimer un controleur
 function SuppControleur($controleurID){
-    $conn = connect() -> prepare('DELETE * FROM controleur WHERE controleurID =:controleurID');
+    $conn = connect() -> prepare('DELETE FROM controleur WHERE controleurID =?');
     $conn -> execute(array($controleurID));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+    //$resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;
 }
 
 // join les tables controleur, pièce, logement, utilisateur 

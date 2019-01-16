@@ -17,10 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       $capteur = test_input($_SESSION["selected_capteur"]);
       }
       if ($capteur){
-          $suppCapteur = SuppCapteur($capteur); 
+          $suppCapteur = SuppControleur($capteur); 
       }
   
-    if ($suppCapteur == true) { 
+    if ($suppControleur == true) { 
       header("Location: ../Liste capteurs/Listecapteurs.php?supp=true");   
     }
     else {
