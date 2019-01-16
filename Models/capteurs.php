@@ -72,8 +72,8 @@ function ModifNomCapteur($capteurID,$nom){
 function SuppCapteur($capteurID){
     $conn = connect() -> prepare('DELETE FROM `capteur` WHERE capteurID =?');
     $conn -> execute(array($capteurID));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+    // $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;
 }
 
 // join les tables capteur, pièce, logement, utilisateur 

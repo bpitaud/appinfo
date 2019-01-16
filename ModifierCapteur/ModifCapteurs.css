@@ -145,7 +145,7 @@ section h1 span {
     opacity: 0;
 }
 
-.retour{
+.retour{ /* bouton retour */
     display: flex;
     background-color: rgba(0,0,0,0);
     color: white;
@@ -153,26 +153,25 @@ section h1 span {
    
 }
 
-section a:hover {
+section a:hover { /* les boutons quand on les survole*/
     text-decoration: underline;
     font-weight: bold;
 }
-.formulaire{
+.formulaire{ /* tout le formulaire*/
     
     width: 30%;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin:auto
+    margin:auto;
 }
 
-input[type=text] {
+input[type=text] { /* nom du capteur */
 	color : white;
     width:100%;
     padding: 10px 20px;
     margin:auto;
     margin-top: 25px;
-    
     border:none;
     border-bottom: 1px solid white;
     box-sizing: border-box;
@@ -180,46 +179,43 @@ input[type=text] {
     text-align: left;
 }
 
-select {
-	color : rgba(255, 255, 255, 0.9);
-    width:100%;
-    padding: 10px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    display : flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.6);
-
-}
-
-#bouton{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width:100%;
-}
-
-
-
-input[type=submit] {
+.bouton input[type=submit] { /*bouton valider*/
     
     width: 30%;
     background-color: LightGray;
     color: black;
     padding: 5px 5px;
-    margin-left: 20%;
-    margin-right: auto;
-    margin-top: 40px;
+    margin-left: 45%;
+    margin-top: 10%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-a[type=submit] {
+
+.bouton1{ /* formulaire supprimer*/
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.bouton1 input[type=submit] { /*bouton supprimer*/
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: LightGray;
+    color: black;
+    padding: 5px 5px;
+    margin-left: 30%;
+    margin-top: -29px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a[type=submit] { /* bouton annuler */
     
     width: 30%;
     background-color: transparent;
@@ -234,7 +230,7 @@ a[type=submit] {
     text-decoration: underline;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover { /* quand on survole le bouton valider*/
     background-color: gray;
 }
 

@@ -97,7 +97,8 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                 foreach ($capteurs as $capteur) {
                     $type=$capteur[2];
                     if ($type == 'lumiere'){
-                        echo '
+                        if ($capteur[4] == true) {
+                            echo '
                         <div class="'.$capteur[1].' block"> 
                             <div class="component-on figure show" >
                                 <p style="color:#FFDA44"> <a href = "#"> <img src="../Images/Capteur/on/iconeLumiere.png" alt="photo de lumiere eteinte" width="128" height="128"/></a>
@@ -111,9 +112,28 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
                             '.$capteur[0].'
                             </div>
-                        </div>  ';}
+                        </div>  ';    
+                        } else {
+                            echo '
+                        <div class="'.$capteur[1].' block"> 
+                            <div class="component-on figure hide" >
+                                <p style="color:#FFDA44"> <a href = "#"> <img src="../Images/Capteur/on/iconeLumiere.png" alt="photo de lumiere eteinte" width="128" height="128"/></a>
+                                <br/><br/> ON </p> 
+                            </div>
+                            <div  class="component-off figure show">
+                            <p><a href = "#"><img src="../Images/Capteur/off/iconeLumiere.png" alt="photo de lumiere"width="128" height="128"/></a>
+                            <br/><br/> OFF </p>
+                        </div>
+                            <div class="caractère">
+                            <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                            '.$capteur[0].'
+                            </div>
+                        </div>  ';
+                        }
+                    }
                     elseif ($type == 'humidite'){
-                        echo '
+                        if ($capteur[4] == true) {
+                            echo '
                         <div class="'.$capteur[1].' block"> 
                             <div class="component-on figure show" style=" color:#FFDA44" >
                                 <div style=" color:#FFDA44" class="pourcentage"> 
@@ -134,8 +154,32 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             '.$capteur[0].'
                             </div>
                         </div>';}
+                        else {
+                            echo '
+                        <div class="'.$capteur[1].' block"> 
+                            <div class="component-on figure hide" style=" color:#FFDA44" >
+                                <div style=" color:#FFDA44" class="pourcentage"> 
+                                    <p style=" color:#FFDA44">  5%  </a>
+                                    </p> 
+                                </div> 
+                                <br/><br/> ON 
+                            </div>
+                            <div class="component-off figure show" style=" color: white" >
+                                <div class="pourcentage"> 
+                                    <p style=" color:white">  5%  </a> 
+                                    </p>
+                                </div> 
+                                <br/><br/> OFF 
+                            </div>
+                            <div class="caractère" > 
+                            <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                            '.$capteur[0].'
+                            </div>
+                        </div>';}
+                        }
                     elseif ($type == 'camera'){
-                        echo '
+                        if ($capteur[4] == true) {
+                            echo '
                         <div class="'.$capteur[1].' block">
                             <div class="component-on figure show">
                                 <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
@@ -150,9 +194,27 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                                 '.$capteur[0].'
                             </div>
                         </div> ';}
+                        else {
+                            echo '
+                            <div class="'.$capteur[1].' block">
+                                <div class="component-on figure hide">
+                                    <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
+                                    <br/><br/> ON </p>
+                                </div>
+                                <div  class="component-off figure show">
+                                <p><a href = "#"><img src="../Images/Capteur/off/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
+                                <br/><br/> OFF </p>
+                            </div>
+                                <div class="caractère">
+                                <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"> <img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                                    '.$capteur[0].'
+                                </div>
+                            </div> ';} 
+                        }
                     
                     elseif ($type == 'temperature'){
-                        echo '
+                        if ($capteur[4] == true) {
+                            echo '
                         <div class="'.$capteur[1].' block"> 
                             <div class="component-on figure show" style=" color:#FFDA44" >
                                 <div class="pourcentage"> 
@@ -173,12 +235,36 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             '.$capteur[0].'
                             </div>
                         </div>';}
+                        else {
+                            echo '
+                        <div class="'.$capteur[1].' block"> 
+                            <div class="component-on figure hide" style=" color:#FFDA44" >
+                                <div class="pourcentage"> 
+                                    <p style=" color:#FFDA44">  22°C  </a>
+                                    </p> 
+                                </div> 
+                                <br/><br/> ON 
+                            </div>
+                            <div class="component-off figure show" style=" color: white" >
+                                <div class="pourcentage"> 
+                                    <p style=" color:white">  22°C  </a> 
+                                    </p>
+                                </div> 
+                                <br/><br/> OFF 
+                            </div>
+                            <div class="caractère" > 
+                            <p><a href = "../ModifierCapteur/ModifCapteur.php?capteur='.$capteur[1].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                            '.$capteur[0].'
+                            </div>
+                        </div>';}
+                        }
                 }
                 foreach ($controleurs as $controleurs) {
                     $type=$controleurs[2];
 
                     if ($type == 'chauffage'){
-                        echo '
+                        if ($controleurs[3] == true) {
+                            echo '
                         <div class="'.$controleurs[0].' block"> 
                             <div class="component-on figure show">
                                 <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
@@ -195,6 +281,25 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                                 '.$controleurs[1].'
                             </div>
                         </div>';}
+                        else {
+                            echo '
+                        <div class="'.$controleurs[0].' block"> 
+                            <div class="component-on figure hide">
+                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
+                                <br/><br/> ON </p>
+                                </p>
+                            </div>
+                            <div  class="component-off figure show">
+                            <p><a href = "#"><img src="../Images/Capteur/off/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
+                            <br/><br/> OFF </p>
+                            </p>
+                        </div>
+                            <div class="caractère"> 
+                            <p><a href = "../ModifierControleur/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                                '.$controleurs[1].'
+                            </div>
+                        </div>';}
+                        }
                     }        
                 }
 

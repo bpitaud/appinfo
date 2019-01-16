@@ -68,33 +68,20 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifControleurs.php">
    				<p>
-       				<input type="text" name="nom" placeholder="Nom du capteur" />
-						      	
-       				</select>
-              <div id="bouton">
-                <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
-                <input onclick="myFunction()" value="Supprimer" type="submit">
-
-
-                <script>
-                function myFunction() {
-                    var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer ce capteur?");
-                    if (r == true) {
-                        href = "../Liste capteurs/listecapteurs.php";
-                    } else {
-                        txt = "none";
-                    }
-                    document.getElementById("demo").innerHTML = txt;
-                }
-                </script>
-                
-                
-                <input type="submit" value="Valider">
-              
-            </div>
-   				</p>
-			</form>
+       				<input type="text" name="nom" placeholder="Nom du capteur" /> </p>			      	
+                <div id="bouton">
+                    <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
+                    <input type="submit" value="Valider">
+                </div>
+   		    </form>
+            
+               <div id="bouton">
+                    <form action="../controllers/SuppCapteur.php?capteur=<?php echo $_SESSION['selected_capteur'] ?>" 
+                    method="get" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer ce capteur?')">
+                        <input  value="Supprimer" type="submit">
+                    </form>   
+                </div> 
 		</div>
     </section>
     
@@ -103,3 +90,4 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
     </footer>
     
 </body>
+</html>

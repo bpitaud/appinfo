@@ -70,26 +70,23 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
         ?>
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifCapteurs.php">
-   				<p>
-       				<input type="text" name="nom" placeholder="Nom du capteur" /> </p>
-                <div id="bouton">
+                    <div class = bouton>
+       				<input type="text" name="nom" placeholder="Nom du capteur" /> 
                     <a type="submit" href="../Liste capteurs/listecapteurs.php">Annuler</a>
                     <input type="submit" value="Valider">
-                </div>
-            </form>
+                    </div>
+</form>
                 
-                <div id="bouton">
+                <div class="bouton1">
                     <form action="../controllers/SuppCapteur.php?capteur=<?php echo $_SESSION['selected_capteur'] ?>" 
                     method="get" onsubmit="return confirm
                     ('Etes-vous sûr de vouloir supprimer ce capteur?')">
                         <input  value="Supprimer" type="submit">
                     </form>   
+                </div>
                 </div>        
-                
-              
-            
-			
-		</div>
+                	
+		
     </section>
     
     <footer>
@@ -97,7 +94,4 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
     </footer>
     
 </body>
-
-
-  <!-- <input type='hidden' value=<?php  $capteur[0][1]  ?> name='capteur' id='capteur'/>  -->
-                        <!-- <?php var_dump($capteur[0][1]); ?> -->
+</html>
