@@ -1,18 +1,8 @@
 <?php
 
 session_start();
-
-require_once("../Models/database.php");
 require_once("../Models/user.php");
-
-// envoi d'un mail de confirmation de compte
-// function send_email($to, $subject, $message, $headers){
-//     $to      = $email; // Envoyer un email à l'utilisateur
-//     $subject = 'Création de compte Domisep'; // Objet du mail
-//     $message = ' Bienvenue sur Domisep! Votre compte a été créé avec succès.'; 
-//     $headers = 'From: noreply@domisep.com' . "\r\n"; // Expediteur
-//     mail($to, $subject, $message, $headers); // envoi du mail
-// }
+require_once("../controllers/mail.php");
 
 $nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
 
@@ -31,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_existe = Verif_email($email);
     if ($mdp == $confirme_mdp && !$email_existe) {
         ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
-        //send_email($to, $subject, $message, $headers);
+        EnvoiMailInscription ($email,$nom,$prenom);
         header('Location: ../connexionn/connexion.php');
 
     }
