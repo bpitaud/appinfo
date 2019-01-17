@@ -23,8 +23,6 @@ body{
     flex-wrap: nowrap;   
 }
 
-
-
 /* nav bar flex */ 
 ul {
     display: flex;
