@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 require_once("../Models/user.php");
 require_once("../controllers/mail.php");
 
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_existe = Verif_email($email);
     if ($mdp == $confirme_mdp && !$email_existe) {
         ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
-        EnvoiMailInscription ($email,$nom,$prenom);
+        EnvoiMailInscription ($email,$prenom);
         header('Location: ../connexionn/connexion.php');
 
     }

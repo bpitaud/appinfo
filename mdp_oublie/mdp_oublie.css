@@ -15,7 +15,6 @@ body{
     background-size: 100%;
 }
 
-/* logo /nav bar flex */
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -116,6 +115,36 @@ header a:hover span {
 .dropdown:hover #hoverUser #borderNone {
     border: none;
 }
+
+.creationcompteheader {
+    border: solid white;
+    background:rgba(255,255,255,0);
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
+}
+
+.connexionheader {
+    border:solid grey;
+    background:grey;
+    color:black;
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
+}
+
 .boutonmenuprincipal {
     background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
     background-size: 30px;

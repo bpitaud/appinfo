@@ -1,9 +1,10 @@
 <?php
 require_once("../Models/user.php");
+require_once("../controllers/mail.php");
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 
 session_start();
@@ -35,12 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nouveau = randomPassword();
         $modif = ModifMdpOubli($email, $nouveau);
         if ($modif){
-            $to = "$email";
-            $subject = "Rénitialisation de mot de passe";
-            $txt = "Vous avez demandé une réinitialisation de votre mot de passe. Votre nouveau mot de passe est : $nouveau  . Vous pouvez changer ce mot de passe une fois que vous êtes connecté.";
-            $headers = "From: no-reply@domisep.fr" ;
-            mail($to,$subject,$txt,$headers);
-            $send_email = mail($to,$subject,$txt,$headers);
+            MailMdpOublie ($email,$nouveau,$prenom);
+            $send_email = MailMdpOublie($email,$nouveau,$prenom);
             if ($send_email){
                  header('Location: ../mdp_oublie/mdp_oublie.php?envoi=ok'); 
             } else {
@@ -51,9 +48,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } 
 }
-
-
-
-
-
 ?>

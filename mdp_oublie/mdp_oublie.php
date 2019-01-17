@@ -8,12 +8,19 @@
 </head>
 <body>
 
-	<header>
+<header>
         <div class="wrapper">
-            <h1>DOMISEP</h1> 
+            <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Liste logements/listelogements.php"><span>Home</span></a></li>
+                    <li><a href="../Home/home.php"><span>Home</span></a></li>
+                    <div class="creationcompteheader">
+                            <a href="../Inscription/inscription.php"> Créer un Compte </a>
+                            
+                    </div>
+                    <div class="connexionheader">
+                        <a href="../connexionn/connexion.php"> Se connecter </a> </div>
+
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">
@@ -22,19 +29,6 @@
                             <div class="hover">
                                 <p>FR</p>
                                 <a href="english.html"> EN </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <div id="noHoverUser">
-                                    <button class="boutonmenuprincipal"><p></p></button>
-                            </div>
-                            <div id="hoverUser">
-                                <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="../mesInfosUser/MesInfosUser.php"><p>Mes infos</p></a>
-                                <a href="../NousContacter/NousContacter.php"><p>Contacter</p></a>
-                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
                             </div>
                         </div>
                     </li>
