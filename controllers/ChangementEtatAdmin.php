@@ -13,10 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($capteur) & isset($changement)) {
         if ($changement == "changer_etat"){
             $etat = RecupEtatCapteur($capteur, $etat);
-            if ($etat[0][0] == "1") {
-                ModifEtatCapteur($capteur, "0");
-            } else {
+            if ($etat[0][0] == "0" ) {
                 ModifEtatCapteur($capteur, "1");
+            } else {
+                ModifEtatCapteur($capteur, "0");
             }
             header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur);
         } 

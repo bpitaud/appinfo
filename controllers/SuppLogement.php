@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("../Models/capteurs.php");
+require_once("../Models/logements.php");
 
 function test_input($data) {
   $data = trim($data);
@@ -13,18 +13,18 @@ function test_input($data) {
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    if (isset($_SESSION['selected_capteur'])){
-      $capteur = test_input($_SESSION["selected_capteur"]);
+    if (isset($_SESSION['selected_logement'])){
+      $logement = test_input($_SESSION['selected_logement']);
       }
-      if ($capteur){
-          $suppCapteur = SuppCapteur($capteur); 
+      if ($logement){
+          $suppLogement = SuppLogement($logement); 
       }
   
-    if ($suppCapteur == true) { 
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=true");   
+    if ($suppLogement == true) { 
+      header("Location: ../Liste logements/Listelogements.php?supp=true");   
     }
     else {
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=false");
+      header("Location: ../Liste logements/Listelogements.php?supp=false");
     }  
   
   }

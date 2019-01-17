@@ -67,6 +67,17 @@ session_start();
                     }
                 }
                 ?>
+    
+    <?php
+                $supp = $_GET['supp'];
+                if (isset($supp)) {
+                    if ($supp == "true") {
+                        echo "<p style='color:white;'>Votre logement a bien été supprimé.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre logement n'a pas été supprimé.</p>";
+                    }
+                }
+                ?>
                 
     <div id="zonelogement"> 
         <div id="zone">

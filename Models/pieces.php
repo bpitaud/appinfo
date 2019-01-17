@@ -58,10 +58,10 @@ function ModifSurfacePiece($pieceID,$surface){
 //supprimer une pièce 
 
 function suppPiece($pieceID){
-    $conn = connect() -> prepare('DELETE * FROM piece WHERE pieceID =:pieceID');
+    $conn = connect() -> prepare('DELETE FROM piece WHERE pieceID =?');
     $conn -> execute(array($pieceID));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+    //$resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;
 
 }
 ?> 

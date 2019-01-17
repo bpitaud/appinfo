@@ -86,7 +86,6 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
                 </div>
                 </div>        
                 	
-		
     </section>
     
     <footer>

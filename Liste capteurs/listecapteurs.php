@@ -83,6 +83,17 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                 }
                 ?>
 
+<?php
+                $supp = $_GET['supp'];
+                if (isset($supp)) {
+                    if ($supp == "true") {
+                        echo "<p style='color:white;'>Votre capteur a bien été supprimé.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre capteur n'a pas été supprimé.</p>";
+                    }
+                }
+                ?>
+
     </div>
     <section>
     	<div id="capteurs">

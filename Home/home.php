@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="home.css" />
-    <title>Acceuil</title>
+    <title>Accueil</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -38,6 +38,17 @@
 
     <body>
         <h1 id="titre"> Gardez le contrôle <br> de votre logement </h1>
+
+        <?php
+                $supp = $_GET['supp'];
+                if (isset($supp)) {
+                    if ($supp == "true") {
+                        echo "<p style='color:white;'>Votre compte a bien été supprimé.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre compte n'a pas été supprimé.</p>";
+                    }
+                }
+                ?>
         
         <a href="#service"><p> Que faisons-nous ? </p> </a>
         <a href="#contact"><p> Nous contacter </p> </a>

@@ -73,39 +73,29 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     }
         ?>		<div class="formulaire">
             <form method="post" action="../controllers/ModifPieces.php">
-            
-   				<p>
                     <?php
                     echo'
        				<input type="text" name="nom" placeholder="'.$piece[1].'" />
                       <input type="text" name="surface" placeholder="'.$piece[2].'" />';
                     ?>
-              <div id="bouton">
+              <div class="bouton">
                 <?php
                 echo '
                 <a type="submit" href="../Liste pièces/listepieces.php?log='.$piece[3].'">Annuler</a>';
                 ?>
-                <input onclick="myFunction()" value="Supprimer" type="submit">
-
-
-                <script>
-                function myFunction() {
-                    var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer cette pièce?");
-                    if (r == true) {
-                        href = "../Liste pièces/listepiece.php";
-                    } else {
-                        txt = "none";
-                    }
-                    document.getElementById("demo").innerHTML = txt;
-                }
-                </script>
-                
                 <input type="submit" value="Valider">
               
             </div>
-   				</p>
-			</form>
+            </form>
+            
+            <div class="bouton1">
+                    <form action="../controllers/SuppPiece.php?capteur=<?php echo $_SESSION['selected_piece'] ?>" 
+                    method="get" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer cette pièce?')">
+                        <input  value="Supprimer" type="submit">
+                    </form>   
+                </div>
+
 		</div>
     </section>
     

@@ -89,28 +89,22 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     			<em class="text">'.$utilisateur[7].'<br/></em>
     			<em class="text">'.$utilisateur[8].'<br/></em>
     			<em class="number">'.$utilisateur[9].'<br/></em>
-                
-                <button onclick="myFunction()" class="bouton">Supprimer mon compte</button> 
-</p>';}
-?>
+                </p>';}
+                ?>
+                <div class="bouton1">
+                    <form action="../controllers/SuppUser.php" 
+                    method="post" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer votre compte?')">
+                        <input  value="Supprimer le compte" type="submit">
+                    </form>   
+                </div>
 
-<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Etes-vous sûr de vouloir supprimer votre compte ?");
-    if (r == true) {
-        href = "../RechercherPar/RechercherPar.php";
-    } else {
-        txt = "none";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
 
 
 <div class="button1">
+<a href="../Liste logements/listelogements.php"> <input type="button" value="Annuler"></a>               
 <a href="../ModifCompteUser/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
-</div>   
+</div> 
 
 			
 </section>  

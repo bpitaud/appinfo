@@ -74,9 +74,9 @@ function ModifPaysLogement($logementID,$pays){
 
 // Supprimer un logement
 function SuppLogement($logementID){
-    $conn = connect() -> prepare('DELETE * FROM logement WHERE logementID =:logementID');
+    $conn = connect() -> prepare('DELETE FROM logement WHERE logementID =?');
     $conn -> execute(array($logementID));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+    //$resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;
 }
 ?>  

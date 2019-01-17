@@ -157,7 +157,7 @@ section a:hover {
     text-decoration: underline;
     font-weight: bold;
 }
-.formulaire{
+.formulaire{ /* tout le formulaire*/
     
     width: 30%;
     justify-content: center;
@@ -166,7 +166,29 @@ section a:hover {
     margin:auto
 }
 
-input[type=text] {
+.bouton1{ /* formulaire supprimer*/
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.bouton1 input[type=submit] { /*bouton supprimer*/
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: LightGray;
+    color: black;
+    padding: 5px 5px;
+    margin-left: 30%;
+    margin-top: -29px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text] { /* infos de la pièce à modifier */
 	color : white;
     width:100%;
     padding: 10px 20px;
@@ -180,23 +202,7 @@ input[type=text] {
     text-align: left;
 }
 
-select {
-	color : rgba(255, 255, 255, 0.9);
-    width:100%;
-    padding: 10px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    display : flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.6);
-
-}
-
-#bouton{
+.bouton{ /* div des boutons valider et annuler */ 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -204,22 +210,20 @@ select {
 }
 
 
-
-input[type=submit] {
+.bouton input[type=submit] { /* bouton valider*/
     
     width: 30%;
     background-color: LightGray;
     color: black;
     padding: 5px 5px;
-    margin-left: 20%;
-    margin-right: auto;
-    margin-top: 40px;
+    margin-left: 45%;
+    margin-top: 10%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-a[type=submit] {
+a[type=submit] {  /* bouton annuler*/
     
     width: 30%;
     background-color: transparent;

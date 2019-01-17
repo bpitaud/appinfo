@@ -86,9 +86,18 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     			<em class="text">'.$utilisateur[0][2].'<br/></em>
     			<em class="text">'.$utilisateur[0][4].'<br/></em>
     			<em class="date">'.$utilisateur[0][5].'<br/></em>
-    			<button onclick="myFunction()" class="bouton">Supprimer le compte</button>
+                <div class="bouton1">';
+                ?>
+                    <form action="../controllers/SuppUserAdmin.php?user=<?php echo $_SESSION['selected_user'] ?>" 
+                    method="get" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer ce compte utilisateur?')">
+                        <input  value="Supprimer" type="submit">
+                    </form>   
+                </div>
             </p>
-    	</div>
+        </div>
+        <?php
+        echo '
     	<div class="info">
         
     		<p>
@@ -106,16 +115,4 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     </section>
     
   </body>
-  <script>
-function myFunction() {
-    var txt;
-    var r = confirm("Etes-vous sûr de vouloir supprimer le compte de ce client ?");
-    if (r == true) {
-        href = "../controllers/ModifInfosAdmin.php";
-    } else {
-        href = "../Admin_Compte/Compte_Admin.php";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
 </html>

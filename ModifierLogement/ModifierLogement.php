@@ -1,8 +1,8 @@
 <?php 
 session_start();
 
-if (isset($_GET['selected']) && $_GET['selected'] != '') {
-    $_SESSION['selected_logement'] = $_GET['selected'];
+if (isset($_GET['log']) && $_GET['log'] != '') {
+    $_SESSION['selected_logement'] = $_GET['log'];
 }
 ?>
 
@@ -73,7 +73,7 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
             <form method="post" action="../controllers/ModifLogements.php">
             <?php
             echo'
-   				<p>
+   			
        				<input type="text" name="nom" placeholder="'.$logement[0][1].'" />
       				<input type="text" name="adresse" placeholder="'.$logement[0][2].'" />
        				<input type="text" name="codepostale" placeholder="'.$logement[0][3].'" />
@@ -90,30 +90,20 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
                        </select>';
                 ?>
             
-              <div id="bouton">
+              <div class="bouton">
                 <a type="submit" href="../Liste logements/listelogements.php">Annuler</a>
-                
-                <input onclick="myFunction()" value="Supprimer" type="submit">
-
-
-                <script>
-                function myFunction() {
-                    var txt;
-                    var r = confirm("Etes-vous sûr de vouloir supprimer ce logement?");
-                    if (r == true) {
-                        href = "../RechercherPar/RechercherPar.php";
-                    } else {
-                        txt = "none";
-                    }
-                    document.getElementById("demo").innerHTML = txt;
-                }
-                </script>
- 
                 <input type="submit" value="Valider">
               
-            </div>
-   				</p>
-			</form>
+            </div>	
+            </form>
+        
+            <div class="bouton1">
+                    <form action="../controllers/SuppLogement.php?capteur=<?php echo $_SESSION['selected_logement'] ?>" 
+                    method="get" onsubmit="return confirm
+                    ('Etes-vous sûr de vouloir supprimer ce logement?')">
+                        <input  value="Supprimer" type="submit">
+                    </form>   
+                </div>
 		</div>
     </section>
     

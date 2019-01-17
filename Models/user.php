@@ -91,10 +91,10 @@ function Possede_logements($utilisateurID) {
 
 // supprimer un utilisateur 
 function SuppUtilisateur($utilisateurID){
-    $conn = connect() -> prepare('DELETE * FROM `utilisateur` WHERE utilisateurID =:utilisateurID');
+    $conn = connect() -> prepare('DELETE FROM `utilisateur` WHERE utilisateurID =?');
     $conn -> execute(array($utilisateurID));
-    $resultat = $conn -> fetchAll(PDO::FETCH_NUM);
-    return $resultat;
+    //$resultat = $conn -> fetchAll(PDO::FETCH_NUM);
+    return true;
 }
 
 

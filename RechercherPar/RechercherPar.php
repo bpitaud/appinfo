@@ -34,7 +34,18 @@
   </div>
 </header>
 
-    			<h2>Rechercher par :</h2>
+					<h2>Rechercher par :</h2>
+					
+					<?php
+                $supp = $_GET['supp'];
+                if (isset($supp)) {
+                    if ($supp == "true") {
+                        echo "<p style='color:white;'>Le compte utilisateur a bien été supprimé.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Le compte utilisateur n'a pas été supprimé.</p>";
+                    }
+                }
+                ?>
     			
     		<section>
 		<div class="formulaire">

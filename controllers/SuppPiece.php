@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("../Models/capteurs.php");
+require_once("../Models/pieces.php");
 
 function test_input($data) {
   $data = trim($data);
@@ -13,18 +13,18 @@ function test_input($data) {
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    if (isset($_SESSION['selected_capteur'])){
-      $capteur = test_input($_SESSION["selected_capteur"]);
+    if (isset($_SESSION['selected_piece'])){
+      $piece = test_input($_SESSION["selected_piece"]);
       }
-      if ($capteur){
-          $suppCapteur = SuppCapteur($capteur); 
+      if ($piece){
+          $suppPiece = suppPiece($piece); 
       }
   
-    if ($suppCapteur == true) { 
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=true");   
+    if ($suppPiece == true) { 
+      header("Location: ../Liste pièces/Listepieces.php?supp=true");   
     }
     else {
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=false");
+      header("Location: ../Liste pièces/Listepieces.php?supp=false");
     }  
   
   }

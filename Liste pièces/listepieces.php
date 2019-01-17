@@ -59,6 +59,14 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
         <div class = 'retour' ><a href='../Liste logements/listelogements.php'> < Retour </a> </div>
         
         <?php
+                
+                require_once ('../Models/logements.php');
+
+                $logement = $_SESSION['selected_logement'];
+                $log = RecupLogementsbyID($logement);
+                echo'
+                <h2>Pièce(s) du logement '.$log[0][1].'</h2>';
+
                 $modif = $_GET['modif'];
                 if (isset($modif)) {
                     if ($modif == "true") {
@@ -67,12 +75,16 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                         echo "<p style='color:red;'>Votre pièce n'a pas été modifié.</p>";
                     }
                 }
-                require_once ('../Models/logements.php');
-
-                $logement = $_SESSION['selected_logement'];
-                $log = RecupLogementsbyID($logement);
-                echo'
-                <h2>Pièce(s) du logement '.$log[0][1].'</h2>';
+                
+                $supp = $_GET['supp'];
+                if (isset($supp)) {
+                    if ($supp == "true") {
+                        echo "<p style='color:white;'>Votre pièce a bien été supprimé.</p>";
+                    } else {
+                        echo "<p style='color:red;'>Votre pièce n'a pas été supprimé.</p>";
+                    }
+                }
+                
                 ?>
     	<div id="pieces">
             <?php
