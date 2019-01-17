@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
   
     if ($suppUser == true) { 
-      header("Location: ../Home/home.php?supp=true");   
+      header("Location: ../Views/home.php?supp=true");   
     }
     else {
-      header("Location: ../Home/home.php?supp=false");
+      header("Location: ../Views/home.php?supp=false");
     }  
   
   }

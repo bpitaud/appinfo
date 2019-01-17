@@ -26,7 +26,7 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $logementID = $_SESSION['selected_logement'];
     $pieceID = uniqid();
     ajoutPiece($pieceID, $nom,$surface,$logementID);
-    header('Location: ../Liste pièces/listepieces.php?log='.$_SESSION['selected_logement']);
+    header('Location: ../Views/listepieces.php?log='.$_SESSION['selected_logement']);
 }
 
 function RecupPieceController($logementID){

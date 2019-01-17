@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       }
   
     if ($suppCapteur == true) { 
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=true");   
+      header("Location: ../Views/Listecapteurs.php?supp=true");   
     }
     else {
-      header("Location: ../Liste capteurs/Listecapteurs.php?supp=false");
+      header("Location: ../Views/Listecapteurs.php?supp=false");
     }  
   
   }

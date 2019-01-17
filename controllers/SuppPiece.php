@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       }
   
     if ($suppPiece == true) { 
-      header("Location: ../Liste pièces/Listepieces.php?supp=true");   
+      header("Location: ../Views/Listepieces.php?supp=true");   
     }
     else {
-      header("Location: ../Liste pièces/Listepieces.php?supp=false");
+      header("Location: ../Views/Listepieces.php?supp=false");
     }  
   
   }

@@ -20,28 +20,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
         break;
 
         case "camera":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
         break;
 
         case "humidite":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
         break;
 
         case "temperature":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
         break;
       }
     } else {
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $controleurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
         ajoutControleur($nom, $controleurID, $type, $pieceID, 1);
-        header('Location: ../Liste capteurs/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
         break;
       }
     }
@@ -70,7 +70,5 @@ function RecupCapteurControleur($id) {
 function RecupControleursController($id) {
   return RecupControleur($id);
 }
-
-
 
 ?>

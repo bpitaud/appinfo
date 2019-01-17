@@ -1,0 +1,270 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background-color: black;
+    background-size: 100%;
+}
+
+/* logo /nav bar flex */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;   
+}
+
+/* nav bar flex */ 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* logo */
+h1 {
+    font-size: 45px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* nav bar general */ 
+header{
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 0;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 0 1 40%; 
+}
+header li {
+    width: 150px;
+    line-height: 30px;
+    padding: 20px;
+}
+
+header a:hover {
+    font-weight: bold;   
+}
+header a:hover span {
+    text-decoration: underline;
+}
+
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("../appinfo/Images/ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+
+/* User scroll bar */
+.dropdown:hover #noHoverUser {
+    display: none;
+}
+.dropdown:hover #hoverUser {
+    display:block;
+    border-radius: 7px;
+    width: 150x;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown:hover #hoverUser p {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: auto;
+}
+.dropdown:hover #hoverUser #borderNone {
+    border: none;
+}
+.boutonmenuprincipal {
+    background: rgba(0, 0, 0, 0) url("../appinfo/Images/iconeuser.svg") no-repeat center center;
+    background-size: 30px;
+    padding: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+}
+.dropdown #noHoverUser {
+    display: block;
+}
+.dropdown #hoverUser {
+    display: none;
+}
+
+section h1 {
+    display: flex;
+	color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+	margin-top: 20px;
+    font-size: 1.5em;
+    margin-bottom:20px;
+}
+
+section h1 span {
+    opacity: 0;
+}
+
+input[type=text] {
+	color : white;
+    width:30%;
+    padding: 10px 10px;
+    margin:auto;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+input[type=password] {
+	color : white;
+    width:30%;
+    padding: 10px 10px;
+    margin:auto;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+    text-align: left;
+}
+
+select {
+	color : white;
+    width:30%;
+    padding: 20px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display : flex;
+    flex-direction: column;
+    border:none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: LightGray;
+    color: black;
+    padding-top:7px;
+    padding-bottom:7px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+input[type=value] {
+    padding-left: 50%;
+    padding-right: 5%;
+}
+
+.motdepasse{
+    font-size: 80%;
+    text-decoration:underline;
+    margin-top:2em;
+}
+
+.inscription{
+    border: solid white;
+    background:rgba(255,255,255,0);
+    margin-top:1.4em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:34.5%;
+    margin-right:34.5%;
+    font-size:100%;
+}
+
+.creationcompteheader {
+    border: solid white;
+    background:rgba(255,255,255,0);
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
+}
+
+.connexionheader {
+    border:solid grey;
+    background:grey;
+    color:black;
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
+}
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+}

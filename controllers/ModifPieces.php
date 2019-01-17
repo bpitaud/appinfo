@@ -48,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
   if ($modif == true) {
-    header("Location: ../Liste pièces/listepieces.php?modif=true");
+    header("Location: ../Views/listepieces.php?modif=true");
   } else {
-    header("Location: ../Liste pièces/listepieces.php?modif=false");
+    header("Location: ../Views/listepieces.php?modif=false");
   }
 }
 

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $utilisateurID = $_SESSION['utilisateurID'];
     $logementID = uniqid();
     ajoutLogement($logementID,$nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
-    header('Location: ../Liste logements/listelogements.php?user='.$utilisateurID);  
+    header('Location: ../Views/listelogements.php?user='.$utilisateurID);  
     }     
 
 

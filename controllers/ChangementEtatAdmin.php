@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 session_start();
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 ModifEtatCapteur($capteur, "0");
             }
-            header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur);
+            header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur);
         } 
     } 
 }

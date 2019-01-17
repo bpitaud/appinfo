@@ -1,0 +1,233 @@
+/* HEADER */
+*
+{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+header {
+    text-align: center;
+    color:white;
+    font-size: 15px;
+}
+
+nav
+{
+    position: absolute; top:20%; left:3%;
+}
+nav+a
+{
+    text-decoration : none;
+    color: rgba(255, 255, 255, 0.8);
+}
+#compte_link
+{
+    text-decoration : underline; 
+}
+
+body{
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/fond.png") no-repeat center top;
+    background-color: black;
+    background-size: 100%;
+    background-position: 10% 0%;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    width: 90%;
+}
+
+
+/* logo */
+h1 strong {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+h1{
+    font-size: 28px;
+    padding-left: 3%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: solid 2 px white;
+}
+/* langage scroll bar */
+.dropdownLang .noHover {
+    display: block;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5) url("../appinfo/Images/ArrowDown.svg") no-repeat 70px center;
+    background-size: 20px;
+    width: 100px;
+    margin: auto;
+}
+
+.dropdownLang
+{
+    margin: 16% 10% 10% 10%;
+}
+.dropdownLang .noHover p {
+    text-align: left;
+    padding-left: 20px;
+}
+.dropdownLang .hover {
+    display: none;
+}
+.dropdownLang:hover .hover {
+    display: block;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    margin: auto;
+}
+.dropdownLang:hover .hover p {
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+.dropdownLang:hover .noHover {
+    display: none;
+}
+
+.haut_droite
+ {
+    display: flex;
+    width:123%;
+    margin-right: 500%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+.admin
+{
+    border: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 100%;
+    color:rgba(255, 255, 255, 0.8);
+}
+
+footer p
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute; bottom: 2%; left: 73%; right: 0;
+    font-size: 95%;
+}
+.quitter
+{
+    display: block;
+    position: absolute; top:9.5%; left:90%;
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0) url("../appinfo/Images/logo_quitter.png") no-repeat 5% center;
+    background-size: 20px;
+    width: 7.7%;
+    padding: 0.3% 0 0.3% 0%;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 5%;
+}
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin: auto;
+    overflow: auto;
+    font-size: 20px;
+}
+.info
+{
+    width: 35%;
+    min-width: 280px;
+    border: 0px white solid;
+    padding: 2px;
+    height: 500px;
+    align-items : stretch;
+    line-height: 100%;
+}
+.email
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    font-style: normal;
+    font-weight: 100; 
+}
+.text
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.date
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid white;
+    border-top: none;
+    margin-top: 13%;
+    margin-bottom: 10%;
+    font-style: normal;
+    font-weight: 100; 
+}
+
+.bouton { /* modifier et réinitalisation */
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:center;
+    width:100%;
+    height: 30px;
+    padding: 2px 0 3px 0;
+    margin-bottom: 10%;
+    border-radius: 6px; 
+    overflow: hidden;
+    font-size: 19px
+    }
+
+[type=submit] { /* bouton supprimer */
+    
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:center;
+    width:100%;
+    height: 30px;
+    padding: 2px 0 3px 0;
+    margin-bottom: 10%;
+    border-radius: 6px; 
+    overflow: hidden;
+    font-size: 19px
+    }
+

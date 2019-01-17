@@ -2,9 +2,9 @@
 
 session_start();
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 require_once("../Models/capteurs.php");
 
@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
   if ($suppCapteur or $suppControleur) { 
-    header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?supp=true");   
+    header("Location: ../Views/Liste_de_capteurs.php?supp=true");   
   }
   else {
-    header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?supp=false");
+    header("Location: ../Views/Liste_de_capteurs.php?supp=false");
   }  
 
 }

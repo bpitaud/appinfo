@@ -23,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($mdp == $confirme_mdp && !$email_existe) {
         ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
         EnvoiMailInscription ($email,$prenom);
-        header('Location: ../connexionn/connexion.php');
+        header('Location: ../Views/connexion.php');
 
     }
      else {
-        header('Location: ../inscription/inscription.php?inscription=error');
+        header('Location: ../Views/inscription.php?inscription=error');
      }
 
 }

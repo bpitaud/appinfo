@@ -45,9 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($recup == true) { 
-    header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteurID);
+    header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteurID);
   } else {
-    header("Location: ../Liste_de_capteurs/Liste_de_capteurs.php?recup=error&user=".$_SESSION['selected_user']);
+    header("Location: ../Views/Liste_de_capteurs.php?recup=error&user=".$_SESSION['selected_user']);
   }  
 
 }

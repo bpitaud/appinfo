@@ -59,9 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($recup == true) {
-    header("Location: ../ConfirmationClient/ConfClient.php?user=".$recherche[0][0]);
+    header("Location: ../Views/ConfClient.php?user=".$recherche[0][0]);
   } else {
-    header("Location: ../RechercherPar/RechercherPar.php?recherche=error");
+    header("Location: ../Views/RechercherPar.php?recherche=error");
   }  
 }
 

@@ -28,18 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $logements = Possede_logements($resultat[0][0]);// faire une fonction pour checker si l'utilisateur a des logements
       if ($resultat[0][11]== 1){ // vérifie si c'est un admin 
         $_SESSION['admin'] = 1;
-        header('Location: ../RechercherPar/RechercherPar.php'); // si admin, diriger vers Rechercher Par
+        header('Location: ../Views/RechercherPar.php'); // si admin, diriger vers Rechercher Par
       } else {
         $_SESSION['admin'] = 0;
         if($logements){ // sinon , vérifie si cet utilisateur a des logements 
-        header('Location: ../Liste logements/listelogements.php');
+        header('Location: ../Views/listelogements.php');
         } else {
-        header('Location: ../Liste logements/premierlogement.php');
+        header('Location: ../Views/premierlogement.php');
         }
       }
     }
     else { // rester sur la page connexion car identifiants non valides
-      header('Location: ../connexionn/connexion.php?connexion=error');
+      header('Location: ../Views/connexion.php?connexion=error');
 
     }
        

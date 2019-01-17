@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       }
   
     if ($suppLogement == true) { 
-      header("Location: ../Liste logements/Listelogements.php?supp=true");   
+      header("Location: ../Views/Listelogements.php?supp=true");   
     }
     else {
-      header("Location: ../Liste logements/Listelogements.php?supp=false");
+      header("Location: ../Views/Listelogements.php?supp=false");
     }  
   
   }

@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
   if ($modif == true) {
-    header("Location: ../Liste capteurs/listecapteurs.php?modif=true");
+    header("Location: ../Views/listecapteurs.php?modif=true");
   } else {
-    header("Location: ../Liste capteurs/listecapteurs.php?modif=false");
+    header("Location: ../Views/listecapteurs.php?modif=false");
   }
 }
 

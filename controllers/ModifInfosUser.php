@@ -128,9 +128,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
   if ($modif == true) {
-    header("Location: ../mesInfosUser/MesInfosUser.php?modif=true");
+    header("Location: ../Views/MesInfosUser.php?modif=true");
   } else {
-    header("Location: ../mesInfosUser/MesInfosUser.php?modif=false");
+    header("Location: ../Views/MesInfosUser.php?modif=false");
   }
 }
 

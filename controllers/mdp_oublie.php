@@ -39,12 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             MailMdpOublie ($email,$nouveau,$prenom);
             $send_email = MailMdpOublie($email,$nouveau,$prenom);
             if ($send_email){
-                 header('Location: ../mdp_oublie/mdp_oublie.php?envoi=ok'); 
+                 header('Location: ../Views/mdp_oublie.php?envoi=ok'); 
             } else {
-                 header('Location: ../mdp_oublie/mdp_oublie.php?envoi=error');
+                 header('Location: ../Views/mdp_oublie.php?envoi=error');
             }
         } else {
-            header('Location: ../mdp_oublie/mdp_oublie.php?envoi=echec');
+            header('Location: ../Views/mdp_oublie.php?envoi=echec');
         }
     } 
 }

@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       }
   
     if ($suppUser == true) { 
-      header("Location: ../RechercherPar/RechercherPar.php?supp=true");   
+      header("Location: ../Views/RechercherPar.php?supp=true");   
     }
     else {
-      header("Location: ../RechercherPar/RechercherPar.php?supp=false");
+      header("Location: ../Views/RechercherPar.php?supp=false");
     }  
   
   }

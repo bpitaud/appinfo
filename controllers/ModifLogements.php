@@ -79,9 +79,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
   if ($modif == true) {
-    header("Location: ../Liste logements/listelogements.php?modif=true");
+    header("Location: ../Views/listelogements.php?modif=true");
   } else {
-    header("Location: ../Liste logements/listelogements.php?modif=false");
+    header("Location: ../Views/listelogements.php?modif=false");
   }
 }
 
