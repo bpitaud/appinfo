@@ -1,70 +1,46 @@
-* {
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-
-}
-header {
-
-    text-align: center;
-    font-size: 15px;
-}
-body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
-    background-color: black;
-    background-size: 100%;
-}
-
-/* logo /nav bar flex */
-.wrapper {
+.wrapper { /* classe du header sauf "domisep" */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;   
+    position : absolute; 
+    margin-left: 55%; 
 }
 
-/* nav bar flex */ 
-ul {
-    display: flex;
+.domisep { /* division titre domisep */
+    display :flex;
     flex-direction: row;
+    position: absolute; 
 }
 
-/* logo */
-h1 {
+ul { /* unordered list avec Home Langues et menu user les 3 ensemble*/
+    display: flex; 
+    flex-direction: row; 
+}
+
+h1 { /* titre Domisep*/
     font-size: 45px;
     padding-left: 50px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: bold; 
 }
 
-/* nav bar general */ 
-header{
+header{ /* intégralité du header*/
     height: 100px;
     margin-top: 20px;
-    
 }
-header nav {
-    display: flex;
-    align-items: center;
-    flex: 0 1 40%; 
-}
-header li {
+
+header li { /* élement de la liste un par un */
     width: 150px;
     line-height: 30px;
-    padding: 20px;
-}
-header a:hover {
+    padding: 20px; 
+} 
+
+header a:hover { /* le texte devient gras quand on passe dessus*/
     font-weight: bold;   
 }
-header a:hover span {
+header a:hover span { /* quand on passe sur Home il est souligné*/
     text-decoration: underline;
 }
 
-/* langage scroll bar */
-.dropdownLang .noHover {
+
+.dropdownLang .noHover { /* menu déroulant de la langue française*/
     display: block;
     border-radius: 7px;
     background: rgba(0, 0, 0, 0.5) url("../Images/ArrowDown.svg") no-repeat 70px center;
@@ -72,61 +48,62 @@ header a:hover span {
     width: 100px;
     margin: auto;
 }
-.dropdownLang .noHover p {
+.dropdownLang .noHover p { /* FR */
     text-align: left;
     padding-left: 20px;
 }
-.dropdownLang .hover {
+.dropdownLang .hover { /* menu déroulant de la langue anglaise cachée */
     display: none;
 }
-.dropdownLang:hover .hover {
+
+.dropdownLang:hover .hover p { /* EN */
+    border-bottom: 1px solid white;
+    width: 80px;
+    margin: auto;
+}
+
+.dropdownLang:hover .hover { /* quand on passe sur "EN" */
     display: block;
     border-radius: 7px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100px;
     margin: auto;
 }
-.dropdownLang:hover .hover p {
-    border-bottom: 1px solid white;
-    width: 80px;
-    margin: auto;
-}
-.dropdownLang:hover .noHover {
+
+.dropdownLang:hover .noHover { /* quand on passe sur "FR", il ne réapparait pas  */
     display: none;
 }
 
-/* User scroll bar */
-.dropdown:hover #noHoverUser {
+.dropdown:hover #noHoverUser { /* quand on est sur le logo user, il ne réapparait pas dans le menu déroulant */
     display: none;
 }
-.dropdown:hover #hoverUser {
+.dropdown:hover #hoverUser { /* Quand on est sur logo user, contenu du menu déroulant */
     display:block;
     border-radius: 7px;
     width: 150x;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    border: none;
 }
-.dropdown:hover #hoverUser p {
+.dropdown:hover #hoverUser p { /* menu déroulant quand on est sur logo user*/
     padding: 10px;
     border-bottom: 1px solid white;
     width: 100px;
-    margin: auto;
+    margin: auto; 
 }
-.dropdown:hover #hoverUser #borderNone {
+.dropdown:hover #hoverUser #borderNone { /* pas de border sous déconnexion*/
     border: none;
 }
-.boutonmenuprincipal {
+.boutonmenuprincipal { /* logo user */
     background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
     background-size: 30px;
     padding: 20px;
     height: 30px;
     width: 150px;
     border: none;
-}
-.dropdown #noHoverUser {
-    display: block;
-}
-.dropdown #hoverUser {
+} 
+
+.dropdown #hoverUser { /* le menu déroulant n'est pas affiché quand on est pas sur le bouton user*/
     display: none;
-}
+} 
 

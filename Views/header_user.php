@@ -14,11 +14,14 @@ session_start();
 
     <body>
     <header>
+    <div class='domisep'>
+    <h1>DOMISEP</h1>
+    </div> 
         <div class="wrapper">
-            <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../Views/listelogements.php"><span>Home</span></a></li>
+                    <li><a href="../Views/listelogements.php"><span>Home</span></a>
+                    </li>
                     <li>
                         <div class="dropdownLang">
                             <div class="noHover">

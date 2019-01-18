@@ -42,7 +42,6 @@ session_start();
                 ?>
                 
     <div id="zonelogement"> 
-        <div id="zone">
     <?php
     require_once('../controllers/FormulaireAjoutLogement.php');
         $logement = RecupLogementController($_SESSION["utilisateurID"]);
@@ -66,7 +65,6 @@ session_start();
                 </div>'); 
     }
     ?>
-        </div>
     </div>
         <a href="../Views/AjoutLogement.php"> <div class="ajoutlogement">
 
