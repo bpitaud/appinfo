@@ -24,7 +24,8 @@
               <p><a href="english.html"> EN </a></p>
             </div>
           </div>
-        </li>
+				</li>
+				<li><a class="deconnexion" href="../controllers/deconnexion.php"><span>Deconnexion</span></a></li>
       </ul>
    		
    			

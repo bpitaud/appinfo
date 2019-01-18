@@ -13,7 +13,7 @@
             <h1>DOMISEP</h1>
             <nav>
                 <ul>
-                    <li><a href="../home.php"><span>Home</span></a></li>
+                    <li><a href="../Views/connexion.php"><span>Home</span></a></li>
                     <div class="creationcompteheader">
                             <a href="../Views/inscription.php"> Créer un Compte </a>
                             
