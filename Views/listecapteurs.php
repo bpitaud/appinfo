@@ -16,45 +16,11 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="codecapteur.js"></script>
+        <?php include('header_user.php') ?>
 
     </head>
 
     <body>
-    <header>
-        <div class="wrapper">
-            <h1>DOMISEP</h1>
-            <nav>
-                <ul>
-                    <li><a href="../Views/listelogements.php"><span>Home</span></a></li>
-                    <li>
-                        <div class="dropdownLang">
-                            <div class="noHover">
-                                <p>FR</p>
-                            </div>
-                            <div class="hover">
-                                <p>FR</p>
-                                <a href="english.html"> EN </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <div id="noHoverUser">
-                                    <button class="boutonmenuprincipal"><p></p></button>
-                            </div>
-                            <div id="hoverUser">
-                                <button class="boutonmenuprincipal"><p></p></button>
-                                <a href="../Views/MesInfosUser.php"><p>Mes infos</p></a>
-                                <a href="../Views/NousContacter.php"><p>Contacter</p></a>
-                                <a href="../controllers/deconnexion.php"><p id="borderNone">Deconnexion</p></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     
     <div id="retour">
     <?php

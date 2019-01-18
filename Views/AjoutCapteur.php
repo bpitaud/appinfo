@@ -14,6 +14,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     <link rel="stylesheet" href="../css/AjoutCapteur.css" />
     <title>Ajout d'un Capteur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <?php include('header_user.php') ?>
 </head>
 <body>
 
