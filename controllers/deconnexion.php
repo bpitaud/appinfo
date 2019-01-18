@@ -8,5 +8,5 @@ session_unset ();
 session_destroy ();
 
 // On redirige l'utilisateur vers la page d'accueil
-header ('location: ../Views/home.php');
+header ('location: ../Views/connexion.php?deco=true');
 ?> 

@@ -24,6 +24,8 @@ h1 { /* titre Domisep*/
 header{ /* intégralité du header*/
     height: 100px;
     margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
 }
 
 header li { /* élement de la liste un par un */
