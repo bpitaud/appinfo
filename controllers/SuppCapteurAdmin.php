@@ -2,9 +2,9 @@
 
 session_start();
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require_once("../Models/capteurs.php");
 
@@ -15,19 +15,21 @@ function test_input($data) {
   return $data;
 }
 
-if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
-  $_SESSION['selected_capteur'] = $_GET['capteur'];
-}
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $capteur = test_input($_SESSION['selected_capteur']);
-    $controleur = test_input($_SESSION['selected_capteur']);
-    if ($capteur){
-        $suppCapteur = SuppCapteur($_SESSION['selected_capteur']); 
+  if (isset($_SESSION['selected_capteur'])){
+    $capteur = test_input($_SESSION["selected_capteur"]);
     }
-    else {
-    $suppControleur = SuppControleur($_SESSION['selected_capteur']);
+  if ($capteur){
+    $recupCapteur = RecupCapteurbyID($capteur);
+    if ($recupCapteur == true){
+      $suppCapteur = SuppCapteur($capteur); 
+    } else if ($recupCapteur == false) {
+          $recupControleur = RecupControleurbyID($capteur);
+          if ($recupControleur == true) {
+            $suppControleur = SuppControleur($capteur);
+          }
+        }
     }
 
   if ($suppCapteur or $suppControleur) { 
@@ -36,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   else {
     header("Location: ../Views/Liste_de_capteurs.php?supp=false");
   }  
-
 }
 
 ?>

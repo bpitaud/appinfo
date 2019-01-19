@@ -130,13 +130,27 @@ footer p
     padding: 0.3% 0 0.3% 0%;
 }
 
+.bouton1{ /* formulaire supprimer*/
 
-#deco_supp
-{
-    width:30%;
+    width: 30%;
     display: inline-block;
     justify-content: space-between;
     position: absolute; bottom:35%; right:10%;
+}
+
+.bouton1 input[type=submit] { /*bouton supprimer*/
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:center;
+    width:40%;
+    height: 30px;
+    padding: 2px 0 3px 0;
+    margin: 0% 2% 10% 2%;
+    border-radius: 6px; 
+    overflow: hidden;
+    font-size: 19px
 }
 
 #change_etat

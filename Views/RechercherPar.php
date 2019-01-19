@@ -25,11 +25,8 @@
             </div>
           </div>
 				</li>
-				<li><a class="deconnexion" href="../controllers/deconnexion.php"><span>Deconnexion</span></a></li>
-      </ul>
-   		
-   			
-     
+				<li><a href="../controllers/deconnexion.php"><p>Deconnexion</p></a></li>
+			</ul>    
   </div>
 </header>
 
@@ -58,8 +55,7 @@
 			}
 		} catch (Exception $e) {}
 	?>
-                
-   				<p>
+   				
       					<label for="name">Numéro de téléphone</label>
       					<input type="text" name="telephone" >
       					
@@ -71,8 +67,7 @@
 								
 
 								<input type="submit" value="Valider">
-   				</p>
-                
+   				      
 			</form>
 		</div>
 
