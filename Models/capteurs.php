@@ -15,6 +15,18 @@
          ));
      }
 
+
+// vérifier si le numéro de capteur rentré lors de l'ajout existe déjà dans la base de données
+function Verif_capteur($capteurID){
+    $conn = connect()->prepare('SELECT * FROM capteur WHERE capteurID=?');
+    $conn -> execute(array($capteurID));
+    $resultat = $conn->fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) > 0){
+        return true;
+    }
+    return false;
+}
+
 // récupérer les données de tous les capteurs 
 function RecupAllCapteurs(){
     $conn = connect() -> prepare('SELECT * FROM capteur');
@@ -131,6 +143,17 @@ function ajoutControleur( $nom, $controleurID, $type, $pieceID, $etat){
         'etat' => $etat,
         ));
     }
+
+// vérifier si le numéro de controleur rentré lors de l'ajout existe déjà dans la base de données
+function Verif_controleur($controleurID){
+    $conn = connect()->prepare('SELECT * FROM controleur WHERE controleurID=?');
+    $conn -> execute(array($controleurID));
+    $resultat = $conn->fetchAll(PDO::FETCH_NUM);
+    if (count($resultat) > 0){
+        return true;
+    }
+    return false;
+}
 
 // récupérer les données de tous les controleurs
 function RecupAllControleurs(){

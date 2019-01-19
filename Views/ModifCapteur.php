@@ -44,7 +44,7 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
 </form>
                 
                 <div class="bouton1">
-                    <form action="../controllers/SuppCapteur.php?capteur=<?php echo $_SESSION['selected_capteur'] ?>" 
+                    <form action="../controllers/SuppCapteurUser.php?capteur=<?php echo $_SESSION['selected_capteur'] ?>" 
                     method="get" onsubmit="return confirm
                     ('Etes-vous sûr de vouloir supprimer ce capteur?')">
                         <input  value="Supprimer" type="submit">

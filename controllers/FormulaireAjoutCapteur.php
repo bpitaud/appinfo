@@ -19,8 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "lumiere":
         $capteurID = test_input($_POST["number"]);
         $pieceID = $_SESSION['selected_piece'];
+        $capteur_existe = Verif_capteur($capteurID);
+        if (!$capteur_existe) {
         ajoutCapteur($nom, $capteurID, $type, $pieceID, 1);
         header('Location: ../Views/listecapteurs.php?piece='.$_SESSION['selected_piece']);
+        } else {
+        header('Location: ../Views/listecapteurs.php?capteur=existe');
+        }
         break;
 
         case "camera":
