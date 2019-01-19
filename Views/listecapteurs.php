@@ -60,6 +60,15 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                 }
                 ?>
 
+<?php
+                $supp = $_GET['capteur'];
+                if (isset($supp)) {
+                    if ($supp == "existe") {
+                        echo "<p style='color:red;'>Ce capteur existe déjà pour vous ou un autre utilisateur.</p>";
+                    } 
+                }
+                ?>
+
     </div>
     <section>
     	<div id="capteurs">
