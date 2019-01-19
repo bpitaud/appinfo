@@ -53,11 +53,6 @@ input {
 
 
 
-
-
-
-
-
 /* HEADER */
 *
 {
@@ -171,7 +166,7 @@ h1{
     border: auto;
     margin-top: 5%;
     margin-left: 10%;
-    width: 100%;
+    /* width: 100%; */
     color:rgba(255, 255, 255, 0.8);
 }
 

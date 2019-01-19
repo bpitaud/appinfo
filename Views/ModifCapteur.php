@@ -37,8 +37,10 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
 		<div class="formulaire">
 			<form method="post" action="../controllers/ModifCapteurs.php">
                     <div class = bouton>
-       				<input type="text" name="nom" placeholder="Nom du capteur" /> 
-                    <a type="submit" href="../Views/listecapteurs.php">Annuler</a>
+                       <input type="text" name="nom" placeholder="Nom du capteur" /> 
+                       <?php
+                       echo '
+                    <a type="submit" href="../Views/listecapteurs.php?piece='.$_SESSION['selected_piece'].'">Annuler</a>'; ?>
                     <input type="submit" value="Valider">
                     </div>
 </form>
@@ -53,10 +55,6 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
                 </div>        
                 	
     </section>
-    
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
     
 </body>
 </html>

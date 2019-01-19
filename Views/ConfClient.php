@@ -18,8 +18,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
 
   <body>
 
-		<!--HEADER-->
-
 <header>
   <div class="wrapper">
 

@@ -10,50 +10,42 @@
 
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
     background-color: black;
     background-size: 100%;
-    background-attachment: fixed;
-    overflow: hidden;
 }
 
-/* logo /nav bar flex */
-.wrapper {
+.wrapper { /* division de tout le header */
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;   
+   
+    
+    
 }
 
-
-
-/* nav bar flex */ 
-ul {
+ul { /* liste des éléments  */ 
     display: flex;
     flex-direction: row;
+    margin-left: 60px;
 }
 
-/* logo */
-h1 {
+
+h1 { /* Domisep */
     font-size: 45px;
     padding-left: 50px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* nav bar general */ 
-header{
+
+header{ /* caractéristique header */
     height: 100px;
     margin-top: 20px;
     margin-right: 0;
-    /* position: fixed; */
 }
-header nav {
-    display: flex;
-    align-items: center;
-    flex: 0 1 40%; 
-    margin-left: 20%;
-}
+
 header li {
     width: 150px;
     line-height: 30px;
@@ -68,6 +60,7 @@ header a:hover span {
 }
 
 /* langage scroll bar */
+
 .dropdownLang .noHover {
     display: block;
     border-radius: 7px;
@@ -99,43 +92,23 @@ header a:hover span {
     display: none;
 }
 
-
-/* User scroll bar */
-.dropdown:hover #noHoverUser {
-    display: none;
-}
-.dropdown:hover #hoverUser {
-    display:block;
-    border-radius: 7px;
-    width: 150x;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.dropdown:hover #hoverUser p {
-    padding: 10px;
-    border-bottom: 1px solid white;
-    width: 100px;
-    margin: auto;
-}
-.dropdown:hover #hoverUser #borderNone {
-    border: none;
-}
-.boutonmenuprincipal {
-    background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
-    background-size: 30px;
-    padding: 20px;
-    height: 30px;
-    width: 150px;
-    border: none;
-}
-.dropdown #noHoverUser {
-    display: block;
-}
-.dropdown #hoverUser {
-    display: none;
+.creationcompteheader {
+    border:solid grey;
+    background:grey;
+    color:black;
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em; 
 }
 
 .connexionheader {
+    
     border: solid white;
     background:rgba(255,255,255,0);
     margin-top:1.7em;
@@ -149,20 +122,7 @@ header a:hover span {
     margin-right:6em;
 }
 
-.creationcompteheader {
-    border:solid grey;
-    background:grey;
-    color:black;
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:4px;
-    padding-bottom:1%;
-    margin-bottom:80em;
-    font-size:60%;
-    width: 180px;
-    margin-right:6em;
-}
+/* fin header */
 
 section
 {
@@ -174,22 +134,21 @@ section
     margin: auto;
     overflow: auto;
     font-size: 20px;
+    position: relative;
 }
 
 .info
 {
+    display: inline-block;
     width: 35%;
-    min-width: 280px;
     border: 0px white solid;
-    padding: 2px;
-    align-items: stretch;
-    line-height: 100%;
+    margin:auto;
+    
 }
 
 input[type=text]
 {
 	width: 100%;
-	height:100%;
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -206,7 +165,6 @@ input[type=text]
 input[type=email]
 {
 	width: 100%;
-	height:100%;
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -223,7 +181,6 @@ input[type=email]
 input[type=password]
 {
 	width: 100%;
-	height:100%;
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -240,7 +197,6 @@ input[type=password]
 input[type=date]
 {
 	width: 100%;
-	height:100%;
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -292,7 +248,6 @@ select {
 
 
     width: 100%;
-	height:100%;
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -311,5 +266,8 @@ select {
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
+    position: fixed; bottom: 0; left: 73%; right: 0;
 }
+
+
+

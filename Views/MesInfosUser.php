@@ -51,27 +51,22 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     			<em class="number">'.$utilisateur[9].'<br/></em>
                 </p>';}
                 ?>
-                <div class="bouton1">
+                
                     <form action="../controllers/SuppUser.php" 
                     method="post" onsubmit="return confirm
                     ('Etes-vous sûr de vouloir supprimer votre compte?')">
                         <input  value="Supprimer le compte" type="submit">
                     </form>   
-                </div>
+                
 
 
 
-<div class="button1">
+
 <a href="../Views/listelogements.php"> <input type="button" value="Annuler"></a>               
 <a href="../Views/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
-</div> 
 
 			
 </section>  
-
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
     
 </body>
 </html>  

@@ -10,44 +10,46 @@
 
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #00000080), url("../Images/fond.png") fixed no-repeat center top;
     background-color: black;
     background-size: 100%;
 }
 
-/* logo /nav bar flex */
-.wrapper {
+.wrapper { /* division de tout le header */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;   
+    flex-wrap: nowrap; 
+    position: fixed;
 }
 
-/* nav bar flex */ 
-ul {
+
+ul { /* liste des éléments  */ 
     display: flex;
     flex-direction: row;
+    margin-left: 60px;
 }
 
-/* logo */
-h1 {
+
+h1 { /* Domisep */
     font-size: 45px;
     padding-left: 50px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* nav bar general */ 
-header{
+
+header{ /* caractéristique header */
     height: 100px;
     margin-top: 20px;
     margin-right: 0;
 }
-header nav {
+header nav { 
     display: flex;
     align-items: center;
     flex: 0 1 40%; 
 }
+
 header li {
     width: 150px;
     line-height: 30px;
@@ -62,6 +64,7 @@ header a:hover span {
 }
 
 /* langage scroll bar */
+
 .dropdownLang .noHover {
     display: block;
     border-radius: 7px;
@@ -93,55 +96,39 @@ header a:hover span {
     display: none;
 }
 
-
-/* User scroll bar */
-.dropdown:hover #noHoverUser {
-    display: none;
-}
-.dropdown:hover #hoverUser {
-    display:block;
-    border-radius: 7px;
-    width: 150x;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.dropdown:hover #hoverUser p {
-    padding: 10px;
-    border-bottom: 1px solid white;
-    width: 100px;
-    margin: auto;
-}
-.dropdown:hover #hoverUser #borderNone {
-    border: none;
-}
-.boutonmenuprincipal {
-    background: rgba(0, 0, 0, 0) url("../appinfo/Images/iconeuser.svg") no-repeat center center;
-    background-size: 30px;
-    padding: 20px;
-    height: 30px;
-    width: 150px;
-    border: none;
-}
-.dropdown #noHoverUser {
-    display: block;
-}
-.dropdown #hoverUser {
-    display: none;
+.creationcompteheader {
+    border: solid white;
+    background:rgba(255,255,255,0);
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
 }
 
-section h1 {
-    display: flex;
-	color: white;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-	margin-top: 20px;
-    font-size: 1.5em;
-    margin-bottom:20px;
+.connexionheader {
+    border:solid grey;
+    background:grey;
+    color:black;
+    margin-top:1.7em;
+    padding-left:0%;
+    padding-right:0%;
+    padding-top:4px;
+    padding-bottom:1%;
+    margin-bottom:80em;
+    font-size:60%;
+    width: 180px;
+    margin-right:6em;
 }
 
-section h1 span {
-    opacity: 0;
+/* fin du header*/
+
+.formulaire {
+    position: relative;
 }
 
 input[type=text] {
@@ -204,67 +191,25 @@ input[type=submit] {
     justify-content: center;
 }
 
-
-
 input[type=submit]:hover {
     background-color: gray;
-}
-
-input[type=value] {
-    padding-left: 50%;
-    padding-right: 5%;
 }
 
 .motdepasse{
     font-size: 80%;
     text-decoration:underline;
     margin-top:2em;
+    position: relative;
 }
 
-.inscription{
-    border: solid white;
-    background:rgba(255,255,255,0);
-    margin-top:1.4em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin-left:34.5%;
-    margin-right:34.5%;
-    font-size:100%;
-}
-
-.creationcompteheader {
-    border: solid white;
-    background:rgba(255,255,255,0);
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:4px;
-    padding-bottom:1%;
-    margin-bottom:80em;
-    font-size:60%;
-    width: 180px;
-    margin-right:6em;
-}
-
-.connexionheader {
-    border:solid grey;
-    background:grey;
-    color:black;
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
-    padding-top:4px;
-    padding-bottom:1%;
-    margin-bottom:80em;
-    font-size:60%;
-    width: 180px;
-    margin-right:6em;
+h2 { /* Se connecter */
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 footer p
 {
     color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
+    position: fixed; bottom: 2%; left: 73%; right: 0;
 }

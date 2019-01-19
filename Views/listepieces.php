@@ -73,10 +73,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                             ');
                         }
                     }
-              ?>          
-            
-
-            
+              ?>                
         </div>
 
             <?php
@@ -88,9 +85,5 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
         ?>
 
     </section>
-
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
-    
 </body> 
+</html>

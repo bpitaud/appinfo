@@ -67,14 +67,14 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
        			<input type="email" name="email" placeholder="'.$utilisateur[0][3].'"/>
       			<input type="text" name="nom" placeholder="'.$utilisateur[0][1].'" />
                 <input type="text" name="prenom" placeholder="'.$utilisateur[0][2].'" />
-                <select name="'.$utilisateur[0][4].'">
-                        <option value="féminin"> Masculin </option>	
-                       <option value="féminin"> Féminin </option>	
+                <select name="genre" placeholder="'.$utilisateur[0][4].'"  >
+                        <option value="masculin"> Masculin </option>	
+                       <option value="feminin"> Féminin </option>	
        				</select>
                 <input type="text" name="naissance" placeholder="'.$utilisateur[0][5].'" />
                 <input type="text" name="telephone" placeholder="'.$utilisateur[0][6].'" />
       				<input type="text" name="adresse" placeholder="'.$utilisateur[0][7].'" />
-                      <select name="'.$utilisateur[0][8].'" >	
+                      <select name="pays" placeholder="'.$utilisateur[0][8].'" >	
        					<option value="france"> France </option>
        					<option value="royaume-Uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>

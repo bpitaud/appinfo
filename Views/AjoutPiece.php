@@ -40,8 +40,4 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
 		</div>
     </section>
     
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
-    
 </body>

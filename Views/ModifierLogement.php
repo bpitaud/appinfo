@@ -39,7 +39,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
       				<input type="text" name="adresse" placeholder="'.$logement[0][2].'" />
        				<input type="text" name="codepostale" placeholder="'.$logement[0][3].'" />
        				<input type="text" name="surface" placeholder="'.$logement[0][4].'" >
-       				<select name="'.$logement[0][6].'" >
+       				<select name="pays" placeholder="'.$logement[0][6].'" >
        					<option value="france"> France </option>
        					<option value="royaume-uni"> Royaume-Uni </option>
        					<option value="espagne"> Espagne </option>
@@ -67,10 +67,6 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                 </div>
 		</div>
     </section>
-    
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
     
 </body>
 </html>

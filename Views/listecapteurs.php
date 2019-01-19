@@ -302,10 +302,6 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
         ?>
 
 </section>
-
-    <footer>
-    	<p> WEBAC © Tous droits réservés </p>
-    </footer>
     
 </body>
 </html>

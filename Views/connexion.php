@@ -36,8 +36,11 @@
             </nav>
         </div>
     </header>
-    <h1> Se connecter </h1>
+
+   
+    
     <div class="formulaire">
+    <h2> Se connecter </h2>
     <form method="post" action="../controllers/FormulaireConnexion.php">
     <?php
 		try {
@@ -57,6 +60,7 @@
     <div class="motdepasse"> 
         <a href="../Views/mdp_oublie.php"> Mot de passe oublié </a> 
     </div>
+
 
     <footer>
     	<p> WEBAC © Tous droits réservés </p>

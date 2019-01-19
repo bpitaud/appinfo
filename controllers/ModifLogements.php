@@ -2,6 +2,10 @@
 
 session_start();
 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
 require_once('../Models/logements.php');
 
 function test_input($data) {
@@ -15,23 +19,22 @@ function RecupLogement($logementID){
 
 }
 
-$nom = $adresse = $codepostale = $surface = $pays = "" ;
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nom'])){
     $nom = test_input($_POST["nom"]);
     }
     if (isset($_POST['adresse'])){
-    $prenom = test_input($_POST["adresse"]);
+    $adresse = test_input($_POST["adresse"]);
     }
     if (isset($_POST['codepostale'])){
-    $email = test_input($_POST["codepostale"]);
+    $codepostale = test_input($_POST["codepostale"]);
     }
+
     if (isset($_POST['surface'])){
-    $genre = test_input($_POST["surface"]);
+    $surface = test_input($_POST["surface"]);
     }
     if (isset($_POST['pays'])){
-    $naissance = test_input($_POST["pays"]);
+    $pays = test_input($_POST["pays"]);
     }
 
     if (isset($_GET['log']) && $_GET['log'] != '') {
@@ -40,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $logementID = $_SESSION['selected_logement'];
-    $logement = RecupLogementsbyID($logementID);
     $modif = false;
 
     if (isset($nom)&& trim($nom)!=""){

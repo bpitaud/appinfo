@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = input_test($_POST["nom"]);
     }
     if (isset($_POST['surface'])){
-    $genre = input_test($_POST["surface"]);
+    $surface = input_test($_POST["surface"]);
     }
     if (isset($_GET['piece']) && $_GET['piece'] != '') {
       $_SESSION['selected_piece'] = $_GET['piece'];

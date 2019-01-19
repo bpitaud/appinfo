@@ -51,4 +51,8 @@ session_start();
         </div>
     </header>
 
+    <footer>
+    	<p> WEBAC © Tous droits réservés </p>
+    </footer>
+
 </html>

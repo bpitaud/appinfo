@@ -16,6 +16,7 @@ body{
 
 h2 {
     text-align: center;
+    font-size: 40px;
     padding-top: 10%;
 }
 
@@ -23,9 +24,8 @@ em{
     text-align: center;
 }
 
-
 .page{
-    border: 2px solid white;
+    border: none;
     margin-top: 5%;
     height: 200px;
     display: flex;
@@ -40,22 +40,21 @@ em{
 }
 
 #coneteneur1{
-    border: 2px solid white;
     background: url("../Images/iconemaison.png") no-repeat 30% center ;
+    background-size: 3%;
+    padding-top: 15px;
 }
 
 #coneteneur2{
-    border: 2px solid white;
     background: url("../Images/iconetel.svg") no-repeat 35% center ;
+    background-size: 3%;
+    padding-top: 15px;
+
 }
 
 #coneteneur3{
-    border: 2px solid white;
     background: url("../Images/iconemail.png") no-repeat 30% center ;
+    background-size: 3%;
+    padding-top: 15px;
 }
 
-footer p
-{
-    color: rgba(255, 255, 255, 0.8);
-    position: absolute; bottom: 2%; left: 73%; right: 0;
-}

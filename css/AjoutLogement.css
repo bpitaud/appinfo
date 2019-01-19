@@ -99,12 +99,3 @@ input[type=submit]:hover {
     color: rgba(255, 255, 255, 0.9);
     opacity: 1; /* Firefox */
 }
-
-footer p
-{
-    width: 300px;
-    color: rgba(255, 255, 255, 0.8);
-    position: absolute; top: 94.2%; left: 70.3% ; right: 0;
-    margin-bottom: 2%;
-    font-size: 14px;
-}

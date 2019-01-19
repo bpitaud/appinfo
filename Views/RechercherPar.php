@@ -25,9 +25,11 @@
             </div>
           </div>
 				</li>
-				<li><a href="../controllers/deconnexion.php"><p>Deconnexion</p></a></li>
 			</ul>    
   </div>
+  <div class="deconnexion">
+	  <a  href="../controllers/deconnexion.php"><p>Deconnexion</p></a>
+</div>
 </header>
 
 					<h2>Rechercher par :</h2>
