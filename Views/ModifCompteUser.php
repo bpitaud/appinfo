@@ -1,5 +1,8 @@
 <?php
 session_start();
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//   header("Location: connexion.php");
+// }
 ?> 
 
 <!DOCTYPE html>
@@ -7,7 +10,7 @@ session_start();
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/ModifCompteUser.css" />
-    <title> Modification de Compte </title>
+    <title> Domisep - Modification de mes informations </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>
   </head>

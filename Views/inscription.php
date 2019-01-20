@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/inscription.css" />
-    <title> Inscription </title>
+    <title> Domisep - Inscription </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
@@ -47,12 +48,11 @@
     	<div class="info">
         <form method="post" action="../controllers/FormulaireInscription.php">
         <?php
-		try {
-			$error = $_GET['inscription'];
+			$error = test_input($_GET['inscription']);
 			if (isset($error) && $error == "error") {
-				echo "<p style='color:red'>L'email existe déjà ou les mots de passe ne sont pas identiques. </p>";
-			}
-		} catch (Exception $e) {}
+                echo "<p style='color:red'>L'email existe déjà ou les mots de passe ne sont pas identiques. </p>";
+            }
+		
 	?>
       			<input type="text" name="nom" placeholder="NOM" required />
                 <input type="text" name="prenom" placeholder="PRENOM" required/>

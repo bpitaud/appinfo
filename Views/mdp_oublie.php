@@ -1,9 +1,25 @@
+<?php
+session_start();
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/mdp_oublie.css" />
-    <title>Mot de passe oublié</title>
+    <title>Domisep - Mot de passe oublié</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -47,7 +63,7 @@
         <h1>Mot de passe oublié<span>.................</span></h1>
         
         <?php
-                $envoi= $_GET['envoi'];
+                $envoi= test_input($_GET['envoi']);
                 if (isset($envoi)) {
                     if ($envoi == "ok") {
                         echo "<p style='color:white;'>Vous avez reçu un nouveau mot de passe par mail.</p>";

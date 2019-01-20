@@ -4,6 +4,10 @@ session_start();
 if (isset($_GET['user']) && $_GET['user'] != '') {
     $_SESSION['selected_user'] = $_GET['user'];
 }
+
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +23,13 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     <body>
 
     <h2> Mes informations </h2>
-
     <?php
-                $modif = $_GET['modif'];
+                require_once ('../controllers/ModifInfosUser.php');
+                $modif = test_input($_GET['modif']);
                 if (isset($modif)) {
                     if ($modif == "true") {
                         echo "<p style='color:white;'>Vos informations ont été modifié.</p>";
-                    } else {
+                    } else if ($modif == "false") {
                         echo "<p style='color:red;'>Vos informations n'ont pas été modifié.</p>";
                     }
                 }
@@ -34,7 +38,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     <section>
     <div class="info">
         <?php
-        require_once ('../controllers/ModifInfosUser.php');
         $utilisateurID = $_SESSION['utilisateurID'];
         $utilisateur = RecupInfoUser($utilisateurID);
         foreach ($utilisateur as $utilisateur) {
@@ -58,9 +61,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
                         <input  value="Supprimer le compte" type="submit">
                     </form>   
                 
-
-
-
 
 <a href="../Views/listelogements.php"> <input type="button" value="Annuler"></a>               
 <a href="../Views/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               

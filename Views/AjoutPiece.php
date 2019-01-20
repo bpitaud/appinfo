@@ -4,7 +4,9 @@ session_start();
 if (isset($_GET['log']) && $_GET['log'] != '') {
     $_SESSION['selected_logement'] = $_GET['log'];
 }
-
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/AjoutPiece.css" />
-    <title>Ajout d'une pièce</title>
+    <title>Domisep - Ajout d'une pièce</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>
 </head>

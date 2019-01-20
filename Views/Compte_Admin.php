@@ -5,6 +5,10 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     $_SESSION['selected_user'] = $_GET['user'];
 }
 
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +30,12 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     <h2>Compte</h2>
 
     <?php
-                $modif = $_GET['modif'];
+                require_once ('../controllers/FormulaireRechercherPar.php');
+                $modif = test($_GET['modif']);
                 if (isset($modif)) {
                     if ($modif == "true") {
                         echo "<p style='color:white;'>Vos informations ont été modifié.</p>";
-                    } else {
+                    } else if ($modif == "false")  {
                         echo "<p style='color:red;'>Vos informations n'ont pas été modifié.</p>";
                     }
                 }
@@ -41,7 +46,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     <section>
     	<div class="info">
         <?php
-        require_once ('../controllers/FormulaireRechercherPar.php');
         $utilisateurID = $_SESSION['selected_user'];
         $utilisateur = RecupUserID($utilisateurID);
         echo'

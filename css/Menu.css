@@ -4,8 +4,9 @@ display: flex;
 flex-direction: row;
 justify-content: space-around;
 margin-top: 15%;
-}
+margin-right: 15%;
 
+}
 
 #conteneur1
 {
@@ -13,7 +14,6 @@ margin-top: 15%;
 	background-size: 100%;
     background-color: rgba(0,0,0,0.6);
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 0.2px solid rgba(255,255,255,0.6);
@@ -29,7 +29,6 @@ margin-top: 15%;
     background-size: 100%;
 	background-color: rgba(0,0,0,0.6);
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 0.2px solid rgba(255,255,255,0.6);

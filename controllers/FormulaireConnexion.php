@@ -1,4 +1,8 @@
 <?php
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
  
 require_once('../Models/user.php');
 session_start();
@@ -23,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
     $IdentifiantsOK = VerifIdentifiants($email,$mdp);
     if ($IdentifiantsOK){ // email et mdp valides
+      $_SESSION['connexion'] = 1;
+      //var_dump($_SESSION['connexion']);
       $resultat = RecupUserByEmail($email);
       $_SESSION['utilisateurID'] = $resultat[0][0]; // création session à partir de l'ID utilisateur // récupérer l'utilisateur par le mail
       $logements = Possede_logements($resultat[0][0]);// faire une fonction pour checker si l'utilisateur a des logements
@@ -39,11 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     }
     else { // rester sur la page connexion car identifiants non valides
+      $_SESSION['connexion'] = 0;
       header('Location: ../Views/connexion.php?connexion=error');
 
-    }
-       
+    }      
 }
+
+
 
 
 ?>

@@ -4,7 +4,9 @@ session_start();
 if (isset($_GET['user']) && $_GET['user'] != '') {
     $_SESSION['selected_user'] = $_GET['user'];
 }
-
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/ModifCompte.css" />
-    <title> Modification de Compte </title>
+    <title> Modification d'un compte utilisateur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_admin.php') ?>
   </head>

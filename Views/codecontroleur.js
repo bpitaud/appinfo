@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.figure').on('click', function () {
+    $('.img').on('click', function () {
   
   
             $(this).css('display','none');
@@ -18,5 +18,6 @@ $(document).ready(function () {
             );
     });
   
+  
     });
-
+  

@@ -5,6 +5,11 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     $_SESSION['selected_piece'] = $_GET['piece'];
 }
 
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +17,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/AjoutCapteur.css" />
-    <title>Ajout d'un Capteur</title>
+    <title>Domisep - Ajout d'un Capteur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>
 </head>
@@ -50,3 +55,4 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     </section>
     
 </body>
+</html>

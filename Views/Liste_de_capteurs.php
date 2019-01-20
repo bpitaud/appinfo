@@ -8,7 +8,19 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
   $_SESSION['selected_capteur'] = $_GET['controleur'];
 }
 
- ?>
+
+// function tes($data) {
+//   $data = trim($data);
+//   $data = stripslashes($data);
+//   $data = htmlspecialchars($data);
+//   return $data;
+// }
+
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//   header("Location: connexion.php");
+// }
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +30,6 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
     <title> Recherche d'un capteur</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="ListeCapteurAdmin.js"></script>
     <?php include('header_admin.php') ?>
 
   </head>
@@ -37,7 +48,8 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
       <form method="post" action="../controllers/RechercheCapteur.php">
 
       <?php
-			$error = $_GET['recup'];
+      require_once('../controllers/RechercheCapteur.php');
+			$error = test_input($_GET['recup']);
 			if (isset($error) && $error == "error") {
         echo "<p style='color:red'>Le capteur n'existe pas. </p>";
 			}	
@@ -69,7 +81,6 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
     <th>Etat</th>
   </tr>
   <?php
-  require_once('../controllers/RechercheCapteur.php');
   $capteur = JoinCapteurModel($_GET['capteur'], $_GET['user']);
   if (!$capteur) {
     $capteur = JoinControleurModel($_GET['controleur'], $_GET['user']);
@@ -99,14 +110,12 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
   
   } else {
     
-		try {
-			$error = $_GET['recherche'];
+			$error = test_input($_GET['recherche']);
 			if (isset($error) && $error == "error") {
 				echo "<p style='color:red'>Ce capteur n'existe pas.</p>";
-			}
-		} catch (Exception $e) {}
-	
-  }
+      }
+    }
+      
   ?>
 <p id="change_etat" >
 <?php

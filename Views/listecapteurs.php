@@ -5,6 +5,10 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     $_SESSION['selected_piece'] = $_GET['piece'];
 }
 
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +20,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="codecapteur.js"></script>
+        <script src="codecontroleur.js"></script>
         <?php include('header_user.php') ?>
 
     </head>
@@ -39,29 +44,29 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     ?>
 
 <?php
-                $modif = $_GET['modif'];
+                $modif = input_test($_GET['modif']);
                 if (isset($modif)) {
                     if ($modif == "true") {
                         echo "<p style='color:white;'>Votre capteur a bien été modifié.</p>";
-                    } else {
+                    } else if ($modif == "false") {
                         echo "<p style='color:red;'>Votre capteur n'a pas été modifié.</p>";
                     }
                 }
                 ?>
 
 <?php
-                $supp = $_GET['supp'];
+                $supp = input_test($_GET['supp']);
                 if (isset($supp)) {
                     if ($supp == "true") {
                         echo "<p style='color:white;'>Votre capteur a bien été supprimé.</p>";
-                    } else {
+                    } else if ($supp == "false"){
                         echo "<p style='color:red;'>Votre capteur n'a pas été supprimé.</p>";
                     }
                 }
                 ?>
 
 <?php
-                $supp = $_GET['capteur'];
+                $supp = input_test($_GET['capteur']);
                 if (isset($supp)) {
                     if ($supp == "existe") {
                         echo "<p style='color:red;'>Ce capteur existe déjà pour vous ou un autre utilisateur.</p>";
@@ -247,50 +252,117 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                 }
                 foreach ($controleurs as $controleurs) {
                     $type=$controleurs[2];
+                    $etat =$controleurs[3];
 
-                    if ($type == 'chauffage'){
-                        if ($controleurs[3] == true) {
-                            echo '
+                    if ($etat == '0') {
+                        echo '
+                    <div class="'.$controleurs[0].' block"> 
+                        
+                        <div  class="fig show">
+                        <p><a href = "#"><img src="../Images/Capteur/off/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
+                        <br/><br/> OFF </p>
+                        </p>
+                    </div>
+                        <div class="caractère"> 
+                        <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                            '.$controleurs[1].'
+                       
+                        <div class = "compteur">
+                            <div class="img image-up">
+                            <form action="../controllers/changementetatcontroleur.php" method="post">
+                            <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
+                            <input type="hidden" value="add_etat" name="up" id="up"/>
+                            <button type="submit" name ="up"> <img src="../Images/sort-up.png" style="height:20px;width:20px;" alt="Submit"></button>
+                            </form>
+                            </div>
+                            
+                             
+                                <div id="number">'.$etat.'</div>
+                            
+                                
+                        </div>
+
+                        
+                    </div>';}
+
+                    else if ($etat == '5') {
+                    
+                    echo '
+                    <div class="'.$controleurs[0].' block"> 
+                        <div class="fig show">
+                            <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
+                            <br/><br/> ON </p>
+                            </p>
+                        </div>
+                        
+                        
+                        <div class="caractère"> 
+                        <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
+                            '.$controleurs[1].' 
+                        
+                            
+                                                      
+
+                            <div class = "compteur">
+                            
+                            <div class="img image-down">
+                            <form action="../controllers/changementetatcontroleur.php" method="post">
+                            <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
+                            <input type="hidden" value="del_etat" name="down" id="down"/>
+                            <button type="submit" name ="down"> <img src="../Images/sort-down.png" style="height:20px;width:20px;" alt="Submit"></button>
+                            </form>
+                            </div>
+                             
+                            <div id="number">'.$etat.'</div>
+                            
+                                
+                        </div>
+                    </div>';}
+
+                    else {
+                    
+                        echo '
                         <div class="'.$controleurs[0].' block"> 
-                            <div class="component-on figure show">
+                            <div class="fig show">
                                 <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
                                 <br/><br/> ON </p>
                                 </p>
                             </div>
-                            <div  class="component-off figure hide">
-                            <p><a href = "#"><img src="../Images/Capteur/off/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
-                            <br/><br/> OFF </p>
-                            </p>
-                        </div>
+                           
+                            
                             <div class="caractère"> 
                             <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
-                                '.$controleurs[1].'
-                            </div>
-                        </div>';}
-                        else {
-                            echo '
-                        <div class="'.$controleurs[0].' block"> 
-                            <div class="component-on figure hide">
-                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
-                                <br/><br/> ON </p>
-                                </p>
-                            </div>
-                            <div  class="component-off figure show">
-                            <p><a href = "#"><img src="../Images/Capteur/off/iconeChauffage.png" alt="photo de chauffage"width="128" height="128"/></a>
-                            <br/><br/> OFF </p>
-                            </p>
-                        </div>
-                            <div class="caractère"> 
-                            <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
-                                '.$controleurs[1].'
-                            </div>
-                        </div>';}
-                        }
-                    }        
-                }
+                                '.$controleurs[1].' 
+                                                          
 
-                ?>        
-            </div>
+                                <div class = "compteur">
+                            <div class="img image-up">
+                            <form action="../controllers/changementetatcontroleur.php" method="post">
+                            <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
+                            <input type="hidden"  value="add_etat" name="up" id="up"/>
+                            <button type="submit" name ="up" > <img src="../Images/sort-up.png" style="height:20px;width:20px;" alt="Submit"></button>
+                            </form>
+                            </div>
+                            <div class="img image-down">
+                            <form action="../controllers/changementetatcontroleur.php" method="post">
+                            <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
+                            <input type="hidden" value="del_etat" name="down" id="down"/>
+                            <button type="submit" name ="down"> <img src="../Images/sort-down.png" style="height:20px;width:20px;" alt="Submit"></button>
+                            </form>
+                            </div>
+                             
+                            <div id="number">'.$etat.'</div>
+                            
+                                
+                        </div>
+                        </div>';}
+                    }
+                }        
+            
+
+            ?> 
+           
+        </div>
         
 
             <?php

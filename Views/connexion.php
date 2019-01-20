@@ -1,9 +1,26 @@
+<?php
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+session_start();
+$_SESSION["connexion"] = 0;
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/connexion.css" />
-    <title>connexion</title>
+    <title>Domisep - Connexion</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -43,12 +60,11 @@
     <h2> Se connecter </h2>
     <form method="post" action="../controllers/FormulaireConnexion.php">
     <?php
-		try {
-			$error = $_GET['connexion'];
+			$error = test_input($_GET['connexion']);
 			if (isset($error) && $error == "error") {
 				echo "<p style='color:red'>Email ou mot de passe incorrect.</p>";
 			}
-		} catch (Exception $e) {}
+		 
 	?>
    				<p>
        				<input type="text" name="email" placeholder="Entrer votre adresse mail" required/>

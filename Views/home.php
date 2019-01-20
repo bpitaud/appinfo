@@ -1,9 +1,21 @@
+<?php
+session_start();
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/home.css" />
-    <title>Accueil</title>
+    <title>Domisep - Accueil</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -40,11 +52,11 @@
         <h1 id="titre"> Gardez le contrôle <br> de votre logement </h1>
 
         <?php
-                $supp = $_GET['supp'];
+                $supp = test_input($_GET['supp']);
                 if (isset($supp)) {
                     if ($supp == "true") {
                         echo "<p style='color:white;'>Votre compte a bien été supprimé.</p>";
-                    } else {
+                    } else if ($supp == "false") {
                         echo "<p style='color:red;'>Votre compte n'a pas été supprimé.</p>";
                     }
                 }

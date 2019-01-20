@@ -4,6 +4,9 @@ session_start();
 if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
     $_SESSION['selected_capteur'] = $_GET['capteur'];
 }
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 
 ?>
 
@@ -12,7 +15,7 @@ if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/ModifControleur.css" />
-    <title>Ajout d'un Logement</title>
+    <title>Domisep - Modification d'un Capteur </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>
 </head>

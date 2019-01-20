@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0 or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +15,7 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/listelogementcss.css" />
-        <title>Domisep - Liste des pièces</title>
+        <title>Domisep - Liste des logements</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <?php include('header_user.php') ?>
     </head>
@@ -20,22 +27,23 @@ session_start();
     <section>
 
     <?php
-                $modif = $_GET['modif'];
+    require_once('../controllers/FormulaireAjoutLogement.php');
+                $modif = test_input($_GET['modif']);
                 if (isset($modif)) {
                     if ($modif == "true") {
                         echo "<p style='color:white;'>Votre logement a bien été modifié.</p>";
-                    } else {
+                    } else if ($modif =="false") {
                         echo "<p style='color:red;'>Votre logement n'a pas été modifié.</p>";
                     }
                 }
                 ?>
     
     <?php
-                $supp = $_GET['supp'];
+                $supp = test_input($_GET['supp']);
                 if (isset($supp)) {
                     if ($supp == "true") {
                         echo "<p style='color:white;'>Votre logement a bien été supprimé.</p>";
-                    } else {
+                    } else if ($modif =="false") {
                         echo "<p style='color:red;'>Votre logement n'a pas été supprimé.</p>";
                     }
                 }
@@ -43,7 +51,6 @@ session_start();
                 
     <div id="zonelogement"> 
     <?php
-    require_once('../controllers/FormulaireAjoutLogement.php');
         $logement = RecupLogementController($_SESSION["utilisateurID"]);
         foreach ($logement as $logement){
             echo(
