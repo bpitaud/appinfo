@@ -19,43 +19,11 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="ListeCapteurAdmin.js"></script>
+    <?php include('header_admin.php') ?>
 
   </head>
 
   <body>
-
-<header>
-	<div class="wrapper">
-
-        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
-          <div class="haut">  	
- 			<ul>
- 				<div class="haut_droite">
- 				<li>
- 					
-            <div class="dropdownLang">
-            <div class="noHover">
-              <p>FR</p>
-              </div>
-              <div class="hover">
-                <p>FR</p>
-                <a href="english.html"> EN </a>
-            </div>
-            </div>
-            <?php
-          require_once('../controllers/FormulaireRechercherPar.php');
-          $utilisateurID = $_SESSION['selected_user'];
-          $utilisateur = RecupUserID($utilisateurID);
-          echo '
-          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
-          ?>
- 				</div>
-                <li><a class="quitter" href="../Views/RechercherPar.php"><span>Quitter</span></a></li>
-			</ul>
-        </div>
-    </div>
-</header>
-
     
 <?php
     echo '

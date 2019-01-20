@@ -32,49 +32,52 @@
 </div>
 </header>
 
-					<h2>Rechercher par :</h2>
+<h2>Rechercher par :</h2>
 					
-					<?php
-                $supp = $_GET['supp'];
-                if (isset($supp)) {
-                    if ($supp == "true") {
-                        echo "<p style='color:white;'>Le compte utilisateur a bien été supprimé.</p>";
-                    } else {
-                        echo "<p style='color:red;'>Le compte utilisateur n'a pas été supprimé.</p>";
-                    }
-                }
-                ?>
+	<?php
+        $supp = $_GET['supp'];
+        if (isset($supp)) {
+            if ($supp == "true") {
+                echo "<p style='color:white;'>Le compte utilisateur a bien été supprimé.</p>";
+            } else {
+                echo "<p style='color:red;'>Le compte utilisateur n'a pas été supprimé.</p>";
+            }
+        }
+    ?>
     			
-    		<section>
-		<div class="formulaire">
-			<form method="post" action="../controllers/FormulaireRechercherPar.php">
-			
+<section>
+	<div class="formulaire">
+		<form method="post" action="../controllers/FormulaireRechercherPar.php">
 			<?php
-		try {
-			$error = $_GET['recherche'];
-			if (isset($error) && $error == "error") {
-				echo "<p style='color:red'>Utilisateur introuvable</p>";
-			}
-		} catch (Exception $e) {}
-	?>
+			try {
+				$error = $_GET['recherche'];
+				if (isset($error) && $error == "error") {
+					echo "<p style='color:red'>Utilisateur introuvable</p>";
+				}
+			} catch (Exception $e) {}
+			?>
    				
-      					<label for="name">Numéro de téléphone</label>
-      					<input type="text" name="telephone" >
-      					
-      					<label for="message">Adresse email</label>
-								<input type="text" name="email">
+      		<label for="name">Numéro de téléphone</label>
+			<input type="text" name="telephone" >
+			  
+      		<label for="message">Adresse email</label>
+			<input type="text" name="email">
 								
-								<label for="numero">Numéro de capteur</label>
-								<input type="text" name="capteurID">
+			<label for="numero">Numéro de capteur</label>
+			<input type="text" name="capteurID">
 								
 
-								<input type="submit" value="Valider">
+			<input type="submit" value="Valider">
    				      
-			</form>
-		</div>
+		</form>
+	</div>
 
-			</section>
+</section>
+	
+<footer>
+    <p> WEBAC © Tous droits réservés </p>
+</footer>
                 
-    	</body>
+</body>
 		
 </html>

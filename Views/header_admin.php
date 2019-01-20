@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['user']) && $_GET['user'] != '') {
+    $_SESSION['selected_user'] = $_GET['user'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,45 +18,41 @@
 
   <body>
 
-<header>
-	<div class="wrapper">
-    <h1><strong>DOMISEP</strong><br/>Administrateur</h1> 	
-   		<ul>
-   			<li> 					
+  <header>
+  <div class="wrapper">
+
+        <h1><strong>DOMISEP</strong><br/>Administrateur</h1>
+        <div class="haut">    
+      <ul>
+        <div class="haut_droite">
+        <li>
           <div class="dropdownLang">
-            <div class="noHover">
-              <p>FR</p>
-            </div>
-            <div class="hover">
-              <p>FR</p>
-              <a href="english.html"> EN </a>
-            </div>
+              <div class="noHover">
+                  <p>FR</p>
+              </div>
+              <div class="hover">
+                <p>FR</p>
+                <a href="english.html"> EN </a>
+              </div>
           </div>
-        </li>
+          </li>
+          <?php
+          require_once('../controllers/FormulaireRechercherPar.php');
+          $utilisateurID = $_SESSION['selected_user'];
+          $utilisateur = RecupUserID($utilisateurID);
+          echo '
+          <li><p class="admin"> SAV Client : '.$utilisateur[0][3].'</p></li>';
+          ?>
+        </div>
+          <li><a class="quitter" href="../Views/RechercherPar.php"><span>Quitter</span></a></li>
       </ul>
-   		<p class="admin"> SAV Client : ADRESSE.EMAIL@mail.com</p>
-   			
-      <a class="quitter" href="../Views/RechercherPar.php"><span>Quitter</span></a>
-  </div>
+        </div>
+    </div>
 </header>
-
-    <nav>
-    	<a href="../Views/Menu.html">Menu</a>/<span id="compte_link">Compte</span>
-    </nav>
-    
-
-    <section>
-
-
-
-
-    </section>
-    
-
-
-    <footer>
-    	<p> Connecté en tant que : ADRESSE_EMAIL_ADMIN</p>
-    </footer>
+   
+<footer>
+    	<p> WEBAC © Tous droits réservés </p>
+</footer>
 
 
   </body>
