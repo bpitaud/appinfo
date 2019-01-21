@@ -10,23 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if (isset($controleur) & isset($_POST['up'])) {
 
-        while ($etat < 6){
-            $etat +=1;
-            ModifEtatControleur($controleur, $etat);
+        if ($etat[0][0] == "0") {
+            ModifEtatControleur($controleur, "1");
+        } else if ($etat[0][0] == "1") {
+            ModifEtatControleur($controleur, "2");
+        } else if ($etat[0][0] == "2") {
+            ModifEtatControleur($controleur, "3");
+        } else if ($etat[0][0] == "3") {
+            ModifEtatControleur($controleur, "4");
+        } else if ($etat[0][0] == "4") {
+            ModifEtatControleur($controleur, "5");
         }
-
-
-        // if ($etat[0][0] == "0") {
-        //     ModifEtatControleur($controleur, "1");
-        // } else if ($etat[0][0] == "1") {
-        //     ModifEtatControleur($controleur, "2");
-        // } else if ($etat[0][0] == "2") {
-        //     ModifEtatControleur($controleur, "3");
-        // } else if ($etat[0][0] == "3") {
-        //     ModifEtatControleur($controleur, "4");
-        // } else if ($etat[0][0] == "4") {
-        //     ModifEtatControleur($controleur, "5");
-        // }
 
 
 
@@ -54,4 +48,4 @@ function testinput($data) {
     return $data;
 }
 
-header("Location: ../Views/Listecapteurs.php?user=".$_SESSION['selected_user']);
+header("Location: ../Views/Listecapteurs.php?piece=".$_SESSION['selected_piece']);

@@ -47,13 +47,6 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
 
       <form method="post" action="../controllers/RechercheCapteur.php">
 
-      <?php
-      require_once('../controllers/RechercheCapteur.php');
-			$error = test_input($_GET['recup']);
-			if (isset($error) && $error == "error") {
-        echo "<p style='color:red'>Le capteur n'existe pas. </p>";
-			}	
-	    ?>
           <p>
                 <input type="text" name="capteurID" placeholder="numéro de capteur">
           </p>
@@ -67,6 +60,26 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
                     </form>   
                 </div>
       </div>
+
+      <?php
+      require_once('../controllers/RechercheCapteur.php');
+			$error = test_input($_GET['recup']);
+			if (isset($error) && $error == "error") {
+        echo "<p style='color:red'>Le capteur n'existe pas. </p>";
+      }	
+      
+      $supp = test_input($_GET['supp']);
+			if (isset($supp) && $supp == "true") {
+        echo "<p style='color:white'>Le capteur a été supprimé </p>";
+			}	else if (isset($supp) && $supp == "false") {
+        echo "<p style='color:red'>Le capteur n'a pas été supprimé ou n'existe pas. </p>";
+      }
+
+      $none = test_input($_GET['capteur']);
+			if (isset($none) && $none == "none") {
+        echo "<p style='color:red'>Vous n'avez pas sélectionné de capteur. </p>";
+			}	
+	    ?>
      
   
 
@@ -95,7 +108,7 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
      
       <?php
       $etat=$capteur['etat'];
-      if ($etat == '1'){
+      if ($etat == '1' or $etat == '2' or $etat == '3' or $etat == '4' or $etat == '5' ){
         echo'
           <td>ON</td>';
       }

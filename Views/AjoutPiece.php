@@ -30,7 +30,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
             ?>
     	</p>
     	</div>
-		<h1>Ajouter une pièce<span>.................</span></h1>
+		<h1>Ajouter une pièce<span>............</span></h1>
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutPiece.php">
    				<p>

@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         $etat = RecupEtatControleur($capteur, $etat);
                         if ($etat[0][0] == "0") {
                             ModifEtatControleur($capteur, "1");
-                        } else {
+                        } else if ($etat[0][0] == "1" or $etat[0][0] == "2" or $etat[0][0] == "3" or $etat[0][0] == "4" or $etat[0][0] == "5") {
                             ModifEtatControleur($capteur, "0");
                         }
                         header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteur);
@@ -40,6 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 }
             }
         }
+    } else {
+        header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=none");
     }
 }
     

@@ -33,7 +33,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
             ?>
     	</p>
     	</div>
-		<h1>Ajouter un capteur<span>.................</span></h1>
+		<h1>Ajouter un capteur<span>.......</span></h1>
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutCapteur.php">
    				<p>

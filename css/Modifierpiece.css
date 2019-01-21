@@ -53,6 +53,7 @@ section a:hover {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 input[type=text] { /* infos de la pièce à modifier */
@@ -67,6 +68,7 @@ input[type=text] { /* infos de la pièce à modifier */
     box-sizing: border-box;
     background-color: rgba(0,0,0,0);
     text-align: left;
+    font-size: 1em;
 }
 
 .bouton{ /* div des boutons valider et annuler */ 
@@ -88,6 +90,7 @@ input[type=text] { /* infos de la pièce à modifier */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 a[type=submit] {  /* bouton annuler*/
@@ -103,35 +106,7 @@ a[type=submit] {  /* bouton annuler*/
     border-radius: 4px;
     cursor: pointer;
     text-decoration: underline;
-}
-
-input[type=test] {
-    
-    width: 30%;
-    background-color: LightGray;
-    color: black;
-    padding: 5px 5px;
-    margin-left: 20%;
-    margin-right: auto;
-    margin-top: 40px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-a[type=test] {
-    
-    width: 30%;
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 5px 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: underline;
+    font-size: 1em;
 }
 
 input[type=submit]:hover {

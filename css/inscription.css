@@ -263,10 +263,14 @@ select {
 
 }
 
-footer p
+footer 
 {
     color: rgba(255, 255, 255, 0.8);
-    position: fixed; bottom: 0; left: 73%; right: 0;
+    position: fixed; bottom: 3%; left: 68%; right: 0;
+}
+
+footer span:hover {
+    text-decoration: underline;
 }
 
 

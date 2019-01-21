@@ -58,7 +58,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
                       
 
             <div id="test">
-    			<button class="bouton" href="../Compte_Admin.php?user='.$_SESSION['selected_user'].'">Annuler</button>
+    			<a input="submit" href="../Views/Compte_Admin.php?user='.$_SESSION['selected_user'].'">Annuler</a>
                 <button class="bouton" type="submit">Valider</button>
             </div>
             </p>

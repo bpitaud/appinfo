@@ -298,10 +298,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                         
                         <div class="caractère"> 
                         <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
-                            '.$controleurs[1].' 
-                        
-                            
-                                                      
+                            '.$controleurs[1].'                          
 
                             <div class = "compteur">
                             
@@ -319,7 +316,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                         </div>
                     </div>';}
 
-                    else {
+                    else if ($etat == '1' or $etat=='2' or $etat=='3' or $etat=='4') {
                     
                         echo '
                         <div class="'.$controleurs[0].' block"> 

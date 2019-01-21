@@ -41,7 +41,7 @@ Pour les personnes morales :
 <p>Pour les personnes physiques : </p>
 Le site domisep.website est édité par Alexis BdB, Charlotte B, William C, Emma G, Bruno P.
 <br> </br>
-</h3 > ARTICLE 3 : accès aux services </h3>
+<h3 > ARTICLE 3 : accès aux services </h3>
 <br> </br>
 L’Utilisateur du site domisep.website a accès aux services suivants :
 <p>•	Ajout, modification et suppression d’un logement ;</p>

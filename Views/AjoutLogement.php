@@ -29,7 +29,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
             </a>
     	</p>
     	</div>
-		<h1>Ajouter un logement<span>.................</span></h1>
+		<h1> Ajouter un logement</h1>
 		<div class="formulaire">
 			<form method="post" action="../controllers/FormulaireAjoutLogement.php">
    				<p>

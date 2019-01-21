@@ -44,6 +44,7 @@ input[type=text] { /* nom du capteur */
     box-sizing: border-box;
     background-color: rgba(0,0,0,0);
     text-align: left;
+    font-size: 1em;
 }
 
 .bouton input[type=submit] { /*bouton valider*/
@@ -57,6 +58,7 @@ input[type=text] { /* nom du capteur */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 
@@ -80,6 +82,7 @@ input[type=text] { /* nom du capteur */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 a[type=submit] { /* bouton annuler */
@@ -95,6 +98,7 @@ a[type=submit] { /* bouton annuler */
     border-radius: 4px;
     cursor: pointer;
     text-decoration: underline;
+    font-size: 1em;
 }
 
 input[type=submit]:hover { /* quand on survole le bouton valider*/
