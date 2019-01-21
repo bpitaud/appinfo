@@ -22,7 +22,7 @@ session_start();
         <h2>Nous contacter</h2>
         <div class="page">
 		<div id="coneteneur1">
-        <p>35 rue Notre-Dame des champs,</br> Paris, 75006,France</p>
+        <p>23 rue Notre-Dame des champs,</br> Paris, 75006,France</p>
         </div>
         <div id="coneteneur2">
         <p>+33 (0) 1 55 09 24 92</p>

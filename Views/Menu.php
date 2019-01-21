@@ -40,12 +40,9 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
 			
 				<a href = "../Views/Compte_Admin.php?user='.$_SESSION["selected_user"].'"><div id="conteneur1">
 					<div class="element1">Compte</div>
-					<!--<img src="../Images/compte.png" alt="Compte" />-->
 				</div></a>
 			
 				<a href = "../Views/Liste_de_capteurs.php?user='.$_SESSION["selected_user"].'"><div id="conteneur2">
-
-					<!--<img src="../Images/House.png" alt="House" />-->
 					<div class="element2">Capteurs</div>
 				</div></a>
 			</div>';

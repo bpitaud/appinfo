@@ -14,6 +14,7 @@
 {
 display: flex;
 flex-direction: row;
+justify-content: space-around;
 margin-top: 10%;
 }
 
@@ -29,7 +30,6 @@ margin-top: 10%;
     padding-bottom: 4%;
     width: 250px;
     height:220px;
-    margin-left: 120%;
 }
 
 
@@ -45,8 +45,7 @@ margin-top: 10%;
     padding-bottom: 4%;
     width: 250px;
     height:220px;
-    margin-left: 190%;
-    
+    margin : auto;
 
 }
 

@@ -17,13 +17,13 @@ body{
 .wrapper { /* classe du header sauf "domisep" */
     display: flex;
     position : fixed; 
-    margin-left: 300px; 
+    margin-left : 650px;
 }
 
 .domisep { /* division titre domisep */
     display :flex;
     flex-direction: row;
-    position: absolute; 
+    position: fixed; 
 }
 
 ul { /* unordered list avec Home Langues et menu user les 3 ensemble*/
