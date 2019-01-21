@@ -16,11 +16,7 @@ session_start();
 </head>
 
 <body>
-<header>
-<h1>DOMISEP</h1>
-</header> 
-
-
+ 
     <section>
     	<div class="retour">
             <a href="javascript:history.go(-1)">< Retour</a>
