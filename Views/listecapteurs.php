@@ -15,7 +15,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../css/codecapteur.css" />
+        <link rel="stylesheet" href="../css/listecapteurs.css" />
         <title>Domisep - Liste des capteurs</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
