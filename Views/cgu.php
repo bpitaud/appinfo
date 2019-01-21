@@ -12,8 +12,9 @@ session_start();
     <link rel="stylesheet" href="../css/cgu.css" />
     <title>Domisep - Conditions Générales d'Utilisation</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+    <?php include('header_user.php') ?>
 </head>
+
 <body>
 <header>
 <h1>DOMISEP</h1>
@@ -22,10 +23,11 @@ session_start();
 
     <section>
     	<div class="retour">
-    	<p>
-           <a href='../Views/listelogements.php'> < Retour </a> </div>
-    	</p>
-    	</div>
+            <a href="javascript:history.go(-1)">< Retour</a>
+    	    <!-- <form>
+                <input type = "button" value = "Retour"  onclick = "history.go(-1)">
+            </form>  -->
+        </div>
         <h1>Conditions Générales d'utilisation</h1>
         
 		

@@ -49,11 +49,6 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
         </div>
     </div>
 </header>
-   
-<footer>
-    	<p> WEBAC © Tous droits réservés <a href="../Views/Mentions_legales.php?user=<?php echo''.$_SESSION['selected_user'].'';?>" ><span>Mentions légales</span> </a><a href = "../Views/cgu.php?user=<?php echo''.$_SESSION['selected_user'].'';?>" ><span>CGU</span></p>
-</footer>
-
 
   </body>
 </html>

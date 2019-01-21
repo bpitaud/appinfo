@@ -22,6 +22,16 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
 	</head>
 	
 		<body>
+		
+		<div class="retour">
+    		<p>
+            <?php
+            echo'
+    		<a href="../Views/RechercherPar.php"> < Retour		
+            </a>';
+            ?>
+    	</p>
+    	</div>
 	
 			<?php
 			$utilisateurID = $_SESSION['selected_user'];
