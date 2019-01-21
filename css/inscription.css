@@ -20,7 +20,7 @@ body{
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
-   
+    /* margin-left: 300px; */
     
     
 }

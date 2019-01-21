@@ -40,3 +40,7 @@ section h1 {
     margin-left: 5%;
     margin-top : 3%;
 }
+
+.retour:hover {
+    text-decoration: underline;
+}

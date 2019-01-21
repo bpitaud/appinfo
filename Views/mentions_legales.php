@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
-    header("Location: connexion.php");
-}
-
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -14,23 +13,16 @@ if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESS
     <link rel="stylesheet" href="../css/cgu.css" />
     <title>Domisep - Mentions Légales</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+    <?php include('header_user.php') ?>
 </head>
 <body>
-<header>
-<h1>DOMISEP</h1>
-</header> 
-
 
     <section>
-    	<div class="retour">
-    	<p>
-           <a href='../Views/listelogements.php'> < Retour </a> </div>
-    	</p>
-    	</div>
+    <div class="retour">
+            <a href="javascript:history.go(-1)">< Retour</a>
+        </div>
         <h1>Mentions Légales</h1>
-        
-		
+	
     </section>
     
 </body>

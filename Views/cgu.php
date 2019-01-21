@@ -20,9 +20,6 @@ session_start();
     <section>
     	<div class="retour">
             <a href="javascript:history.go(-1)">< Retour</a>
-    	    <!-- <form>
-                <input type = "button" value = "Retour"  onclick = "history.go(-1)">
-            </form>  -->
         </div>
         <h1>Conditions Générales d'utilisation</h1>
         
