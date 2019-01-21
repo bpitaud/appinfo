@@ -29,8 +29,8 @@ function test_input($data) {
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
-                <ul>
-                    <li><a href="../Views/connexion.php"><span>Home</span></a></li>
+                
+                    <a href="../Views/connexion.php"><span>Home</span></a>
                     <div class="creationcompteheader">
                             <a href="../Views/inscription.php"> Créer un Compte </a>
                             
@@ -38,7 +38,7 @@ function test_input($data) {
                     <div class="connexionheader">
                         <a href="../Views/connexion.php"> Se connecter </a> </div>
 
-                    <li>
+                    
                         <div class="dropdownLang">
                             <div class="noHover">
                                 <p>FR</p>
@@ -48,8 +48,7 @@ function test_input($data) {
                                 <a href="english.html"> EN </a>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    
             </nav>
         </div>
     </header>

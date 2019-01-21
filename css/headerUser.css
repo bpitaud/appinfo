@@ -15,14 +15,13 @@ body{
 }
 
 .wrapper { /* classe du header sauf "domisep" */
-    display: flex;
+    display: inline-block;
     position : fixed; 
-    margin-left : 650px;
+    right : 5%;
 }
 
 .domisep { /* division titre domisep */
     display :flex;
-    flex-direction: row;
     position: fixed; 
 }
 
@@ -42,6 +41,7 @@ header{ /* intégralité du header*/
     margin-top: 20px;
     text-align: center;
     font-size: 15px;
+    margin-right: 0px;
 }
 
 header li { /* élement de la liste un par un */
@@ -128,10 +128,32 @@ header a:hover span { /* quand on passe sur Home il est souligné*/
 footer 
 {
     color: rgba(255, 255, 255, 0.8);
-    position: fixed; bottom: 3%; left: 62%; right: 0;
+    position: fixed; bottom: 3%; right: 5%;
 }
 
 footer span:hover {
     text-decoration: underline;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3C4459; 
+  }
 

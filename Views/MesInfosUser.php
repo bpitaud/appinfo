@@ -54,8 +54,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     			<em class="number">'.$utilisateur[9].'<br/></em>
                 </p>';}
                 ?>
-                
-                    <form action="../controllers/SuppUser.php" 
+                <form action="../controllers/SuppUser.php" 
                     method="post" onsubmit="return confirm
                     ('Etes-vous sûr de vouloir supprimer votre compte?')">
                         <input  value="Supprimer le compte" type="submit">
@@ -63,9 +62,12 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
                 
 
 <a href="../Views/listelogements.php"> <input type="button" value="Annuler"></a>               
-<a href="../Views/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>               
-
+<a href="../Views/ModifCompteUser.php"> <input type="button" value="Modifier mes informations"></a>   
 			
+                             
+        </div>
+
+        
 </section>  
     
 </body>

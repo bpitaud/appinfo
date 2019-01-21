@@ -27,7 +27,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
     		<p>
             <?php
             echo'
-    		<a href="../Views/RechercherPar.php"> < Retour		
+    		<a href="../Views/ConfClient.php"> < Retour		
             </a>';
             ?>
     	</p>

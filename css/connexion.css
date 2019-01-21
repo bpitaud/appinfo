@@ -17,19 +17,16 @@ body{
 
 .wrapper { /* division de tout le header */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap; 
+    /* flex-wrap: nowrap;  */
     position: fixed;
 }
 
-
-ul { /* liste des éléments  */ 
+nav { /* liste des éléments  */ 
     display: flex;
-    flex-direction: row;
-    margin-left: 60px;
-}
-
+    justify-content: space-between;
+    margin-bottom:80%;
+} 
 
 h1 { /* Domisep */
     font-size: 45px;
@@ -38,23 +35,17 @@ h1 { /* Domisep */
     font-weight: bold;
 }
 
-
 header{ /* caractéristique header */
     height: 100px;
+    width : 400px;
     margin-top: 20px;
-    margin-right: 0;
-}
-header nav { 
-    display: flex;
-    align-items: center;
-    flex: 0 1 40%; 
 }
 
-header li {
+/* header div {
     width: 150px;
     line-height: 30px;
     padding: 20px;
-}
+} */
 
 header a:hover {
     font-weight: bold;   
@@ -99,12 +90,8 @@ header a:hover span {
 .creationcompteheader {
     border: solid white;
     background:rgba(255,255,255,0);
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
     padding-top:4px;
     padding-bottom:1%;
-    margin-bottom:80em;
     font-size:60%;
     width: 180px;
     margin-right:6em;
@@ -114,15 +101,10 @@ header a:hover span {
     border:solid grey;
     background:grey;
     color:black;
-    margin-top:1.7em;
-    padding-left:0%;
-    padding-right:0%;
     padding-top:4px;
     padding-bottom:1%;
-    margin-bottom:80em;
     font-size:60%;
     width: 180px;
-    margin-right:6em;
 }
 
 /* fin du header*/
