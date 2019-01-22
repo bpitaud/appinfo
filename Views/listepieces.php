@@ -84,7 +84,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
             <?php
             echo'
             </div>
-            <a href="../Views/AjoutPiece.php?log='.$_SESSION['selected_logement'].'"> <div class="ajoutpiece">
+            <div class="ajoutpiece"> <a href="../Views/AjoutPiece.php?log='.$_SESSION['selected_logement'].'"> 
              <p>+  Ajouter une pièce</p>  
         </div></a>';
         ?>

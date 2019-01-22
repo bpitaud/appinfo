@@ -365,7 +365,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
             <?php
             echo'
             </div>
-            <a href="../Views/AjoutCapteur.php?piece='.$_SESSION['selected_piece'].'"> <div class="ajoutcapteur">
+            <div class="ajoutcapteur"><a href="../Views/AjoutCapteur.php?piece='.$_SESSION['selected_piece'].'"> 
              <p>+  Ajouter un capteur</p>  
         </div></a>';
         ?>

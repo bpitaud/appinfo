@@ -73,7 +73,7 @@ session_start();
     }
     ?>
     </div>
-        <a href="../Views/AjoutLogement.php"> <div class="ajoutlogement">
+    <div class="ajoutlogement"> <a href="../Views/AjoutLogement.php"> 
 
              <p>+  Ajouter un logement</p>  
         </div></a>

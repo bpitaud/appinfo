@@ -48,4 +48,4 @@ function testinput($data) {
     return $data;
 }
 
-header("Location: ../Views/Listecapteurs.php?piece=".$_SESSION['selected_piece']);
+header("Location: ../Views/listecapteurs.php?piece=".$_SESSION['selected_piece']);
