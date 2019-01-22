@@ -38,8 +38,8 @@ section
     width: 35%;
     min-width: 280px;
     border: 0px white solid;
-    padding: 2px;
-    height: 500px;
+    /* padding: 2px; */
+    height: 100%;
     align-items : stretch;
     line-height: 100%;
 }
