@@ -176,6 +176,10 @@ section .retour {
     text-align: center;
 }
 
+.ajoutpiece p {
+    margin: auto;
+}
+
 
 /* width */
 ::-webkit-scrollbar {
