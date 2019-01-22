@@ -173,7 +173,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             echo '
                         <div class="'.$capteur[1].' block">
                             <div class="component-on figure show">
-                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
+                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de camera"width="128" height="128"/></a>
                                 <br/><br/> ON </p>
                             </div>
                             <div  class="component-off figure hide">
