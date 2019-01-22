@@ -1,8 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once("../Models/logements.php");
+require_once __DIR__.'/../Models/logements.php';
 
 function test_input($data) {
   $data = trim($data);
@@ -20,13 +21,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           $suppLogement = SuppLogement($logement); 
       }
   
-    if ($suppLogement == true) { 
-      header("Location: ../Views/Listelogements.php?supp=true");   
-    }
-    else {
-      header("Location: ../Views/Listelogements.php?supp=false");
-    }  
-  
+      if ($suppLogement == true) { 
+        if ($langue =='fr'){
+          header("Location: ../Views/Listelogements.php?supp=true");   
+        } else {
+          header("Location: ../Views/english/Listelogements.php?supp=true");   
+        }
+      } else {
+        if ($langue =='fr'){
+          header("Location: ../Views/Listelogements.php?supp=false");   
+        } else {
+          header("Location: ../Views/english/Listelogements.php?supp=false");   
+        }
+      }   
   }
 
 ?>

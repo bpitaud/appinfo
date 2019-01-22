@@ -1,7 +1,11 @@
 <?php
-require_once("../Models/pieces.php");
+require_once __DIR__.'/../Models/pieces.php';
+require_once __DIR__ .'/../Models/logements.php';
+
 
 session_start();
+
+$langue = $_SESSION['language'];
 
 function test_input($data) {
     $data = trim($data);
@@ -26,10 +30,22 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $logementID = $_SESSION['selected_logement'];
     $pieceID = uniqid();
     ajoutPiece($pieceID, $nom,$surface,$logementID);
-    header('Location: ../Views/listepieces.php?log='.$_SESSION['selected_logement']);
+    if ($langue =='fr'){
+        header('Location: ../Views/listepieces.php?log='.$_SESSION['selected_logement']);
+    } else {
+        header('Location: ../Views/english/listepieces.php?log='.$_SESSION['selected_logement']);
+    }
 }
 
 function RecupPieceController($logementID){
     return RecupPiece($logementID);
+}
+
+function LogementID($logementID){
+    return RecupLogementsbyID($logementID);
+}
+
+function RecupPieceID($pieceID){
+return RecupPiecebyID($pieceID);
 }
 ?>

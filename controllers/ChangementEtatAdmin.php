@@ -5,7 +5,9 @@
 
 session_start();
 
-require_once ('../Models/capteurs.php');
+$langue = $_SESSION['language'];
+
+require_once __DIR__.'/../Models/capteurs.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $changement = testinput($_POST['changement']);
@@ -21,7 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     } else {
                         ModifEtatCapteur($capteur, "0");
                     }
-                    header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur);
+                    if ($langue =='fr'){
+                        header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur); 
+                      } else {
+                        header("Location: ../Views/english/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteur);
+                      }
                 }
             }
         } else if ($recupCapteur == false) {
@@ -35,13 +41,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         } else if ($etat[0][0] == "1" or $etat[0][0] == "2" or $etat[0][0] == "3" or $etat[0][0] == "4" or $etat[0][0] == "5") {
                             ModifEtatControleur($capteur, "0");
                         }
-                        header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteur);
+                        if ($langue =='fr'){
+                            header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteur); 
+                          } else {
+                            header("Location: ../Views/english/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteur);
+                          }
                     }
                 }
             }
         }
     } else {
-        header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=none");
+        if ($langue =='fr'){
+            header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=none"); 
+          } else {
+            header("Location: ../Views/english/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=none");
+          }
     }
 }
     

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['language'] ='fr';
 $_SESSION["connexion"] = 0;
 
 function test_input($data) {
@@ -47,7 +48,7 @@ function test_input($data) {
                             </div>
                             <div class="hover">
                                 <p>FR</p>
-                                <a href="english.html"> EN </a>
+                                <a href="../Views/english/connexion.php"> EN </a>
                             </div>
                         </div>
                     </li>

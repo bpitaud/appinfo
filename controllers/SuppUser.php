@@ -1,8 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once("../Models/user.php");
+require_once __DIR__.'/../Models/user.php';
 
 function test_input($data) {
   $data = trim($data);
@@ -21,13 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $suppUser = SuppUtilisateur($utilisateur); 
       }
   
-    if ($suppUser == true) { 
-      header("Location: ../Views/home.php?supp=true");   
-    }
-    else {
-      header("Location: ../Views/home.php?supp=false");
-    }  
-  
+
+      if ($suppUser == true) { 
+        if ($langue =='fr'){
+          header("Location: ../Views/home.php?supp=true");   
+        } else {
+          header("Location: ../Views/english/home.php?supp=true");   
+        }
+      } else {
+        if ($langue =='fr'){
+          header("Location: ../Views/home.php?supp=false");   
+        } else {
+          header("Location: ../Views/english/home.php?supp=false");   
+        }
+      } 
   }
 
 ?>

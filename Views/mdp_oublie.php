@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['language'] ='fr';
 
 function test_input($data) {
     $data = trim($data);
@@ -44,7 +45,7 @@ function test_input($data) {
                             </div>
                             <div class="hover">
                                 <p>FR</p>
-                                <a href="english.html"> EN </a>
+                                <a href="../Views/english/mdp_oublie.php"> EN </a>
                             </div>
                         </div>
                     </li>

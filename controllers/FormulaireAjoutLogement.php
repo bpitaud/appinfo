@@ -1,5 +1,5 @@
 <?php
-require_once("../Models/logements.php");
+require_once __DIR__ .'/../Models/logements.php';
 
 session_start();
 
@@ -9,6 +9,8 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
   }
+
+$langue = $_SESSION['language'];
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,8 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $utilisateurID = $_SESSION['utilisateurID'];
     $logementID = uniqid();
     ajoutLogement($logementID,$nom,$adresse,$codepostale,$surface,$utilisateurID,$pays); // ajout dans la database 
-    header('Location: ../Views/listelogements.php?user='.$utilisateurID);  
-    }     
+    if ($langue =='fr'){
+      header('Location: ../Views/listelogements.php?user='.$utilisateurID); 
+    } else {
+      header('Location: ../Views/english/listelogements.php?user='.$utilisateurID);     
+    }
+  }     
 
 
 function RecupLogementController($utilisateurID){

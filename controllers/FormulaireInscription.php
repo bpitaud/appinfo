@@ -1,8 +1,9 @@
 <?php
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once("../Models/user.php");
+require_once __DIR__.'/../Models/user.php';
 require_once("../controllers/mail.php");
 
 $nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
@@ -22,12 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_existe = Verif_email($email);
     if ($mdp == $confirme_mdp && !$email_existe) {
         ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
+        if ($langue =='fr'){
         EnvoiMailInscription ($email,$prenom);
-        header('Location: ../Views/connexion.php');
+        } else {
+        SendMailRegistration ($email,$prenom);
+        }
+        if ($langue =='fr'){
+            header('Location: ../Views/connexion.php');
+        } else {
+            header('Location: ../Views/english/connexion.php');
+        }
 
     }
      else {
-        header('Location: ../Views/inscription.php?inscription=error');
+         if ($langue =='fr'){
+            header('Location: ../Views/inscription.php?inscription=error');
+        } else {
+            header('Location: ../Views/english/inscription.php?inscription=error');
+        }
      }
 
 }

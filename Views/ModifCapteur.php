@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['language'] ='fr';
 
 if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
     $_SESSION['selected_capteur'] = $_GET['capteur'];

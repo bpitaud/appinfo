@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['language'] ='fr';
 
 if (isset($_GET['log']) && $_GET['log'] != '') {
     $_SESSION['selected_logement'] = $_GET['log'];

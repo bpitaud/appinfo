@@ -4,6 +4,8 @@ session_start();
 if (isset($_GET['log']) && $_GET['log'] != '') {
     $_SESSION['selected_logement'] = $_GET['log'];
 }
+
+$_SESSION['language'] ='fr';
 // if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
 //     header("Location: connexion.php");
 // }

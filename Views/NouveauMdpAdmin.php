@@ -1,6 +1,6 @@
 <?php 
-
 session_start();
+$_SESSION['language'] ='fr';
 
 if (isset($_GET['user']) && $_GET['user'] != '') {
     $_SESSION['selected_user'] = $_GET['user'];

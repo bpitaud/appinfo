@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$_SESSION['language'] ='fr';
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ session_start();
                             </div>
                             <div class="hover">
                                 <p>FR</p>
-                                <a href="english.html"> EN </a>
+                                <a href="../Views/english/listelogements.php"> EN </a>
                             </div>
                         </div>
                     </li>

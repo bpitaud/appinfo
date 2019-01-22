@@ -1,6 +1,7 @@
 <?php 
 session_start();
-require_once("../Models/capteurs.php");
+$langue = $_SESSION['language'];
+require_once __DIR__.'/../Models/capteurs.php';
 
 function test_input($data) {
   $data = trim($data);
@@ -46,11 +47,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($recup == true) { 
-    header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteurID);
+    if ($langue =='fr'){
+      header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteurID);
+    } else {
+      header("Location: ../Views/english/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&capteur=".$capteurID);
+    }
   } else if ($recup1 == true){
-    header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteurID);
+    if ($langue =='fr'){
+      header("Location: ../Views/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteurID);
+    } else {
+      header("Location: ../Views/english/Liste_de_capteurs.php?user=".$_SESSION['selected_user']."&controleur=".$capteurID);
+    }
   } else {
-    header("Location: ../Views/Liste_de_capteurs.php?recup=error&user=".$_SESSION['selected_user']);
+    if ($langue =='fr'){
+      header("Location: ../Views/Liste_de_capteurs.php?recup=error&user=".$_SESSION['selected_user']);
+    } else {
+      header("Location: ../Views/english/Liste_de_capteurs.php?recup=error&user=".$_SESSION['selected_user']);
+    }
   }  
 
 }

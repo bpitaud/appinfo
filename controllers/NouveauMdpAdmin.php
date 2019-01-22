@@ -1,8 +1,9 @@
 <?php
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once('../Models/user.php');
+require_once __DIR__.'/../Models/user.php';
 
 function test_input($data) {
     $data = trim($data);
@@ -38,11 +39,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-  if ($modif == true) {
-    header("Location: ../Views/Compte_Admin.php?modif=true");
-  } else {
-    header("Location: ../Views/Compte_Admin.php?modif=false");
-  }
+    if ($modif == true) {
+        if ($langue =='fr'){
+          header("Location: ../Views/Compte_Admin.php?modif=true");
+        } else {
+          header("Location: ../Views/english/Compte_Admin.php?modif=true");
+        } 
+      } else {
+        if ($langue =='fr'){
+          header("Location: ../Views/Compte_Admin.php?modif=false");
+        } else {
+          header("Location: ../Views/english/Compte_Admin.php?modif=false");
+        } 
+      }
 }
 
 ?>

@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+$_SESSION['language'] ='fr';
 
 function test($data) {
   $data = trim($data);

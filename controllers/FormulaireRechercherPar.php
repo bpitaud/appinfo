@@ -1,8 +1,9 @@
 <?php
 
-require_once("../Models/user.php");
-require_once("../Models/capteurs.php");
-
+require_once __DIR__.'/../Models/user.php';
+require_once __DIR__.'/../Models/capteurs.php';
+session_start();
+$langue = $_SESSION['language'];
 
 function test($data) {
   $data = trim($data);
@@ -59,9 +60,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($recup == true) {
-    header("Location: ../Views/ConfClient.php?user=".$recherche[0][0]);
+    if ($langue =='fr'){
+      header("Location: ../Views/ConfClient.php?user=".$recherche[0][0]);
+    } else {
+      header("Location: ../Views/english/ConfClient.php?user=".$recherche[0][0]);
+    }
   } else {
-    header("Location: ../Views/RechercherPar.php?recherche=error");
+    if ($langue =='fr'){
+      header("Location: ../Views/RechercherPar.php?recherche=error");
+    } else {
+      header("Location: ../Views/english/RechercherPar.php?recherche=error");
+    }
   }  
 }
 

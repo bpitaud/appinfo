@@ -1,12 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-
-require_once('../Models/logements.php');
+require_once __DIR__.'/../Models/logements.php';
 
 function test_input($data) {
     $data = trim($data);
@@ -80,11 +77,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-  if ($modif == true) {
-    header("Location: ../Views/listelogements.php?modif=true");
-  } else {
-    header("Location: ../Views/listelogements.php?modif=false");
-  }
+
+    if ($modif == true) {
+      if ($langue =='fr'){
+        header("Location: ../Views/listelogements.php?modif=true");
+      } else {
+        header("Location: ../Views/english/listelogements.php?modif=true");
+      } 
+    } else {
+      if ($langue =='fr'){
+        header("Location: ../Views/listelogements.php?modif=false");
+      } else {
+        header("Location: ../Views/english/listelogements.php?modif=false");
+      } 
+    }
 }
 
 ?>

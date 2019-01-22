@@ -5,6 +5,8 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     $_SESSION['selected_piece'] = $_GET['piece'];
 }
 
+$_SESSION['language'] ='fr';
+
 // if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
 //     header("Location: connexion.php");
 // }

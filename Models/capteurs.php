@@ -1,6 +1,6 @@
 <?php
  
- require_once("../Models/database.php");
+ require_once("database.php");
  
  
  // Ajouter un capteur

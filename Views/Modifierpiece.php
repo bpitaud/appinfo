@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['language'] ='fr';
 
 if (isset($_GET['piece']) && $_GET['piece'] != '') {
     $_SESSION['selected_piece'] = $_GET['piece'];

@@ -1,7 +1,7 @@
 <?php
 
-require_once("../Models/database.php");
-require_once("../Models/logements.php");
+require_once("database.php");
+require_once("logements.php");
 
 // ajouter un utilisateur à la base de données
 function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp){

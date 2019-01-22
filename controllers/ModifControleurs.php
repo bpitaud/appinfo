@@ -1,8 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once('../Models/capteurs.php');
+require_once __DIR__.'/../Models/capteurs.php';
 
 function test_input($data) {
     $data = trim($data);
@@ -36,9 +37,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
   if ($modif == true) {
-    header("Location: ../Views/listecapteurs.php?modif=true");
+    if ($langue =='fr'){
+      header("Location: ../Views/listecapteurs.php?modif=true");
+    } else {
+      header("Location: ../Views/english/listecapteurs.php?modif=true");
+    } 
   } else {
-    header("Location: ../Views/listecapteurs.php?modif=false");
+    if ($langue =='fr'){
+      header("Location: ../Views/listecapteurs.php?modif=false");
+    } else {
+      header("Location: ../Views/english/listecapteurs.php?modif=false");
+    } 
   }
 }
 

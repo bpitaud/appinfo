@@ -1,12 +1,7 @@
 <?php
-
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
  
-require_once('../Models/user.php');
+ require_once __DIR__.'/../Models/user.php';
 session_start();
-
 
 $email = $mdp = "";
 
@@ -16,6 +11,8 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
+$langue = $_SESSION['language'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -34,20 +31,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $logements = Possede_logements($resultat[0][0]);// faire une fonction pour checker si l'utilisateur a des logements
       if ($resultat[0][11]== 1){ // vérifie si c'est un admin 
         $_SESSION['admin'] = 1;
-        header('Location: ../Views/RechercherPar.php'); // si admin, diriger vers Rechercher Par
+        if ($langue =='fr'){
+          header('Location: ../Views/RechercherPar.php'); // si admin, diriger vers Rechercher Par
+        } else {
+          header('Location: ../Views/english/RechercherPar.php');
+        }
       } else {
         $_SESSION['admin'] = 0;
         if($logements){ // sinon , vérifie si cet utilisateur a des logements 
-        header('Location: ../Views/listelogements.php');
+          if ($langue =='fr'){
+            header('Location: ../Views/listelogements.php'); 
+          } else {
+            header('Location: ../Views/english/listelogements.php');
+          }
         } else {
-        header('Location: ../Views/premierlogement.php');
+          if ($langue =='fr'){
+            header('Location: ../Views/premierlogement.php'); 
+          } else {
+            header('Location: ../Views/english/premierlogement.php');
+          }
         }
       }
     }
     else { // rester sur la page connexion car identifiants non valides
       $_SESSION['connexion'] = 0;
-      header('Location: ../Views/connexion.php?connexion=error');
-
+      if ($langue =='fr'){
+        header('Location: ../Views/connexion.php?connexion=error'); // si admin, diriger vers Rechercher Par
+      } else {
+        header('Location: ../Views/english/connexion.php?connexion=error');
+      }
     }      
 }
 

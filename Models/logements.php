@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Models/database.php");
+require_once("database.php");
 
 // Ajouter un logement 
 function ajoutLogement($logementID, $nom, $adresse, $codepostale, $surface, $utilisateurID, $pays){

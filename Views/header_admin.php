@@ -4,6 +4,7 @@ session_start();
 if (isset($_GET['user']) && $_GET['user'] != '') {
     $_SESSION['selected_user'] = $_GET['user'];
 }
+$_SESSION['language'] ='fr';
 
 ?>
 
@@ -32,7 +33,7 @@ if (isset($_GET['user']) && $_GET['user'] != '') {
               </div>
               <div class="hover">
                 <p>FR</p>
-                <a href="english.html"> EN </a>
+                <a href="../Views/english/RechercherPar.php"> EN </a>
               </div>
           </div>
           </li>

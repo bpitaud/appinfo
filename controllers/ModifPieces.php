@@ -1,8 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once('../Models/pieces.php');
+require_once __DIR__.'/../Models/pieces.php';
 
 function input_test($data) {
     $data = trim($data);
@@ -47,11 +48,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     
 
-  if ($modif == true) {
-    header("Location: ../Views/listepieces.php?modif=true");
-  } else {
-    header("Location: ../Views/listepieces.php?modif=false");
-  }
+      if ($modif == true) {
+        if ($langue =='fr'){
+          header("Location: ../Views/listepieces.php?modif=true");
+        } else {
+          header("Location: ../Views/english/listepieces.php?modif=true");
+        } 
+      } else {
+        if ($langue =='fr'){
+          header("Location: ../Views/listepieces.php?modif=false");
+        } else {
+          header("Location: ../Views/english/listepieces.php?modif=false");
+        } 
+      }
 }
 
 ?>

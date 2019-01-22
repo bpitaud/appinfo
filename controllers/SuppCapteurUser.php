@@ -1,12 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-require_once("../Models/capteurs.php");
+require_once __DIR__.'/../Models/capteurs.php';
 
 function test_input($data) {
   $data = trim($data);
@@ -32,12 +29,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         }
     }
 
-  if ($suppCapteur or $suppControleur) { 
-    header("Location: ../Views/Listecapteurs.php?supp=true");   
-  }
-  else {
-    header("Location: ../Views/Listecapteurs.php?supp=false");
-  }  
+    if ($suppCapteur or $suppControleur) { 
+      if ($langue =='fr'){
+        header("Location: ../Views/listecapteurs.php?supp=true");   
+      } else {
+        header("Location: ../Views/english/listecapteurs.php?supp=true");   
+      }
+    } else {
+      if ($langue =='fr'){
+        header("Location: ../Views/listecapteurs.php?supp=false");   
+      } else {
+        header("Location: ../Views/english/listecapteurs.php?supp=false");   
+      }
+    }  
 }
 
 ?>

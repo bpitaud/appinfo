@@ -1,8 +1,9 @@
 <?php 
 
 session_start();
+$langue = $_SESSION['language'];
 
-require_once("../Models/pieces.php");
+require_once __DIR__.'/../Models/pieces.php';
 
 function test_input($data) {
   $data = trim($data);
@@ -20,13 +21,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           $suppPiece = suppPiece($piece); 
       }
   
-    if ($suppPiece == true) { 
-      header("Location: ../Views/Listepieces.php?supp=true");   
-    }
-    else {
-      header("Location: ../Views/Listepieces.php?supp=false");
-    }  
-  
+
+      if ($suppPiece == true) { 
+        if ($langue =='fr'){
+          header("Location: ../Views/Listepieces.php?supp=true");   
+        } else {
+          header("Location: ../Views/english/Listepieces.php?supp=true");   
+        }
+      } else {
+        if ($langue =='fr'){
+          header("Location: ../Views/Listepieces.php?supp=false");   
+        } else {
+          header("Location: ../Views/english/Listepieces.php?supp=false");   
+        }
+      }  
   }
 
 ?>

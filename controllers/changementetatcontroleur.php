@@ -2,6 +2,8 @@
 session_start();
 require_once __DIR__.'/../Models/capteurs.php';
 
+$langue = $_SESSION['language'];
+
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $controleur = testinput($_POST['controleur']);
@@ -47,5 +49,8 @@ function testinput($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
-header("Location: ../Views/listecapteurs.php?piece=".$_SESSION['selected_piece']);
+if ($langue =='fr'){
+    header("Location: ../Views/listecapteurs.php?piece=".$_SESSION['selected_piece']);
+} else {
+    header("Location: ../Views/english/listecapteurs.php?piece=".$_SESSION['selected_piece']);
+  }
