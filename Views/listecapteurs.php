@@ -266,8 +266,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                         <div class="caractère"> 
                         <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
                             '.$controleurs[1].'
-                       
-                        <div class = "compteur">
+                            
                             <div class="img image-up">
                             <form action="../controllers/changementetatcontroleur.php" method="post">
                             <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
@@ -278,11 +277,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             
                              
                                 <div id="number">'.$etat.'</div>
-                            
-                                
-                        </div>
-
-                        
+                            </div>
                     </div>';}
 
                     else if ($etat == '5') {
@@ -299,8 +294,6 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                         <div class="caractère"> 
                         <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
                             '.$controleurs[1].'                          
-
-                            <div class = "compteur">
                             
                             <div class="img image-down">
                             <form action="../controllers/changementetatcontroleur.php" method="post">
@@ -311,9 +304,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             </div>
                              
                             <div id="number">'.$etat.'</div>
-                            
-                                
-                        </div>
+                            </div>
                     </div>';}
 
                     else if ($etat == '1' or $etat=='2' or $etat=='3' or $etat=='4') {
@@ -325,14 +316,9 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                                 <br/><br/> ON </p>
                                 </p>
                             </div>
-                           
-                            
                             <div class="caractère"> 
                             <p><a href = "../Views/ModifControleur.php?capteur='.$controleurs[0].'"><img src="../Images/Capteur/off/iconereglageblanc.png" alt="logo réglage" width="39" height="39"/></a></p>
-                                '.$controleurs[1].' 
-                                                          
-
-                                <div class = "compteur">
+                                '.$controleurs[1].'                   
                             <div class="img image-up">
                             <form action="../controllers/changementetatcontroleur.php" method="post">
                             <input type="hidden" value='.$controleurs[0].' name="controleur" id="controleur"/>
@@ -349,16 +335,11 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
                             </div>
                              
                             <div id="number">'.$etat.'</div>
-                            
-                                
-                        </div>
+                            </div> 
                         </div>';}
                     }
                 }        
-            
-
-            ?> 
-           
+            ?>    
         </div>
         </section>
 

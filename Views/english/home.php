@@ -84,7 +84,7 @@ Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stati
 
 
 <footer>
-        <p> WEBAC © All rights reserved </p>
+    <p> WEBAC © All rights reserved <a href="../Views/Mentions_legales.php" ><span>Legal Notice</span> </a><a href = "../Views/cgu.php" ><span>Terms of service</span></a></p>
 </footer>
 
 </body>    

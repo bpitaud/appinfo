@@ -1,27 +1,9 @@
-* {
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color:white;
-    margin: 0;
-    padding: 0;
-
-}
-
-body{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/fond.png") fixed no-repeat center top;
-    background-color: black;
-    background-size: 100%;
-}
-
 section
 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     justify-content: space-around;
-     margin-bottom: 2%;
     margin: auto;
     overflow: auto;
     /* font-size: 20px; */
@@ -100,7 +82,7 @@ section
 
 
 #retour h2{
-     display: flex;
+    display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -123,16 +105,11 @@ section
     padding-bottom:0%;
     padding-right:7%;
     padding-left:7%;
-    margin-top: 0%;
-    margin-bottom:0%;
     font-size: 1em;
     text-align:center;
-   
     max-width: 180px;
     max-height: 180px;
-    
     width:23vw; height:23vw;
-    overflow:hidden;
    
 } 
 
@@ -144,12 +121,9 @@ section
     padding-bottom:0%;
     padding-right:7%;
     padding-left:7%;
-    margin-top: 0%;
-    margin-bottom:0%;
     font-size: 1em;
     text-align:center;
     width:23vw; height:23vw;
-    overflow:hidden;
     max-width: 180px;
     max-height: 180px;
    

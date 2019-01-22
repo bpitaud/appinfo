@@ -201,3 +201,13 @@ h2{
     margin-top:5em;
 }
 
+footer 
+{
+    color: rgba(255, 255, 255, 0.8);
+    position: relative; bottom: 3%; left: 65%; right: 0;
+}
+
+footer span:hover {
+    text-decoration: underline;
+}
+
