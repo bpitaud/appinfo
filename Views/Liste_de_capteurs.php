@@ -1,5 +1,5 @@
 <?php
-  session_start();
+session_start();
 
   if (isset($_GET['capteur']) && $_GET['capteur'] != '') {
     $_SESSION['selected_capteur'] = $_GET['capteur'];

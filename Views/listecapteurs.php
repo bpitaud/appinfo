@@ -360,7 +360,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
             ?> 
            
         </div>
-        
+        </section>
 
             <?php
             echo'
@@ -370,7 +370,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
         </div></a>';
         ?>
 
-</section>
+
     
 </body>
 </html>

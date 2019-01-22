@@ -6,7 +6,7 @@
     width: 100%;
     flex-wrap: wrap;
     margin-bottom: 1%;
-    height: 4500px;
+    height: 400px;
     overflow: auto;
 }
 
@@ -45,16 +45,17 @@
     align-items: center;
 }
 
+
+
 .figure {
     padding:5%;
     font-size:10em;
     border : 1px solid white;
     background-color: #3C4459;
-    padding-right:20px;
     text-align: center;
-    padding-bottom:10%;
-    width: 130px;
-    height: 130px;
+    max-width: 180px;
+    max-height: 180px;
+    width:23vw; height:23vw;
     overflow:hidden;
 
 }
@@ -81,16 +82,24 @@
 .Caractere {
     display: flex;
     flex-direction: row-reverse;
-    text-align: center;
+    text-align: left;
     margin-top:5%;
-    margin-right:28%;
+    
+    max-width: 200px;
+    min-width: 130px;
+    width:23vw;
 }
 
 .Caractere p{
     display: inline-block;
-    padding-left: 10px;
-    padding-top: 15px;
+    margin: auto 0 auto 0;
+    align-items: center;
+    text-align: center;
     
+}
+
+.Caractere a{
+    flex: 1 100 auto;
 }
 
 .caractère1 {
@@ -124,7 +133,7 @@ section h2 {
     justify-content: center;
     margin:auto;
     margin-bottom:2%;
-    margin-top:2%;
+    margin-top:1%;
 }
 
 section a {

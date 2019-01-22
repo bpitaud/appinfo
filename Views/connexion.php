@@ -1,6 +1,4 @@
 <?php
-
-
 session_start();
 $_SESSION["connexion"] = 0;
 

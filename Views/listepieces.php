@@ -66,7 +66,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                             echo ('
                             <div class="block" >
                                 <div class="figure">
-                                    <p> <a href = "../Views/listecapteurs.php?piece='.$piece[0].'" ><img src="../Images/iconesalon.png" alt="photo de salon" width="128" height="128"></p> 
+                                    <p> <a href = "../Views/listecapteurs.php?piece='.$piece[0].'" ><img src="../Images/iconesalon.png" alt="photo de salon" width="180" height="180"></p> 
                                 </div>
                                 <div class="Caractere"> 
                                     <p>'.$piece[1].'</p>
