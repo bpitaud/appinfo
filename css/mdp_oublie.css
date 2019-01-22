@@ -146,6 +146,8 @@ section h1 span {
     background-color: rgba(0,0,0,0);
     color: white;
     margin-left: 5%;
+    margin-top: 3%;
+    position: relative;
    
 }
 
@@ -172,22 +174,6 @@ input[type=email] {
     box-sizing: border-box;
     background-color: rgba(0,0,0,0);
     text-align: left;
-}
-
-select {
-	color : rgba(255, 255, 255, 0.9);
-    width:30%;
-    padding: 10px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    display : flex;
-    flex-direction: column;
-    border:none;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0);
-
 }
 
 input[type=submit] {

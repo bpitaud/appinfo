@@ -132,9 +132,8 @@ header a:hover span {
 }
 
 .connexionheader {
-    border:solid grey;
-    background:grey;
-    color:black;
+    border: solid white;
+    background:rgba(255,255,255,0);
     margin-top:1.7em;
     padding-left:0%;
     padding-right:0%;
@@ -143,6 +142,7 @@ header a:hover span {
     margin-bottom:80em;
     font-size:60%;
     width: 180px;
+    margin-right:6em;
 }
 .creationcompteheader {
     border: solid white;

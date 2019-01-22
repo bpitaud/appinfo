@@ -95,41 +95,6 @@ header a:hover span {
 }
 
 
-/* User scroll bar */
-.dropdown:hover #noHoverUser {
-    display: none;
-}
-.dropdown:hover #hoverUser {
-    display:block;
-    border-radius: 7px;
-    width: 150x;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.dropdown:hover #hoverUser p {
-    padding: 10px;
-    border-bottom: 1px solid white;
-    width: 100px;
-    margin: auto;
-}
-.dropdown:hover #hoverUser #borderNone {
-    border: none;
-}
-.boutonmenuprincipal {
-    background: rgba(0, 0, 0, 0) url("../Images/iconeuser.svg") no-repeat center center;
-    background-size: 30px;
-    padding: 20px;
-    height: 30px;
-    width: 150px;
-    border: none;
-}
-.dropdown #noHoverUser {
-    display: block;
-}
-.dropdown #hoverUser {
-    display: none;
-}
-
 .inscription{
     border: solid white;
     background:rgba(255,255,255,0);
@@ -144,8 +109,9 @@ header a:hover span {
 }
 
 .creationcompteheader {
-    border: solid white;
-    background:rgba(255,255,255,0);
+    border:solid grey;
+    background:grey;
+    color:black;
     margin-top:1.7em;
     padding-left:0%;
     padding-right:0%;
@@ -155,12 +121,12 @@ header a:hover span {
     font-size:60%;
     width: 180px;
     margin-right:6em;
+    
 }
 
 .connexionheader {
-    border:solid grey;
-    background:grey;
-    color:black;
+    border: solid white;
+    background:rgba(255,255,255,0);
     margin-top:1.7em;
     padding-left:0%;
     padding-right:0%;
