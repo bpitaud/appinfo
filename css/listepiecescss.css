@@ -1,3 +1,15 @@
+#divpiece 
+{
+    
+    margin-top: 0%;
+    margin:auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+    height: 4500px;
+    overflow: auto;
+}
+
 #pieces 
 {
     display:flex;
@@ -7,9 +19,7 @@
     margin:auto;
     width: 75%;
     flex-wrap: wrap;
-    margin-bottom: 2%;
-    height: 320px;
-    overflow: auto;
+
 }
 
 .block {
@@ -152,7 +162,7 @@ section .retour {
     padding-right:2.5%;
     margin: auto;
     margin-bottom: 3%;
-    margin-top: 2%; 
+    margin-top: 1%; 
     width: 300px;
     text-align: center;
 

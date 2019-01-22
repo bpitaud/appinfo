@@ -1,8 +1,5 @@
 <?php
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
 
 session_start();
 $_SESSION["connexion"] = 0;
@@ -25,12 +22,19 @@ function test_input($data) {
 </head>
 <body>
 
-	<header>
+
+
+
+
+</head>
+<body>
+
+    <header>
         <div class="wrapper">
             <h1>DOMISEP</h1>
             <nav>
-                
-                    <a href="../Views/connexion.php"><span>Home</span></a>
+                <ul>
+                    <li><a href="../Views/home.php"><span>Home</span></a></li>
                     <div class="creationcompteheader">
                             <a href="../Views/inscription.php"> Créer un Compte </a>
                             
@@ -38,7 +42,7 @@ function test_input($data) {
                     <div class="connexionheader">
                         <a href="../Views/connexion.php"> Se connecter </a> </div>
 
-                    
+                    <li>
                         <div class="dropdownLang">
                             <div class="noHover">
                                 <p>FR</p>
@@ -48,11 +52,11 @@ function test_input($data) {
                                 <a href="english.html"> EN </a>
                             </div>
                         </div>
-                    
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
-
    
     
     <div class="formulaire">

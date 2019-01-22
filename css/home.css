@@ -132,8 +132,9 @@ header a:hover span {
 }
 
 .connexionheader {
-    border: solid white;
-    background:rgba(255,255,255,0);
+    border:solid grey;
+    background:grey;
+    color:black;
     margin-top:1.7em;
     padding-left:0%;
     padding-right:0%;

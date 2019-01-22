@@ -1,8 +1,12 @@
+section
+{
+    height: 500px;
+    overflow: auto;
+    width: 100%;
+}
 #zonelogement
 {
     margin: auto;
-    height: 430px;
-    overflow: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

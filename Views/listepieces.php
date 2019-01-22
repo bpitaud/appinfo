@@ -55,7 +55,8 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                 }
                 
                 ?>
-    	<div id="pieces">
+    	<div id="divpiece">
+        <div id="pieces">
             <?php
                         $piece = RecupPieceController($_SESSION["selected_logement"]);
                         if (count($piece) == 0) {
@@ -78,6 +79,7 @@ if (isset($_GET['log']) && $_GET['log'] != '') {
                     }
               ?>                
         </div>
+    </div>
 
             <?php
             echo'
