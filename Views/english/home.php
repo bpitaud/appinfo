@@ -9,6 +9,7 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -67,10 +68,10 @@ function test_input($data) {
         <a href="#contact"><p> Contact us</p> </a>
 
 <div id="service">
-        <h2 > Nos services </h2>
-        <p>Sed fruatur sane hoc solacio atque hanc insignem ignominiam, quoniam uni praeter se inusta sit, putet esse leviorem, dum modo, cuius exemplo se consolatur, eius exitum expectet, praesertim cum in Albucio nec Pisonis libidines nec audacia Gabini fuerit ac tamen hac una plaga conciderit, ignominia senatus.
-Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset.
-Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stationibus servabantur agrariis, laevorsum flexo itinere Osdroenae subsederat extimas partes, novum parumque aliquando temptatum commentum adgressus. quod si impetrasset, fulminis modo cuncta vastarat. erat autem quod cogitabat huius modi.</p>
+        <h2 > Our services </h2>
+        <p> Domisep is a home automation company, thanks to our services you can now equip your home to have a connected home. <br/> With our sensors and controllers, you can remotely control many functions of your home. Your lights, cameras and alarm can be activated remotely. <br/> You can also change the temperature of each live room and know the humidity of your home. <br/>
+        Domisep accompanies you in your daily management.
+        Our After Sales Service is available 24 hours a day to facilitate your customer experience. </p>
 
 </div>
 
@@ -106,4 +107,5 @@ Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stati
 </footer>
 
 </body>    
+</html>  
 

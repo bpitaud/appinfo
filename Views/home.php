@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 session_start();
 $_SESSION['language'] ='fr';
 function test_input($data) {
@@ -68,9 +68,9 @@ function test_input($data) {
 
 <div id="service">
         <h2 > Nos services </h2>
-        <p>Sed fruatur sane hoc solacio atque hanc insignem ignominiam, quoniam uni praeter se inusta sit, putet esse leviorem, dum modo, cuius exemplo se consolatur, eius exitum expectet, praesertim cum in Albucio nec Pisonis libidines nec audacia Gabini fuerit ac tamen hac una plaga conciderit, ignominia senatus.
-Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset.
-Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stationibus servabantur agrariis, laevorsum flexo itinere Osdroenae subsederat extimas partes, novum parumque aliquando temptatum commentum adgressus. quod si impetrasset, fulminis modo cuncta vastarat. erat autem quod cogitabat huius modi.</p>
+        <p>Domisep est une entreprise de domotique, grâce à nos services vous pouvez dès à présent équiper votre domicile pour avoir une maison connectée.<br/> Avec nos capteurs et controllers, vous pourrez controler à distance de nombreuses fonctions de votre logement.            Vos lumières, vous caméras et alarme seront activables à distance.<br/> Vous pouvez aussi modifier la température de chaque pièce en direct et connaçitre l'humidité de votre logement. <br/>
+        Domisep vous accompagne dans votre gestion quotidienne.
+        Notre Service Après Vente est disponble 24h/24 afin de faciliter votre expérience client.</p>
 
 </div>
 
@@ -101,5 +101,5 @@ Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stati
 <footer>
     <p> WEBAC © Tous droits réservés |<a href="../Views/Mentions_legales.php" ><span> Mentions légales </span> </a> | <a href = "../Views/cgu.php" ><span>CGU </span></a></p>
 </footer>
-</body>    
-
+</body> 
+</html>

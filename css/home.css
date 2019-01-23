@@ -178,9 +178,17 @@ a p{
     width: 80%;
     margin: auto;
     padding-top: 130px;
+    line-height: 40px; 
+    overflow: auto;
+    text-align: justify;
 }
 
-p{text-align: left;}
+p{
+
+    text-align: left;
+    text-align: justify;
+    font-size: 16px;
+}
 
 h2{
     text-align: left;
@@ -203,7 +211,7 @@ h2{
 
 footer 
 {
-    width: 30%;
+    width: 35%;
     color: rgba(255, 255, 255, 0.8);
     position: relative; bottom: 3%; left: 65%; right: 0;
     /*border: 2px solid white;*/
@@ -215,13 +223,6 @@ footer span:hover {
    
 }
 
-
-
-
-
-
-
-
 #page{
     border: none;
     margin-top: 5%;
@@ -230,9 +231,8 @@ footer span:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-
 }
+
 #page p a{
     font-size: 20px;
 
