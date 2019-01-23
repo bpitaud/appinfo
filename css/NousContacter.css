@@ -38,6 +38,10 @@ em{
     padding: 7px;
 }
 
+#coneteneur1 p :hover{
+    text-decoration : underline ;
+}
+
 #coneteneur2{
     background: url("../Images/iconetel.svg") no-repeat 0% center ;
     text-align: left;
@@ -52,3 +56,6 @@ em{
     padding: 7px;
 }
 
+#coneteneur3 p :hover{
+    text-decoration : underline ;
+}
