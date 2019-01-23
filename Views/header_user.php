@@ -52,7 +52,7 @@ $_SESSION['language'] ='fr';
     </header>
 
     <footer>
-    	<p> WEBAC © Tous droits réservés <a href="../Views/Mentions_legales.php" ><span>Mentions légales</span> </a><a href = "../Views/cgu.php" ><span>CGU</span></a></p>
+    	<p> WEBAC © Tous droits réservés <a href="../Views/mentions_legales.php" ><span>Mentions légales</span> </a><a href = "../Views/cgu.php" ><span>CGU</span></a></p>
     </footer>
 
 </html>
