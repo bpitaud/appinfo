@@ -9,7 +9,7 @@ $_SESSION['language'] ='en';
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../css/cgu.css" />
-    <title>Domisep - Conditions Générales d'Utilisation</title>
+    <title>Domisep - Terms of Service</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
@@ -25,7 +25,7 @@ $_SESSION['language'] ='en';
  
     <section>
     	<div class="retour">
-            <a href="javascript:history.go(-1)">< Retour</a>
+            <a href="javascript:history.go(-1)">< Back</a>
         </div>
         <h1> Terms of Service of the web site domisep.website</h1>
 

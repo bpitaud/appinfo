@@ -9,7 +9,7 @@ $_SESSION['language'] ='en';
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../css/mentions_legales.css" />
-    <title>Domisep - Mentions Légales</title>
+    <title>Domisep - Legal Notice</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -25,7 +25,7 @@ $_SESSION['language'] ='en';
 
     <section>
     <div class="retour">
-            <a href="javascript:history.go(-1)">< Retour</a>
+            <a href="javascript:history.go(-1)">< Back</a>
         </div>
     <h1>Legal Notice</h1>
 
