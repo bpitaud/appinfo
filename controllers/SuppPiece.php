@@ -24,15 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
       if ($suppPiece == true) { 
         if ($langue =='fr'){
-          header("Location: ../Views/Listepieces.php?supp=true");   
+          header("Location: ../Views/listepieces.php?supp=true");   
         } else {
-          header("Location: ../Views/english/Listepieces.php?supp=true");   
+          header("Location: ../Views/english/listepieces.php?supp=true");   
         }
       } else {
         if ($langue =='fr'){
-          header("Location: ../Views/Listepieces.php?supp=false");   
+          header("Location: ../Views/listepieces.php?supp=false");   
         } else {
-          header("Location: ../Views/english/Listepieces.php?supp=false");   
+          header("Location: ../Views/english/listepieces.php?supp=false");   
         }
       }  
   }

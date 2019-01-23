@@ -23,15 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   
       if ($suppLogement == true) { 
         if ($langue =='fr'){
-          header("Location: ../Views/Listelogements.php?supp=true");   
+          header("Location: ../Views/listelogements.php?supp=true");   
         } else {
-          header("Location: ../Views/english/Listelogements.php?supp=true");   
+          header("Location: ../Views/english/listelogements.php?supp=true");   
         }
       } else {
         if ($langue =='fr'){
-          header("Location: ../Views/Listelogements.php?supp=false");   
+          header("Location: ../Views/listelogements.php?supp=false");   
         } else {
-          header("Location: ../Views/english/Listelogements.php?supp=false");   
+          header("Location: ../Views/english/listelogements.php?supp=false");   
         }
       }   
   }
