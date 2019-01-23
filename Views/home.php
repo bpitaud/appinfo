@@ -68,7 +68,7 @@ function test_input($data) {
 
 <div id="service">
         <h2 > Nos services </h2>
-        <p>Domisep est une entreprise de domotique et, grâce à nos services, vous pouvez dès à présent équiper votre domicile pour avoir une maison connectée.<br/> Avec nos capteurs et controleurs, vous pourrez contrôler à distance de nombreuses fonctions de votre logement.            Vos lumières, vos caméras et alarmes seront activables à distance.<br/> Vous pouvez aussi connaitre l'humidité et la température de votre logement. <br/>
+        <p>Domisep est une entreprise de domotique et, grâce à nos services, vous pouvez dès à présent équiper votre domicile pour avoir une maison connectée.<br/> Avec nos capteurs et controleurs, vous pourrez contrôler à distance de nombreuses fonctions de votre logement.            Vos lumières et vos caméras  seront activables à distance.<br/> Vous pouvez aussi connaitre l'humidité et la température de votre logement ainsi que changer le niveau de chauffage à distance. <br/>
         Domisep vous accompagne dans votre gestion quotidienne.
         Notre Service Après Vente est disponible 24h/24 afin de faciliter votre expérience client.</p>
 
