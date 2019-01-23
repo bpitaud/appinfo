@@ -214,7 +214,7 @@ function SuppControleur($controleurID){
     return true;
 }
 
-// join les tables controleur, pièce, logement, utilisateur 
+// rechercher un controleurID à partir d'un utilisateurID 
 function joinControleur($controleurID, $utilisateurID){
     $req = connect() -> prepare('SELECT
     controleur.controleurID as capteurID,
