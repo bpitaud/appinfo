@@ -8,9 +8,7 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-    header("Location: connexion.php");
-}
+
 ?>
 
 <!DOCTYPE html>
