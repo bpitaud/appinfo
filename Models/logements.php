@@ -79,4 +79,5 @@ function SuppLogement($logementID){
     //$resultat = $conn -> fetchAll(PDO::FETCH_NUM);
     return true;
 }
+
 ?>  
