@@ -6,9 +6,10 @@ $langue = $_SESSION['language'];
 require_once __DIR__.'/../Models/user.php';
 require_once("../controllers/mail.php");
 
-$nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
+$utilisateurID = $nom = $prenom = $email = $genre = $naissance = $telephone = $adresse = $pays = $codepostale = $mdp = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $utilisateurID = uniqid();
     $nom = test_input($_POST["nom"]);
     $prenom = test_input($_POST["prenom"]);
     $email = test_input($_POST["email"]);
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirme_mdp = test_input($_POST['conf_mdp']);
     $email_existe = Verif_email($email);
     if ($mdp == $confirme_mdp && !$email_existe) {
-        ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
+        ajoutUtilisateur($utilisateurID, $nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, mdp_hache($mdp));   
         if ($langue =='fr'){
         EnvoiMailInscription ($email,$prenom);
         } else {

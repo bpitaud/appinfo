@@ -88,7 +88,7 @@ function SuppCapteur($capteurID){
     return true;
 }
 
-// join les tables capteur, pièce, logement, utilisateur 
+// rechercher un capteur ID à partir d'un utilisateurID 
 function joinCapteur($capteurID, $utilisateurID){
     $req = connect() -> prepare('SELECT
     capteur.capteurID as capteurID,
