@@ -14,96 +14,149 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
     <link rel="stylesheet" href="../../css/mentions_legales.css" />
     <title>Domisep - Mentions Légales</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <?php include('header_user.php') ?>
 </head>
 <body>
+
+<header>
+        <div class="wrapper">
+            <h1>DOMISEP</h1>
+        </div>
+    </header>
+
+
+
 
     <section>
     <div class="retour">
             <a href="javascript:history.go(-1)">< Retour</a>
         </div>
-        <h1>Mentions Légales</h1>
+    <h1>Legal Notice</h1>
 
     <div class ='mentions'>
 
-<h3>1. Présentation du site.</h3>
+        
+<h3>1. Presentation of the website.</h3>
 <br> </br>
-<p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://domisep.website/">domisep.website</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
-<p><strong>Propriétaire</strong> : Domisep –  – 23 rue Notre-Dame des Champs<br />
-<strong>Créateur</strong>  : <a href="https://domisep.website">WEBAC</a><br />
-<strong>Responsable publication</strong> : Emma Grimaldi – 0663792527<br />
-Le responsable publication est une personne physique ou une personne morale.<br />
+<p>Under Article 6 of Law No. 2004-575 of 21 June 2004 on confidence in the digital economy, it is clear to users of the site <a href="http://domisep.website/"> domisep.website </a> the identity of the various stakeholders as part of its implementation and monitoring:</p>
+<p><strong>Owner</strong> : Domisep –  – 23 street Notre-Dame des Champs<br />
+<strong>Creator</strong>  : <a href="https://domisep.website">WEBAC</a><br />
+<strong>Publication Manager
+</strong> : Emma Grimaldi – 0663792527<br />
+The publication manager is a natural person or a legal person.
+<br />
 <strong>Webmaster</strong> : Charlotte Bruzeau – charlotte.bruzeau@yahoo.fr<br />
-<strong>Hébergeur</strong> : Leo Berton INC – 106 avenue de l'hébergement, 75006, Paris<br />
-Crédits : <br />
-Le modèle de mentions légales est offert par Subdelirium.com <a target="_blank" href="https://www.subdelirium.com/generateur-de-mentions-legales/" alt="Modèle de mentions légales">Modèle de mentions légales</a></p>
+<strong>Host</strong> : Leo Berton INC – 106 avenue de l'hébergement, 75006, Paris<br />
+Credits : <br />
+The model of legal mentions is offered by Subdelirium.com
+ <a target="_blank" href="https://www.subdelirium.com/generateur-de-mentions-legales/" alt="Modèle de mentions légales">
+Model of legal notices</a></p>
 <br> </br>
-<h3>2. Conditions générales d’utilisation du site et des services proposés.</h3>
+<h3>2.General conditions of use of the site and services offered.
+</h3>
 <br> </br>
-<p>L’utilisation du site <a href="http://domisep.website/">domisep.website</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="http://domisep.website/">domisep.website</a> sont donc invités à les consulter de manière régulière.</p>
-<p>Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Domisep, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.</p>
-<p>Le site <a href="http://domisep.website/">domisep.website</a> est mis à jour régulièrement par Emma Grimaldi. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
+<p>Utilisation of the website <a href="http://domisep.website/">domisep.website</a> 
+implies full acceptance of the terms and conditions described below. These terms of use may be modified or supplemented at any time, users of the site <a href="http://domisep.website/"> domisep.website </a> are invited to consult them regularly.</p>
+<p>
+This site is normally accessible to users at any time. An interruption due to technical maintenance may however be decided by Domisep, who will then endeavor to communicate to users before the dates and times of the intervention.</p>
+<p>The website <a href="http://domisep.website/">domisep.website</a> 
+is updated regularly by Emma Grimaldi. In the same way, the legal notices can be modified at any time: they nevertheless impose themselves on the user who is invited to refer to them as often as possible in order to become acquainted with them.</p>
 <br> </br>
-<h3>3. Description des services fournis.</h3>
+<h3>3. Description of the services provided.
+</h3>
 <br> </br>
-<p>Le site <a href="http://domisep.website/">domisep.website</a> a pour objet de fournir une information concernant l’ensemble des activités de la société.</p>
-<p>Domisep s’efforce de fournir sur le site <a href="http://domisep.website/">domisep.website</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
-<p>Tous les informations indiquées sur le site <a href="http://domisep.website/">domisep.website</a> sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site <a href="http://domisep.website/">domisep.website</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+<p>The website <a href="http://domisep.website/">domisep.website</a> 
+is intended to provide information on all of the company's activities.</p>
+<p>Domisep strives to provide on the site
+ <a href="http://domisep.website/">domisep.website</a> 
+information as accurate as possible. However, it can not be held responsible for omissions, inaccuracies and deficiencies in the update, whether of its own doing or because of third party partners who provide this information.</p>
+<p>
+All information listed on the <a href="http://domisep.website/"> domisep.website </a> site is for informational purposes only and is subject to change. In addition, the information contained on the <a href="http://domisep.website/"> domisep.website </a> site is not exhaustive. They are subject to modifications that have been made since they were posted. </P>
 <br> </br>
-<h3>4. Limitations contractuelles sur les données techniques.</h3>
+<h3>4. 
+Contractual limitations on technical data.</h3>
 <br> </br>
-<p>Le site utilise la technologie JavaScript.</p>
-<p>Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour</p>
+<p>
+The site uses JavaScript technology.</p>
+<p>
+The website can not be held responsible for material damage related to the use of the site. In addition, the user of the site agrees to access the site using recent equipment, not containing any viruses and with a browser of last generation up-to-date</p>
 <br> </br>
-<h3>5. Propriété intellectuelle et contrefaçons.</h3>
+<h3>5. 
+Intellectual property and counterfeits.</h3>
 <br> </br>
-<p>Domisep est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.</p>
-<p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : Domisep.</p>
-<p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+<p>
+Domisep owns the intellectual property rights or holds the rights to use all the items available on the site, including text, images, graphics, logos, icons, sounds, software.</p>
+<p>
+Any reproduction, representation, modification, publication, adaptation of all or part of the elements of the site, whatever the means or process used, is prohibited without the prior written permission of: Domisep.</p>
+<p>
+Any unauthorized use of the website or any of the elements it contains will be considered as constituting an infringement and prosecuted in accordance with the provisions of articles L.335-2 and following of the Code of Intellectual Property.</p>
 <br> </br>
-<h3>6. Limitations de responsabilité.</h3>
+<h3>6.Limitations of liability.
+</h3>
 <br> </br>
-<p>Domisep ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site domisep.website, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>
-<p>Domisep ne pourra également être tenue responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href="http://domisep.website/">domisep.website</a>.</p>
-<p>Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Domisep se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, Domisep se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>
+<p>Domisep can not be held responsible for direct or indirect damage to the user's equipment when accessing the site domisep.website, and resulting from the use of equipment that does not meet the specifications given in point 4 or the appearance of a bug or incompatibility.</p>
+<p>Domisep can not be held liable for indirect damages (such as a loss of market or loss of opportunity) resulting from the use of the <a href="http://domisep.website/"> site domisep.website </a>. </ p>
+<p> Interactive spaces (possibility to ask questions in the contact area) are available to users. Domisep reserves the right to delete, without prior notice, any content posted in this space that would violate the applicable law in France, especially the provisions on data protection. Where applicable, Domisep also reserves the right to question the civil and / or criminal liability of the user, particularly in the event of a racist, abusive, defamatory or pornographic message, regardless of the medium used (text , photography…).</p>
 <br> </br>
-<h3>7. Gestion des données personnelles.</h3>
+<h3>7. Management of personal data.</h3>
 <br> </br>
-<p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.</p>
-<p>A l'occasion de l'utilisation du site <a href="http://domisep.website/">domisep.website</a>, peuvent êtres recueillies : l'URL des liens par l'intermédiaire desquels l'utilisateur a accédé au site <a href="http://domisep.website/">domisep.website</a>, le fournisseur d'accès de l'utilisateur, l'adresse de protocole Internet (IP) de l'utilisateur.</p>
-<p> En tout état de cause Domisep ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="http://domisep.website/">domisep.website</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="http://domisep.website/">domisep.website</a> l’obligation ou non de fournir ces informations.</p>
-<p>Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.</p>
-<p>Aucune information personnelle de l'utilisateur du site <a href="http://domisep.website/">domisep.website</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de Domisep et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href="http://domisep.website/">domisep.website</a>.</p>
-<p>Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles. .</p>
-<p>Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+<p>
+In France, personal data is protected in particular by the law n ° 78-87 of January 6th, 1978, the law n ° 2004-801 of August 6th, 2004, the article L. 226-13 of the Penal Code and the European Directive of the October 24, 1995.</p>
+<p>
+On the occasion of the use of the site <a href="http://domisep.website/">domisep.website</a>, 
+can be collected: the URL of the links through which the user accessed the <a href="http://domisep.website/"> domisep.website </a> site, the service provider of the user, the Internet Protocol (IP) address of the user.</p>
+<p> 
+In any case Domisep only collects personal information about the user for the needs of certain services offered by the <a href="http://domisep.website/"> domisep.website </a> site. The user provides this information with full knowledge of the facts, in particular when it proceeds to input them himself. It is then specified to the user of the site <a href="http://domisep.website/"> domisep.website </a> the obligation or not to provide this information.</p>
+<p>
+In accordance with the provisions of Article 38 et seq. Of Law 78-17 of 6 January 1978 relating to data, files and freedoms, all users have a right of access, rectification and opposition to personal data. concerning him, by making his written and signed request, accompanied by a copy of the identity document with signature of the holder of the document, specifying the address to which the answer must be sent.</p>
+<p>No personal information of the user of the site <a href="http://domisep.website/"> domisep.website </a> is published without the knowledge of the user, exchanged, transferred, assigned or sold on any support to others. Only the assumption of redemption of Domisep and its rights would allow the transmission of such information to the prospective purchaser who would in turn be given the same obligation to store and modify data with respect to the user of the site < a href = "http://domisep.website/"> domisep.website</a>.</p>
+<p>
+The site is not declared to the CNIL because it does not collect personal information. . </ P>
+<p> Databases are protected by the provisions of the Act of 1 July 1998 transposing Directive 96/9 of 11 March 1996 on the legal protection of databases.</p>
 <br> </br>
-<h3>8. Liens hypertextes et cookies.</h3>
+<h3>8. Hypertext links and cookies.</h3>
 <br> </br>
-<p>Le site <a href="http://domisep.website/">domisep.website</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Domisep. Cependant, Domisep n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>
-<p>La navigation sur le site <a href="http://domisep.website/">domisep.website</a> est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.</p>
-<p>Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :</p>
-<p>Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>
-<p>Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur l'onglet Vie privée.
- Paramétrez les Règles de conservation sur :  utiliser les paramètres personnalisés pour l'historique. Enfin décochez-la pour désactiver les cookies.</p>
-<p>Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur Paramètres de contenu. Dans la section "Cookies", vous pouvez bloquer les cookies.</p>
-<p>Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur préférences. Dans l'onglet "Confidentialité", vous pouvez bloquer les cookies.</p>
+<p>The website <a href="http://domisep.website/">domisep.website</a> 
+contains a number of hypertext links to other sites, set up with the authorization of Domisep. However, Domisep does not have the possibility to verify the contents of the sites thus visited, and will therefore assume no responsibility for this fact.</p>
+<p>The navigation on the website <a href="http://domisep.website/">domisep.website</a> is likely to cause the installation of cookie (s) on the user's computer. A cookie is a small file, which does not allow the identification of the user, but which records information relating to the navigation of a computer on a site. The data thus obtained are intended to facilitate subsequent navigation on the site, and are also intended to allow various measures of attendance.</p>
+<p>
+The refusal to install a cookie may result in the impossibility of accessing certain services. The user can however configure his computer as follows, to refuse the installation of cookies:</p>
+<p>
+In Internet Explorer: tool tab (pictogram in the form of a cog in the upper right corner) / internet options. Click Privacy and choose Block all cookies. Validate on Ok.</p>
+<p>
+In Firefox: at the top of the browser window, click the Firefox button, then go to the Options tab. Click on the Privacy tab.
+
+Set the Storage Rules to: use the custom settings for the history. Finally uncheck it to disable cookies.</p>
+<p>
+Under Safari: Click on the top right of the browser on the menu pictogram (symbolized by a cog). Select Settings. Click Show Advanced Settings. In the "Privacy" section, click Content Settings. In the "Cookies" section, you can block cookies.</p>
+<p>
+Under Chrome: Click at the top right of the browser on the menu icon (symbolized by three horizontal lines). Select Settings. Click Show Advanced Settings. In the "Privacy" section, click Preferences. In the "Privacy" tab, you can block cookies.</p>
 <br> </br>
-<h3>9. Droit applicable et attribution de juridiction.</h3>
+<h3>9. Applicable law and attribution of jurisdiction.</h3>
 <br> </br>
-<p>Tout litige en relation avec l’utilisation du site <a href="http://domisep.website/">domisep.website</a> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>
+<p>
+Any dispute in connection with the use of the site <a href="http://domisep.website/"> domisep.website </a> is subject to French law. It is made exclusive jurisdiction to the competent courts of Paris.</p>
 <br> </br>
-<h3>10. Les principales lois concernées.</h3>
+<h3>10. 
+The main laws concerned.</h3>
 <br> </br>
-<p>Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés.</p>
-<p> Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
+<p>
+Law n ° 78-17 of January 6, 1978, notably modified by the law n ° 2004-801 of August 6, 2004 relating to data processing, files and freedoms.</p>
+<p>
+Law No. 2004-575 of 21 June 2004 on confidence in the digital economy.</p>
 <br> </br>
-<h3>11. Lexique.</h3>
+<h3>11. Lexicon.</h3>
 <br> </br>
-<p>Utilisateur : Internaute se connectant, utilisant le site susnommé.</p>
-<p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
-    
-</div>
+<p>
+User: Internet user connecting, using the aforementioned site.</p>
+<p>
+Personal information: "information that allows, in any form whatsoever, directly or indirectly, the identification of natural persons to which they apply" (Article 4 of Law No. 78-17 of 6 January 1978).
+</p> 
+        </div>
     </section>
+
+<footer>
+    <p> WEBAC © All rights reserved | <span class="legal">Legal Notice</span> | <a href = "../english/cgu.php" ><span>Terms of service</span></a></p>
+</footer>
     
 </body>
 </html>

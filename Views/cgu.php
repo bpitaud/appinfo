@@ -14,8 +14,13 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
     <link rel="stylesheet" href="../css/cgu.css" />
     <title>Domisep - Conditions Générales d'Utilisation</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <?php include('header_user.php') ?>
 </head>
+
+<header>
+        <div class="wrapper">
+            <h1>DOMISEP</h1>
+        </div>
+    </header>
 
 <body>
  
@@ -130,5 +135,9 @@ L’Utilisateur du site domisep.website a accès aux services suivants :
 </div>
 </section>
     
+<footer>
+    <p> WEBAC © Tous droits réservés | <a href = "../Views/mentions_legales.php" ><span> Mentions Légales</span> | </a><span class="legal">CGU</span></p>
+</footer>
+
 </body>
 </html>

@@ -13,9 +13,15 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
     <link rel="stylesheet" href="../css/mentions_legales.css" />
     <title>Domisep - Mentions Légales</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <?php include('header_user.php') ?>
 </head>
 <body>
+
+<header>
+        <div class="wrapper">
+            <h1>DOMISEP</h1>
+        </div>
+    </header>
+
 
     <section>
     <div class="retour">
@@ -103,6 +109,8 @@ Le modèle de mentions légales est offert par Subdelirium.com <a target="_blank
     
 </div>
     </section>
-    
+    <footer>
+        <p> WEBAC © Tous droits réservés |<span class="legal"> Mentions légales </span>  | <a href = "../Views/cgu.php" ><span>CGU </span></a></p>
+    </footer>
 </body>
 </html>
