@@ -27,7 +27,7 @@ $_SESSION['language'] ='en';
     	<div class="retour">
             <a href="javascript:history.go(-1)">< Retour</a>
         </div>
-        <h1> General condictions of the web site domisep.website</h1>
+        <h1> Terms of Service of the web site domisep.website</h1>
 
 <div class ="conditions">
 
