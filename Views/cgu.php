@@ -111,7 +111,7 @@ L’Utilisateur du site domisep.website a accès aux services suivants :
 <h3> ARTICLE 8 : Liens hypertextes </h3>
 <br> </br>
 </p><p>Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la responsabilité de l’Éditeur de domisep.website, qui n’a pas de contrôle sur ces liens.
-</p><p>Il est possible pour un tiers de créer un lien vers une page du site [votre site] sans autorisation expresse de l’éditeur.
+</p><p>Il est possible pour un tiers de créer un lien vers une page du site Domisep.website sans autorisation expresse de l’éditeur.
 <br> </br>
 <h3> ARTICLE 9 : Évolution des conditions générales d’utilisation </h3>
 <br> </br>
