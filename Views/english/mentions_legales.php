@@ -2,16 +2,16 @@
 session_start();
 $_SESSION['language'] ='en';
 
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-    header("Location: connexion.php");
-}
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../css/mentions_legales.css" />
+    <link rel="stylesheet" href="../css/mentions_legales.css" />
     <title>Domisep - Mentions Légales</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>

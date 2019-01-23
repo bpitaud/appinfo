@@ -6,9 +6,9 @@ if (isset($_GET['piece']) && $_GET['piece'] != '') {
     $_SESSION['selected_piece'] = $_GET['piece'];
 }
 
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-    header("Location: connexion.php");
-}
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 
 ?>
 
@@ -173,7 +173,7 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
                             echo '
                         <div class="'.$capteur[1].' block">
                             <div class="component-on figure show">
-                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconCamera.png" alt="photo de camera"width="128" height="128"/></a>
+                                <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de camera"width="128" height="128"/></a>
                                 <br/><br/> ON </p>
                             </div>
                             <div  class="component-off figure hide">
@@ -189,7 +189,7 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
                             echo '
                             <div class="'.$capteur[1].' block">
                                 <div class="component-on figure hide">
-                                    <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
+                                    <p style=" color:#FFDA44"><a href = "#"><img src="../Images/Capteur/on/iconeCamera.png" alt="photo de cadenas"width="128" height="128"/></a>
                                     <br/><br/> ON </p>
                                 </div>
                                 <div  class="component-off figure show">

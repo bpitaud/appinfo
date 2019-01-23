@@ -4,10 +4,9 @@ require_once("database.php");
 require_once("logements.php");
 
 // ajouter un utilisateur à la base de données
-function ajoutUtilisateur($utilisateurID, $nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp){
-    $conn = connect() -> prepare("INSERT INTO utilisateur(utilisateurID, nom, prenom, email, genre,naissance,telephone,adresse,pays,codepostale,mdp,administrateur) VALUES (:utilisateurID, :nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp, false)");
+function ajoutUtilisateur($nom, $prenom, $email, $genre, $naissance, $telephone, $adresse, $pays, $codepostale, $mdp){
+    $conn = connect() -> prepare("INSERT INTO utilisateur(nom, prenom, email, genre,naissance,telephone,adresse,pays,codepostale,mdp,administrateur) VALUES (:nom, :prenom, :email, :genre, :naissance, :telephone, :adresse, :pays, :codepostale, :mdp, false)");
     $conn->execute(array(
-        'utilisateurID' => $utilisateurID,
         'nom' => $nom,
         'prenom' => $prenom,
         'email' => $email,
@@ -19,7 +18,8 @@ function ajoutUtilisateur($utilisateurID, $nom, $prenom, $email, $genre, $naissa
         'codepostale' => $codepostale,
         'mdp' => $mdp,
     ));
-}
+
+    }
 
 // hachage du mdp
 function mdp_hache($mdp){

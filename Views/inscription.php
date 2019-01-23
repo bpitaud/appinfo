@@ -89,7 +89,6 @@ function test_input($data) {
                 <input type="text" name="codepostale" placeholder="CODE POSTAL" required />
                 <input type="password" name="mdp" placeholder="Entrer votre mot de passe" required />
                 <input type="password" name="conf_mdp" placeholder="Confirmer mot de passe" required />
-                <p> En continuant, vous acceptez les <a href = "../Views/cgu.php" >CGU</a></p>
 
             <div id="test">
     			<button class="bouton" type="reset">Annuler</button>
@@ -101,7 +100,7 @@ function test_input($data) {
   </body>
 
   <footer>
-    <p> WEBAC © Tous droits réservés <a href="../Views/Mentions_legales.php" ><span>Mentions légales</span> </a><a href = "../Views/cgu.php" ><span>CGU</span></a></p>
+    <p> WEBAC © Tous droits réservés |<a href="../Views/Mentions_legales.php" ><span>Mentions légales</span> </a>|<a href = "../Views/cgu.php" ><span>CGU</span></a></p>
 </footer>
     
 </html>

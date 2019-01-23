@@ -9,9 +9,18 @@ if (isset($_GET['controleur']) && $_GET['controleur'] != '') {
   $_SESSION['selected_capteur'] = $_GET['controleur'];
 }
 
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-  header("Location: connexion.php");
-}
+
+// function tes($data) {
+//   $data = trim($data);
+//   $data = stripslashes($data);
+//   $data = htmlspecialchars($data);
+//   return $data;
+// }
+
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//   header("Location: connexion.php");
+// }
+
 ?>
 
 <!DOCTYPE html>

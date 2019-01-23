@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['language'] ='fr';
+$_SESSION["connexion"] = 0;
 
 function test_input($data) {
     $data = trim($data);
@@ -80,7 +81,7 @@ function test_input($data) {
 
 
     <footer>
-    <p> WEBAC © Tous droits réservés <a href="../Views/Mentions_legales.php" ><span>Mentions légales</span> </a><a href = "../Views/cgu.php" ><span>CGU</span></a></p>
+    <p> WEBAC © Tous droits réservés |<a href="../Views/Mentions_legales.php" ><span>Mentions légales</span> </a>|<a href = "../Views/cgu.php" ><span>CGU</span></a></p>
     </footer>
     
 </body>    

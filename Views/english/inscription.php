@@ -90,7 +90,6 @@ function test_input($data) {
                 <input type="text" name="codepostale" placeholder="ZIPCODE" required />
                 <input type="password" name="mdp" placeholder="Enter your password" required />
                 <input type="password" name="conf_mdp" placeholder="Confirm your password" required />
-                <p> By submitting, you accept the <a href = "../Views/cgu.php" >Terms of Service</a></p>
 
             <div id="test">
     			<button class="bouton" type="reset">Cancel</button>
@@ -102,7 +101,8 @@ function test_input($data) {
   </body>
 
   <footer>
-    <p> WEBAC © All rights reserved <a href="../english/Mentions_legales.php" ><span>Legal Notice</span> </a><a href = "../english/cgu.php" ><span>Terms of Service</span></a></p>
+
+    <p> WEBAC © All rights reserved |<a href="../english/Mentions_legales.php" ><span>Legal Notice</span> </a>|<a href = "../english/cgu.php" ><span>Terms of Service</span></a></p>
 </footer>
     
 </html>

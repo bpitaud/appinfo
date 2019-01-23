@@ -3,9 +3,9 @@
 session_start();
 $_SESSION['language'] ='fr';
 
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-    header("Location: connexion.php");
-}
+// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0  or empty($_SESSION["connexion"])) {
+//     header("Location: connexion.php");
+// }
 ?>
 
 <!DOCTYPE html>
