@@ -7,9 +7,9 @@ $_SESSION['language'] ='fr';
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-// if(!isset($_SESSION["connexion"]) or $_SESSION["connexion"] = 0 or empty($_SESSION["connexion"])) {
-//     header("Location: connexion.php");
-// }
+if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
+    header("Location: connexion.php");
+}
 ?>
 
 <!DOCTYPE html>

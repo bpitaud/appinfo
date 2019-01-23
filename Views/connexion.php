@@ -1,7 +1,6 @@
 <?php
 session_start();
 $_SESSION['language'] ='fr';
-$_SESSION["connexion"] = 0;
 
 function test_input($data) {
     $data = trim($data);
