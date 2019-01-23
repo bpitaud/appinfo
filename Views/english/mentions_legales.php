@@ -11,7 +11,7 @@ if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../css/mentions_legales.css" />
+    <link rel="stylesheet" href="../../css/mentions_legales.css" />
     <title>Domisep - Mentions Légales</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <?php include('header_user.php') ?>
