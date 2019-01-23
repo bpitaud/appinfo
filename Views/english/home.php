@@ -69,8 +69,8 @@ function test_input($data) {
 
 <div id="service">
         <h2 > Our services </h2>
-        <p> Domisep is a home automation company, thanks to our services you can now equip your home to have a connected home. <br/> With our sensors and controllers, you can remotely control many functions of your home. Your lights, cameras and alarm can be activated remotely. <br/> You can also change the temperature of each live room and know the humidity of your home. <br/>
-        Domisep accompanies you in your daily management.
+        <p> Domisep is a home automation company, thanks to our services you can now equip your home to have a connected home. <br/> With our sensors and controllers, you can remotely control many functions of your home. Your lights, cameras and alarms can be activated remotely. <br/> You can also  know the humidity and the temperature of your home. <br/>
+        Domisep follows you in your daily management.
         Our After Sales Service is available 24 hours a day to facilitate your customer experience. </p>
 
 </div>
