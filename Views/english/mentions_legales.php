@@ -2,9 +2,6 @@
 session_start();
 $_SESSION['language'] ='en';
 
-if(!isset($_SESSION["connexion"]) || $_SESSION["connexion"] == 0) {
-    header("Location: connexion.php");
-}
 ?>
 
 <!DOCTYPE html>
