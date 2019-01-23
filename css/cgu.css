@@ -14,16 +14,12 @@ body{
   background-size: 100%;
 }
 
-
-
 .wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;   
 }
-
-
 
 /* logo */
 header h1 {
@@ -39,8 +35,6 @@ header{
   margin-top: 20px;
   margin-right: 0;
 }
-
-
 
 footer 
 {
