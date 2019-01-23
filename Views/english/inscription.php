@@ -102,7 +102,7 @@ function test_input($data) {
 
   <footer>
 
-    <p> WEBAC © All rights reserved |<a href="../english/Mentions_legales.php" ><span>Legal Notice</span> </a>|<a href = "../english/cgu.php" ><span>Terms of Service</span></a></p>
+    <p> WEBAC © All rights reserved |<a href="../english/mentions_legales.php" ><span>Legal Notice</span> </a>|<a href = "../english/cgu.php" ><span>Terms of Service</span></a></p>
 </footer>
     
 </html>
